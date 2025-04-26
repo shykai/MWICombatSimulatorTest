@@ -21,6 +21,7 @@ class SimulationManager {
 }
 
 onmessage = async function (event) {
+    const workerId = event.data.workerId;
     switch (event.data.type) {
         case "start_simulation":
             let playersData = event.data.players;
@@ -34,12 +35,12 @@ onmessage = async function (event) {
             let simulationTimeLimit = event.data.simulationTimeLimit;
             let combatSimulator = new CombatSimulator(players, zone);
             combatSimulator.addEventListener("progress", (event) => {
-                this.postMessage({ type: "simulation_progress", progress: event.detail });
+                this.postMessage({ type: "simulation_progress", progress: event.detail, workerId: workerId });
             });
 
             try {
                 let simResult = await combatSimulator.simulate(simulationTimeLimit);
-                this.postMessage({ type: "simulation_result", simResult: simResult });
+                this.postMessage({ type: "simulation_result", simResult: simResult, workerId: workerId });
             } catch (e) {
                 console.log(e);
                 this.postMessage({ type: "simulation_error", error: e });
@@ -61,7 +62,7 @@ onmessage = async function (event) {
                     let simulation = new CombatSimulator(players, zoneInstance);
                     if(i == 0) {
                         simulation.addEventListener("progress", (event) => {
-                            this.postMessage({ type: "simulation_progress", progress: event.detail });
+                            this.postMessage({ type: "simulation_progress", progress: event.detail, workerId: workerId });
                         });
                     }
                     simManager.addSimulation(simulation);
@@ -69,7 +70,7 @@ onmessage = async function (event) {
             }
             try {
                 const simResults = await simManager.startSimulations(event.data.simulationTimeLimit);
-                    this.postMessage({ type: "simulation_result_allZones", simResults: simResults });
+                    this.postMessage({ type: "simulation_result_allZones", simResults: simResults, workerId: workerId });
                 } catch (e) {
                     console.log(e);
                     this.postMessage({ type: "simulation_error", error: e });

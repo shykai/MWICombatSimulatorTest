@@ -32,6 +32,8 @@ let abilities = [null, null, null, null];
 let triggerMap = {};
 let modalTriggers = [];
 let currentSimResults = {};
+let simResults = new Map();
+let simResultActive = -1;
 
 let currentPlayerTabId = '1';
 let playerDataMap = {
@@ -49,12 +51,13 @@ window.noRngProfit = 0;
 
 // #region Worker
 
-worker.onmessage = function (event) {
+function workerOnmessage (event) {
     switch (event.data.type) {
         case "simulation_result":
             progressbar.style.width = "100%";
             progressbar.innerHTML = "100%";
-            //console.log("SIM RESULTS: ", event.data.simResult);
+            console.log("SIM RESULTS: ", event.data.simResult);
+            simResults.set(event.data.workerId, event.data.simResult);
             showSimulationResult(event.data.simResult);
             updateContent();
             buttonStartSimulation.disabled = false;
@@ -2183,6 +2186,42 @@ function initSimulationControls() {
     });
 }
 
+function clearResultTab() {
+  const tabList = document.getElementById('resultTabs');
+  tabList.innerHTML = '';
+}
+
+function addResultTab(id) {
+  const newTab = document.createElement('li');
+  newTab.className = 'nav-item';
+  newTab.setAttribute('role', 'presentation');
+  newTab.innerHTML = `
+    <button class="nav-link" id="result-tab-${id}" data-bs-toggle="tab" data-bs-target="#content-${id}" 
+            type="button" role="tab" aria-controls="content-${id}" aria-selected="false">
+      Sim ${id + 1}
+    </button>
+  `;
+
+  const tabList = document.getElementById('resultTabs');
+  tabList.insertBefore(newTab, null);
+
+  const tabButton = document.getElementById(`result-tab-${id}`);
+  tabButton.addEventListener('click', () => {
+    tabButton.classList.add("selected");
+    if (simResultActive !== -1) {
+      const prev = document.getElementById(`result-tab-${simResultActive}`);
+      prev.classList.remove("selected");
+    }
+
+    simResultActive = id;
+    if (simResults.has(simResultActive)) {
+      console.log(`display run: ${simResultActive}`);
+      showSimulationResult(simResults.get(simResultActive));
+      updateContent();
+    }
+  });
+}
+
 function startSimulation(selectedPlayers) {
     let playersToSim = [];
     for (let j = 1; j < 6; j++) {
@@ -2229,30 +2268,45 @@ function startSimulation(selectedPlayers) {
     let dungeonSelect = document.getElementById("selectDungeon");
     let simulationTimeInput = document.getElementById("inputSimulationTime");
     let simulationTimeLimit = Number(simulationTimeInput.value) * ONE_HOUR;
-    if (!simAllZonesToggle.checked) {
-        let zoneHrid = zoneSelect.value;
-        if (simDungeonToggle.checked) {
-            zoneHrid = dungeonSelect.value;
+
+    const N = Number(document.getElementById("workers").value);
+
+    clearResultTab();
+    simResults.clear();
+    for (let i = 0; i < N; i++) {
+        addResultTab(i);
+    }
+
+    for (let i = 0; i < N; i++) {
+        let worker = new Worker(new URL("worker.js", import.meta.url));
+        worker.onmessage = workerOnmessage;
+        if (!simAllZonesToggle.checked) {
+            let zoneHrid = zoneSelect.value;
+            if (simDungeonToggle.checked) {
+                zoneHrid = dungeonSelect.value;
+            }
+            let workerMessage = {
+                type: "start_simulation",
+                players: structuredClone(playersToSim),
+                zoneHrid: structuredClone(zoneHrid),
+                workerId: i,
+                simulationTimeLimit: structuredClone(simulationTimeLimit),
+            };
+            worker.postMessage(workerMessage);
+        } else {
+            let zoneHrids = Object.values(actionDetailMap)
+                .filter((action) => action.type == "/action_types/combat" && action.category != "/action_categories/combat/dungeons" && action.combatZoneInfo.fightInfo.battlesPerBoss === 10)
+                .sort((a, b) => a.sortIndex - b.sortIndex)
+                .map(action => action.hrid);
+            let workerMessage = {
+                type: "start_simulation_all_zones",
+                players: structuredClone(playersToSim),
+                zones: structuredClone(zoneHrids),
+                workerId: i,
+                simulationTimeLimit: structuredClone(simulationTimeLimit),
+            };
+            worker.postMessage(workerMessage);
         }
-        let workerMessage = {
-            type: "start_simulation",
-            players: playersToSim,
-            zoneHrid: zoneHrid,
-            simulationTimeLimit: simulationTimeLimit,
-        };
-        worker.postMessage(workerMessage);
-    } else {
-        let zoneHrids = Object.values(actionDetailMap)
-            .filter((action) => action.type == "/action_types/combat" && action.category != "/action_categories/combat/dungeons" && action.combatZoneInfo.fightInfo.battlesPerBoss === 10)
-            .sort((a, b) => a.sortIndex - b.sortIndex)
-            .map(action => action.hrid);
-        let workerMessage = {
-            type: "start_simulation_all_zones",
-            players: playersToSim,
-            zones: zoneHrids,
-            simulationTimeLimit: simulationTimeLimit,
-        };
-        worker.postMessage(workerMessage);
     }
 }
 

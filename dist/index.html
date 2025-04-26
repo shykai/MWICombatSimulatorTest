@@ -921,6 +921,7 @@
             <div class="col-md-5">
                 <div class="row mb-3">
                     <b data-i18n="common:simulationResults.title">Simulation Results</b>
+                <ul class="nav nav-tabs" id="resultTabs" role="tablist"></ul>
                 </div>
                 <div class="row">
                     <!-- #region Simulation Results -->
@@ -1301,6 +1302,15 @@
                                             <input type="checkbox" id="simDungeonToggle">
                                             <span class="slider round"></span>
                                         </label>
+                                    </div>
+                                    <div class="row">
+                                        <label for="repeat" class="col-md-3 col-form-label" data-i18n="">Repeat </label>
+                                        <div class="col-md">
+                                            <div class="input-group">
+                                                <input type="number" id="workers" class="form-control" value="8"
+                                                    min="1" max="32" required />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 
