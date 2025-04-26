@@ -33,7 +33,8 @@ let triggerMap = {};
 let modalTriggers = [];
 let currentSimResults = {};
 let simResults = new Map();
-let simResultActive = -1;
+let simResultActive = -2;
+let simCount = -1;
 
 let currentPlayerTabId = '1';
 let playerDataMap = {
@@ -50,16 +51,114 @@ window.profit = 0;
 window.noRngProfit = 0;
 
 // #region Worker
+function calcExpenses(simResult, playerToDisplay) {
+    let consumablesUsed = Object.entries(simResult.consumablesUsed[playerToDisplay])
+                                .sort((a, b) => b[1] - a[1]);
+
+    let total = 0;
+    for (const [consumable, amount] of consumablesUsed) {
+        let price = -1;
+        let expensesSetting = document.getElementById('selectPrices_consumables').value;
+        if (window.prices && window.prices[consumable]) {
+            let item = window.prices[consumable];
+            if (expensesSetting == 'bid') {
+                if (item['bid'] !== -1) {
+                    price = item['bid'];
+                } else if (item['ask'] !== -1) {
+                    price = item['ask'];
+                }
+            } else if (expensesSetting == 'ask') {
+                if (item['ask'] !== -1) {
+                    price = item['ask'];
+                } else if (item['bid'] !== -1) {
+                    price = item['bid'];
+                }
+            }
+            if (price == -1) {
+                price = item['vendor'];
+            }
+        }
+        total += price * amount;
+    }
+
+    return total;
+}
+
+function calcStats(values) {
+  let sum = values.reduce((acc, val) => acc + val);
+  let mean = sum / values.length;
+  let std = Math.sqrt(values.map(x => Math.pow(x - mean, 2))
+                            .reduce((acc, val) => acc + val)
+                      / values.length);
+  return { mean: mean, std: std };
+}
+
+function aggregateResult() {
+  let summary = {};
+  let data = {};
+  for (let i = 0; i < simCount; i++) {
+    const res = simResults.get(i);
+    const hours = res.simulatedTime / ONE_HOUR;
+
+    // Dungeons completed
+    data.dungeonsCompleted ??= [];
+    data.dungeonsCompleted.push(res.dungeonsCompleted);
+
+    // Player stats
+    data.deaths ??= {};
+    data.profit ??= {};
+    for (let i = 1; i <= 5; i++) {
+      const playerKey = `player${i}`;
+      data.deaths[playerKey] ??= [];
+      data.deaths[playerKey].push((res.deaths[playerKey] ?? 0) / hours);
+      
+      data.profit[playerKey] ??= [];
+      data.profit[playerKey].push(
+        res.noRngRevTotal - calcExpenses(res, playerKey)
+      );
+    }
+  }
+
+  for (let i = 0; i < simCount; i++) {
+    summary.dungeonsCompleted = calcStats(data.dungeonsCompleted);
+    
+    summary.deaths ??= {};
+    summary.profit ??= {};
+    for (let i = 1; i <= 5; i++) {
+      const playerKey = `player${i}`;
+      summary.deaths[playerKey] = calcStats(data.deaths[playerKey]);
+      summary.profit[playerKey] = calcStats(data.profit[playerKey]);
+    }
+  }
+
+  summary.isSummary = true;
+  return summary;
+}
+
+function setProgressBar(id, progress) {
+  let progressBar = document.getElementById(`tab-progress-${id}`);
+  progressBar.style.width = Math.floor(100 * progress) + "%";
+}
 
 function workerOnmessage (event) {
     switch (event.data.type) {
         case "simulation_result":
             progressbar.style.width = "100%";
             progressbar.innerHTML = "100%";
+            setProgressBar(event.data.workerId, 1.0);
             console.log("SIM RESULTS: ", event.data.simResult);
+            event.data.simResult.isSummary = false;
             simResults.set(event.data.workerId, event.data.simResult);
             showSimulationResult(event.data.simResult);
             updateContent();
+
+            setProgressBar(-1, simResults.size / simCount);
+            if (simResults.size == simCount) {
+              const summary = aggregateResult();
+              simResults.set(-1, summary);
+              showSimulationResult(summary);
+              updateContent();
+            }
             buttonStartSimulation.disabled = false;
             document.getElementById('buttonShowAllSimData').style.display = 'none';
             break;
@@ -67,6 +166,7 @@ function workerOnmessage (event) {
             let progress = Math.floor(100 * event.data.progress);
             progressbar.style.width = progress + "%";
             progressbar.innerHTML = progress + "%";
+            setProgressBar(event.data.workerId, event.data.progress);
             break;
         case "simulation_error":
             showErrorModal(event.data.error.toString());
@@ -964,6 +1064,42 @@ function initDamageDoneTaken() {
     }
 }
 
+function showSummary(simResult, playerIdToDisplay) {
+  let resultRow = document.getElementById("resultSummary");
+
+  const titleRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
+                             ["", "mean", "std"]);
+  titleRow.children.item(1).setAttribute("data-i18n", 
+                                         "common:simulationResults.mean");
+  titleRow.children.item(2).setAttribute("data-i18n", 
+                                         "common:simulationResults.std");
+
+  const completedRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
+                                 ["Dungeons Completed",
+                                  simResult.dungeonsCompleted.mean.toFixed(2),
+                                  simResult.dungeonsCompleted.std.toFixed(2)]);
+  completedRow.children.item(0).setAttribute(
+    "data-i18n", "common:simulationResults.dungeonsCompleted");
+
+  const deaths = simResult.deaths[playerIdToDisplay] ?? { mean: 0.0, var: 0.0 };
+  const deathRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
+                             ["Deaths Per Hour", 
+                              deaths.mean.toFixed(2),
+                              deaths.std.toFixed(2)]);
+  deathRow.children.item(0).setAttribute(
+    "data-i18n", "common:simulationResults.deathPerHour");
+
+  const profit = simResult.profit[playerIdToDisplay] ?? { mean: 0.0, var: 0.0 };
+  const profitRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
+                              ["No RNG Profit",
+                               profit.mean.toFixed(2),
+                               profit.std.toFixed(2)]);
+  profitRow.children.item(0).setAttribute(
+    "data-i18n", "common:noRNGProfit");
+
+  resultRow.replaceChildren(...[titleRow, completedRow, deathRow, profitRow]);
+}
+
 function showSimulationResult(simResult) {
     currentSimResults = simResult;
     let expensesModalTable = document.querySelector("#expensesTable > tbody");
@@ -976,22 +1112,34 @@ function showSimulationResult(simResult) {
     if (selectedPlayers.includes(parseInt(currentPlayerTabId))) {
         playerToDisplay = "player" + currentPlayerTabId;
     }
-    showKills(simResult, playerToDisplay);
-    showDeaths(simResult, playerToDisplay);
-    showExperienceGained(simResult, playerToDisplay);
-    showConsumablesUsed(simResult, playerToDisplay);
-    showHpSpent(simResult, playerToDisplay);
-    showManaUsed(simResult, playerToDisplay);
-    showHitpointsGained(simResult, playerToDisplay);
-    showManapointsGained(simResult, playerToDisplay);
-    showDamageDone(simResult, playerToDisplay);
-    showDamageTaken(simResult, playerToDisplay);
-    window.profit = window.revenue - window.expenses;
-    document.getElementById('profitSpan').innerText = window.profit.toLocaleString();
-    document.getElementById('profitPreview').innerText = window.profit.toLocaleString();
-    window.noRngProfit = window.noRngRevenue - window.expenses;
-    document.getElementById('noRngProfitSpan').innerText = window.noRngProfit.toLocaleString();
-    document.getElementById('noRngProfitPreview').innerText = window.noRngProfit.toLocaleString();
+
+    let resultRow = document.getElementById("resultRow");
+    let summaryRow = document.getElementById("resultSummary");
+
+    if (simResult.isSummary) {
+      summaryRow.style.display = "block";
+      resultRow.style.display = "none";
+      showSummary(simResult, playerToDisplay); 
+    } else {
+      summaryRow.style.display = "none";
+      resultRow.style.display = "flex";
+      showKills(simResult, playerToDisplay);
+      showDeaths(simResult, playerToDisplay);
+      showExperienceGained(simResult, playerToDisplay);
+      showConsumablesUsed(simResult, playerToDisplay);
+      showHpSpent(simResult, playerToDisplay);
+      showManaUsed(simResult, playerToDisplay);
+      showHitpointsGained(simResult, playerToDisplay);
+      showManapointsGained(simResult, playerToDisplay);
+      showDamageDone(simResult, playerToDisplay);
+      showDamageTaken(simResult, playerToDisplay);
+      window.profit = window.revenue - window.expenses;
+      document.getElementById('profitSpan').innerText = window.profit.toLocaleString();
+      document.getElementById('profitPreview').innerText = window.profit.toLocaleString();
+      window.noRngProfit = window.noRngRevenue - window.expenses;
+      document.getElementById('noRngProfitSpan').innerText = window.noRngProfit.toLocaleString();
+      document.getElementById('noRngProfitPreview').innerText = window.noRngProfit.toLocaleString();
+    }
 }
 
 function showAllSimulationResults(simResults) {
@@ -1503,7 +1651,7 @@ function showKills(simResult, playerToDisplay) {
                         price = item['bid'];
                     } else if (item['ask'] !== -1) {
                         price = item['ask'];
-                    }
+                  }
                 } else if (revenueSetting == 'ask') {
                     if (item['ask'] !== -1) {
                         price = item['ask'];
@@ -1530,6 +1678,7 @@ function showKills(simResult, playerToDisplay) {
     window.revenue = total;
     document.getElementById('noRngRevenueSpan').innerText = noRngTotal.toLocaleString();
     window.noRngRevenue = noRngTotal;
+    simResult["noRngRevTotal"] = noRngTotal;
 
     let resultAccordion = document.getElementById("noRngDropsAccordion");
     showElement(resultAccordion);
@@ -2193,25 +2342,30 @@ function clearResultTab() {
 
 function addResultTab(id) {
   const newTab = document.createElement('li');
-  newTab.className = 'nav-item';
+  newTab.className = 'nav nav-tabs sim-tabs';
   newTab.setAttribute('role', 'presentation');
   newTab.innerHTML = `
-    <button class="nav-link" id="result-tab-${id}" data-bs-toggle="tab" data-bs-target="#content-${id}" 
+    <div class="tab-progress", id="tab-progress-${id}"></div>
+    <button class="nav-link sim-item" id="result-tab-${id + 1}" data-bs-toggle="tab" data-bs-target="#content-${id}" 
             type="button" role="tab" aria-controls="content-${id}" aria-selected="false">
-      Sim ${id + 1}
+      ${id == -1 ? "Summary" : `Sim ${id + 1}`}
     </button>
   `;
+
+  newTab.children.item(1).setAttribute(
+    "data-i18n", id == -1 ? "common:summary" : "common:sim");
 
   const tabList = document.getElementById('resultTabs');
   tabList.insertBefore(newTab, null);
 
-  const tabButton = document.getElementById(`result-tab-${id}`);
+  const tabButton = document.getElementById(`result-tab-${id + 1}`);
   tabButton.addEventListener('click', () => {
+    /*
     tabButton.classList.add("selected");
-    if (simResultActive !== -1) {
+    if (simResultActive !== -2) {
       const prev = document.getElementById(`result-tab-${simResultActive}`);
       prev.classList.remove("selected");
-    }
+    } */
 
     simResultActive = id;
     if (simResults.has(simResultActive)) {
@@ -2270,12 +2424,15 @@ function startSimulation(selectedPlayers) {
     let simulationTimeLimit = Number(simulationTimeInput.value) * ONE_HOUR;
 
     const N = Number(document.getElementById("workers").value);
+    simCount = N;
 
     clearResultTab();
     simResults.clear();
+    addResultTab(-1);
     for (let i = 0; i < N; i++) {
         addResultTab(i);
     }
+    updateContent();
 
     for (let i = 0; i < N; i++) {
         let worker = new Worker(new URL("worker.js", import.meta.url));
@@ -3172,10 +3329,14 @@ darkModeToggle.addEventListener('change', () => {
 });
 
 function updateContent() {
+    console.log("update content");
     document.querySelectorAll('[data-i18n]').forEach(function (element) {
         const key = element.getAttribute('data-i18n');
         if (key) {
             element.textContent = i18next.t(key);
+            if (key === "common:sim") {
+                element.textContent += " " + element.id.split("-").at(-1);
+            }
         }
     });
 

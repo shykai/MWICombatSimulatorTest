@@ -67,8 +67,12 @@
         "maxWaveReached" : "已完成最大波次",
         "dungeonsCompleted": "地下城的完成次数",
         "dungeonsFailed": "地下城的团灭次数",
-        "averageTime": "完成平均时间"
+        "averageTime": "完成平均时间",
+        "mean": "平均",
+        "std": "标准差"
     },
+    "sim": "模拟",
+    "summary": "合计",
     "selectPlayer": "选择玩家",
     "simAllZones": "模拟所有星球",
     "simDungeon": "模拟地下城",
