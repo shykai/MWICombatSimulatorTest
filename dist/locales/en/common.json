@@ -67,8 +67,12 @@
         "maxWaveReached" : "Max Wave Reached",
         "dungeonsCompleted": "Dungeons Completed",
         "dungeonsFailed": "Dungeons Failed",
-        "averageTime": "Average Time"
+        "averageTime": "Average Time",
+        "mean": "Mean",
+        "std": "STD"
     },
+    "sim": "Sim",
+    "summary": "Summary",
     "selectPlayer": "SelectPlayer",
     "simAllZones": "Sim All Zones",
     "simDungeon": "Sim Dungeon",

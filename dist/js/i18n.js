@@ -9315,6 +9315,9 @@ document.addEventListener('DOMContentLoaded', function () {
             const key = element.getAttribute('data-i18n');
             if (key) {
                 element.textContent = i18next.t(key);
+                if (key === "common:sim") {
+                    element.textContent += " " + element.id.split("-").at(-1);
+                }
             }
         });
 
