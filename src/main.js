@@ -52,8 +52,13 @@ window.noRngProfit = 0;
 
 // #region Worker
 function calcExpenses(simResult, playerToDisplay) {
-    let consumablesUsed = Object.entries(simResult.consumablesUsed[playerToDisplay])
-                                .sort((a, b) => b[1] - a[1]);
+    let consumablesUsed = simResult.consumablesUsed?.[playerToDisplay];
+
+    if (consumablesUsed) {
+        consumablesUsed = Object.entries(consumablesUsed).sort((a, b) => b[1] - a[1]);
+    } else {
+        consumablesUsed = [];
+    }
 
     let total = 0;
     for (const [consumable, amount] of consumablesUsed) {
@@ -104,6 +109,9 @@ function aggregateResult() {
     data.dungeonsCompleted ??= [];
     data.dungeonsCompleted.push(res.dungeonsCompleted);
 
+    data.encounters ??= [];
+    data.encounters.push((res.encounters ?? 0) / hours);
+
     // Player stats
     data.deaths ??= {};
     data.profit ??= {};
@@ -121,6 +129,7 @@ function aggregateResult() {
 
   for (let i = 0; i < simCount; i++) {
     summary.dungeonsCompleted = calcStats(data.dungeonsCompleted);
+    summary.encounters = calcStats(data.encounters);
     
     summary.deaths ??= {};
     summary.profit ??= {};
@@ -131,6 +140,7 @@ function aggregateResult() {
     }
   }
 
+  summary.isDungeon = simResults.get(0).isDungeon;
   summary.isSummary = true;
   return summary;
 }
@@ -1074,12 +1084,22 @@ function showSummary(simResult, playerIdToDisplay) {
   titleRow.children.item(2).setAttribute("data-i18n", 
                                          "common:simulationResults.std");
 
-  const completedRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
-                                 ["Dungeons Completed",
-                                  simResult.dungeonsCompleted.mean.toFixed(2),
-                                  simResult.dungeonsCompleted.std.toFixed(2)]);
-  completedRow.children.item(0).setAttribute(
-    "data-i18n", "common:simulationResults.dungeonsCompleted");
+  let completedRow = null;
+  if (simResult.isDungeon) {
+      completedRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
+                               ["Dungeons Completed",
+                                simResult.dungeonsCompleted.mean.toFixed(2),
+                                simResult.dungeonsCompleted.std.toFixed(2)]);
+      completedRow.children.item(0).setAttribute(
+        "data-i18n", "common:simulationResults.dungeonsCompleted");
+  } else {
+      completedRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
+                               ["Encounters",
+                                simResult.encounters.mean.toFixed(2),
+                                simResult.encounters.std.toFixed(2)]);
+      completedRow.children.item(0).setAttribute(
+        "data-i18n", "common:simulationResults.encounters");
+  }
 
   const deaths = simResult.deaths[playerIdToDisplay] ?? { mean: 0.0, var: 0.0 };
   const deathRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
