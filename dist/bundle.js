@@ -3331,7 +3331,7 @@ function showKills(simResult, playerToDisplay) {
                         price = item['bid'];
                     } else if (item['ask'] !== -1) {
                         price = item['ask'];
-                  }
+                    }
                 } else if (revenueSetting == 'ask') {
                     if (item['ask'] !== -1) {
                         price = item['ask'];
