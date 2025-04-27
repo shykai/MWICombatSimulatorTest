@@ -1684,8 +1684,6 @@ const ONE_HOUR = 60 * 60 * ONE_SECOND;
 let buttonStartSimulation = document.getElementById("buttonStartSimulation");
 let progressbar = document.getElementById("simulationProgressBar");
 
-let worker = new Worker(new URL(/* worker import */ __webpack_require__.p + __webpack_require__.u(1), __webpack_require__.b));
-
 let player = new _combatsimulator_player_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
 let selectedPlayers = [];
 let main_food = [null, null, null];
@@ -1752,64 +1750,66 @@ function calcExpenses(simResult, playerToDisplay) {
 }
 
 function calcStats(values) {
-  let sum = values.reduce((acc, val) => acc + val);
-  let mean = sum / values.length;
-  let std = Math.sqrt(values.map(x => Math.pow(x - mean, 2))
-                            .reduce((acc, val) => acc + val)
-                      / values.length);
-  return { mean: mean, std: std };
+    let sum = values.reduce((acc, val) => acc + val);
+    let mean = sum / values.length;
+    let std = Math.sqrt(values.map(x => Math.pow(x - mean, 2))
+                              .reduce((acc, val) => acc + val)
+                        / values.length);
+    return { mean: mean, std: std };
 }
 
 function aggregateResult() {
-  let summary = {};
-  let data = {};
-  for (let i = 0; i < simCount; i++) {
-    const res = simResults.get(i);
-    const hours = res.simulatedTime / ONE_HOUR;
+    let summary = {};
+    let data = {};
+    for (let i = 0; i < simCount; i++) {
+        const res = simResults.get(i);
+        const hours = res.simulatedTime / ONE_HOUR;
 
-    // Dungeons completed
-    data.dungeonsCompleted ??= [];
-    data.dungeonsCompleted.push(res.dungeonsCompleted);
+        // Dungeons completed
+        data.dungeonsCompleted ??= [];
+        data.dungeonsCompleted.push(res.dungeonsCompleted);
 
-    data.encounters ??= [];
-    data.encounters.push((res.encounters ?? 0) / hours);
+        data.encounters ??= [];
+        data.encounters.push((res.encounters ?? 0) / hours);
 
-    // Player stats
-    data.deaths ??= {};
-    data.profit ??= {};
-    for (let i = 1; i <= 5; i++) {
-      const playerKey = `player${i}`;
-      data.deaths[playerKey] ??= [];
-      data.deaths[playerKey].push((res.deaths[playerKey] ?? 0) / hours);
-      
-      data.profit[playerKey] ??= [];
-      data.profit[playerKey].push(
-        res.noRngRevTotal - calcExpenses(res, playerKey)
-      );
+        // Player stats
+        data.deaths ??= {};
+        data.profit ??= {};
+        for (let i = 1; i <= 5; i++) {
+            const playerKey = `player${i}`;
+            data.deaths[playerKey] ??= [];
+            data.deaths[playerKey].push((res.deaths[playerKey] ?? 0) / hours);
+            
+            data.profit[playerKey] ??= [];
+            data.profit[playerKey].push(
+                res.noRngRevTotal - calcExpenses(res, playerKey)
+            );
+        }
     }
-  }
 
-  for (let i = 0; i < simCount; i++) {
-    summary.dungeonsCompleted = calcStats(data.dungeonsCompleted);
-    summary.encounters = calcStats(data.encounters);
-    
-    summary.deaths ??= {};
-    summary.profit ??= {};
-    for (let i = 1; i <= 5; i++) {
-      const playerKey = `player${i}`;
-      summary.deaths[playerKey] = calcStats(data.deaths[playerKey]);
-      summary.profit[playerKey] = calcStats(data.profit[playerKey]);
+    for (let i = 0; i < simCount; i++) {
+        summary.dungeonsCompleted = calcStats(data.dungeonsCompleted);
+        summary.encounters = calcStats(data.encounters);
+        
+        summary.deaths ??= {};
+        summary.profit ??= {};
+        for (let i = 1; i <= 5; i++) {
+            const playerKey = `player${i}`;
+            summary.deaths[playerKey] = calcStats(data.deaths[playerKey]);
+            summary.profit[playerKey] = calcStats(data.profit[playerKey]);
+        }
     }
-  }
 
-  summary.isDungeon = simResults.get(0).isDungeon;
-  summary.isSummary = true;
-  return summary;
+    summary.isDungeon = simResults.get(0).isDungeon;
+    summary.isSummary = true;
+    return summary;
 }
 
 function setProgressBar(id, progress) {
-  let progressBar = document.getElementById(`tab-progress-${id}`);
-  progressBar.style.width = Math.floor(100 * progress) + "%";
+    let progressBar = document.getElementById(`tab-progress-${id}`);
+    if (progressBar) {
+        progressBar.style.width = Math.floor(100 * progress) + "%";
+    }
 }
 
 function workerOnmessage (event) {
@@ -1818,18 +1818,17 @@ function workerOnmessage (event) {
             progressbar.style.width = "100%";
             progressbar.innerHTML = "100%";
             setProgressBar(event.data.workerId, 1.0);
-            console.log("SIM RESULTS: ", event.data.simResult);
             event.data.simResult.isSummary = false;
             simResults.set(event.data.workerId, event.data.simResult);
             showSimulationResult(event.data.simResult);
             updateContent();
 
             setProgressBar(-1, simResults.size / simCount);
-            if (simResults.size == simCount) {
-              const summary = aggregateResult();
-              simResults.set(-1, summary);
-              showSimulationResult(summary);
-              updateContent();
+            if (simResults.size == simCount && simCount > 1) {
+                const summary = aggregateResult();
+                simResults.set(-1, summary);
+                showSimulationResult(summary);
+                updateContent();
             }
             buttonStartSimulation.disabled = false;
             document.getElementById('buttonShowAllSimData').style.display = 'none';
@@ -2737,49 +2736,48 @@ function initDamageDoneTaken() {
 }
 
 function showSummary(simResult, playerIdToDisplay) {
-  let resultRow = document.getElementById("resultSummary");
+    let resultRow = document.getElementById("resultSummary");
 
-  const titleRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
-                             ["", "mean", "std"]);
-  titleRow.children.item(1).setAttribute("data-i18n", 
-                                         "common:simulationResults.mean");
-  titleRow.children.item(2).setAttribute("data-i18n", 
-                                         "common:simulationResults.std");
+    const titleRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
+                               ["", "mean", "std"]);
+    titleRow.children.item(1).setAttribute("data-i18n", 
+                                           "common:simulationResults.mean");
+    titleRow.children.item(2).setAttribute("data-i18n", 
+                                           "common:simulationResults.std");
 
-  let completedRow = null;
-  if (simResult.isDungeon) {
-      completedRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
-                               ["Dungeons Completed",
-                                simResult.dungeonsCompleted.mean.toFixed(2),
-                                simResult.dungeonsCompleted.std.toFixed(2)]);
-      completedRow.children.item(0).setAttribute(
-        "data-i18n", "common:simulationResults.dungeonsCompleted");
-  } else {
-      completedRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
-                               ["Encounters",
-                                simResult.encounters.mean.toFixed(2),
-                                simResult.encounters.std.toFixed(2)]);
-      completedRow.children.item(0).setAttribute(
-        "data-i18n", "common:simulationResults.encounters");
-  }
+    let completedRow = null;
+    if (simResult.isDungeon) {
+        completedRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
+                                 ["Dungeons Completed",
+                                  simResult.dungeonsCompleted.mean.toFixed(2),
+                                  simResult.dungeonsCompleted.std.toFixed(2)]);
+        completedRow.children.item(0).setAttribute(
+          "data-i18n", "common:simulationResults.dungeonsCompleted");
+    } else {
+        completedRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
+                                 ["Encounters",
+                                  simResult.encounters.mean.toFixed(2),
+                                  simResult.encounters.std.toFixed(2)]);
+        completedRow.children.item(0).setAttribute(
+          "data-i18n", "common:simulationResults.encounters");
+    }
 
-  const deaths = simResult.deaths[playerIdToDisplay] ?? { mean: 0.0, var: 0.0 };
-  const deathRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
-                             ["Deaths Per Hour", 
-                              deaths.mean.toFixed(2),
-                              deaths.std.toFixed(2)]);
-  deathRow.children.item(0).setAttribute(
-    "data-i18n", "common:simulationResults.deathPerHour");
+    const deaths = simResult.deaths[playerIdToDisplay] ?? { mean: 0.0, var: 0.0 };
+    const deathRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
+                               ["Deaths Per Hour", 
+                                deaths.mean.toFixed(2),
+                                deaths.std.toFixed(2)]);
+    deathRow.children.item(0).setAttribute(
+      "data-i18n", "common:simulationResults.deathPerHour");
 
-  const profit = simResult.profit[playerIdToDisplay] ?? { mean: 0.0, var: 0.0 };
-  const profitRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
-                              ["No RNG Profit",
-                               profit.mean.toFixed(2),
-                               profit.std.toFixed(2)]);
-  profitRow.children.item(0).setAttribute(
-    "data-i18n", "common:noRNGProfit");
+    const profit = simResult.profit[playerIdToDisplay] ?? { mean: 0.0, var: 0.0 };
+    const profitRow = createRow(["col-md-4", "col-md-4 text-end", "col-md-2 text-end"],
+                                ["No RNG Profit",
+                                 profit.mean.toFixed(2),
+                                 profit.std.toFixed(2)]);
+    profitRow.children.item(0).setAttribute("data-i18n", "common:noRNGProfit");
 
-  resultRow.replaceChildren(...[titleRow, completedRow, deathRow, profitRow]);
+    resultRow.replaceChildren(...[titleRow, completedRow, deathRow, profitRow]);
 }
 
 function showSimulationResult(simResult) {
@@ -2799,28 +2797,28 @@ function showSimulationResult(simResult) {
     let summaryRow = document.getElementById("resultSummary");
 
     if (simResult.isSummary) {
-      summaryRow.style.display = "block";
-      resultRow.style.display = "none";
-      showSummary(simResult, playerToDisplay); 
+        summaryRow.style.display = "block";
+        resultRow.style.display = "none";
+        showSummary(simResult, playerToDisplay); 
     } else {
-      summaryRow.style.display = "none";
-      resultRow.style.display = "flex";
-      showKills(simResult, playerToDisplay);
-      showDeaths(simResult, playerToDisplay);
-      showExperienceGained(simResult, playerToDisplay);
-      showConsumablesUsed(simResult, playerToDisplay);
-      showHpSpent(simResult, playerToDisplay);
-      showManaUsed(simResult, playerToDisplay);
-      showHitpointsGained(simResult, playerToDisplay);
-      showManapointsGained(simResult, playerToDisplay);
-      showDamageDone(simResult, playerToDisplay);
-      showDamageTaken(simResult, playerToDisplay);
-      window.profit = window.revenue - window.expenses;
-      document.getElementById('profitSpan').innerText = window.profit.toLocaleString();
-      document.getElementById('profitPreview').innerText = window.profit.toLocaleString();
-      window.noRngProfit = window.noRngRevenue - window.expenses;
-      document.getElementById('noRngProfitSpan').innerText = window.noRngProfit.toLocaleString();
-      document.getElementById('noRngProfitPreview').innerText = window.noRngProfit.toLocaleString();
+        summaryRow.style.display = "none";
+        resultRow.style.display = "flex";
+        showKills(simResult, playerToDisplay);
+        showDeaths(simResult, playerToDisplay);
+        showExperienceGained(simResult, playerToDisplay);
+        showConsumablesUsed(simResult, playerToDisplay);
+        showHpSpent(simResult, playerToDisplay);
+        showManaUsed(simResult, playerToDisplay);
+        showHitpointsGained(simResult, playerToDisplay);
+        showManapointsGained(simResult, playerToDisplay);
+        showDamageDone(simResult, playerToDisplay);
+        showDamageTaken(simResult, playerToDisplay);
+        window.profit = window.revenue - window.expenses;
+        document.getElementById('profitSpan').innerText = window.profit.toLocaleString();
+        document.getElementById('profitPreview').innerText = window.profit.toLocaleString();
+        window.noRngProfit = window.noRngRevenue - window.expenses;
+        document.getElementById('noRngProfitSpan').innerText = window.noRngProfit.toLocaleString();
+        document.getElementById('noRngProfitPreview').innerText = window.noRngProfit.toLocaleString();
     }
 }
 
@@ -4018,44 +4016,36 @@ function initSimulationControls() {
 }
 
 function clearResultTab() {
-  const tabList = document.getElementById('resultTabs');
-  tabList.innerHTML = '';
+    const tabList = document.getElementById('resultTabs');
+    tabList.innerHTML = '';
 }
 
 function addResultTab(id) {
-  const newTab = document.createElement('li');
-  newTab.className = 'nav nav-tabs sim-tabs';
-  newTab.setAttribute('role', 'presentation');
-  newTab.innerHTML = `
-    <div class="tab-progress", id="tab-progress-${id}"></div>
-    <button class="nav-link sim-item" id="result-tab-${id + 1}" data-bs-toggle="tab" data-bs-target="#content-${id}" 
-            type="button" role="tab" aria-controls="content-${id}" aria-selected="false">
-      ${id == -1 ? "Summary" : `Sim ${id + 1}`}
-    </button>
-  `;
+    const newTab = document.createElement('li');
+    newTab.className = 'nav nav-tabs sim-tabs';
+    newTab.setAttribute('role', 'presentation');
+    newTab.innerHTML = `
+      <div class="tab-progress", id="tab-progress-${id}"></div>
+      <button class="nav-link sim-item" id="result-tab-${id + 1}" data-bs-toggle="tab" data-bs-target="#content-${id}" 
+              type="button" role="tab" aria-controls="content-${id}" aria-selected="false">
+        ${id == -1 ? "Summary" : `Sim ${id + 1}`}
+      </button>
+    `;
 
-  newTab.children.item(1).setAttribute(
-    "data-i18n", id == -1 ? "common:summary" : "common:sim");
+    newTab.children.item(1).setAttribute(
+      "data-i18n", id == -1 ? "common:summary" : "common:sim");
 
-  const tabList = document.getElementById('resultTabs');
-  tabList.insertBefore(newTab, null);
+    const tabList = document.getElementById('resultTabs');
+    tabList.insertBefore(newTab, null);
 
-  const tabButton = document.getElementById(`result-tab-${id + 1}`);
-  tabButton.addEventListener('click', () => {
-    /*
-    tabButton.classList.add("selected");
-    if (simResultActive !== -2) {
-      const prev = document.getElementById(`result-tab-${simResultActive}`);
-      prev.classList.remove("selected");
-    } */
-
-    simResultActive = id;
-    if (simResults.has(simResultActive)) {
-      console.log(`display run: ${simResultActive}`);
-      showSimulationResult(simResults.get(simResultActive));
-      updateContent();
-    }
-  });
+    const tabButton = document.getElementById(`result-tab-${id + 1}`);
+    tabButton.addEventListener('click', () => {
+        simResultActive = id;
+        if (simResults.has(simResultActive)) {
+            showSimulationResult(simResults.get(simResultActive));
+            updateContent();
+        }
+    });
 }
 
 function startSimulation(selectedPlayers) {
@@ -4105,47 +4095,56 @@ function startSimulation(selectedPlayers) {
     let simulationTimeInput = document.getElementById("inputSimulationTime");
     let simulationTimeLimit = Number(simulationTimeInput.value) * ONE_HOUR;
 
-    const N = Number(document.getElementById("workers").value);
-    simCount = N;
+    simCount = Math.max(1, Math.min(Number(document.getElementById("workers").value), navigator.hardwareConcurrency));
+    if (simAllZonesToggle.checked) {
+        simCount = 1;
+    }
 
+    let resultTabs = document.getElementById("resultTabs");
+    resultTabs.style.display = simCount > 1 ? "flex" : "none";
     clearResultTab();
     simResults.clear();
     addResultTab(-1);
-    for (let i = 0; i < N; i++) {
+    for (let i = 0; i < simCount; i++) {
         addResultTab(i);
     }
     updateContent();
 
-    for (let i = 0; i < N; i++) {
+    if (simAllZonesToggle.checked) {
+        let worker = new Worker(new URL(/* worker import */ __webpack_require__.p + __webpack_require__.u(1), __webpack_require__.b));
+        worker.onmessage = workerOnmessage;
+        let zoneHrids = Object.values(_combatsimulator_data_actionDetailMap_json__WEBPACK_IMPORTED_MODULE_12__)
+            .filter((action) => action.type == "/action_types/combat" 
+                             && action.category != "/action_categories/combat/dungeons"
+                             && action.combatZoneInfo.fightInfo.battlesPerBoss === 10)
+            .sort((a, b) => a.sortIndex - b.sortIndex)
+            .map(action => action.hrid);
+        let workerMessage = {
+            type: "start_simulation_all_zones",
+            players: structuredClone(playersToSim),
+            zones: structuredClone(zoneHrids),
+            workerId: -1,
+            simulationTimeLimit: structuredClone(simulationTimeLimit),
+        };
+        worker.postMessage(workerMessage);
+        return;
+    }
+
+    for (let i = 0; i < simCount; i++) {
         let worker = new Worker(new URL(/* worker import */ __webpack_require__.p + __webpack_require__.u(0), __webpack_require__.b));
         worker.onmessage = workerOnmessage;
-        if (!simAllZonesToggle.checked) {
-            let zoneHrid = zoneSelect.value;
-            if (simDungeonToggle.checked) {
-                zoneHrid = dungeonSelect.value;
-            }
-            let workerMessage = {
-                type: "start_simulation",
-                players: structuredClone(playersToSim),
-                zoneHrid: structuredClone(zoneHrid),
-                workerId: i,
-                simulationTimeLimit: structuredClone(simulationTimeLimit),
-            };
-            worker.postMessage(workerMessage);
-        } else {
-            let zoneHrids = Object.values(_combatsimulator_data_actionDetailMap_json__WEBPACK_IMPORTED_MODULE_12__)
-                .filter((action) => action.type == "/action_types/combat" && action.category != "/action_categories/combat/dungeons" && action.combatZoneInfo.fightInfo.battlesPerBoss === 10)
-                .sort((a, b) => a.sortIndex - b.sortIndex)
-                .map(action => action.hrid);
-            let workerMessage = {
-                type: "start_simulation_all_zones",
-                players: structuredClone(playersToSim),
-                zones: structuredClone(zoneHrids),
-                workerId: i,
-                simulationTimeLimit: structuredClone(simulationTimeLimit),
-            };
-            worker.postMessage(workerMessage);
+        let zoneHrid = zoneSelect.value;
+        if (simDungeonToggle.checked) {
+            zoneHrid = dungeonSelect.value;
         }
+        let workerMessage = {
+            type: "start_simulation",
+            players: structuredClone(playersToSim),
+            zoneHrid: structuredClone(zoneHrid),
+            workerId: i,
+            simulationTimeLimit: structuredClone(simulationTimeLimit),
+        };
+        worker.postMessage(workerMessage);
     }
 }
 
