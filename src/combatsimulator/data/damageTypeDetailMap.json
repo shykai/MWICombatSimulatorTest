@@ -1,0 +1,22 @@
+{
+    "/damage_types/fire": {
+        "hrid": "/damage_types/fire",
+        "name": "Fire",
+        "sortIndex": 4
+    },
+    "/damage_types/nature": {
+        "hrid": "/damage_types/nature",
+        "name": "Nature",
+        "sortIndex": 3
+    },
+    "/damage_types/physical": {
+        "hrid": "/damage_types/physical",
+        "name": "Physical",
+        "sortIndex": 1
+    },
+    "/damage_types/water": {
+        "hrid": "/damage_types/water",
+        "name": "Water",
+        "sortIndex": 2
+    }
+}

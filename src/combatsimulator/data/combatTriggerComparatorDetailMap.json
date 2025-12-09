@@ -1,0 +1,26 @@
+{
+    "/combat_trigger_comparators/greater_than_equal": {
+        "hrid": "/combat_trigger_comparators/greater_than_equal",
+        "name": ">=",
+        "allowValue": true,
+        "sortIndex": 1
+    },
+    "/combat_trigger_comparators/is_active": {
+        "hrid": "/combat_trigger_comparators/is_active",
+        "name": "Is Active",
+        "allowValue": false,
+        "sortIndex": 3
+    },
+    "/combat_trigger_comparators/is_inactive": {
+        "hrid": "/combat_trigger_comparators/is_inactive",
+        "name": "Is Inactive",
+        "allowValue": false,
+        "sortIndex": 4
+    },
+    "/combat_trigger_comparators/less_than_equal": {
+        "hrid": "/combat_trigger_comparators/less_than_equal",
+        "name": "<=",
+        "allowValue": true,
+        "sortIndex": 2
+    }
+}

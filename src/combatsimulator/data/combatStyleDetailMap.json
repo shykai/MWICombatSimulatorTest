@@ -1,0 +1,68 @@
+{
+    "/combat_styles/heal": {
+        "hrid": "/combat_styles/heal",
+        "name": "Heal",
+        "skillExpMap": null,
+        "sortIndex": 6
+    },
+    "/combat_styles/magic": {
+        "hrid": "/combat_styles/magic",
+        "name": "Magic",
+        "skillExpMap": {
+            "/skills/attack": true,
+            "/skills/defense": true,
+            "/skills/intelligence": true,
+            "/skills/magic": true,
+            "/skills/stamina": true
+        },
+        "sortIndex": 5
+    },
+    "/combat_styles/ranged": {
+        "hrid": "/combat_styles/ranged",
+        "name": "Ranged",
+        "skillExpMap": {
+            "/skills/attack": true,
+            "/skills/defense": true,
+            "/skills/intelligence": true,
+            "/skills/ranged": true,
+            "/skills/stamina": true
+        },
+        "sortIndex": 4
+    },
+    "/combat_styles/slash": {
+        "hrid": "/combat_styles/slash",
+        "name": "Slash",
+        "skillExpMap": {
+            "/skills/attack": true,
+            "/skills/defense": true,
+            "/skills/intelligence": true,
+            "/skills/melee": true,
+            "/skills/stamina": true
+        },
+        "sortIndex": 2
+    },
+    "/combat_styles/smash": {
+        "hrid": "/combat_styles/smash",
+        "name": "Smash",
+        "skillExpMap": {
+            "/skills/attack": true,
+            "/skills/defense": true,
+            "/skills/intelligence": true,
+            "/skills/melee": true,
+            "/skills/stamina": true
+        },
+        "sortIndex": 3
+    },
+    "/combat_styles/stab": {
+        "hrid": "/combat_styles/stab",
+        "name": "Stab",
+        "skillExpMap": {
+            "/skills/attack": true,
+            "/skills/defense": true,
+            "/skills/intelligence": true,
+            "/skills/melee": true,
+            "/skills/stamina": true
+        },
+        "sortIndex": 1
+    }
+}
