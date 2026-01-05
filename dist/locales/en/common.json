@@ -108,7 +108,15 @@
         "uploadAndRun" : "Upload & Run",
         "download" : "Download Results",
         "dungeonStartWave" : "Dungeon Start Wave",
-        "wave" : "Wave"
-
+        "wave" : "Wave",
+        "hpMpVisualization" : "HP/MP Visualization Charts",
+        "enableHpMpVisualization" : "Enable HP/MP Timeline Charts",
+        "combatReadyStats" : "Combat Ready Stats",
+        "enableCombatReadyStats" : "Show combat-ready stats (includes House, Achievements, Coffee, Auras, etc.)",
+        "combatReadyStatsNote" : "Note: Only Aura abilities are included in calculation. Other abilities are not calculated as they require combat triggers.",
+        "hpOverTime" : "HP Over Time",
+        "mpOverTime" : "MP Over Time",
+        "timeInSeconds" : "Time (seconds)",
+        "waitingForData" : "Waiting for simulation data..."
     }
 }

@@ -32,13 +32,14 @@ const RESTART_INTERVAL = 15 * ONE_SECOND;
 const ENRAGE_TICK_INTERVAL = 60 * ONE_SECOND;
 
 class CombatSimulator extends EventTarget {
-    constructor(players, zone) {
+    constructor(players, zone, options = {}) {
         super();
         this.players = players;
         this.zone = zone;
         this.eventQueue = new EventQueue();
         this.simResult = new SimResult(zone, players.length);
         this.allPlayersDead = false;
+        this.enableHpMpVisualization = options.enableHpMpVisualization || false;
 
         this.wipeLogs = {
             buffer: new Array(200),
@@ -183,11 +184,16 @@ class CombatSimulator extends EventTarget {
             ticks++;
             if (ticks == 1000) {
                 ticks = 0;
+                // 收集HP/MP时序数据
+                if (this.enableHpMpVisualization) {
+                    this.simResult.addTimeSeriesSnapshot(this.simulationTime, this.players);
+                }
                 let progressEvent = new CustomEvent("progress", {
                     detail: {
                         zone: this.zone.hrid,
                         difficultyTier: this.zone.difficultyTier,
-                        progress: Math.min(this.simulationTime / simulationTimeLimit, 1)
+                        progress: Math.min(this.simulationTime / simulationTimeLimit, 1),
+                        timeSeriesData: this.enableHpMpVisualization ? this.simResult.timeSeriesData : null
                     },
                 });
                 this.dispatchEvent(progressEvent);

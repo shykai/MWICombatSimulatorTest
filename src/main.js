@@ -6,6 +6,8 @@ import houseRoomDetailMap from "./combatsimulator/data/houseRoomDetailMap.json";
 import Ability from "./combatsimulator/ability.js";
 import Consumable from "./combatsimulator/consumable.js";
 import HouseRoom from "./combatsimulator/houseRoom"
+import Buff from "./combatsimulator/buff.js";
+import Achievement from "./combatsimulator/achievement.js";
 import combatTriggerDependencyDetailMap from "./combatsimulator/data/combatTriggerDependencyDetailMap.json";
 import combatTriggerConditionDetailMap from "./combatsimulator/data/combatTriggerConditionDetailMap.json";
 import combatTriggerComparatorDetailMap from "./combatsimulator/data/combatTriggerComparatorDetailMap.json";
@@ -74,6 +76,10 @@ function onWorkerMessage(event) {
             let progress = Math.floor(100 * event.data.progress);
             progressbar.style.width = progress + "%";
             progressbar.innerHTML = progress + "% (" + ((Date.now() - simStartTime) / 1000).toFixed(2) + "s)";
+            // 实时更新图表
+            if (event.data.timeSeriesData && document.getElementById('hpMpVisualizationToggle').checked) {
+                updateChartsRealtime(event.data.timeSeriesData);
+            }
             break;
         case "simulation_error":
             showErrorModal(event.data.error.toString());
@@ -161,6 +167,10 @@ function initHouseRoomsModal() {
             let inputValue = e.target.value;
             const hrid = e.target.dataset.houseHrid;
             player.houseRooms[hrid] = parseInt(inputValue);
+            // 如果开启入战属性模式，实时更新
+            if (isCombatReadyMode) {
+                updateCombatStatsUI();
+            }
         });
 
         levelCol.appendChild(levelInput);
@@ -247,6 +257,10 @@ function initAchievementsModal(){
             }
             cardStatics.dataset.checked = cardStatics.dataset.checked == "true" ? "false" : "true";
             refreshAchievementStatics();
+            // 如果开启入战属性模式，实时更新
+            if (isCombatReadyMode) {
+                updateCombatStatsUI();
+            }
         });
         cardHeader.appendChild(cardStatics);
 
@@ -270,6 +284,10 @@ function initAchievementsModal(){
                 player.achievements[hrid] = e.target.checked;
 
                 refreshAchievementStatics();
+                // 如果开启入战属性模式，实时更新
+                if (isCombatReadyMode) {
+                    updateCombatStatsUI();
+                }
             });
             formCheck.appendChild(input);
 
@@ -424,29 +442,281 @@ function changeEquipmentSetListener() {
 
 // #region Combat Stats
 
-function updateCombatStatsUI() {
+// 存储基础属性和入战属性的对比数据
+let baseStats = {};
+let combatReadyStats = {};
+let isCombatReadyMode = false;
+
+// 光环技能列表（按照后放覆盖先放的逻辑）
+const AURA_ABILITIES = [
+    "/abilities/critical_aura",
+    "/abilities/fierce_aura",
+    "/abilities/guardian_aura",
+    "/abilities/mystic_aura",
+    "/abilities/speed_aura"
+];
+
+// 咖啡类饮料列表（用于识别咖啡）
+function isCoffee(hrid) {
+    return hrid && hrid.includes("coffee");
+}
+
+// 计算入战时的所有永久buff
+function calculateCombatReadyBuffs() {
+    let buffs = [];
+    
+    // 1. 房屋buff
+    Object.entries(player.houseRooms).forEach(([hrid, level]) => {
+        if (level > 0) {
+            try {
+                let houseRoom = new HouseRoom(hrid, level);
+                houseRoom.buffs.forEach(buff => {
+                    buffs.push(buff);
+                });
+            } catch (e) {
+                // 跳过无效的房间
+            }
+        }
+    });
+    
+    // 2. 成就buff
+    if (player.achievements && Object.keys(player.achievements).length > 0) {
+        let achievement = new Achievement(player.achievements);
+        achievement.buffs.forEach(buff => {
+            buffs.push(buff);
+        });
+    }
+    
+    // 3. 社区经验buff
+    if (document.getElementById("comExpToggle").checked) {
+        let comExp = Number(document.getElementById("comExpInput").value);
+        if (comExp > 0) {
+            const comExpBuff = {
+                uniqueHrid: "/buff_uniques/experience_community_buff",
+                typeHrid: "/buff_types/wisdom",
+                ratioBoost: 0,
+                ratioBoostLevelBonus: 0,
+                flatBoost: 0.005 * (comExp - 1) + 0.2,
+                flatBoostLevelBonus: 0,
+                duration: 0
+            };
+            buffs.push(new Buff(comExpBuff));
+        }
+    }
+    
+    // 4. 社区掉落buff
+    if (document.getElementById("comDropToggle").checked) {
+        let comDrop = Number(document.getElementById("comDropInput").value);
+        if (comDrop > 0) {
+            const comDropBuff = {
+                uniqueHrid: "/buff_uniques/combat_community_buff",
+                typeHrid: "/buff_types/combat_drop_quantity",
+                ratioBoost: 0,
+                ratioBoostLevelBonus: 0,
+                flatBoost: 0.005 * (comDrop - 1) + 0.2,
+                flatBoostLevelBonus: 0,
+                duration: 0
+            };
+            buffs.push(new Buff(comDropBuff));
+        }
+    }
+    
+    // 5. MooPass buff
+    if (document.getElementById("mooPassToggle").checked) {
+        const mooPassBuff = {
+            uniqueHrid: "/buff_uniques/experience_moo_pass_buff",
+            typeHrid: "/buff_types/wisdom",
+            ratioBoost: 0,
+            ratioBoostLevelBonus: 0,
+            flatBoost: 0.05,
+            flatBoostLevelBonus: 0,
+            duration: 0
+        };
+        buffs.push(new Buff(mooPassBuff));
+    }
+    
+    // 6. 咖啡buff（考虑饮料浓度）
+    let drinkConcentration = player.combatDetails.combatStats.drinkConcentration;
+    for (let i = 0; i < 3; i++) {
+        let drinkSelect = document.getElementById("selectDrink_" + i);
+        if (drinkSelect && drinkSelect.value && isCoffee(drinkSelect.value)) {
+            let drinkHrid = drinkSelect.value;
+            let gameItem = itemDetailMap[drinkHrid];
+            if (gameItem && gameItem.consumableDetail && gameItem.consumableDetail.buffs) {
+                for (const buffData of gameItem.consumableDetail.buffs) {
+                    let buffCopy = structuredClone(buffData);
+                    // 应用饮料浓度加成
+                    if (drinkConcentration > 0) {
+                        buffCopy.ratioBoost = buffCopy.ratioBoost * (1 + drinkConcentration);
+                        buffCopy.flatBoost = buffCopy.flatBoost * (1 + drinkConcentration);
+                    }
+                    buffs.push(new Buff(buffCopy));
+                }
+            }
+        }
+    }
+    
+    // 7. 光环技能buff（按顺序处理，后放覆盖先放）
+    let auraBuffMap = {}; // 用于处理覆盖
+    for (let i = 0; i < 5; i++) {
+        let abilitySelect = document.getElementById("selectAbility_" + i);
+        if (abilitySelect && abilitySelect.value && AURA_ABILITIES.includes(abilitySelect.value)) {
+            let abilityHrid = abilitySelect.value;
+            let abilityLevel = Number(document.getElementById("inputAbilityLevel_" + i).value) || 1;
+            let gameAbility = abilityDetailMap[abilityHrid];
+            if (gameAbility && gameAbility.abilityEffects) {
+                for (const effect of gameAbility.abilityEffects) {
+                    if (effect.buffs) {
+                        for (const buffData of effect.buffs) {
+                            let buff = new Buff(buffData, abilityLevel);
+                            // 使用uniqueHrid作为key，后放覆盖先放
+                            auraBuffMap[buff.uniqueHrid] = buff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 添加光环buff
+    Object.values(auraBuffMap).forEach(buff => {
+        buffs.push(buff);
+    });
+    
+    return buffs;
+}
+
+// 创建一个临时player来计算入战属性
+function calculateCombatReadyPlayer() {
+    // 深拷贝当前player的基础数据
+    let tempPlayer = new Player();
+    tempPlayer.staminaLevel = player.staminaLevel;
+    tempPlayer.intelligenceLevel = player.intelligenceLevel;
+    tempPlayer.attackLevel = player.attackLevel;
+    tempPlayer.meleeLevel = player.meleeLevel;
+    tempPlayer.defenseLevel = player.defenseLevel;
+    tempPlayer.rangedLevel = player.rangedLevel;
+    tempPlayer.magicLevel = player.magicLevel;
+    tempPlayer.equipment = player.equipment;
+    tempPlayer.food = player.food;
+    tempPlayer.drinks = player.drinks;
+    tempPlayer.abilities = player.abilities;
+    tempPlayer.houseRooms = [];
+    tempPlayer.achievements = null;
+    
+    // 计算基础属性
+    tempPlayer.updateCombatDetails();
+    
+    // 收集所有入战buff
+    let combatBuffs = calculateCombatReadyBuffs();
+    
+    // 将buff添加到permanentBuffs
+    combatBuffs.forEach(buff => {
+        if (tempPlayer.permanentBuffs[buff.typeHrid]) {
+            tempPlayer.permanentBuffs[buff.typeHrid].flatBoost += buff.flatBoost;
+            tempPlayer.permanentBuffs[buff.typeHrid].ratioBoost += buff.ratioBoost;
+        } else {
+            tempPlayer.permanentBuffs[buff.typeHrid] = buff;
+        }
+    });
+    
+    // 复制到combatBuffs
+    tempPlayer.combatBuffs = structuredClone(tempPlayer.permanentBuffs);
+    
+    // 重新计算战斗属性
+    tempPlayer.updateCombatDetails();
+    
+    return tempPlayer;
+}
+
+// 保存基础属性快照
+function saveBaseStats() {
     player.updateCombatDetails();
+    baseStats = {
+        combatDetails: structuredClone(player.combatDetails)
+    };
+}
+
+// 保存入战属性快照
+function saveCombatReadyStats() {
+    let combatReadyPlayer = calculateCombatReadyPlayer();
+    combatReadyStats = {
+        combatDetails: structuredClone(combatReadyPlayer.combatDetails)
+    };
+}
+
+// 判断属性是否被增益（用于高亮显示）
+function isStatBoosted(statName, isFloor = false, isCombatStats = false) {
+    if (!isCombatReadyMode) return false;
+    if (!baseStats.combatDetails || !combatReadyStats.combatDetails) return false;
+    
+    let baseValue, combatValue;
+    if (isCombatStats) {
+        baseValue = baseStats.combatDetails.combatStats[statName];
+        combatValue = combatReadyStats.combatDetails.combatStats[statName];
+    } else {
+        baseValue = baseStats.combatDetails[statName];
+        combatValue = combatReadyStats.combatDetails[statName];
+    }
+    
+    if (baseValue === undefined || combatValue === undefined) return false;
+    
+    if (isFloor) {
+        return Math.floor(combatValue) > Math.floor(baseValue);
+    }
+    return combatValue > baseValue + 0.0001; // 浮点数比较容差
+}
+
+// 获取当前应该显示的属性源
+function getCurrentDisplayStats() {
+    return isCombatReadyMode ? combatReadyStats : baseStats;
+}
+
+function updateCombatStatsUI() {
+    // 先保存基础属性
+    saveBaseStats();
+    
+    // 如果开启入战属性模式，计算入战属性
+    if (isCombatReadyMode) {
+        saveCombatReadyStats();
+    }
+    
+    // 获取要显示的属性
+    let displayStats = isCombatReadyMode ? combatReadyStats.combatDetails : player.combatDetails;
+    if (!displayStats) {
+        player.updateCombatDetails();
+        displayStats = player.combatDetails;
+    }
 
     let combatStyleElement = document.getElementById("combatStat_combatStyleHrid");
-    let combatStyle = player.combatDetails.combatStats.combatStyleHrid;
+    let combatStyle = displayStats.combatStats.combatStyleHrid;
     combatStyleElement.setAttribute("data-i18n", "combatStyleNames." + combatStyle);
     combatStyleElement.innerHTML = combatStyleDetailMap[combatStyle].name;
 
     let damageTypeElement = document.getElementById("combatStat_damageType");
-    let damageType = damageTypeDetailMap[player.combatDetails.combatStats.damageType];
+    let damageType = damageTypeDetailMap[displayStats.combatStats.damageType];
     damageTypeElement.setAttribute("data-i18n", "damageTypeNames." + damageType.hrid);
     damageTypeElement.innerHTML = damageType.name;
 
     let attackIntervalElement = document.getElementById("combatStat_attackInterval");
-    attackIntervalElement.innerHTML = (player.combatDetails.combatStats.attackInterval / 1e9).toLocaleString() + "s";
+    let attackIntervalValue = (displayStats.combatStats.attackInterval / 1e9).toLocaleString() + "s";
+    attackIntervalElement.innerHTML = attackIntervalValue;
+    // 攻速变快时也高亮（数值变小）
+    if (isCombatReadyMode && baseStats.combatDetails && 
+        displayStats.combatStats.attackInterval < baseStats.combatDetails.combatStats.attackInterval - 1000) {
+        attackIntervalElement.style.color = "#0d6efd";
+        attackIntervalElement.style.fontWeight = "bold";
+    } else {
+        attackIntervalElement.style.color = "";
+        attackIntervalElement.style.fontWeight = "";
+    }
 
     let primaryTrainingElement = document.getElementById("combatStat_primaryTraining");
-    let primaryTraining = player.combatDetails.combatStats.primaryTraining;
+    let primaryTraining = displayStats.combatStats.primaryTraining;
     primaryTrainingElement.setAttribute("data-i18n", "skillNames." + primaryTraining);
     primaryTrainingElement.innerHTML = primaryTraining;
 
     let focusTrainingElement = document.getElementById("combatStat_focusTraining");
-    let focusTraining = player.combatDetails.combatStats.focusTraining;
+    let focusTraining = displayStats.combatStats.focusTraining;
     if (focusTraining) {
         focusTrainingElement.setAttribute("data-i18n", "skillNames." + focusTraining);
     } else {
@@ -480,7 +750,14 @@ function updateCombatStatsUI() {
         "totalThreat"
     ].forEach((stat) => {
         let element = document.getElementById("combatStat_" + stat);
-        element.innerHTML = Math.floor(player.combatDetails[stat]);
+        element.innerHTML = Math.floor(displayStats[stat]);
+        if (isStatBoosted(stat, true, false)) {
+            element.style.color = "#0d6efd";
+            element.style.fontWeight = "bold";
+        } else {
+            element.style.color = "";
+            element.style.fontWeight = "";
+        }
     });
 
     [
@@ -488,7 +765,14 @@ function updateCombatStatsUI() {
         "tenacity"
     ].forEach((stat) => {
         let element = document.getElementById("combatStat_" + stat);
-        element.innerHTML = Math.floor(player.combatDetails.combatStats[stat]);
+        element.innerHTML = Math.floor(displayStats.combatStats[stat]);
+        if (isStatBoosted(stat, true, true)) {
+            element.style.color = "#0d6efd";
+            element.style.fontWeight = "bold";
+        } else {
+            element.style.color = "";
+            element.style.fontWeight = "";
+        }
     });
 
     [
@@ -536,11 +820,37 @@ function updateCombatStatsUI() {
 
     ].forEach((stat) => {
         let element = document.getElementById("combatStat_" + stat);
-        let value = (100 * player.combatDetails.combatStats[stat]).toLocaleString([], {
+        let value = (100 * displayStats.combatStats[stat]).toLocaleString([], {
             minimumFractionDigits: 0,
             maximumFractionDigits: 4,
         });
         element.innerHTML = value + "%";
+        if (isStatBoosted(stat, false, true)) {
+            element.style.color = "#0d6efd";
+            element.style.fontWeight = "bold";
+        } else {
+            element.style.color = "";
+            element.style.fontWeight = "";
+        }
+    });
+}
+
+// 初始化入战属性开关
+function initCombatReadyStatsToggle() {
+    let toggle = document.getElementById("combatReadyStatsToggle");
+    if (!toggle) return;
+    
+    // 从localStorage读取状态
+    let savedState = localStorage.getItem('combatReadyStatsEnabled');
+    if (savedState === 'true') {
+        toggle.checked = true;
+        isCombatReadyMode = true;
+    }
+    
+    toggle.addEventListener('change', () => {
+        isCombatReadyMode = toggle.checked;
+        localStorage.setItem('combatReadyStatsEnabled', toggle.checked);
+        updateUI();
     });
 }
 
@@ -664,6 +974,10 @@ function initDrinksSection() {
 function drinkSelectHandler() {
     updateDrinksState();
     updateDrinksUI();
+    // 如果开启入战属性模式，实时更新（咖啡会影响入战属性）
+    if (isCombatReadyMode) {
+        updateCombatStatsUI();
+    }
 }
 
 function updateDrinksState() {
@@ -713,12 +1027,25 @@ function initAbilitiesSection() {
         }
 
         selectElement.addEventListener("change", abilitySelectHandler);
+        // 技能等级改变时也需要更新入战属性
+        inputElement.addEventListener("input", abilityLevelInputHandler);
+    }
+}
+
+function abilityLevelInputHandler() {
+    // 如果开启入战属性模式，实时更新（光环技能等级会影响入战属性）
+    if (isCombatReadyMode) {
+        updateCombatStatsUI();
     }
 }
 
 function abilitySelectHandler() {
     updateAbilityState();
     updateAbilityUI();
+    // 如果开启入战属性模式，实时更新（光环技能会影响入战属性）
+    if (isCombatReadyMode) {
+        updateCombatStatsUI();
+    }
 }
 
 function updateAbilityState() {
@@ -1280,12 +1607,336 @@ function showSimulationResult(simResult) {
     window.noRngProfit = window.noRngRevenue - window.expenses;
     document.getElementById('noRngProfitSpan').innerText = window.noRngProfit.toLocaleString();
     document.getElementById('noRngProfitPreview').innerText = window.noRngProfit.toLocaleString();
+    
+    // 显示战斗图表
+    if (document.getElementById('hpMpVisualizationToggle').checked) {
+        renderCombatCharts(simResult);
+    }
 }
 
 function showAllSimulationResults(simResults) {
     let displaySimResults = manipulateSimResultsDataForDisplay(simResults);
     updateAllSimsModal(displaySimResults);
 }
+
+// #region 战斗图表功能
+
+let combatCharts = {
+    hpChart: null,
+    mpChart: null
+};
+
+let lastUpdateTime = 0;
+const UPDATE_INTERVAL = 1000; // 每秒更新一次图表
+
+// 实时更新图表
+function updateChartsRealtime(timeSeriesData) {
+    // 节流：避免过于频繁的更新
+    const now = Date.now();
+    if (now - lastUpdateTime < UPDATE_INTERVAL) {
+        return;
+    }
+    lastUpdateTime = now;
+    
+    if (!timeSeriesData || !timeSeriesData.timestamps || timeSeriesData.timestamps.length === 0) {
+        return;
+    }
+    
+    // 显示图表容器
+    const container = document.getElementById('combatChartsContainer');
+    if (container) {
+        container.classList.remove('d-none');
+    }
+    
+    // 如果图表不存在，先创建
+    if (!combatCharts.hpChart || !combatCharts.mpChart) {
+        initializeRealtimeCharts();
+        // 等待下一次更新周期再更新数据
+        return;
+    }
+    
+    const timeLabels = timeSeriesData.timestamps.map(t => (t / ONE_SECOND).toFixed(1));
+    const playerIds = Object.keys(timeSeriesData.players);
+    
+    // 生成颜色方案
+    const colors = [
+        { border: 'rgb(75, 192, 192)', bg: 'rgba(75, 192, 192, 0.2)' },
+        { border: 'rgb(255, 99, 132)', bg: 'rgba(255, 99, 132, 0.2)' },
+        { border: 'rgb(54, 162, 235)', bg: 'rgba(54, 162, 235, 0.2)' },
+        { border: 'rgb(255, 206, 86)', bg: 'rgba(255, 206, 86, 0.2)' },
+        { border: 'rgb(153, 102, 255)', bg: 'rgba(153, 102, 255, 0.2)' }
+    ];
+    
+    // 重建datasets以确保完整更新
+    const hpDatasets = playerIds.map((playerId, index) => {
+        const playerData = timeSeriesData.players[playerId];
+        return {
+            label: playerId + ' HP',
+            data: playerData.hp,
+            borderColor: colors[index % colors.length].border,
+            backgroundColor: colors[index % colors.length].bg,
+            borderWidth: 2,
+            pointRadius: 0,
+            tension: 0.1
+        };
+    });
+    
+    const mpDatasets = playerIds.map((playerId, index) => {
+        const playerData = timeSeriesData.players[playerId];
+        return {
+            label: playerId + ' MP',
+            data: playerData.mp,
+            borderColor: colors[index % colors.length].border,
+            backgroundColor: colors[index % colors.length].bg,
+            borderWidth: 2,
+            pointRadius: 0,
+            tension: 0.1
+        };
+    });
+    
+    // 更新HP图表
+    combatCharts.hpChart.data.labels = timeLabels;
+    combatCharts.hpChart.data.datasets = hpDatasets;
+    combatCharts.hpChart.options.plugins.legend.display = true;
+    combatCharts.hpChart.options.plugins.title.text = i18next.t('common:Experiment.hpOverTime');
+    combatCharts.hpChart.update('none');
+    
+    // 更新MP图表
+    combatCharts.mpChart.data.labels = timeLabels;
+    combatCharts.mpChart.data.datasets = mpDatasets;
+    combatCharts.mpChart.options.plugins.legend.display = true;
+    combatCharts.mpChart.options.plugins.title.text = i18next.t('common:Experiment.mpOverTime');
+    combatCharts.mpChart.update('none');
+}
+
+function renderCombatCharts(simResult) {
+    // 显示图表容器
+    const container = document.getElementById('combatChartsContainer');
+    if (container) {
+        container.classList.remove('d-none');
+    }
+    
+    if (!simResult.timeSeriesData || !simResult.timeSeriesData.timestamps || simResult.timeSeriesData.timestamps.length === 0) {
+        // 显示空状态
+        showEmptyCharts();
+        return;
+    }
+    
+    const timeLabels = simResult.timeSeriesData.timestamps.map(t => (t / ONE_SECOND).toFixed(1));
+    
+    // 获取所有玩家
+    const playerIds = Object.keys(simResult.timeSeriesData.players);
+    
+    // 生成颜色方案
+    const colors = [
+        { border: 'rgb(75, 192, 192)', bg: 'rgba(75, 192, 192, 0.2)' },
+        { border: 'rgb(255, 99, 132)', bg: 'rgba(255, 99, 132, 0.2)' },
+        { border: 'rgb(54, 162, 235)', bg: 'rgba(54, 162, 235, 0.2)' },
+        { border: 'rgb(255, 206, 86)', bg: 'rgba(255, 206, 86, 0.2)' },
+        { border: 'rgb(153, 102, 255)', bg: 'rgba(153, 102, 255, 0.2)' }
+    ];
+    
+    // HP图表
+    destroyChart('hpChart');
+    const hpDatasets = playerIds.map((playerId, index) => {
+        const playerData = simResult.timeSeriesData.players[playerId];
+        return {
+            label: playerId + ' HP',
+            data: playerData.hp,
+            borderColor: colors[index % colors.length].border,
+            backgroundColor: colors[index % colors.length].bg,
+            borderWidth: 2,
+            pointRadius: 0,
+            tension: 0.1
+        };
+    });
+    
+    combatCharts.hpChart = new Chart(document.getElementById('hpChart'), {
+        type: 'line',
+        data: {
+            labels: timeLabels,
+            datasets: hpDatasets
+        },
+        options: getChartOptions(i18next.t('common:Experiment.hpOverTime'), i18next.t('common:Experiment.timeInSeconds'), 'HP')
+    });
+    
+    // MP图表
+    destroyChart('mpChart');
+    const mpDatasets = playerIds.map((playerId, index) => {
+        const playerData = simResult.timeSeriesData.players[playerId];
+        return {
+            label: playerId + ' MP',
+            data: playerData.mp,
+            borderColor: colors[index % colors.length].border,
+            backgroundColor: colors[index % colors.length].bg,
+            borderWidth: 2,
+            pointRadius: 0,
+            tension: 0.1
+        };
+    });
+    
+    combatCharts.mpChart = new Chart(document.getElementById('mpChart'), {
+        type: 'line',
+        data: {
+            labels: timeLabels,
+            datasets: mpDatasets
+        },
+        options: getChartOptions(i18next.t('common:Experiment.mpOverTime'), i18next.t('common:Experiment.timeInSeconds'), 'MP')
+    });
+}
+
+function destroyChart(chartName) {
+    if (combatCharts[chartName]) {
+        combatCharts[chartName].destroy();
+        combatCharts[chartName] = null;
+    }
+}
+
+function getChartOptions(title, xLabel, yLabel) {
+    return {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+            legend: {
+                display: true,
+                position: 'top',
+                labels: {
+                    color: '#eee',
+                    font: {
+                        size: 11
+                    }
+                }
+            },
+            title: {
+                display: true,
+                text: title,
+                color: '#eee',
+                font: {
+                    size: 14
+                }
+            }
+        },
+        scales: {
+            x: {
+                display: true,
+                title: {
+                    display: true,
+                    text: xLabel,
+                    color: '#eee'
+                },
+                ticks: {
+                    color: '#ccc',
+                    maxTicksLimit: 10
+                },
+                grid: {
+                    color: 'rgba(255, 255, 255, 0.1)'
+                }
+            },
+            y: {
+                display: true,
+                title: {
+                    display: true,
+                    text: yLabel,
+                    color: '#eee'
+                },
+                ticks: {
+                    color: '#ccc'
+                },
+                grid: {
+                    color: 'rgba(255, 255, 255, 0.1)'
+                }
+            }
+        },
+        interaction: {
+            intersect: false,
+            mode: 'index'
+        }
+    };
+}
+
+// 初始化实时图表（用于模拟过程中更新）
+function initializeRealtimeCharts() {
+    // 销毁现有图表
+    destroyChart('hpChart');
+    destroyChart('mpChart');
+    
+    const hpCanvas = document.getElementById('hpChart');
+    const mpCanvas = document.getElementById('mpChart');
+    
+    if (!hpCanvas || !mpCanvas) {
+        console.warn('图表canvas元素未找到');
+        return;
+    }
+    
+    // 显示等待状态
+    const emptyOptions = {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: i18next.t('common:Experiment.waitingForData'),
+                color: '#888',
+                font: { size: 14 }
+            }
+        },
+        scales: {
+            x: {
+                display: true,
+                ticks: { color: '#555' },
+                grid: { color: 'rgba(255, 255, 255, 0.05)' }
+            },
+            y: {
+                display: true,
+                ticks: { color: '#555' },
+                grid: { color: 'rgba(255, 255, 255, 0.05)' }
+            }
+        }
+    };
+    
+    try {
+        combatCharts.hpChart = new Chart(hpCanvas, {
+            type: 'line',
+            data: { labels: [], datasets: [] },
+            options: emptyOptions
+        });
+        
+        combatCharts.mpChart = new Chart(mpCanvas, {
+            type: 'line',
+            data: { labels: [], datasets: [] },
+            options: emptyOptions
+        });
+    } catch (e) {
+        console.error('创建图表时出错:', e);
+    }
+}
+
+// 显示空图表状态
+function showEmptyCharts() {
+    initializeRealtimeCharts();
+}
+
+// 初始化HP/MP可视化开关事件
+function initHpMpVisualization() {
+    const toggle = document.getElementById('hpMpVisualizationToggle');
+    const container = document.getElementById('combatChartsContainer');
+    
+    if (toggle && container) {
+        toggle.addEventListener('change', function() {
+            if (this.checked) {
+                container.classList.remove('d-none');
+                showEmptyCharts();
+            } else {
+                container.classList.add('d-none');
+                destroyChart('hpChart');
+                destroyChart('mpChart');
+            }
+        });
+    }
+}
+
+// #endregion
 
 function manipulateSimResultsDataForDisplay(simResults) {
     let displaySimResults = [];
@@ -2592,6 +3243,7 @@ function startSimulation(selectedPlayers) {
     if (document.getElementById("comDropToggle").checked) {
         extra.comDrop = Number(document.getElementById("comDropInput").value);
     }
+    extra.enableHpMpVisualization = document.getElementById("hpMpVisualizationToggle").checked;
 
     let simAllZonesToggle = document.getElementById("simAllZoneToggle");
     let simAllSoloToggle = document.getElementById("simAllSoloToggle");
@@ -4134,6 +4786,10 @@ function initExtraBuffSection() {
     }
     mooPassToggle.onchange = () => {
         localStorage.setItem('mooPass', mooPassToggle.checked);
+        // 如果开启入战属性模式，实时更新
+        if (isCombatReadyMode) {
+            updateCombatStatsUI();
+        }
     }
     
     // comExp
@@ -4158,6 +4814,10 @@ function initExtraBuffSection() {
         } else {
             localStorage.setItem('comExp', 0);
             comExpInput.disabled = true;
+        }
+        // 如果开启入战属性模式，实时更新
+        if (isCombatReadyMode) {
+            updateCombatStatsUI();
         }
     }
     comExpToggle.onchange = updateComExp;
@@ -4185,6 +4845,10 @@ function initExtraBuffSection() {
         } else {
             localStorage.setItem('comDrop', 0);
             comDropInput.disabled = true;
+        }
+        // 如果开启入战属性模式，实时更新
+        if (isCombatReadyMode) {
+            updateCombatStatsUI();
         }
     }
     comDropToggle.onchange = updateComDrop;
@@ -4270,6 +4934,8 @@ initImportExportModal();
 initDamageDoneTaken();
 initPatchNotes();
 initExtraBuffSection();
+initHpMpVisualization();
+initCombatReadyStatsToggle();
 
 updateState();
 updateUI();

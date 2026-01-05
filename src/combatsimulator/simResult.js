@@ -36,6 +36,12 @@ class SimResult {
         this.minDungenonTime = 0;
 
         this.wipeEvents = [];
+        
+        // 时间序列数据用于图表显示
+        this.timeSeriesData = {
+            timestamps: [],
+            players: {}
+        };
     }
 
     addWipeEvent(logs, simulationTime, wave) {
@@ -255,6 +261,28 @@ class SimResult {
                 this.playerRanOutOfManaTime[unit.hrid].totalTimeForOutOfMana += time - this.playerRanOutOfManaTime[unit.hrid].startTimeForOutOfMana;
             }
         }
+    }
+
+    // 添加时间序列数据点
+    addTimeSeriesSnapshot(time, players) {
+        this.timeSeriesData.timestamps.push(time);
+        
+        players.forEach(player => {
+            if (!this.timeSeriesData.players[player.hrid]) {
+                this.timeSeriesData.players[player.hrid] = {
+                    hp: [],
+                    mp: [],
+                    maxHp: [],
+                    maxMp: []
+                };
+            }
+            
+            const playerData = this.timeSeriesData.players[player.hrid];
+            playerData.hp.push(player.combatDetails.currentHitpoints);
+            playerData.mp.push(player.combatDetails.currentManapoints);
+            playerData.maxHp.push(player.combatDetails.maxHitpoints);
+            playerData.maxMp.push(player.combatDetails.maxManapoints);
+        });
     }
 }
 

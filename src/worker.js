@@ -57,9 +57,16 @@ onmessage = async function (event) {
                 players.push(currentPlayer);
             }
             let simulationTimeLimit = event.data.simulationTimeLimit;
-            let combatSimulator = new CombatSimulator(players, zone);
+            let enableHpMpVisualization = event.data.extra.enableHpMpVisualization || false;
+            let combatSimulator = new CombatSimulator(players, zone, { enableHpMpVisualization });
             combatSimulator.addEventListener("progress", (event) => {
-                this.postMessage({ type: "simulation_progress", progress: event.detail.progress, zone: event.detail.zone, difficultyTier: event.detail.difficultyTier });
+                this.postMessage({ 
+                    type: "simulation_progress", 
+                    progress: event.detail.progress, 
+                    zone: event.detail.zone, 
+                    difficultyTier: event.detail.difficultyTier,
+                    timeSeriesData: event.detail.timeSeriesData
+                });
             });
 
             try {

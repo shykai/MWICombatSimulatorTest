@@ -107,7 +107,15 @@
         "uploadAndRun" : "上传并运行",
         "download" : "下载结果",
         "dungeonStartWave" : "地下城模拟起始波次",
-        "wave" : "波次"
-
+        "wave" : "波次",
+        "hpMpVisualization" : "HP/MP 可视化图表",
+        "enableHpMpVisualization" : "启用 HP/MP 变化折线图",
+        "combatReadyStats" : "显示入战属性",
+        "enableCombatReadyStats" : "启用入战属性显示（包含房屋、成就、咖啡、光环等增益）",
+        "combatReadyStatsNote" : "注：仅光环类技能会计入入战属性，其他技能因需要战斗触发条件故不计算。",
+        "hpOverTime" : "HP 随时间变化",
+        "mpOverTime" : "MP 随时间变化",
+        "timeInSeconds" : "时间 (秒)",
+        "waitingForData" : "等待模拟数据..."
     }
 }
