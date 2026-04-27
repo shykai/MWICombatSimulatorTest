@@ -412,7 +412,7 @@
     "/items/advanced_attack_charm": {
         "hrid": "/items/advanced_attack_charm",
         "name": "Advanced Attack Charm",
-        "description": "",
+        "description": "Focuses combat experience to Attack instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 1000000,
         "isTradable": true,
@@ -997,7 +997,7 @@
     "/items/advanced_defense_charm": {
         "hrid": "/items/advanced_defense_charm",
         "name": "Advanced Defense Charm",
-        "description": "",
+        "description": "Focuses combat experience to Defense instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 1000000,
         "isTradable": true,
@@ -1338,7 +1338,7 @@
     "/items/advanced_intelligence_charm": {
         "hrid": "/items/advanced_intelligence_charm",
         "name": "Advanced Intelligence Charm",
-        "description": "",
+        "description": "Focuses combat experience to Intelligence instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 1000000,
         "isTradable": true,
@@ -1435,7 +1435,7 @@
     "/items/advanced_magic_charm": {
         "hrid": "/items/advanced_magic_charm",
         "name": "Advanced Magic Charm",
-        "description": "",
+        "description": "Focuses combat experience to Magic instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 1000000,
         "isTradable": true,
@@ -1532,7 +1532,7 @@
     "/items/advanced_melee_charm": {
         "hrid": "/items/advanced_melee_charm",
         "name": "Advanced Melee Charm",
-        "description": "",
+        "description": "Focuses combat experience to Melee instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 1000000,
         "isTradable": true,
@@ -1743,7 +1743,7 @@
     "/items/advanced_ranged_charm": {
         "hrid": "/items/advanced_ranged_charm",
         "name": "Advanced Ranged Charm",
-        "description": "",
+        "description": "Focuses combat experience to Ranged instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 1000000,
         "isTradable": true,
@@ -1856,7 +1856,7 @@
     "/items/advanced_stamina_charm": {
         "hrid": "/items/advanced_stamina_charm",
         "name": "Advanced Stamina Charm",
-        "description": "",
+        "description": "Focuses combat experience to Stamina instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 1000000,
         "isTradable": true,
@@ -2816,6 +2816,7 @@
                 "slashAccuracy": 0.18,
                 "smashAccuracy": 0.18,
                 "magicAccuracy": -0.3,
+                "defensiveDamage": 0.06,
                 "maxHitpoints": 250,
                 "stabEvasion": 0.6,
                 "slashEvasion": 0.6,
@@ -2835,6 +2836,7 @@
                 "stabAccuracy": 0.0036,
                 "slashAccuracy": 0.0036,
                 "smashAccuracy": 0.0036,
+                "defensiveDamage": 0.0012,
                 "maxHitpoints": 5,
                 "stabEvasion": 0.012,
                 "slashEvasion": 0.012,
@@ -2931,6 +2933,7 @@
                 "slashAccuracy": 0.1944,
                 "smashAccuracy": 0.1944,
                 "magicAccuracy": -0.3,
+                "defensiveDamage": 0.0648,
                 "maxHitpoints": 270,
                 "stabEvasion": 0.648,
                 "slashEvasion": 0.648,
@@ -2950,6 +2953,7 @@
                 "stabAccuracy": 0.003888,
                 "slashAccuracy": 0.003888,
                 "smashAccuracy": 0.003888,
+                "defensiveDamage": 0.001296,
                 "maxHitpoints": 5.4,
                 "stabEvasion": 0.012960000000000001,
                 "slashEvasion": 0.012960000000000001,
@@ -3043,6 +3047,7 @@
                 "slashAccuracy": 0.15,
                 "smashAccuracy": 0.15,
                 "magicAccuracy": -0.24,
+                "defensiveDamage": 0.05,
                 "maxHitpoints": 200,
                 "stabEvasion": 0.5,
                 "slashEvasion": 0.5,
@@ -3062,6 +3067,7 @@
                 "stabAccuracy": 0.003,
                 "slashAccuracy": 0.003,
                 "smashAccuracy": 0.003,
+                "defensiveDamage": 0.001,
                 "maxHitpoints": 4,
                 "stabEvasion": 0.01,
                 "slashEvasion": 0.01,
@@ -3158,6 +3164,7 @@
                 "slashAccuracy": 0.162,
                 "smashAccuracy": 0.162,
                 "magicAccuracy": -0.24,
+                "defensiveDamage": 0.054,
                 "maxHitpoints": 216,
                 "stabEvasion": 0.54,
                 "slashEvasion": 0.54,
@@ -3177,6 +3184,7 @@
                 "stabAccuracy": 0.0032400000000000003,
                 "slashAccuracy": 0.0032400000000000003,
                 "smashAccuracy": 0.0032400000000000003,
+                "defensiveDamage": 0.00108,
                 "maxHitpoints": 4.32,
                 "stabEvasion": 0.0108,
                 "slashEvasion": 0.0108,
@@ -6459,7 +6467,7 @@
     "/items/basic_attack_charm": {
         "hrid": "/items/basic_attack_charm",
         "name": "Basic Attack Charm",
-        "description": "",
+        "description": "Focuses combat experience to Attack instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 200000,
         "isTradable": true,
@@ -7019,7 +7027,7 @@
     "/items/basic_defense_charm": {
         "hrid": "/items/basic_defense_charm",
         "name": "Basic Defense Charm",
-        "description": "",
+        "description": "Focuses combat experience to Defense instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 200000,
         "isTradable": true,
@@ -7343,7 +7351,7 @@
     "/items/basic_intelligence_charm": {
         "hrid": "/items/basic_intelligence_charm",
         "name": "Basic Intelligence Charm",
-        "description": "",
+        "description": "Focuses combat experience to Intelligence instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 200000,
         "isTradable": true,
@@ -7431,7 +7439,7 @@
     "/items/basic_magic_charm": {
         "hrid": "/items/basic_magic_charm",
         "name": "Basic Magic Charm",
-        "description": "",
+        "description": "Focuses combat experience to Magic instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 200000,
         "isTradable": true,
@@ -7519,7 +7527,7 @@
     "/items/basic_melee_charm": {
         "hrid": "/items/basic_melee_charm",
         "name": "Basic Melee Charm",
-        "description": "",
+        "description": "Focuses combat experience to Melee instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 200000,
         "isTradable": true,
@@ -7717,7 +7725,7 @@
     "/items/basic_ranged_charm": {
         "hrid": "/items/basic_ranged_charm",
         "name": "Basic Ranged Charm",
-        "description": "",
+        "description": "Focuses combat experience to Ranged instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 200000,
         "isTradable": true,
@@ -7821,7 +7829,7 @@
     "/items/basic_stamina_charm": {
         "hrid": "/items/basic_stamina_charm",
         "name": "Basic Stamina Charm",
-        "description": "",
+        "description": "Focuses combat experience to Stamina instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 200000,
         "isTradable": true,
@@ -8298,7 +8306,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 8e-05,
+                "criticalRate": 0.00008,
                 "rangedAccuracy": 0.0032,
                 "stabEvasion": 0.004,
                 "slashEvasion": 0.004,
@@ -8370,7 +8378,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 8e-05,
+                "criticalRate": 0.00008,
                 "rangedAccuracy": 0.0032,
                 "stabEvasion": 0.004,
                 "slashEvasion": 0.004,
@@ -8579,7 +8587,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 8e-05,
+                "criticalRate": 0.00008,
                 "rangedAccuracy": 0.0048,
                 "stabEvasion": 0.005600000000000001,
                 "slashEvasion": 0.005600000000000001,
@@ -14396,7 +14404,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 8e-05,
+                "criticalRate": 0.00008,
                 "rangedAccuracy": 0.0042,
                 "rangedDamage": 0.002,
                 "stabEvasion": 0.004,
@@ -18244,7 +18252,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "abilityDamage": 8e-05,
+                "abilityDamage": 0.00008,
                 "magicAccuracy": 0.0002,
                 "magicDamage": 0.0004,
                 "stabEvasion": 0.0008,
@@ -18372,7 +18380,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "abilityDamage": 8e-05,
+                "abilityDamage": 0.00008,
                 "magicAccuracy": 0.0002,
                 "magicDamage": 0.0004,
                 "stabEvasion": 0.0008,
@@ -18441,7 +18449,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "abilityDamage": 8e-05,
+                "abilityDamage": 0.00008,
                 "magicAccuracy": 0.0004,
                 "magicDamage": 0.0006,
                 "stabEvasion": 0.001,
@@ -24434,7 +24442,7 @@
     "/items/expert_attack_charm": {
         "hrid": "/items/expert_attack_charm",
         "name": "Expert Attack Charm",
-        "description": "",
+        "description": "Focuses combat experience to Attack instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 3000000,
         "isTradable": true,
@@ -25019,7 +25027,7 @@
     "/items/expert_defense_charm": {
         "hrid": "/items/expert_defense_charm",
         "name": "Expert Defense Charm",
-        "description": "",
+        "description": "Focuses combat experience to Defense instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 3000000,
         "isTradable": true,
@@ -25360,7 +25368,7 @@
     "/items/expert_intelligence_charm": {
         "hrid": "/items/expert_intelligence_charm",
         "name": "Expert Intelligence Charm",
-        "description": "",
+        "description": "Focuses combat experience to Intelligence instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 3000000,
         "isTradable": true,
@@ -25457,7 +25465,7 @@
     "/items/expert_magic_charm": {
         "hrid": "/items/expert_magic_charm",
         "name": "Expert Magic Charm",
-        "description": "",
+        "description": "Focuses combat experience to Magic instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 3000000,
         "isTradable": true,
@@ -25554,7 +25562,7 @@
     "/items/expert_melee_charm": {
         "hrid": "/items/expert_melee_charm",
         "name": "Expert Melee Charm",
-        "description": "",
+        "description": "Focuses combat experience to Melee instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 3000000,
         "isTradable": true,
@@ -25765,7 +25773,7 @@
     "/items/expert_ranged_charm": {
         "hrid": "/items/expert_ranged_charm",
         "name": "Expert Ranged Charm",
-        "description": "",
+        "description": "Focuses combat experience to Ranged instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 3000000,
         "isTradable": true,
@@ -25878,7 +25886,7 @@
     "/items/expert_stamina_charm": {
         "hrid": "/items/expert_stamina_charm",
         "name": "Expert Stamina Charm",
-        "description": "",
+        "description": "Focuses combat experience to Stamina instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 3000000,
         "isTradable": true,
@@ -26657,7 +26665,8 @@
                 "smashAccuracy": 0.04,
                 "stabDamage": 0.04,
                 "slashDamage": 0.04,
-                "smashDamage": 0.04
+                "smashDamage": 0.04,
+                "defensiveDamage": 0.04
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
@@ -26666,7 +26675,8 @@
                 "smashAccuracy": 0.004,
                 "stabDamage": 0.004,
                 "slashDamage": 0.004,
-                "smashDamage": 0.004
+                "smashDamage": 0.004,
+                "defensiveDamage": 0.004
             },
             "noncombatEnhancementBonuses": {}
         },
@@ -29587,7 +29597,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 6e-05,
+                "criticalRate": 0.00006,
                 "rangedAccuracy": 0.0024,
                 "stabEvasion": 0.003,
                 "slashEvasion": 0.003,
@@ -29659,7 +29669,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 6e-05,
+                "criticalRate": 0.00006,
                 "rangedAccuracy": 0.0024,
                 "stabEvasion": 0.003,
                 "slashEvasion": 0.003,
@@ -29971,7 +29981,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 6e-05,
+                "criticalRate": 0.00006,
                 "rangedAccuracy": 0.0036,
                 "stabEvasion": 0.0042,
                 "slashEvasion": 0.0042,
@@ -30642,7 +30652,7 @@
     "/items/grandmaster_attack_charm": {
         "hrid": "/items/grandmaster_attack_charm",
         "name": "Grandmaster Attack Charm",
-        "description": "",
+        "description": "Focuses combat experience to Attack instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 10000000,
         "isTradable": true,
@@ -31195,7 +31205,7 @@
     "/items/grandmaster_defense_charm": {
         "hrid": "/items/grandmaster_defense_charm",
         "name": "Grandmaster Defense Charm",
-        "description": "",
+        "description": "Focuses combat experience to Defense instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 10000000,
         "isTradable": true,
@@ -31520,7 +31530,7 @@
     "/items/grandmaster_intelligence_charm": {
         "hrid": "/items/grandmaster_intelligence_charm",
         "name": "Grandmaster Intelligence Charm",
-        "description": "",
+        "description": "Focuses combat experience to Intelligence instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 10000000,
         "isTradable": true,
@@ -31617,7 +31627,7 @@
     "/items/grandmaster_magic_charm": {
         "hrid": "/items/grandmaster_magic_charm",
         "name": "Grandmaster Magic Charm",
-        "description": "",
+        "description": "Focuses combat experience to Magic instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 10000000,
         "isTradable": true,
@@ -31714,7 +31724,7 @@
     "/items/grandmaster_melee_charm": {
         "hrid": "/items/grandmaster_melee_charm",
         "name": "Grandmaster Melee Charm",
-        "description": "",
+        "description": "Focuses combat experience to Melee instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 10000000,
         "isTradable": true,
@@ -31925,7 +31935,7 @@
     "/items/grandmaster_ranged_charm": {
         "hrid": "/items/grandmaster_ranged_charm",
         "name": "Grandmaster Ranged Charm",
-        "description": "",
+        "description": "Focuses combat experience to Ranged instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 10000000,
         "isTradable": true,
@@ -32022,7 +32032,7 @@
     "/items/grandmaster_stamina_charm": {
         "hrid": "/items/grandmaster_stamina_charm",
         "name": "Grandmaster Stamina Charm",
-        "description": "",
+        "description": "Focuses combat experience to Stamina instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 10000000,
         "isTradable": true,
@@ -36975,8 +36985,9 @@
         "categoryHrid": "/item_categories/resource",
         "sellPrice": 300,
         "isTradable": true,
+        "itemLevel": 95,
         "alchemyDetail": {
-            "bulkMultiplier": 1,
+            "bulkMultiplier": 5,
             "isCoinifiable": true,
             "decomposeItems": null,
             "transmuteSuccessRate": 0,
@@ -40446,7 +40457,7 @@
     "/items/master_attack_charm": {
         "hrid": "/items/master_attack_charm",
         "name": "Master Attack Charm",
-        "description": "",
+        "description": "Focuses combat experience to Attack instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 6000000,
         "isTradable": true,
@@ -40999,7 +41010,7 @@
     "/items/master_defense_charm": {
         "hrid": "/items/master_defense_charm",
         "name": "Master Defense Charm",
-        "description": "",
+        "description": "Focuses combat experience to Defense instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 6000000,
         "isTradable": true,
@@ -41324,7 +41335,7 @@
     "/items/master_intelligence_charm": {
         "hrid": "/items/master_intelligence_charm",
         "name": "Master Intelligence Charm",
-        "description": "",
+        "description": "Focuses combat experience to Intelligence instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 6000000,
         "isTradable": true,
@@ -41421,7 +41432,7 @@
     "/items/master_magic_charm": {
         "hrid": "/items/master_magic_charm",
         "name": "Master Magic Charm",
-        "description": "",
+        "description": "Focuses combat experience to Magic instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 6000000,
         "isTradable": true,
@@ -41518,7 +41529,7 @@
     "/items/master_melee_charm": {
         "hrid": "/items/master_melee_charm",
         "name": "Master Melee Charm",
-        "description": "",
+        "description": "Focuses combat experience to Melee instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 6000000,
         "isTradable": true,
@@ -41729,7 +41740,7 @@
     "/items/master_ranged_charm": {
         "hrid": "/items/master_ranged_charm",
         "name": "Master Ranged Charm",
-        "description": "",
+        "description": "Focuses combat experience to Ranged instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 6000000,
         "isTradable": true,
@@ -41826,7 +41837,7 @@
     "/items/master_stamina_charm": {
         "hrid": "/items/master_stamina_charm",
         "name": "Master Stamina Charm",
-        "description": "",
+        "description": "Focuses combat experience to Stamina instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 6000000,
         "isTradable": true,
@@ -45192,6 +45203,7 @@
                 "smashDamage": 0.04,
                 "rangedDamage": 0.04,
                 "magicDamage": 0.04,
+                "defensiveDamage": 0.04,
                 "combatExperience": 0.03
             },
             "noncombatStats": {
@@ -45212,6 +45224,7 @@
                 "smashDamage": 0.004,
                 "rangedDamage": 0.004,
                 "magicDamage": 0.004,
+                "defensiveDamage": 0.004,
                 "combatExperience": 0.003
             },
             "noncombatEnhancementBonuses": {
@@ -50289,7 +50302,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 4e-05,
+                "criticalRate": 0.00004,
                 "rangedAccuracy": 0.0016,
                 "stabEvasion": 0.002,
                 "slashEvasion": 0.002,
@@ -50361,7 +50374,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 4e-05,
+                "criticalRate": 0.00004,
                 "rangedAccuracy": 0.0016,
                 "stabEvasion": 0.002,
                 "slashEvasion": 0.002,
@@ -50433,7 +50446,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 8e-05,
+                "criticalRate": 0.00008,
                 "rangedAccuracy": 0.0032,
                 "stabEvasion": 0.004,
                 "slashEvasion": 0.004,
@@ -50570,7 +50583,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 4e-05,
+                "criticalRate": 0.00004,
                 "rangedAccuracy": 0.0024,
                 "stabEvasion": 0.0028000000000000004,
                 "slashEvasion": 0.0028000000000000004,
@@ -50707,7 +50720,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 8e-05,
+                "criticalRate": 0.00008,
                 "rangedAccuracy": 0.004,
                 "stabEvasion": 0.0048,
                 "slashEvasion": 0.0048,
@@ -51836,7 +51849,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 2e-05,
+                "criticalRate": 0.00002,
                 "rangedAccuracy": 0.0008,
                 "stabEvasion": 0.001,
                 "slashEvasion": 0.001,
@@ -51904,7 +51917,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 2e-05,
+                "criticalRate": 0.00002,
                 "rangedAccuracy": 0.0008,
                 "stabEvasion": 0.001,
                 "slashEvasion": 0.001,
@@ -51972,7 +51985,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 4e-05,
+                "criticalRate": 0.00004,
                 "rangedAccuracy": 0.0016,
                 "stabEvasion": 0.002,
                 "slashEvasion": 0.002,
@@ -52099,7 +52112,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 2e-05,
+                "criticalRate": 0.00002,
                 "rangedAccuracy": 0.0012,
                 "stabEvasion": 0.0014000000000000002,
                 "slashEvasion": 0.0014000000000000002,
@@ -52226,7 +52239,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 4e-05,
+                "criticalRate": 0.00004,
                 "rangedAccuracy": 0.002,
                 "stabEvasion": 0.0024,
                 "slashEvasion": 0.0024,
@@ -53664,9 +53677,9 @@
     },
     "/items/seal_of_action_speed": {
         "hrid": "/items/seal_of_action_speed",
-        "name": "Seal Of Action Speed",
-        "description": "Received from the Labyrinth. Grants 30 minutes of +15% Action Speed when opened.",
-        "categoryHrid": "/item_categories/loot",
+        "name": "Scroll Of Action Speed",
+        "description": "Received from the Labyrinth. Grants 30 minutes of buff when opened. (Only effective outside of Labyrinth)",
+        "categoryHrid": "/item_categories/scroll",
         "sellPrice": 0,
         "isOpenable": true,
         "alchemyDetail": {
@@ -53718,14 +53731,17 @@
                     "maxCount": 1
                 }
             ]
+        },
+        "scrollDetail": {
+            "personalBuffTypeHrid": "/personal_buff_types/action_speed"
         },
         "sortIndex": 35
     },
     "/items/seal_of_attack_speed": {
         "hrid": "/items/seal_of_attack_speed",
-        "name": "Seal Of Attack Speed",
-        "description": "Received from the Labyrinth. Grants 30 minutes of +15% Attack Speed when opened.",
-        "categoryHrid": "/item_categories/loot",
+        "name": "Scroll Of Attack Speed",
+        "description": "Received from the Labyrinth. Grants 30 minutes of buff when opened. (Only effective outside of Labyrinth)",
+        "categoryHrid": "/item_categories/scroll",
         "sellPrice": 0,
         "isOpenable": true,
         "alchemyDetail": {
@@ -53777,14 +53793,17 @@
                     "maxCount": 1
                 }
             ]
+        },
+        "scrollDetail": {
+            "personalBuffTypeHrid": "/personal_buff_types/attack_speed"
         },
         "sortIndex": 37
     },
     "/items/seal_of_cast_speed": {
         "hrid": "/items/seal_of_cast_speed",
-        "name": "Seal Of Cast Speed",
-        "description": "Received from the Labyrinth. Grants 30 minutes of +15% Cast Speed when opened.",
-        "categoryHrid": "/item_categories/loot",
+        "name": "Scroll Of Cast Speed",
+        "description": "Received from the Labyrinth. Grants 30 minutes of buff when opened. (Only effective outside of Labyrinth)",
+        "categoryHrid": "/item_categories/scroll",
         "sellPrice": 0,
         "isOpenable": true,
         "alchemyDetail": {
@@ -53836,14 +53855,17 @@
                     "maxCount": 1
                 }
             ]
+        },
+        "scrollDetail": {
+            "personalBuffTypeHrid": "/personal_buff_types/cast_speed"
         },
         "sortIndex": 38
     },
     "/items/seal_of_combat_drop": {
         "hrid": "/items/seal_of_combat_drop",
-        "name": "Seal Of Combat Drop",
-        "description": "Received from the Labyrinth. Grants 30 minutes of +15% Combat Drop Quantity when opened.",
-        "categoryHrid": "/item_categories/loot",
+        "name": "Scroll Of Combat Drop",
+        "description": "Received from the Labyrinth. Grants 30 minutes of buff when opened. (Only effective outside of Labyrinth)",
+        "categoryHrid": "/item_categories/scroll",
         "sellPrice": 0,
         "isOpenable": true,
         "alchemyDetail": {
@@ -53895,14 +53917,17 @@
                     "maxCount": 1
                 }
             ]
+        },
+        "scrollDetail": {
+            "personalBuffTypeHrid": "/personal_buff_types/combat_drop"
         },
         "sortIndex": 36
     },
     "/items/seal_of_critical_rate": {
         "hrid": "/items/seal_of_critical_rate",
-        "name": "Seal Of Critical Rate",
-        "description": "Received from the Labyrinth. Grants 30 minutes of +10% Critical Rate when opened.",
-        "categoryHrid": "/item_categories/loot",
+        "name": "Scroll Of Critical Rate",
+        "description": "Received from the Labyrinth. Grants 30 minutes of buff when opened. (Only effective outside of Labyrinth)",
+        "categoryHrid": "/item_categories/scroll",
         "sellPrice": 0,
         "isOpenable": true,
         "alchemyDetail": {
@@ -53954,14 +53979,17 @@
                     "maxCount": 1
                 }
             ]
+        },
+        "scrollDetail": {
+            "personalBuffTypeHrid": "/personal_buff_types/critical_rate"
         },
         "sortIndex": 40
     },
     "/items/seal_of_damage": {
         "hrid": "/items/seal_of_damage",
-        "name": "Seal Of Damage",
-        "description": "Received from the Labyrinth. Grants 30 minutes of +8% Damage when opened.",
-        "categoryHrid": "/item_categories/loot",
+        "name": "Scroll Of Damage",
+        "description": "Received from the Labyrinth. Grants 30 minutes of buff when opened. (Only effective outside of Labyrinth)",
+        "categoryHrid": "/item_categories/scroll",
         "sellPrice": 0,
         "isOpenable": true,
         "alchemyDetail": {
@@ -54013,14 +54041,17 @@
                     "maxCount": 1
                 }
             ]
+        },
+        "scrollDetail": {
+            "personalBuffTypeHrid": "/personal_buff_types/damage"
         },
         "sortIndex": 39
     },
     "/items/seal_of_efficiency": {
         "hrid": "/items/seal_of_efficiency",
-        "name": "Seal Of Efficiency",
-        "description": "Received from the Labyrinth. Grants 30 minutes of +14% Efficiency when opened.",
-        "categoryHrid": "/item_categories/loot",
+        "name": "Scroll Of Efficiency",
+        "description": "Received from the Labyrinth. Grants 30 minutes of buff when opened. (Only effective outside of Labyrinth)",
+        "categoryHrid": "/item_categories/scroll",
         "sellPrice": 0,
         "isOpenable": true,
         "alchemyDetail": {
@@ -54072,14 +54103,17 @@
                     "maxCount": 1
                 }
             ]
+        },
+        "scrollDetail": {
+            "personalBuffTypeHrid": "/personal_buff_types/efficiency"
         },
         "sortIndex": 34
     },
     "/items/seal_of_gathering": {
         "hrid": "/items/seal_of_gathering",
-        "name": "Seal Of Gathering",
-        "description": "Received from the Labyrinth. Grants 30 minutes of +18% Gathering when opened.",
-        "categoryHrid": "/item_categories/loot",
+        "name": "Scroll Of Gathering",
+        "description": "Received from the Labyrinth. Grants 30 minutes of buff when opened. (Only effective outside of Labyrinth)",
+        "categoryHrid": "/item_categories/scroll",
         "sellPrice": 0,
         "isOpenable": true,
         "alchemyDetail": {
@@ -54131,14 +54165,17 @@
                     "maxCount": 1
                 }
             ]
+        },
+        "scrollDetail": {
+            "personalBuffTypeHrid": "/personal_buff_types/gathering"
         },
         "sortIndex": 31
     },
     "/items/seal_of_gourmet": {
         "hrid": "/items/seal_of_gourmet",
-        "name": "Seal Of Gourmet",
-        "description": "Received from the Labyrinth. Grants 30 minutes of +16% Gourmet when opened.",
-        "categoryHrid": "/item_categories/loot",
+        "name": "Scroll Of Gourmet",
+        "description": "Received from the Labyrinth. Grants 30 minutes of buff when opened. (Only effective outside of Labyrinth)",
+        "categoryHrid": "/item_categories/scroll",
         "sellPrice": 0,
         "isOpenable": true,
         "alchemyDetail": {
@@ -54190,14 +54227,17 @@
                     "maxCount": 1
                 }
             ]
+        },
+        "scrollDetail": {
+            "personalBuffTypeHrid": "/personal_buff_types/gourmet"
         },
         "sortIndex": 32
     },
     "/items/seal_of_processing": {
         "hrid": "/items/seal_of_processing",
-        "name": "Seal Of Processing",
-        "description": "Received from the Labyrinth. Grants 30 minutes of +20% Processing when opened.",
-        "categoryHrid": "/item_categories/loot",
+        "name": "Scroll Of Processing",
+        "description": "Received from the Labyrinth. Grants 30 minutes of buff when opened. (Only effective outside of Labyrinth)",
+        "categoryHrid": "/item_categories/scroll",
         "sellPrice": 0,
         "isOpenable": true,
         "alchemyDetail": {
@@ -54250,13 +54290,16 @@
                 }
             ]
         },
+        "scrollDetail": {
+            "personalBuffTypeHrid": "/personal_buff_types/processing"
+        },
         "sortIndex": 33
     },
     "/items/seal_of_rare_find": {
         "hrid": "/items/seal_of_rare_find",
-        "name": "Seal Of Rare Find",
-        "description": "Received from the Labyrinth. Grants 30 minutes of +60% Rare Find when opened.",
-        "categoryHrid": "/item_categories/loot",
+        "name": "Scroll Of Rare Find",
+        "description": "Received from the Labyrinth. Grants 30 minutes of buff when opened. (Only effective outside of Labyrinth)",
+        "categoryHrid": "/item_categories/scroll",
         "sellPrice": 0,
         "isOpenable": true,
         "alchemyDetail": {
@@ -54327,13 +54370,16 @@
                 }
             ]
         },
+        "scrollDetail": {
+            "personalBuffTypeHrid": "/personal_buff_types/rare_find"
+        },
         "sortIndex": 42
     },
     "/items/seal_of_wisdom": {
         "hrid": "/items/seal_of_wisdom",
-        "name": "Seal Of Wisdom",
-        "description": "Received from the Labyrinth. Grants 30 minutes of +20% Wisdom when opened.",
-        "categoryHrid": "/item_categories/loot",
+        "name": "Scroll Of Wisdom",
+        "description": "Received from the Labyrinth. Grants 30 minutes of buff when opened. (Only effective outside of Labyrinth)",
+        "categoryHrid": "/item_categories/scroll",
         "sellPrice": 0,
         "isOpenable": true,
         "alchemyDetail": {
@@ -54403,6 +54449,9 @@
                     "maxCount": 1
                 }
             ]
+        },
+        "scrollDetail": {
+            "personalBuffTypeHrid": "/personal_buff_types/wisdom"
         },
         "sortIndex": 41
     },
@@ -54768,7 +54817,7 @@
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "criticalRate": 8e-05,
+                "criticalRate": 0.00008,
                 "criticalDamage": 0.0016,
                 "rangedAccuracy": 0.0032,
                 "rangedDamage": 0.0008,
@@ -55367,6 +55416,7 @@
                 "stabDamage": 0.06,
                 "slashDamage": 0.06,
                 "smashDamage": 0.06,
+                "defensiveDamage": 0.06,
                 "armor": 4,
                 "hpRegenPer10": 0.0015
             },
@@ -55378,6 +55428,7 @@
                 "stabDamage": 0.006,
                 "slashDamage": 0.006,
                 "smashDamage": 0.006,
+                "defensiveDamage": 0.006,
                 "armor": 0.4,
                 "hpRegenPer10": 0.00015000000000000001
             },
@@ -55477,6 +55528,7 @@
                 "stabDamage": 0.0696,
                 "slashDamage": 0.0696,
                 "smashDamage": 0.0696,
+                "defensiveDamage": 0.0696,
                 "armor": 4.64,
                 "hpRegenPer10": 0.00174
             },
@@ -55488,6 +55540,7 @@
                 "stabDamage": 0.00696,
                 "slashDamage": 0.00696,
                 "smashDamage": 0.00696,
+                "defensiveDamage": 0.00696,
                 "armor": 0.46399999999999997,
                 "hpRegenPer10": 0.000174
             },
@@ -56392,14 +56445,14 @@
                 ],
                 "damageType": "/damage_types/physical",
                 "attackInterval": 3600000000,
-                "rangedAccuracy": 1.32,
+                "rangedAccuracy": 1.4,
                 "rangedDamage": 1.02,
                 "manaLeech": 0.02,
                 "primaryTraining": "/skills/ranged"
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "rangedAccuracy": 0.026400000000000003,
+                "rangedAccuracy": 0.027999999999999997,
                 "rangedDamage": 0.0204,
                 "manaLeech": 0.0004
             },
@@ -57876,15 +57929,15 @@
                 ],
                 "damageType": "/damage_types/physical",
                 "attackInterval": 3600000000,
-                "rangedAccuracy": 1.45,
-                "rangedDamage": 1.18,
+                "rangedAccuracy": 1.6,
+                "rangedDamage": 1.2,
                 "primaryTraining": "/skills/ranged",
                 "pierce": 0.25
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "rangedAccuracy": 0.028999999999999998,
-                "rangedDamage": 0.0236
+                "rangedAccuracy": 0.032,
+                "rangedDamage": 0.024
             },
             "noncombatEnhancementBonuses": {}
         },
@@ -57973,15 +58026,15 @@
                 ],
                 "damageType": "/damage_types/physical",
                 "attackInterval": 3600000000,
-                "rangedAccuracy": 1.566,
-                "rangedDamage": 1.2744,
+                "rangedAccuracy": 1.728,
+                "rangedDamage": 1.296,
                 "primaryTraining": "/skills/ranged",
                 "pierce": 0.27
             },
             "noncombatStats": {},
             "combatEnhancementBonuses": {
-                "rangedAccuracy": 0.03132,
-                "rangedDamage": 0.025488
+                "rangedAccuracy": 0.03456,
+                "rangedDamage": 0.025920000000000002
             },
             "noncombatEnhancementBonuses": {}
         },
@@ -60681,7 +60734,7 @@
     "/items/trainee_attack_charm": {
         "hrid": "/items/trainee_attack_charm",
         "name": "Trainee Attack Charm",
-        "description": "",
+        "description": "Focuses combat experience to Attack instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 250000,
         "itemLevel": 1,
@@ -61184,7 +61237,7 @@
     "/items/trainee_defense_charm": {
         "hrid": "/items/trainee_defense_charm",
         "name": "Trainee Defense Charm",
-        "description": "",
+        "description": "Focuses combat experience to Defense instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 250000,
         "itemLevel": 1,
@@ -61479,7 +61532,7 @@
     "/items/trainee_intelligence_charm": {
         "hrid": "/items/trainee_intelligence_charm",
         "name": "Trainee Intelligence Charm",
-        "description": "",
+        "description": "Focuses combat experience to Intelligence instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 250000,
         "itemLevel": 1,
@@ -61566,7 +61619,7 @@
     "/items/trainee_magic_charm": {
         "hrid": "/items/trainee_magic_charm",
         "name": "Trainee Magic Charm",
-        "description": "",
+        "description": "Focuses combat experience to Magic instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 250000,
         "itemLevel": 1,
@@ -61653,7 +61706,7 @@
     "/items/trainee_melee_charm": {
         "hrid": "/items/trainee_melee_charm",
         "name": "Trainee Melee Charm",
-        "description": "",
+        "description": "Focuses combat experience to Melee instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 250000,
         "itemLevel": 1,
@@ -61844,7 +61897,7 @@
     "/items/trainee_ranged_charm": {
         "hrid": "/items/trainee_ranged_charm",
         "name": "Trainee Ranged Charm",
-        "description": "",
+        "description": "Focuses combat experience to Ranged instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 250000,
         "itemLevel": 1,
@@ -61931,7 +61984,7 @@
     "/items/trainee_stamina_charm": {
         "hrid": "/items/trainee_stamina_charm",
         "name": "Trainee Stamina Charm",
-        "description": "",
+        "description": "Focuses combat experience to Stamina instead of splitting across multiple skills",
         "categoryHrid": "/item_categories/equipment",
         "sellPrice": 250000,
         "itemLevel": 1,
@@ -66440,7 +66493,7 @@
                 "naturePenetration": 0.004,
                 "firePenetration": 0.004,
                 "armor": 0.16,
-                "mpRegenPer10": 5e-05
+                "mpRegenPer10": 0.00005
             },
             "noncombatEnhancementBonuses": {}
         },
