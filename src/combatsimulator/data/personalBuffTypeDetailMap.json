@@ -1,0 +1,260 @@
+{
+    "/personal_buff_types/action_speed": {
+        "hrid": "/personal_buff_types/action_speed",
+        "name": "Action Speed",
+        "usableInActionTypeMap": {
+            "/action_types/alchemy": true,
+            "/action_types/brewing": true,
+            "/action_types/cheesesmithing": true,
+            "/action_types/cooking": true,
+            "/action_types/crafting": true,
+            "/action_types/enhancing": true,
+            "/action_types/foraging": true,
+            "/action_types/milking": true,
+            "/action_types/tailoring": true,
+            "/action_types/woodcutting": true
+        },
+        "buff": {
+            "uniqueHrid": "/buff_uniques/personal_action_speed",
+            "typeHrid": "/buff_types/action_speed",
+            "ratioBoost": 0,
+            "ratioBoostLevelBonus": 0,
+            "flatBoost": 0.15,
+            "flatBoostLevelBonus": 0,
+            "startTime": "0001-01-01T00:00:00Z",
+            "duration": 1800000000000
+        },
+        "sortIndex": 5
+    },
+    "/personal_buff_types/attack_speed": {
+        "hrid": "/personal_buff_types/attack_speed",
+        "name": "Attack Speed",
+        "usableInActionTypeMap": {
+            "/action_types/combat": true
+        },
+        "buff": {
+            "uniqueHrid": "/buff_uniques/personal_attack_speed",
+            "typeHrid": "/buff_types/attack_speed",
+            "ratioBoost": 0.15,
+            "ratioBoostLevelBonus": 0,
+            "flatBoost": 0,
+            "flatBoostLevelBonus": 0,
+            "startTime": "0001-01-01T00:00:00Z",
+            "duration": 1800000000000
+        },
+        "sortIndex": 7
+    },
+    "/personal_buff_types/cast_speed": {
+        "hrid": "/personal_buff_types/cast_speed",
+        "name": "Cast Speed",
+        "usableInActionTypeMap": {
+            "/action_types/combat": true
+        },
+        "buff": {
+            "uniqueHrid": "/buff_uniques/personal_cast_speed",
+            "typeHrid": "/buff_types/cast_speed",
+            "ratioBoost": 0,
+            "ratioBoostLevelBonus": 0,
+            "flatBoost": 0.15,
+            "flatBoostLevelBonus": 0,
+            "startTime": "0001-01-01T00:00:00Z",
+            "duration": 1800000000000
+        },
+        "sortIndex": 8
+    },
+    "/personal_buff_types/combat_drop": {
+        "hrid": "/personal_buff_types/combat_drop",
+        "name": "Combat Drop",
+        "usableInActionTypeMap": {
+            "/action_types/combat": true
+        },
+        "buff": {
+            "uniqueHrid": "/buff_uniques/personal_combat_drop",
+            "typeHrid": "/buff_types/combat_drop_quantity",
+            "ratioBoost": 0,
+            "ratioBoostLevelBonus": 0,
+            "flatBoost": 0.15,
+            "flatBoostLevelBonus": 0,
+            "startTime": "0001-01-01T00:00:00Z",
+            "duration": 1800000000000
+        },
+        "sortIndex": 6
+    },
+    "/personal_buff_types/critical_rate": {
+        "hrid": "/personal_buff_types/critical_rate",
+        "name": "Critical Rate",
+        "usableInActionTypeMap": {
+            "/action_types/combat": true
+        },
+        "buff": {
+            "uniqueHrid": "/buff_uniques/personal_critical_rate",
+            "typeHrid": "/buff_types/critical_rate",
+            "ratioBoost": 0,
+            "ratioBoostLevelBonus": 0,
+            "flatBoost": 0.1,
+            "flatBoostLevelBonus": 0,
+            "startTime": "0001-01-01T00:00:00Z",
+            "duration": 1800000000000
+        },
+        "sortIndex": 10
+    },
+    "/personal_buff_types/damage": {
+        "hrid": "/personal_buff_types/damage",
+        "name": "Damage",
+        "usableInActionTypeMap": {
+            "/action_types/combat": true
+        },
+        "buff": {
+            "uniqueHrid": "/buff_uniques/personal_damage",
+            "typeHrid": "/buff_types/damage",
+            "ratioBoost": 0.08,
+            "ratioBoostLevelBonus": 0,
+            "flatBoost": 0,
+            "flatBoostLevelBonus": 0,
+            "startTime": "0001-01-01T00:00:00Z",
+            "duration": 1800000000000
+        },
+        "sortIndex": 9
+    },
+    "/personal_buff_types/efficiency": {
+        "hrid": "/personal_buff_types/efficiency",
+        "name": "Efficiency",
+        "usableInActionTypeMap": {
+            "/action_types/alchemy": true,
+            "/action_types/brewing": true,
+            "/action_types/cheesesmithing": true,
+            "/action_types/cooking": true,
+            "/action_types/crafting": true,
+            "/action_types/foraging": true,
+            "/action_types/milking": true,
+            "/action_types/tailoring": true,
+            "/action_types/woodcutting": true
+        },
+        "buff": {
+            "uniqueHrid": "/buff_uniques/personal_efficiency",
+            "typeHrid": "/buff_types/efficiency",
+            "ratioBoost": 0,
+            "ratioBoostLevelBonus": 0,
+            "flatBoost": 0.14,
+            "flatBoostLevelBonus": 0,
+            "startTime": "0001-01-01T00:00:00Z",
+            "duration": 1800000000000
+        },
+        "sortIndex": 4
+    },
+    "/personal_buff_types/gathering": {
+        "hrid": "/personal_buff_types/gathering",
+        "name": "Gathering",
+        "usableInActionTypeMap": {
+            "/action_types/foraging": true,
+            "/action_types/milking": true,
+            "/action_types/woodcutting": true
+        },
+        "buff": {
+            "uniqueHrid": "/buff_uniques/personal_gathering",
+            "typeHrid": "/buff_types/gathering",
+            "ratioBoost": 0,
+            "ratioBoostLevelBonus": 0,
+            "flatBoost": 0.18,
+            "flatBoostLevelBonus": 0,
+            "startTime": "0001-01-01T00:00:00Z",
+            "duration": 1800000000000
+        },
+        "sortIndex": 1
+    },
+    "/personal_buff_types/gourmet": {
+        "hrid": "/personal_buff_types/gourmet",
+        "name": "Gourmet",
+        "usableInActionTypeMap": {
+            "/action_types/brewing": true,
+            "/action_types/cooking": true
+        },
+        "buff": {
+            "uniqueHrid": "/buff_uniques/personal_gourmet",
+            "typeHrid": "/buff_types/gourmet",
+            "ratioBoost": 0,
+            "ratioBoostLevelBonus": 0,
+            "flatBoost": 0.1,
+            "flatBoostLevelBonus": 0,
+            "startTime": "0001-01-01T00:00:00Z",
+            "duration": 1800000000000
+        },
+        "sortIndex": 2
+    },
+    "/personal_buff_types/processing": {
+        "hrid": "/personal_buff_types/processing",
+        "name": "Processing",
+        "usableInActionTypeMap": {
+            "/action_types/foraging": true,
+            "/action_types/milking": true,
+            "/action_types/woodcutting": true
+        },
+        "buff": {
+            "uniqueHrid": "/buff_uniques/personal_processing",
+            "typeHrid": "/buff_types/processing",
+            "ratioBoost": 0,
+            "ratioBoostLevelBonus": 0,
+            "flatBoost": 0.2,
+            "flatBoostLevelBonus": 0,
+            "startTime": "0001-01-01T00:00:00Z",
+            "duration": 1800000000000
+        },
+        "sortIndex": 3
+    },
+    "/personal_buff_types/rare_find": {
+        "hrid": "/personal_buff_types/rare_find",
+        "name": "Rare Find",
+        "usableInActionTypeMap": {
+            "/action_types/alchemy": true,
+            "/action_types/brewing": true,
+            "/action_types/cheesesmithing": true,
+            "/action_types/combat": true,
+            "/action_types/cooking": true,
+            "/action_types/crafting": true,
+            "/action_types/enhancing": true,
+            "/action_types/foraging": true,
+            "/action_types/milking": true,
+            "/action_types/tailoring": true,
+            "/action_types/woodcutting": true
+        },
+        "buff": {
+            "uniqueHrid": "/buff_uniques/personal_rare_find",
+            "typeHrid": "/buff_types/rare_find",
+            "ratioBoost": 0,
+            "ratioBoostLevelBonus": 0,
+            "flatBoost": 0.6,
+            "flatBoostLevelBonus": 0,
+            "startTime": "0001-01-01T00:00:00Z",
+            "duration": 1800000000000
+        },
+        "sortIndex": 12
+    },
+    "/personal_buff_types/wisdom": {
+        "hrid": "/personal_buff_types/wisdom",
+        "name": "Wisdom",
+        "usableInActionTypeMap": {
+            "/action_types/alchemy": true,
+            "/action_types/brewing": true,
+            "/action_types/cheesesmithing": true,
+            "/action_types/combat": true,
+            "/action_types/cooking": true,
+            "/action_types/crafting": true,
+            "/action_types/enhancing": true,
+            "/action_types/foraging": true,
+            "/action_types/milking": true,
+            "/action_types/tailoring": true,
+            "/action_types/woodcutting": true
+        },
+        "buff": {
+            "uniqueHrid": "/buff_uniques/personal_wisdom",
+            "typeHrid": "/buff_types/wisdom",
+            "ratioBoost": 0,
+            "ratioBoostLevelBonus": 0,
+            "flatBoost": 0.2,
+            "flatBoostLevelBonus": 0,
+            "startTime": "0001-01-01T00:00:00Z",
+            "duration": 1800000000000
+        },
+        "sortIndex": 11
+    }
+}

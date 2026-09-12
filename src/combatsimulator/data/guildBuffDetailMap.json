@@ -1,0 +1,4702 @@
+{
+    "/guild_buffs/force_combat": {
+        "hrid": "/guild_buffs/force_combat",
+        "shrineHrid": "/guild_shrines/force",
+        "isCombat": true,
+        "buffs": [
+            {
+                "uniqueHrid": "/buff_uniques/damage_guild_buff",
+                "typeHrid": "/buff_types/damage",
+                "ratioBoost": 0.003,
+                "ratioBoostLevelBonus": 0.003,
+                "flatBoost": 0,
+                "flatBoostLevelBonus": 0,
+                "startTime": "0001-01-01T00:00:00Z",
+                "duration": 0
+            }
+        ],
+        "levelCosts": {
+            "1": {
+                "guildTokenCost": 400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 200
+                    }
+                ]
+            },
+            "2": {
+                "guildTokenCost": 800,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 600
+                    }
+                ]
+            },
+            "3": {
+                "guildTokenCost": 1400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 1200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 100
+                    }
+                ]
+            },
+            "4": {
+                "guildTokenCost": 2200,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 300
+                    }
+                ]
+            },
+            "5": {
+                "guildTokenCost": 3000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 3000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 600
+                    }
+                ]
+            },
+            "6": {
+                "guildTokenCost": 4000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 4200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1000
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 50
+                    }
+                ]
+            },
+            "7": {
+                "guildTokenCost": 5000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 5600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 150
+                    }
+                ]
+            },
+            "8": {
+                "guildTokenCost": 6500,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 7200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 300
+                    }
+                ]
+            },
+            "9": {
+                "guildTokenCost": 8000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 9000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 500
+                    }
+                ]
+            },
+            "10": {
+                "guildTokenCost": 10000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 11000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 3600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 750
+                    }
+                ]
+            },
+            "11": {
+                "guildTokenCost": 12000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 13200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 4500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1050
+                    }
+                ]
+            },
+            "12": {
+                "guildTokenCost": 14000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 15600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 5500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1400
+                    }
+                ]
+            },
+            "13": {
+                "guildTokenCost": 16000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 18200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 6600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1800
+                    }
+                ]
+            },
+            "14": {
+                "guildTokenCost": 18000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 21000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 7800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2250
+                    }
+                ]
+            },
+            "15": {
+                "guildTokenCost": 20000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 24000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 9100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2750
+                    }
+                ]
+            },
+            "16": {
+                "guildTokenCost": 22000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 27200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 10500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3300
+                    }
+                ]
+            },
+            "17": {
+                "guildTokenCost": 24000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 30600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3900
+                    }
+                ]
+            },
+            "18": {
+                "guildTokenCost": 26000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 34200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 13600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 4550
+                    }
+                ]
+            },
+            "19": {
+                "guildTokenCost": 28000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 38000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 15300
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 5250
+                    }
+                ]
+            },
+            "20": {
+                "guildTokenCost": 30000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 17100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 6000
+                    }
+                ]
+            }
+        },
+        "sortIndex": 1
+    },
+    "/guild_buffs/force_skilling": {
+        "hrid": "/guild_buffs/force_skilling",
+        "shrineHrid": "/guild_shrines/force",
+        "isCombat": false,
+        "buffs": [
+            {
+                "uniqueHrid": "/buff_uniques/efficiency_guild_buff",
+                "typeHrid": "/buff_types/efficiency",
+                "ratioBoost": 0,
+                "ratioBoostLevelBonus": 0,
+                "flatBoost": 0.005,
+                "flatBoostLevelBonus": 0.005,
+                "startTime": "0001-01-01T00:00:00Z",
+                "duration": 0
+            }
+        ],
+        "levelCosts": {
+            "1": {
+                "guildTokenCost": 400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 200
+                    }
+                ]
+            },
+            "2": {
+                "guildTokenCost": 800,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 600
+                    }
+                ]
+            },
+            "3": {
+                "guildTokenCost": 1400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 1200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 100
+                    }
+                ]
+            },
+            "4": {
+                "guildTokenCost": 2200,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 300
+                    }
+                ]
+            },
+            "5": {
+                "guildTokenCost": 3000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 3000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 600
+                    }
+                ]
+            },
+            "6": {
+                "guildTokenCost": 4000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 4200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1000
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 50
+                    }
+                ]
+            },
+            "7": {
+                "guildTokenCost": 5000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 5600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 150
+                    }
+                ]
+            },
+            "8": {
+                "guildTokenCost": 6500,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 7200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 300
+                    }
+                ]
+            },
+            "9": {
+                "guildTokenCost": 8000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 9000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 500
+                    }
+                ]
+            },
+            "10": {
+                "guildTokenCost": 10000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 11000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 3600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 750
+                    }
+                ]
+            },
+            "11": {
+                "guildTokenCost": 12000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 13200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 4500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1050
+                    }
+                ]
+            },
+            "12": {
+                "guildTokenCost": 14000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 15600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 5500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1400
+                    }
+                ]
+            },
+            "13": {
+                "guildTokenCost": 16000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 18200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 6600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1800
+                    }
+                ]
+            },
+            "14": {
+                "guildTokenCost": 18000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 21000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 7800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2250
+                    }
+                ]
+            },
+            "15": {
+                "guildTokenCost": 20000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 24000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 9100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2750
+                    }
+                ]
+            },
+            "16": {
+                "guildTokenCost": 22000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 27200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 10500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3300
+                    }
+                ]
+            },
+            "17": {
+                "guildTokenCost": 24000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 30600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3900
+                    }
+                ]
+            },
+            "18": {
+                "guildTokenCost": 26000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 34200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 13600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 4550
+                    }
+                ]
+            },
+            "19": {
+                "guildTokenCost": 28000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 38000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 15300
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 5250
+                    }
+                ]
+            },
+            "20": {
+                "guildTokenCost": 30000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 17100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 6000
+                    }
+                ]
+            }
+        },
+        "sortIndex": 2
+    },
+    "/guild_buffs/rarity_combat": {
+        "hrid": "/guild_buffs/rarity_combat",
+        "shrineHrid": "/guild_shrines/rarity",
+        "isCombat": true,
+        "buffs": [
+            {
+                "uniqueHrid": "/buff_uniques/rare_find_guild_buff",
+                "typeHrid": "/buff_types/rare_find",
+                "ratioBoost": 0,
+                "ratioBoostLevelBonus": 0,
+                "flatBoost": 0.015,
+                "flatBoostLevelBonus": 0.015,
+                "startTime": "0001-01-01T00:00:00Z",
+                "duration": 0
+            }
+        ],
+        "levelCosts": {
+            "1": {
+                "guildTokenCost": 400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 80
+                    }
+                ]
+            },
+            "2": {
+                "guildTokenCost": 800,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 240
+                    }
+                ]
+            },
+            "3": {
+                "guildTokenCost": 1400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 480
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 40
+                    }
+                ]
+            },
+            "4": {
+                "guildTokenCost": 2200,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 120
+                    }
+                ]
+            },
+            "5": {
+                "guildTokenCost": 3000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1200
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 240
+                    }
+                ]
+            },
+            "6": {
+                "guildTokenCost": 4000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1680
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 400
+                    }
+                ]
+            },
+            "7": {
+                "guildTokenCost": 5000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2240
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 600
+                    }
+                ]
+            },
+            "8": {
+                "guildTokenCost": 6500,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2880
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 840
+                    }
+                ]
+            },
+            "9": {
+                "guildTokenCost": 8000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 3600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1120
+                    }
+                ]
+            },
+            "10": {
+                "guildTokenCost": 10000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 4400
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1440
+                    }
+                ]
+            },
+            "11": {
+                "guildTokenCost": 12000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 5280
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1800
+                    }
+                ]
+            },
+            "12": {
+                "guildTokenCost": 14000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 6240
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2200
+                    }
+                ]
+            },
+            "13": {
+                "guildTokenCost": 16000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 7280
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2640
+                    }
+                ]
+            },
+            "14": {
+                "guildTokenCost": 18000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 8400
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3120
+                    }
+                ]
+            },
+            "15": {
+                "guildTokenCost": 20000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 9600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3640
+                    }
+                ]
+            },
+            "16": {
+                "guildTokenCost": 22000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 10880
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 4200
+                    }
+                ]
+            },
+            "17": {
+                "guildTokenCost": 24000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 12240
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 4800
+                    }
+                ]
+            },
+            "18": {
+                "guildTokenCost": 26000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 13680
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 5440
+                    }
+                ]
+            },
+            "19": {
+                "guildTokenCost": 28000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 15200
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 6120
+                    }
+                ]
+            },
+            "20": {
+                "guildTokenCost": 30000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 16800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 6840
+                    }
+                ]
+            }
+        },
+        "sortIndex": 7
+    },
+    "/guild_buffs/rarity_skilling": {
+        "hrid": "/guild_buffs/rarity_skilling",
+        "shrineHrid": "/guild_shrines/rarity",
+        "isCombat": false,
+        "buffs": [
+            {
+                "uniqueHrid": "/buff_uniques/rare_find_guild_buff",
+                "typeHrid": "/buff_types/rare_find",
+                "ratioBoost": 0,
+                "ratioBoostLevelBonus": 0,
+                "flatBoost": 0.015,
+                "flatBoostLevelBonus": 0.015,
+                "startTime": "0001-01-01T00:00:00Z",
+                "duration": 0
+            }
+        ],
+        "levelCosts": {
+            "1": {
+                "guildTokenCost": 400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 80
+                    }
+                ]
+            },
+            "2": {
+                "guildTokenCost": 800,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 240
+                    }
+                ]
+            },
+            "3": {
+                "guildTokenCost": 1400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 480
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 40
+                    }
+                ]
+            },
+            "4": {
+                "guildTokenCost": 2200,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 120
+                    }
+                ]
+            },
+            "5": {
+                "guildTokenCost": 3000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1200
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 240
+                    }
+                ]
+            },
+            "6": {
+                "guildTokenCost": 4000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1680
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 400
+                    }
+                ]
+            },
+            "7": {
+                "guildTokenCost": 5000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2240
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 600
+                    }
+                ]
+            },
+            "8": {
+                "guildTokenCost": 6500,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2880
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 840
+                    }
+                ]
+            },
+            "9": {
+                "guildTokenCost": 8000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 3600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1120
+                    }
+                ]
+            },
+            "10": {
+                "guildTokenCost": 10000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 4400
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1440
+                    }
+                ]
+            },
+            "11": {
+                "guildTokenCost": 12000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 5280
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1800
+                    }
+                ]
+            },
+            "12": {
+                "guildTokenCost": 14000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 6240
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2200
+                    }
+                ]
+            },
+            "13": {
+                "guildTokenCost": 16000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 7280
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2640
+                    }
+                ]
+            },
+            "14": {
+                "guildTokenCost": 18000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 8400
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3120
+                    }
+                ]
+            },
+            "15": {
+                "guildTokenCost": 20000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 9600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3640
+                    }
+                ]
+            },
+            "16": {
+                "guildTokenCost": 22000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 10880
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 4200
+                    }
+                ]
+            },
+            "17": {
+                "guildTokenCost": 24000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 12240
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 4800
+                    }
+                ]
+            },
+            "18": {
+                "guildTokenCost": 26000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 13680
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 5440
+                    }
+                ]
+            },
+            "19": {
+                "guildTokenCost": 28000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 15200
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 6120
+                    }
+                ]
+            },
+            "20": {
+                "guildTokenCost": 30000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 16800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 6840
+                    }
+                ]
+            }
+        },
+        "sortIndex": 8
+    },
+    "/guild_buffs/scholar_combat": {
+        "hrid": "/guild_buffs/scholar_combat",
+        "shrineHrid": "/guild_shrines/scholar",
+        "isCombat": true,
+        "buffs": [
+            {
+                "uniqueHrid": "/buff_uniques/wisdom_guild_buff",
+                "typeHrid": "/buff_types/wisdom",
+                "ratioBoost": 0,
+                "ratioBoostLevelBonus": 0,
+                "flatBoost": 0.005,
+                "flatBoostLevelBonus": 0.005,
+                "startTime": "0001-01-01T00:00:00Z",
+                "duration": 0
+            }
+        ],
+        "levelCosts": {
+            "1": {
+                "guildTokenCost": 400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 80
+                    }
+                ]
+            },
+            "2": {
+                "guildTokenCost": 800,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 240
+                    }
+                ]
+            },
+            "3": {
+                "guildTokenCost": 1400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 1200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 480
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 40
+                    }
+                ]
+            },
+            "4": {
+                "guildTokenCost": 2200,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 120
+                    }
+                ]
+            },
+            "5": {
+                "guildTokenCost": 3000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 3000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1200
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 240
+                    }
+                ]
+            },
+            "6": {
+                "guildTokenCost": 4000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 4200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1680
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 400
+                    }
+                ]
+            },
+            "7": {
+                "guildTokenCost": 5000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 5600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2240
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 600
+                    }
+                ]
+            },
+            "8": {
+                "guildTokenCost": 6500,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 7200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2880
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 840
+                    }
+                ]
+            },
+            "9": {
+                "guildTokenCost": 8000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 9000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 3600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1120
+                    }
+                ]
+            },
+            "10": {
+                "guildTokenCost": 10000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 11000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 4400
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1440
+                    }
+                ]
+            },
+            "11": {
+                "guildTokenCost": 12000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 13200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 5280
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1800
+                    }
+                ]
+            },
+            "12": {
+                "guildTokenCost": 14000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 15600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 6240
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2200
+                    }
+                ]
+            },
+            "13": {
+                "guildTokenCost": 16000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 18200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 7280
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2640
+                    }
+                ]
+            },
+            "14": {
+                "guildTokenCost": 18000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 21000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 8400
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3120
+                    }
+                ]
+            },
+            "15": {
+                "guildTokenCost": 20000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 24000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 9600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3640
+                    }
+                ]
+            },
+            "16": {
+                "guildTokenCost": 22000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 27200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 10880
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 4200
+                    }
+                ]
+            },
+            "17": {
+                "guildTokenCost": 24000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 30600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 12240
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 4800
+                    }
+                ]
+            },
+            "18": {
+                "guildTokenCost": 26000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 34200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 13680
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 5440
+                    }
+                ]
+            },
+            "19": {
+                "guildTokenCost": 28000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 38000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 15200
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 6120
+                    }
+                ]
+            },
+            "20": {
+                "guildTokenCost": 30000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 16800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 6840
+                    }
+                ]
+            }
+        },
+        "sortIndex": 9
+    },
+    "/guild_buffs/scholar_skilling": {
+        "hrid": "/guild_buffs/scholar_skilling",
+        "shrineHrid": "/guild_shrines/scholar",
+        "isCombat": false,
+        "buffs": [
+            {
+                "uniqueHrid": "/buff_uniques/wisdom_guild_buff",
+                "typeHrid": "/buff_types/wisdom",
+                "ratioBoost": 0,
+                "ratioBoostLevelBonus": 0,
+                "flatBoost": 0.005,
+                "flatBoostLevelBonus": 0.005,
+                "startTime": "0001-01-01T00:00:00Z",
+                "duration": 0
+            }
+        ],
+        "levelCosts": {
+            "1": {
+                "guildTokenCost": 400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 80
+                    }
+                ]
+            },
+            "2": {
+                "guildTokenCost": 800,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 240
+                    }
+                ]
+            },
+            "3": {
+                "guildTokenCost": 1400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 1200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 480
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 40
+                    }
+                ]
+            },
+            "4": {
+                "guildTokenCost": 2200,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 120
+                    }
+                ]
+            },
+            "5": {
+                "guildTokenCost": 3000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 3000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1200
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 240
+                    }
+                ]
+            },
+            "6": {
+                "guildTokenCost": 4000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 4200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1680
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 400
+                    }
+                ]
+            },
+            "7": {
+                "guildTokenCost": 5000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 5600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2240
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 600
+                    }
+                ]
+            },
+            "8": {
+                "guildTokenCost": 6500,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 7200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2880
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 840
+                    }
+                ]
+            },
+            "9": {
+                "guildTokenCost": 8000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 9000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 3600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1120
+                    }
+                ]
+            },
+            "10": {
+                "guildTokenCost": 10000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 11000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 4400
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1440
+                    }
+                ]
+            },
+            "11": {
+                "guildTokenCost": 12000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 13200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 5280
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1800
+                    }
+                ]
+            },
+            "12": {
+                "guildTokenCost": 14000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 15600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 6240
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2200
+                    }
+                ]
+            },
+            "13": {
+                "guildTokenCost": 16000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 18200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 7280
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2640
+                    }
+                ]
+            },
+            "14": {
+                "guildTokenCost": 18000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 21000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 8400
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3120
+                    }
+                ]
+            },
+            "15": {
+                "guildTokenCost": 20000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 24000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 9600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3640
+                    }
+                ]
+            },
+            "16": {
+                "guildTokenCost": 22000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 27200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 10880
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 4200
+                    }
+                ]
+            },
+            "17": {
+                "guildTokenCost": 24000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 30600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 12240
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 4800
+                    }
+                ]
+            },
+            "18": {
+                "guildTokenCost": 26000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 34200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 13680
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 5440
+                    }
+                ]
+            },
+            "19": {
+                "guildTokenCost": 28000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 38000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 15200
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 6120
+                    }
+                ]
+            },
+            "20": {
+                "guildTokenCost": 30000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 16800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 6840
+                    }
+                ]
+            }
+        },
+        "sortIndex": 10
+    },
+    "/guild_buffs/spirit_combat": {
+        "hrid": "/guild_buffs/spirit_combat",
+        "shrineHrid": "/guild_shrines/spirit",
+        "isCombat": true,
+        "buffs": [
+            {
+                "uniqueHrid": "/buff_uniques/max_hitpoints_guild_buff",
+                "typeHrid": "/buff_types/max_hitpoints",
+                "ratioBoost": 0.01,
+                "ratioBoostLevelBonus": 0.01,
+                "flatBoost": 0,
+                "flatBoostLevelBonus": 0,
+                "startTime": "0001-01-01T00:00:00Z",
+                "duration": 0
+            },
+            {
+                "uniqueHrid": "/buff_uniques/max_manapoints_guild_buff",
+                "typeHrid": "/buff_types/max_manapoints",
+                "ratioBoost": 0.01,
+                "ratioBoostLevelBonus": 0.01,
+                "flatBoost": 0,
+                "flatBoostLevelBonus": 0,
+                "startTime": "0001-01-01T00:00:00Z",
+                "duration": 0
+            }
+        ],
+        "levelCosts": {
+            "1": {
+                "guildTokenCost": 400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 2000
+                    }
+                ]
+            },
+            "2": {
+                "guildTokenCost": 800,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 600
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 6000
+                    }
+                ]
+            },
+            "3": {
+                "guildTokenCost": 1400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 1200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 100
+                    }
+                ]
+            },
+            "4": {
+                "guildTokenCost": 2200,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 300
+                    }
+                ]
+            },
+            "5": {
+                "guildTokenCost": 3000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 3000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 600
+                    }
+                ]
+            },
+            "6": {
+                "guildTokenCost": 4000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 4200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1000
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 50
+                    }
+                ]
+            },
+            "7": {
+                "guildTokenCost": 5000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 5600
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 150
+                    }
+                ]
+            },
+            "8": {
+                "guildTokenCost": 6500,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 7200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 300
+                    }
+                ]
+            },
+            "9": {
+                "guildTokenCost": 8000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 9000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 500
+                    }
+                ]
+            },
+            "10": {
+                "guildTokenCost": 10000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 11000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 3600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 750
+                    }
+                ]
+            },
+            "11": {
+                "guildTokenCost": 12000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 13200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 4500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1050
+                    }
+                ]
+            },
+            "12": {
+                "guildTokenCost": 14000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 15600
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 5500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1400
+                    }
+                ]
+            },
+            "13": {
+                "guildTokenCost": 16000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 18200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 6600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1800
+                    }
+                ]
+            },
+            "14": {
+                "guildTokenCost": 18000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 21000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 7800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2250
+                    }
+                ]
+            },
+            "15": {
+                "guildTokenCost": 20000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 24000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 9100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2750
+                    }
+                ]
+            },
+            "16": {
+                "guildTokenCost": 22000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 27200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 10500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3300
+                    }
+                ]
+            },
+            "17": {
+                "guildTokenCost": 24000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 30600
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3900
+                    }
+                ]
+            },
+            "18": {
+                "guildTokenCost": 26000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 34200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 13600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 4550
+                    }
+                ]
+            },
+            "19": {
+                "guildTokenCost": 28000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 38000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 15300
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 5250
+                    }
+                ]
+            },
+            "20": {
+                "guildTokenCost": 30000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 17100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 6000
+                    }
+                ]
+            }
+        },
+        "sortIndex": 5
+    },
+    "/guild_buffs/spirit_skilling": {
+        "hrid": "/guild_buffs/spirit_skilling",
+        "shrineHrid": "/guild_shrines/spirit",
+        "isCombat": false,
+        "buffs": [
+            {
+                "uniqueHrid": "/buff_uniques/essence_find_guild_buff",
+                "typeHrid": "/buff_types/essence_find",
+                "ratioBoost": 0,
+                "ratioBoostLevelBonus": 0,
+                "flatBoost": 0.03,
+                "flatBoostLevelBonus": 0.03,
+                "startTime": "0001-01-01T00:00:00Z",
+                "duration": 0
+            }
+        ],
+        "levelCosts": {
+            "1": {
+                "guildTokenCost": 400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 2000
+                    }
+                ]
+            },
+            "2": {
+                "guildTokenCost": 800,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 600
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 6000
+                    }
+                ]
+            },
+            "3": {
+                "guildTokenCost": 1400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 1200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 100
+                    }
+                ]
+            },
+            "4": {
+                "guildTokenCost": 2200,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 300
+                    }
+                ]
+            },
+            "5": {
+                "guildTokenCost": 3000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 3000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 600
+                    }
+                ]
+            },
+            "6": {
+                "guildTokenCost": 4000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 4200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1000
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 50
+                    }
+                ]
+            },
+            "7": {
+                "guildTokenCost": 5000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 5600
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 150
+                    }
+                ]
+            },
+            "8": {
+                "guildTokenCost": 6500,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 7200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 300
+                    }
+                ]
+            },
+            "9": {
+                "guildTokenCost": 8000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 9000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 500
+                    }
+                ]
+            },
+            "10": {
+                "guildTokenCost": 10000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 11000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 3600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 750
+                    }
+                ]
+            },
+            "11": {
+                "guildTokenCost": 12000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 13200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 4500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1050
+                    }
+                ]
+            },
+            "12": {
+                "guildTokenCost": 14000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 15600
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 5500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1400
+                    }
+                ]
+            },
+            "13": {
+                "guildTokenCost": 16000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 18200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 6600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1800
+                    }
+                ]
+            },
+            "14": {
+                "guildTokenCost": 18000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 21000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 7800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2250
+                    }
+                ]
+            },
+            "15": {
+                "guildTokenCost": 20000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 24000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 9100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2750
+                    }
+                ]
+            },
+            "16": {
+                "guildTokenCost": 22000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 27200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 10500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3300
+                    }
+                ]
+            },
+            "17": {
+                "guildTokenCost": 24000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 30600
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3900
+                    }
+                ]
+            },
+            "18": {
+                "guildTokenCost": 26000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 34200
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 13600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 4550
+                    }
+                ]
+            },
+            "19": {
+                "guildTokenCost": 28000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 38000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 15300
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 5250
+                    }
+                ]
+            },
+            "20": {
+                "guildTokenCost": 30000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/white_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 17100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 6000
+                    }
+                ]
+            }
+        },
+        "sortIndex": 6
+    },
+    "/guild_buffs/tempo_combat": {
+        "hrid": "/guild_buffs/tempo_combat",
+        "shrineHrid": "/guild_shrines/tempo",
+        "isCombat": true,
+        "buffs": [
+            {
+                "uniqueHrid": "/buff_uniques/attack_speed_guild_buff",
+                "typeHrid": "/buff_types/attack_speed",
+                "ratioBoost": 0.004,
+                "ratioBoostLevelBonus": 0.004,
+                "flatBoost": 0,
+                "flatBoostLevelBonus": 0,
+                "startTime": "0001-01-01T00:00:00Z",
+                "duration": 0
+            },
+            {
+                "uniqueHrid": "/buff_uniques/cast_speed_guild_buff",
+                "typeHrid": "/buff_types/cast_speed",
+                "ratioBoost": 0,
+                "ratioBoostLevelBonus": 0,
+                "flatBoost": 0.004,
+                "flatBoostLevelBonus": 0.004,
+                "startTime": "0001-01-01T00:00:00Z",
+                "duration": 0
+            }
+        ],
+        "levelCosts": {
+            "1": {
+                "guildTokenCost": 400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 200
+                    }
+                ]
+            },
+            "2": {
+                "guildTokenCost": 800,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 600
+                    }
+                ]
+            },
+            "3": {
+                "guildTokenCost": 1400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 1200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 100
+                    }
+                ]
+            },
+            "4": {
+                "guildTokenCost": 2200,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 300
+                    }
+                ]
+            },
+            "5": {
+                "guildTokenCost": 3000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 3000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 600
+                    }
+                ]
+            },
+            "6": {
+                "guildTokenCost": 4000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 4200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1000
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 50
+                    }
+                ]
+            },
+            "7": {
+                "guildTokenCost": 5000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 5600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 150
+                    }
+                ]
+            },
+            "8": {
+                "guildTokenCost": 6500,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 7200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 300
+                    }
+                ]
+            },
+            "9": {
+                "guildTokenCost": 8000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 9000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 500
+                    }
+                ]
+            },
+            "10": {
+                "guildTokenCost": 10000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 11000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 3600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 750
+                    }
+                ]
+            },
+            "11": {
+                "guildTokenCost": 12000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 13200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 4500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1050
+                    }
+                ]
+            },
+            "12": {
+                "guildTokenCost": 14000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 15600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 5500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1400
+                    }
+                ]
+            },
+            "13": {
+                "guildTokenCost": 16000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 18200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 6600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1800
+                    }
+                ]
+            },
+            "14": {
+                "guildTokenCost": 18000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 21000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 7800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2250
+                    }
+                ]
+            },
+            "15": {
+                "guildTokenCost": 20000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 24000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 9100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2750
+                    }
+                ]
+            },
+            "16": {
+                "guildTokenCost": 22000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 27200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 10500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3300
+                    }
+                ]
+            },
+            "17": {
+                "guildTokenCost": 24000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 30600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3900
+                    }
+                ]
+            },
+            "18": {
+                "guildTokenCost": 26000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 34200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 13600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 4550
+                    }
+                ]
+            },
+            "19": {
+                "guildTokenCost": 28000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 38000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 15300
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 5250
+                    }
+                ]
+            },
+            "20": {
+                "guildTokenCost": 30000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/brown_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/red_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 17100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 6000
+                    }
+                ]
+            }
+        },
+        "sortIndex": 3
+    },
+    "/guild_buffs/tempo_skilling": {
+        "hrid": "/guild_buffs/tempo_skilling",
+        "shrineHrid": "/guild_shrines/tempo",
+        "isCombat": false,
+        "buffs": [
+            {
+                "uniqueHrid": "/buff_uniques/action_speed_guild_buff",
+                "typeHrid": "/buff_types/action_speed",
+                "ratioBoost": 0,
+                "ratioBoostLevelBonus": 0,
+                "flatBoost": 0.005,
+                "flatBoostLevelBonus": 0.005,
+                "startTime": "0001-01-01T00:00:00Z",
+                "duration": 0
+            }
+        ],
+        "levelCosts": {
+            "1": {
+                "guildTokenCost": 400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 200
+                    }
+                ]
+            },
+            "2": {
+                "guildTokenCost": 800,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 6000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 600
+                    }
+                ]
+            },
+            "3": {
+                "guildTokenCost": 1400,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 1200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 100
+                    }
+                ]
+            },
+            "4": {
+                "guildTokenCost": 2200,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 20000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 2000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 300
+                    }
+                ]
+            },
+            "5": {
+                "guildTokenCost": 3000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 30000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 3000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 600
+                    }
+                ]
+            },
+            "6": {
+                "guildTokenCost": 4000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 4200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1000
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 50
+                    }
+                ]
+            },
+            "7": {
+                "guildTokenCost": 5000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 56000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 5600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 1500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 150
+                    }
+                ]
+            },
+            "8": {
+                "guildTokenCost": 6500,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 72000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 7200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 300
+                    }
+                ]
+            },
+            "9": {
+                "guildTokenCost": 8000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 90000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 9000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 2800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 500
+                    }
+                ]
+            },
+            "10": {
+                "guildTokenCost": 10000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 110000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 11000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 3600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 750
+                    }
+                ]
+            },
+            "11": {
+                "guildTokenCost": 12000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 132000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 13200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 4500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1050
+                    }
+                ]
+            },
+            "12": {
+                "guildTokenCost": 14000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 156000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 15600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 5500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1400
+                    }
+                ]
+            },
+            "13": {
+                "guildTokenCost": 16000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 182000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 18200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 6600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 1800
+                    }
+                ]
+            },
+            "14": {
+                "guildTokenCost": 18000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 210000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 21000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 7800
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2250
+                    }
+                ]
+            },
+            "15": {
+                "guildTokenCost": 20000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 240000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 24000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 9100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 2750
+                    }
+                ]
+            },
+            "16": {
+                "guildTokenCost": 22000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 272000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 27200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 10500
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3300
+                    }
+                ]
+            },
+            "17": {
+                "guildTokenCost": 24000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 306000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 30600
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 12000
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 3900
+                    }
+                ]
+            },
+            "18": {
+                "guildTokenCost": 26000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 342000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 34200
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 13600
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 4550
+                    }
+                ]
+            },
+            "19": {
+                "guildTokenCost": 28000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 380000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 38000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 15300
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 5250
+                    }
+                ]
+            },
+            "20": {
+                "guildTokenCost": 30000,
+                "creditCosts": [
+                    {
+                        "itemHrid": "/items/green_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/blue_guild_credit",
+                        "count": 420000
+                    },
+                    {
+                        "itemHrid": "/items/purple_guild_credit",
+                        "count": 42000
+                    },
+                    {
+                        "itemHrid": "/items/silver_guild_credit",
+                        "count": 17100
+                    },
+                    {
+                        "itemHrid": "/items/gold_guild_credit",
+                        "count": 6000
+                    }
+                ]
+            }
+        },
+        "sortIndex": 4
+    }
+}

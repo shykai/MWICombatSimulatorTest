@@ -4484,7 +4484,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/cheesesmithing",
         "category": "/action_categories/cheesesmithing/body",
-        "name": "Anchorbound Plate Body (R)",
+        "name": "Anchorbound Plate Body ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/cheesesmithing",
@@ -4596,7 +4596,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/cheesesmithing",
         "category": "/action_categories/cheesesmithing/legs",
-        "name": "Anchorbound Plate Legs (R)",
+        "name": "Anchorbound Plate Legs ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/cheesesmithing",
@@ -7780,7 +7780,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/cheesesmithing",
         "category": "/action_categories/cheesesmithing/main_hand",
-        "name": "Chaotic Flail (R)",
+        "name": "Chaotic Flail ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/cheesesmithing",
@@ -9116,7 +9116,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/cheesesmithing",
         "category": "/action_categories/cheesesmithing/head",
-        "name": "Corsair Helmet (R)",
+        "name": "Corsair Helmet ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/cheesesmithing",
@@ -10456,7 +10456,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/cheesesmithing",
         "category": "/action_categories/cheesesmithing/hands",
-        "name": "Dodocamel Gauntlets (R)",
+        "name": "Dodocamel Gauntlets ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/cheesesmithing",
@@ -10632,7 +10632,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/cheesesmithing",
         "category": "/action_categories/cheesesmithing/main_hand",
-        "name": "Furious Spear (R)",
+        "name": "Furious Spear ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/cheesesmithing",
@@ -10800,7 +10800,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/cheesesmithing",
         "category": "/action_categories/cheesesmithing/two_hand",
-        "name": "Griffin Bulwark (R)",
+        "name": "Griffin Bulwark ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/cheesesmithing",
@@ -12094,7 +12094,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/cheesesmithing",
         "category": "/action_categories/cheesesmithing/off_hand",
-        "name": "Knights Aegis (R)",
+        "name": "Knights Aegis ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/cheesesmithing",
@@ -12202,7 +12202,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/cheesesmithing",
         "category": "/action_categories/cheesesmithing/body",
-        "name": "Maelstrom Plate Body (R)",
+        "name": "Maelstrom Plate Body ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/cheesesmithing",
@@ -12310,7 +12310,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/cheesesmithing",
         "category": "/action_categories/cheesesmithing/legs",
-        "name": "Maelstrom Plate Legs (R)",
+        "name": "Maelstrom Plate Legs ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/cheesesmithing",
@@ -12534,7 +12534,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/cheesesmithing",
         "category": "/action_categories/cheesesmithing/feet",
-        "name": "Pathbreaker Boots (R)",
+        "name": "Pathbreaker Boots ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/cheesesmithing",
@@ -13876,7 +13876,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/cheesesmithing",
         "category": "/action_categories/cheesesmithing/main_hand",
-        "name": "Regal Sword (R)",
+        "name": "Regal Sword ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/cheesesmithing",
@@ -25027,7 +25027,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/crafting",
         "category": "/action_categories/crafting/off_hand",
-        "name": "Bishop's Codex (R)",
+        "name": "Bishop's Codex ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/crafting",
@@ -25139,7 +25139,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/crafting",
         "category": "/action_categories/crafting/staff",
-        "name": "Blazing Trident (R)",
+        "name": "Blazing Trident ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/crafting",
@@ -25251,7 +25251,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/crafting",
         "category": "/action_categories/crafting/staff",
-        "name": "Blooming Trident (R)",
+        "name": "Blooming Trident ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/crafting",
@@ -26451,7 +26451,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/crafting",
         "category": "/action_categories/crafting/bow",
-        "name": "Cursed Bow (R)",
+        "name": "Cursed Bow ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/crafting",
@@ -32425,7 +32425,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/crafting",
         "category": "/action_categories/crafting/staff",
-        "name": "Rippling Trident (R)",
+        "name": "Rippling Trident ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/crafting",
@@ -32713,7 +32713,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/crafting",
         "category": "/action_categories/crafting/crossbow",
-        "name": "Sundering Crossbow (R)",
+        "name": "Sundering Crossbow ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/crafting",
@@ -35589,7 +35589,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/head",
-        "name": "Acrobatic Hood (R)",
+        "name": "Acrobatic Hood ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -35849,7 +35849,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/back",
-        "name": "Artificer Cape (R)",
+        "name": "Artificer Cape ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -36785,7 +36785,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/back",
-        "name": "Chance Cape (R)",
+        "name": "Chance Cape ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -37109,7 +37109,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/back",
-        "name": "Chimerical Quiver (R)",
+        "name": "Chimerical Quiver ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -37729,7 +37729,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/back",
-        "name": "Culinary Cape (R)",
+        "name": "Culinary Cape ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -37917,7 +37917,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/back",
-        "name": "Enchanted Cloak (R)",
+        "name": "Enchanted Cloak ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -38553,7 +38553,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/back",
-        "name": "Gatherer Cape (R)",
+        "name": "Gatherer Cape ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -39377,7 +39377,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/legs",
-        "name": "Kraken Chaps (R)",
+        "name": "Kraken Chaps ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -39485,7 +39485,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/body",
-        "name": "Kraken Tunic (R)",
+        "name": "Kraken Tunic ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -40205,7 +40205,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/head",
-        "name": "Magician's Hat (R)",
+        "name": "Magician's Hat ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -40421,7 +40421,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/hands",
-        "name": "Marksman Bracers (R)",
+        "name": "Marksman Bracers ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -40593,7 +40593,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/feet",
-        "name": "Pathfinder Boots (R)",
+        "name": "Pathfinder Boots ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -40705,7 +40705,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/feet",
-        "name": "Pathseeker Boots (R)",
+        "name": "Pathseeker Boots ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -41931,7 +41931,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/legs",
-        "name": "Royal Fire Robe Bottoms (R)",
+        "name": "Royal Fire Robe Bottoms ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -42043,7 +42043,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/body",
-        "name": "Royal Fire Robe Top (R)",
+        "name": "Royal Fire Robe Top ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -42151,7 +42151,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/legs",
-        "name": "Royal Nature Robe Bottoms (R)",
+        "name": "Royal Nature Robe Bottoms ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -42259,7 +42259,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/body",
-        "name": "Royal Nature Robe Top (R)",
+        "name": "Royal Nature Robe Top ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -42371,7 +42371,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/legs",
-        "name": "Royal Water Robe Bottoms (R)",
+        "name": "Royal Water Robe Bottoms ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -42483,7 +42483,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/body",
-        "name": "Royal Water Robe Top (R)",
+        "name": "Royal Water Robe Top ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
@@ -42967,7 +42967,7 @@
         "function": "/action_functions/production",
         "type": "/action_types/tailoring",
         "category": "/action_categories/tailoring/back",
-        "name": "Sinister Cape (R)",
+        "name": "Sinister Cape ★",
         "maxDifficulty": 0,
         "levelRequirement": {
             "skillHrid": "/skills/tailoring",
