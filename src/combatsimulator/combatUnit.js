@@ -26,6 +26,8 @@ class CombatUnit {
     food = [null, null, null];
     drinks = [null, null, null];
     houseRooms = [];
+    labyrinthUpgrades = [];
+    guildBuffs = [];
     achievements = null;
     dropTable = [];
     rareDropTable = [];
@@ -180,13 +182,16 @@ class CombatUnit {
             });
         });
 
+        let maxHitpointsRatio = this.getBuffBoost("/buff_types/max_hitpoints").ratioBoost;
+        let maxManapointsRatio = this.getBuffBoost("/buff_types/max_manapoints").ratioBoost;
+
         this.combatDetails.maxHitpoints = Math.floor(
             (10 * (10 + this.combatDetails.staminaLevel) + this.combatDetails.combatStats.maxHitpoints)
-            * (1 + this.combatDetails.combatStats.maxHitpointsRatio)
+            * (1 + this.combatDetails.combatStats.maxHitpointsRatio + maxHitpointsRatio)
         );
         this.combatDetails.maxManapoints = Math.floor(
             (10 * (10 + this.combatDetails.intelligenceLevel) + this.combatDetails.combatStats.maxManapoints)
-            * (1 + this.combatDetails.combatStats.maxManapointsRatio)
+            * (1 + this.combatDetails.combatStats.maxManapointsRatio + maxManapointsRatio)
         );
 
         let accuracyRatioBoostFromFury = this.getBuffBoost("/buff_types/fury_accuracy").ratioBoost;
@@ -444,8 +449,19 @@ class CombatUnit {
 
     generatePermanentBuffs() {
         for (let i = 0; i < this.houseRooms.length; i++) {
-            const houseRoom = this.houseRooms[i];
-            houseRoom.buffs.forEach(buff => {
+            this.houseRooms[i].buffs.forEach(buff => {
+                this.addPermanentBuff(buff);
+            });
+        }
+
+        for (let i = 0; i < this.labyrinthUpgrades.length; i++) {
+            this.labyrinthUpgrades[i].buffs.forEach(buff => {
+                this.addPermanentBuff(buff);
+            });
+        }
+
+        for (let i = 0; i < this.guildBuffs.length; i++) {
+            this.guildBuffs[i].buffs.forEach(buff => {
                 this.addPermanentBuff(buff);
             });
         }

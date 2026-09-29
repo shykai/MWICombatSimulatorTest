@@ -3,9 +3,13 @@ import Player from "./combatsimulator/player.js";
 import abilityDetailMap from "./combatsimulator/data/abilityDetailMap.json";
 import itemDetailMap from "./combatsimulator/data/itemDetailMap.json";
 import houseRoomDetailMap from "./combatsimulator/data/houseRoomDetailMap.json";
+import labyrinthUpgradeDetailMap from "./combatsimulator/data/labyrinthUpgradeDetailMap.json";
+import guildBuffDetailMap from "./combatsimulator/data/guildBuffDetailMap.json";
 import Ability from "./combatsimulator/ability.js";
 import Consumable from "./combatsimulator/consumable.js";
 import HouseRoom from "./combatsimulator/houseRoom"
+import LabyrinthUpgrade from "./combatsimulator/labyrinthUpgrade";
+import GuildBuff from "./combatsimulator/guildBuff";
 import combatTriggerDependencyDetailMap from "./combatsimulator/data/combatTriggerDependencyDetailMap.json";
 import combatTriggerConditionDetailMap from "./combatsimulator/data/combatTriggerConditionDetailMap.json";
 import combatTriggerComparatorDetailMap from "./combatsimulator/data/combatTriggerComparatorDetailMap.json";
@@ -188,6 +192,170 @@ function createHouseInput(hrid) {
     levelInput.dataset.houseHrid = hrid;
 
     return levelInput;
+}
+
+function initLabyrinthUpgradesModal() {
+    let labyrinthUpgradesList = document.getElementById("labyrinthUpgradesList");
+    let newChildren = [];
+    let labyrinthUpgrades = Object.values(labyrinthUpgradeDetailMap).sort((a, b) => a.sortIndex - b.sortIndex);
+    player.labyrinthUpgrades = {};
+
+    for (const upgrade of Object.values(labyrinthUpgrades)) {
+        player.labyrinthUpgrades[upgrade.uniqueHrid] = 0;
+
+        let row = createElement("div", "row mb-2");
+
+        let nameCol = createElement("div", "col-md-4 offset-md-3 align-self-center");
+        let nameText = createElement("div", "");
+        nameText.setAttribute("data-i18n", "buffTypeNames." + upgrade.typeHrid);
+        nameCol.appendChild(nameText);
+        row.appendChild(nameCol);
+
+        let levelCol = createElement("div", "col-md-2");
+        let levelInput = createLabyrinthUpgradeInput(upgrade.uniqueHrid, upgrade.maxLevel);
+
+        levelInput.addEventListener("input", function (e) {
+            const hrid = e.target.dataset.labyrinthUpgradeHrid;
+            player.labyrinthUpgrades[hrid] = parseInt(e.target.value) || 0;
+        });
+
+        levelCol.appendChild(levelInput);
+        row.appendChild(levelCol);
+
+        newChildren.push(row);
+    }
+
+    labyrinthUpgradesList.replaceChildren(...newChildren);
+}
+
+function createLabyrinthUpgradeInput(hrid, maxLevel) {
+    let levelInput = document.createElement("input");
+    levelInput.className = "form-control";
+    levelInput.type = "number";
+    levelInput.placeholder = 0;
+    levelInput.min = 0;
+    levelInput.max = maxLevel;
+    levelInput.step = 1;
+    levelInput.dataset.labyrinthUpgradeHrid = hrid;
+
+    return levelInput;
+}
+
+function initGuildBuffsModal() {
+    let guildBuffsList = document.getElementById("guildBuffsList");
+    let newChildren = [];
+    let guildBuffs = Object.values(guildBuffDetailMap)
+        // .filter((guildBuff) => guildBuff.isCombat === true)
+        .sort((a, b) => a.sortIndex - b.sortIndex);
+    player.guildBuffs = {};
+
+    for (const guildBuff of Object.values(guildBuffs)) {
+        player.guildBuffs[guildBuff.hrid] = 0;
+
+        let row = createElement("div", "row mb-2");
+
+        let nameCol = createElement("div", "col-md-6 offset-md-1 align-self-center");
+        let nameText = createElement("div", "");
+        nameText.setAttribute("data-i18n", "guildShrineNames." + guildBuff.shrineHrid);
+        nameCol.appendChild(nameText);
+
+        let buffDesc = createElement("div", "small text-secondary");
+        let buffType = createElement("span", "");
+        buffType.setAttribute("data-i18n", "guildPanel." + (guildBuff.isCombat?"combat":"skilling"));
+        buffDesc.appendChild(buffType);
+
+        guildBuff.buffs.forEach((buff, index) => {
+            if (index > 0) {
+                buffDesc.appendChild(document.createTextNode(" / "));
+            }
+            let buffName = createElement("span", "");
+            buffName.setAttribute("data-i18n", "buffTypeNames." + buff.typeHrid);
+            buffDesc.appendChild(buffName);
+        });
+        nameCol.appendChild(buffDesc);
+        row.appendChild(nameCol);
+
+        let levelCol = createElement("div", "col-md-2");
+        let levelInput = createGuildBuffInput(guildBuff.hrid);
+
+        levelInput.addEventListener("input", function (e) {
+            const hrid = e.target.dataset.guildBuffHrid;
+            player.guildBuffs[hrid] = parseInt(e.target.value) || 0;
+        });
+
+        levelCol.appendChild(levelInput);
+        row.appendChild(levelCol);
+
+        newChildren.push(row);
+    }
+
+    guildBuffsList.replaceChildren(...newChildren);
+}
+
+function createGuildBuffInput(hrid) {
+    let levelInput = document.createElement("input");
+    levelInput.className = "form-control";
+    levelInput.type = "number";
+    levelInput.placeholder = 0;
+    levelInput.min = 0;
+    levelInput.max = 20;
+    levelInput.step = 1;
+    levelInput.dataset.guildBuffHrid = hrid;
+
+    return levelInput;
+}
+
+const labyrinthUpgradeExportKeyMap = {
+    "/buff_uniques/labyrinth_upgrade_attack_speed": "labyrinthAttackSpeedLevel",
+    "/buff_uniques/labyrinth_upgrade_cast_speed": "labyrinthCastSpeedLevel",
+    "/buff_uniques/labyrinth_upgrade_combat_damage": "labyrinthCombatDamageLevel",
+    "/buff_uniques/labyrinth_upgrade_critical_rate": "labyrinthCriticalRateLevel",
+    "/buff_uniques/labyrinth_upgrade_experience": "labyrinthExperienceLevel",
+};
+
+function convertLabyrinthUpgradesToExport(labyrinthUpgrades) {
+    let labyrinth = {};
+    for (const [hrid, level] of Object.entries(labyrinthUpgrades ?? {})) {
+        const exportKey = labyrinthUpgradeExportKeyMap[hrid];
+        if (exportKey && level > 0) {
+            labyrinth[exportKey] = level;
+        }
+    }
+    return labyrinth;
+}
+
+function convertLabyrinthExportToUpgrades(labyrinth) {
+    let labyrinthUpgrades = {};
+    for (const [hrid, exportKey] of Object.entries(labyrinthUpgradeExportKeyMap)) {
+        const level = parseInt(labyrinth?.[exportKey]) || 0;
+        if (level > 0) {
+            labyrinthUpgrades[hrid] = level;
+        }
+    }
+    return labyrinthUpgrades;
+}
+
+function applyLabyrinthUpgradesToState(labyrinth) {
+    const importMap = convertLabyrinthExportToUpgrades(labyrinth);
+    let labyrinthUpgrades = Object.values(labyrinthUpgradeDetailMap).sort((a, b) => a.sortIndex - b.sortIndex);
+    for (const upgrade of labyrinthUpgrades) {
+        const field = document.querySelector('[data-labyrinth-upgrade-hrid="' + upgrade.uniqueHrid + '"]');
+        const level = importMap[upgrade.uniqueHrid] || 0;
+        field.value = level ? level : '';
+        player.labyrinthUpgrades[upgrade.uniqueHrid] = level;
+    }
+}
+
+function applyGuildBuffsToState(importMap) {
+    let guildBuffs = Object.values(guildBuffDetailMap)
+        .filter((guildBuff) => guildBuff.isCombat === true)
+        .sort((a, b) => a.sortIndex - b.sortIndex);
+    for (const guildBuff of guildBuffs) {
+        const field = document.querySelector('[data-guild-buff-hrid="' + guildBuff.hrid + '"]');
+        const level = parseInt(importMap?.[guildBuff.hrid]) || 0;
+        field.value = level ? level : '';
+        player.guildBuffs[guildBuff.hrid] = level;
+    }
 }
 
 function refreshAchievementStatics() {
@@ -3012,7 +3180,12 @@ function startSimulation(selectedPlayers) {
                 }
             }
 
-            playersToSim.push(structuredClone(player));
+            let simPlayer = structuredClone(player);
+            if (!simLabyrinthToggle.checked && !simAllLabyrinthsToggle.checked) {
+                // Labyrinth upgrade buffs only apply in labyrinth simulations
+                simPlayer.labyrinthUpgrades = {};
+            }
+            playersToSim.push(simPlayer);
         }
     }
     updateNextPlayer(currentPlayerTabId);
@@ -3202,6 +3375,8 @@ function parsePlayerJson(playerJson, hrid) {
         abilities: [],
         ...playerJson.player,
         houseRooms: playerJson.houseRooms,
+        labyrinthUpgrades: convertLabyrinthExportToUpgrades(playerJson.labyrinth),
+        guildBuffs: playerJson.guildBuffs,
     };
     playerData.equipment = {};
     const triggerMap = playerJson.triggerMap;
@@ -3234,6 +3409,8 @@ function parsePlayerJson(playerJson, hrid) {
     const player = Player.createFromDTO(playerData)
     player.updateCombatDetails();
     player.houseRooms = playerJson.houseRooms;
+    player.labyrinthUpgrades = convertLabyrinthExportToUpgrades(playerJson.labyrinth);
+    player.guildBuffs = playerJson.guildBuffs ?? {};
     player.achievements = playerJson.achievements ?? {};
     return player;
 }
@@ -3754,6 +3931,8 @@ function getEquipmentSetFromUI() {
         abilities: {},
         triggerMap: {},
         houseRooms: {},
+        labyrinth: {},
+        guildBuffs: {},
         achievements: {},
     };
 
@@ -3794,6 +3973,8 @@ function getEquipmentSetFromUI() {
     equipmentSet.triggerMap = triggerMap;
 
     equipmentSet.houseRooms = player.houseRooms;
+    equipmentSet.labyrinth = convertLabyrinthUpgradesToExport(player.labyrinthUpgrades);
+    equipmentSet.guildBuffs = player.guildBuffs;
     equipmentSet.achievements = player.achievements;
 
     return equipmentSet;
@@ -3902,6 +4083,9 @@ function loadEquipmentSetIntoUI(equipmentSet) {
             player.houseRooms[room.hrid] = 0;
         }
     }
+
+    applyLabyrinthUpgradesToState(equipmentSet.labyrinth);
+    applyGuildBuffsToState(equipmentSet.guildBuffs);
 
     if (equipmentSet.achievements) {
         for (const achievement in equipmentSet.achievements) {
@@ -4036,6 +4220,8 @@ function doSoloExport() {
         zone: zoneSelect.value,
         simulationTime: simulationTimeInput.value,
         houseRooms: player.houseRooms,
+        labyrinth: convertLabyrinthUpgradesToExport(player.labyrinthUpgrades),
+        guildBuffs: player.guildBuffs,
         achievements: player.achievements
     };
     try {
@@ -4187,6 +4373,9 @@ function doSoloImport() {
         }
     }
 
+    applyLabyrinthUpgradesToState(importSet.labyrinth);
+    applyGuildBuffsToState(importSet.guildBuffs);
+
     if (importSet.achievements) {
         for (const achievement in importSet.achievements) {
             const field = document.querySelector('[data-achievement-hrid="' + achievement + '"]');
@@ -4265,6 +4454,8 @@ function savePreviousPlayer(playerId) {
         zone: zoneSelect.value,
         simulationTime: simulationTimeInput.value,
         houseRooms: player.houseRooms,
+        labyrinth: convertLabyrinthUpgradesToExport(player.labyrinthUpgrades),
+        guildBuffs: player.guildBuffs,
         achievements: player.achievements
     };
     try {
@@ -4386,6 +4577,9 @@ function updateNextPlayer(currentPlayerNumber) {
         }
         player.houseRooms = importSet.houseRooms;
     }
+
+    applyLabyrinthUpgradesToState(importSet.labyrinth);
+    applyGuildBuffsToState(importSet.guildBuffs);
 
     { // reset all achievements
         let achievements = Object.values(achievementDetailMap);
@@ -4813,6 +5007,8 @@ function updateContent() {
 
 initEquipmentSection();
 initHouseRoomsModal();
+initLabyrinthUpgradesModal();
+initGuildBuffsModal();
 initAchievementsModal();
 initLevelSection();
 initFoodSection();

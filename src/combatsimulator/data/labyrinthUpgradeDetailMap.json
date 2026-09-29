@@ -1,0 +1,62 @@
+{
+    "/buff_uniques/labyrinth_upgrade_attack_speed": {
+        "uniqueHrid": "/buff_uniques/labyrinth_upgrade_attack_speed",
+        "typeHrid": "/buff_types/attack_speed",
+        "ratioBoost": 0.01,
+        "ratioBoostLevelBonus": 0.01,
+        "flatBoost": 0,
+        "flatBoostLevelBonus": 0,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0,
+        "maxLevel": 12,
+        "sortIndex": 1
+    },
+    "/buff_uniques/labyrinth_upgrade_cast_speed": {
+        "uniqueHrid": "/buff_uniques/labyrinth_upgrade_cast_speed",
+        "typeHrid": "/buff_types/cast_speed",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.01,
+        "flatBoostLevelBonus": 0.01,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0,
+        "maxLevel": 12,
+        "sortIndex": 2
+    },
+    "/buff_uniques/labyrinth_upgrade_combat_damage": {
+        "uniqueHrid": "/buff_uniques/labyrinth_upgrade_combat_damage",
+        "typeHrid": "/buff_types/damage",
+        "ratioBoost": 0.01,
+        "ratioBoostLevelBonus": 0.01,
+        "flatBoost": 0,
+        "flatBoostLevelBonus": 0,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0,
+        "maxLevel": 12,
+        "sortIndex": 3
+    },
+    "/buff_uniques/labyrinth_upgrade_critical_rate": {
+        "uniqueHrid": "/buff_uniques/labyrinth_upgrade_critical_rate",
+        "typeHrid": "/buff_types/critical_rate",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.01,
+        "flatBoostLevelBonus": 0.01,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0,
+        "maxLevel": 12,
+        "sortIndex": 4
+    },
+    "/buff_uniques/labyrinth_upgrade_experience": {
+        "uniqueHrid": "/buff_uniques/labyrinth_upgrade_experience",
+        "typeHrid": "/buff_types/wisdom",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.01,
+        "flatBoostLevelBonus": 0.01,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0,
+        "maxLevel": 12,
+        "sortIndex": 5
+    }
+}

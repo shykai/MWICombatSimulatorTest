@@ -3,6 +3,8 @@ import CombatUnit from "./combatUnit";
 import Consumable from "./consumable";
 import Equipment from "./equipment";
 import HouseRoom from "./houseRoom";
+import LabyrinthUpgrade from "./labyrinthUpgrade";
+import GuildBuff from "./guildBuff";
 import Achievement from "./achievement";
 
 class Player extends CombatUnit {
@@ -49,6 +51,18 @@ class Player extends CombatUnit {
         Object.entries(dto.houseRooms).forEach(houseRoom => {
             if (houseRoom[1] > 0) {
                 player.houseRooms.push(new HouseRoom(houseRoom[0], houseRoom[1]))
+            }
+        });
+
+        Object.entries(dto.labyrinthUpgrades ?? {}).forEach(labyrinthUpgrade => {
+            if (labyrinthUpgrade[1] > 0) {
+                player.labyrinthUpgrades.push(new LabyrinthUpgrade(labyrinthUpgrade[0], labyrinthUpgrade[1]))
+            }
+        });
+
+        Object.entries(dto.guildBuffs ?? {}).forEach(guildBuff => {
+            if (guildBuff[1] > 0) {
+                player.guildBuffs.push(new GuildBuff(guildBuff[0], guildBuff[1]))
             }
         });
 
