@@ -198,8 +198,20 @@
                         </div>
                         <div class="row mb-2">
                             <button id="buttonHouseRoomsModal" class="btn btn-primary" type="button"
-                                data-bs-toggle="modal" data-bs-target="#houseRoomsModal" data-i18n="characterManagement.house">
+                                data-bs-toggle="modal" data-bs-target="#houseRoomsModal" data-i18n="sharableProfile.house">
                                 House Rooms
+                            </button>
+                        </div>
+                        <div class="row mb-2">
+                            <button id="buttonLabyrinthUpgradesModal" class="btn btn-primary" type="button"
+                                data-bs-toggle="modal" data-bs-target="#labyrinthUpgradesModal" data-i18n="navigationBar.labyrinth">
+                                Labyrinth Upgrades
+                            </button>
+                        </div>
+                        <div class="row mb-2">
+                            <button id="buttonGuildBuffsModal" class="btn btn-primary" type="button"
+                                data-bs-toggle="modal" data-bs-target="#guildBuffsModal" data-i18n="sharableProfile.shrines">
+                                Guild Buildings
                             </button>
                         </div>
                         <div class="row mb-2">
@@ -1938,6 +1950,46 @@
                 <div class="modal-body">
                     <div class="container-fluid">
                         <div id="houseRoomsList"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="common:controls.close">Close</button>
+                </div>
+            </div>
+        </div>
+        <!-- #endregion -->
+    </div>
+    <div class="modal" id="labyrinthUpgradesModal" tabindex="-1">
+        <!-- #region Labyrinth Upgrades Modal -->
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" data-i18n="labyrinthPanel.upgrades">Labyrinth Upgrades</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div id="labyrinthUpgradesList"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="common:controls.close">Close</button>
+                </div>
+            </div>
+        </div>
+        <!-- #endregion -->
+    </div>
+    <div class="modal" id="guildBuffsModal" tabindex="-1">
+        <!-- #region Guild Buildings Modal -->
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" data-i18n="guildPanel.guildBuffs">Guild Buildings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div id="guildBuffsList"></div>
                     </div>
                 </div>
                 <div class="modal-footer">
