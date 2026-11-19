@@ -1,0 +1,74 @@
+{
+    "maxGrade": 6,
+    "maxModifierCount": 4,
+    "maxSlotCount": 3,
+    "maxCountPerCharacter": 60,
+    "createInputItemHrid": "/items/basic_talisman_core",
+    "addModifierInputMap": {
+        "2": {
+            "itemHrid": "/items/basic_talisman_core",
+            "count": 5
+        },
+        "3": {
+            "itemHrid": "/items/advanced_talisman_core",
+            "count": 1
+        },
+        "4": {
+            "itemHrid": "/items/expert_talisman_core",
+            "count": 1
+        }
+    },
+    "rerollInputMap": {
+        "/items/attunement_orb": {
+            "modeHrid": "/talisman_reroll_modes/grade_shift",
+            "gradeCap": 0,
+            "lineCount": 0,
+            "minUnlockedCount": 1,
+            "shiftDownChance": 0.65,
+            "shiftUpChance": 0.15
+        },
+        "/items/exchange_orb": {
+            "modeHrid": "/talisman_reroll_modes/permute",
+            "gradeCap": 0,
+            "lineCount": 0,
+            "minUnlockedCount": 2,
+            "shiftDownChance": 0,
+            "shiftUpChance": 0
+        },
+        "/items/focus_orb": {
+            "modeHrid": "/talisman_reroll_modes/types_only",
+            "gradeCap": 0,
+            "lineCount": 0,
+            "minUnlockedCount": 1,
+            "shiftDownChance": 0,
+            "shiftUpChance": 0
+        },
+        "/items/mutation_orb": {
+            "modeHrid": "/talisman_reroll_modes/random_lines",
+            "gradeCap": 6,
+            "lineCount": 2,
+            "minUnlockedCount": 2,
+            "shiftDownChance": 0,
+            "shiftUpChance": 0
+        },
+        "/items/reforging_orb": {
+            "modeHrid": "/talisman_reroll_modes/full",
+            "gradeCap": 6,
+            "lineCount": 0,
+            "minUnlockedCount": 1,
+            "shiftDownChance": 0,
+            "shiftUpChance": 0
+        },
+        "/items/reshaping_orb": {
+            "modeHrid": "/talisman_reroll_modes/full",
+            "gradeCap": 4,
+            "lineCount": 0,
+            "minUnlockedCount": 1,
+            "shiftDownChance": 0,
+            "shiftUpChance": 0
+        }
+    },
+    "focusWeight": 5,
+    "focusPickLimit": 10,
+    "lockInputItemHrid": "/items/binding_orb"
+}

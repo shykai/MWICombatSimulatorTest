@@ -1,0 +1,2325 @@
+{
+    "/talisman_modifiers/ability_damage": {
+        "hrid": "/talisman_modifiers/ability_damage",
+        "name": "Ability Damage",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "AbilityDamage"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.01,
+            0.015,
+            0.02,
+            0.025,
+            0.03,
+            0.04
+        ],
+        "weight": 1,
+        "sortIndex": 2
+    },
+    "/talisman_modifiers/ability_haste": {
+        "hrid": "/talisman_modifiers/ability_haste",
+        "name": "Ability Haste",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "AbilityHaste"
+        ],
+        "isPercent": false,
+        "gradeValues": [
+            1,
+            1.5,
+            2,
+            2.5,
+            3,
+            4
+        ],
+        "weight": 1,
+        "sortIndex": 5
+    },
+    "/talisman_modifiers/alchemy_efficiency": {
+        "hrid": "/talisman_modifiers/alchemy_efficiency",
+        "name": "Alchemy Efficiency",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/efficiency",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "AlchemyEfficiency"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 71
+    },
+    "/talisman_modifiers/alchemy_essence_find": {
+        "hrid": "/talisman_modifiers/alchemy_essence_find",
+        "name": "Alchemy Essence Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/other",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "AlchemyEssenceFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.15,
+            0.225,
+            0.3,
+            0.375,
+            0.45,
+            0.6
+        ],
+        "weight": 1,
+        "sortIndex": 102
+    },
+    "/talisman_modifiers/alchemy_experience": {
+        "hrid": "/talisman_modifiers/alchemy_experience",
+        "name": "Alchemy Experience",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/experience",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "AlchemyExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 80
+    },
+    "/talisman_modifiers/alchemy_rare_find": {
+        "hrid": "/talisman_modifiers/alchemy_rare_find",
+        "name": "Alchemy Rare Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/rare_find",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "AlchemyRareFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.09,
+            0.135,
+            0.18,
+            0.225,
+            0.27,
+            0.36
+        ],
+        "weight": 1,
+        "sortIndex": 90
+    },
+    "/talisman_modifiers/alchemy_speed": {
+        "hrid": "/talisman_modifiers/alchemy_speed",
+        "name": "Alchemy Speed",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/speed",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "AlchemySpeed"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 61
+    },
+    "/talisman_modifiers/armor": {
+        "hrid": "/talisman_modifiers/armor",
+        "name": "Armor",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/defense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "Armor"
+        ],
+        "isPercent": false,
+        "gradeValues": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8
+        ],
+        "weight": 1,
+        "sortIndex": 23
+    },
+    "/talisman_modifiers/armor_penetration": {
+        "hrid": "/talisman_modifiers/armor_penetration",
+        "name": "Armor Penetration",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "ArmorPenetration"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.02,
+            0.03,
+            0.04,
+            0.05,
+            0.06,
+            0.08
+        ],
+        "weight": 1,
+        "sortIndex": 9
+    },
+    "/talisman_modifiers/attack_experience": {
+        "hrid": "/talisman_modifiers/attack_experience",
+        "name": "Attack Experience",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/utility",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "AttackExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.015,
+            0.0225,
+            0.03,
+            0.0375,
+            0.045,
+            0.06
+        ],
+        "weight": 1,
+        "sortIndex": 39
+    },
+    "/talisman_modifiers/attack_speed": {
+        "hrid": "/talisman_modifiers/attack_speed",
+        "name": "Attack Speed",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "AttackSpeed"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.01,
+            0.015,
+            0.02,
+            0.025,
+            0.03,
+            0.04
+        ],
+        "weight": 1,
+        "sortIndex": 3
+    },
+    "/talisman_modifiers/auto_attack_damage": {
+        "hrid": "/talisman_modifiers/auto_attack_damage",
+        "name": "Auto Attack Damage",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "AutoAttackDamage"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.012,
+            0.018,
+            0.024,
+            0.03,
+            0.036,
+            0.048
+        ],
+        "weight": 1,
+        "sortIndex": 1
+    },
+    "/talisman_modifiers/brewing_efficiency": {
+        "hrid": "/talisman_modifiers/brewing_efficiency",
+        "name": "Brewing Efficiency",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/efficiency",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "BrewingEfficiency"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 70
+    },
+    "/talisman_modifiers/brewing_essence_find": {
+        "hrid": "/talisman_modifiers/brewing_essence_find",
+        "name": "Brewing Essence Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/other",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "BrewingEssenceFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.15,
+            0.225,
+            0.3,
+            0.375,
+            0.45,
+            0.6
+        ],
+        "weight": 1,
+        "sortIndex": 101
+    },
+    "/talisman_modifiers/brewing_experience": {
+        "hrid": "/talisman_modifiers/brewing_experience",
+        "name": "Brewing Experience",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/experience",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "BrewingExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 79
+    },
+    "/talisman_modifiers/brewing_rare_find": {
+        "hrid": "/talisman_modifiers/brewing_rare_find",
+        "name": "Brewing Rare Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/rare_find",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "BrewingRareFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.09,
+            0.135,
+            0.18,
+            0.225,
+            0.27,
+            0.36
+        ],
+        "weight": 1,
+        "sortIndex": 89
+    },
+    "/talisman_modifiers/brewing_speed": {
+        "hrid": "/talisman_modifiers/brewing_speed",
+        "name": "Brewing Speed",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/speed",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "BrewingSpeed"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 60
+    },
+    "/talisman_modifiers/cast_speed": {
+        "hrid": "/talisman_modifiers/cast_speed",
+        "name": "Cast Speed",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "CastSpeed"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.012,
+            0.018,
+            0.024,
+            0.03,
+            0.036,
+            0.048
+        ],
+        "weight": 1,
+        "sortIndex": 4
+    },
+    "/talisman_modifiers/cheesesmithing_efficiency": {
+        "hrid": "/talisman_modifiers/cheesesmithing_efficiency",
+        "name": "Cheesesmithing Efficiency",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/efficiency",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "CheesesmithingEfficiency"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 66
+    },
+    "/talisman_modifiers/cheesesmithing_essence_find": {
+        "hrid": "/talisman_modifiers/cheesesmithing_essence_find",
+        "name": "Cheesesmithing Essence Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/other",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "CheesesmithingEssenceFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.15,
+            0.225,
+            0.3,
+            0.375,
+            0.45,
+            0.6
+        ],
+        "weight": 1,
+        "sortIndex": 97
+    },
+    "/talisman_modifiers/cheesesmithing_experience": {
+        "hrid": "/talisman_modifiers/cheesesmithing_experience",
+        "name": "Cheesesmithing Experience",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/experience",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "CheesesmithingExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 75
+    },
+    "/talisman_modifiers/cheesesmithing_rare_find": {
+        "hrid": "/talisman_modifiers/cheesesmithing_rare_find",
+        "name": "Cheesesmithing Rare Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/rare_find",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "CheesesmithingRareFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.09,
+            0.135,
+            0.18,
+            0.225,
+            0.27,
+            0.36
+        ],
+        "weight": 1,
+        "sortIndex": 85
+    },
+    "/talisman_modifiers/cheesesmithing_speed": {
+        "hrid": "/talisman_modifiers/cheesesmithing_speed",
+        "name": "Cheesesmithing Speed",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/speed",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "CheesesmithingSpeed"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 56
+    },
+    "/talisman_modifiers/combat_drop_rate": {
+        "hrid": "/talisman_modifiers/combat_drop_rate",
+        "name": "Combat Drop Rate",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/utility",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "CombatDropRate"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.01,
+            0.015,
+            0.02,
+            0.025,
+            0.03,
+            0.04
+        ],
+        "weight": 1,
+        "sortIndex": 34
+    },
+    "/talisman_modifiers/combat_experience": {
+        "hrid": "/talisman_modifiers/combat_experience",
+        "name": "Combat Experience",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/utility",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "CombatExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.01,
+            0.015,
+            0.02,
+            0.025,
+            0.03,
+            0.04
+        ],
+        "weight": 1,
+        "sortIndex": 36
+    },
+    "/talisman_modifiers/combat_rare_find": {
+        "hrid": "/talisman_modifiers/combat_rare_find",
+        "name": "Combat Rare Find",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/utility",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "CombatRareFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 35
+    },
+    "/talisman_modifiers/cooking_efficiency": {
+        "hrid": "/talisman_modifiers/cooking_efficiency",
+        "name": "Cooking Efficiency",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/efficiency",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "CookingEfficiency"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 69
+    },
+    "/talisman_modifiers/cooking_essence_find": {
+        "hrid": "/talisman_modifiers/cooking_essence_find",
+        "name": "Cooking Essence Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/other",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "CookingEssenceFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.15,
+            0.225,
+            0.3,
+            0.375,
+            0.45,
+            0.6
+        ],
+        "weight": 1,
+        "sortIndex": 100
+    },
+    "/talisman_modifiers/cooking_experience": {
+        "hrid": "/talisman_modifiers/cooking_experience",
+        "name": "Cooking Experience",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/experience",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "CookingExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 78
+    },
+    "/talisman_modifiers/cooking_rare_find": {
+        "hrid": "/talisman_modifiers/cooking_rare_find",
+        "name": "Cooking Rare Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/rare_find",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "CookingRareFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.09,
+            0.135,
+            0.18,
+            0.225,
+            0.27,
+            0.36
+        ],
+        "weight": 1,
+        "sortIndex": 88
+    },
+    "/talisman_modifiers/cooking_speed": {
+        "hrid": "/talisman_modifiers/cooking_speed",
+        "name": "Cooking Speed",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/speed",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "CookingSpeed"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 59
+    },
+    "/talisman_modifiers/crafting_efficiency": {
+        "hrid": "/talisman_modifiers/crafting_efficiency",
+        "name": "Crafting Efficiency",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/efficiency",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "CraftingEfficiency"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 67
+    },
+    "/talisman_modifiers/crafting_essence_find": {
+        "hrid": "/talisman_modifiers/crafting_essence_find",
+        "name": "Crafting Essence Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/other",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "CraftingEssenceFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.15,
+            0.225,
+            0.3,
+            0.375,
+            0.45,
+            0.6
+        ],
+        "weight": 1,
+        "sortIndex": 98
+    },
+    "/talisman_modifiers/crafting_experience": {
+        "hrid": "/talisman_modifiers/crafting_experience",
+        "name": "Crafting Experience",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/experience",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "CraftingExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 76
+    },
+    "/talisman_modifiers/crafting_rare_find": {
+        "hrid": "/talisman_modifiers/crafting_rare_find",
+        "name": "Crafting Rare Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/rare_find",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "CraftingRareFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.09,
+            0.135,
+            0.18,
+            0.225,
+            0.27,
+            0.36
+        ],
+        "weight": 1,
+        "sortIndex": 86
+    },
+    "/talisman_modifiers/crafting_speed": {
+        "hrid": "/talisman_modifiers/crafting_speed",
+        "name": "Crafting Speed",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/speed",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "CraftingSpeed"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 57
+    },
+    "/talisman_modifiers/critical_damage": {
+        "hrid": "/talisman_modifiers/critical_damage",
+        "name": "Critical Damage",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "CriticalDamage"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.015,
+            0.0225,
+            0.03,
+            0.0375,
+            0.045,
+            0.06
+        ],
+        "weight": 1,
+        "sortIndex": 7
+    },
+    "/talisman_modifiers/critical_rate": {
+        "hrid": "/talisman_modifiers/critical_rate",
+        "name": "Critical Rate",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "CriticalRate"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.006,
+            0.009,
+            0.012,
+            0.015,
+            0.018,
+            0.024
+        ],
+        "weight": 1,
+        "sortIndex": 6
+    },
+    "/talisman_modifiers/damage_taken": {
+        "hrid": "/talisman_modifiers/damage_taken",
+        "name": "Damage Taken",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/defense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "DamageTaken"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            -0.005,
+            -0.0075,
+            -0.01,
+            -0.0125,
+            -0.015,
+            -0.02
+        ],
+        "weight": 1,
+        "sortIndex": 24
+    },
+    "/talisman_modifiers/defense_experience": {
+        "hrid": "/talisman_modifiers/defense_experience",
+        "name": "Defense Experience",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/utility",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "DefenseExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.015,
+            0.0225,
+            0.03,
+            0.0375,
+            0.045,
+            0.06
+        ],
+        "weight": 1,
+        "sortIndex": 40
+    },
+    "/talisman_modifiers/defensive_damage": {
+        "hrid": "/talisman_modifiers/defensive_damage",
+        "name": "Defensive Damage",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "DefensiveDamage"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 16
+    },
+    "/talisman_modifiers/echo": {
+        "hrid": "/talisman_modifiers/echo",
+        "name": "Echo",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/special",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "Echo"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 0.1,
+        "sortIndex": 46
+    },
+    "/talisman_modifiers/elemental_amplify": {
+        "hrid": "/talisman_modifiers/elemental_amplify",
+        "name": "Elemental Amplify",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "WaterAmplify",
+            "NatureAmplify",
+            "FireAmplify"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.01,
+            0.015,
+            0.02,
+            0.025,
+            0.03,
+            0.04
+        ],
+        "weight": 1,
+        "sortIndex": 18
+    },
+    "/talisman_modifiers/elemental_penetration": {
+        "hrid": "/talisman_modifiers/elemental_penetration",
+        "name": "Elemental Penetration",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "WaterPenetration",
+            "NaturePenetration",
+            "FirePenetration"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.02,
+            0.03,
+            0.04,
+            0.05,
+            0.06,
+            0.08
+        ],
+        "weight": 1,
+        "sortIndex": 19
+    },
+    "/talisman_modifiers/elemental_resistance": {
+        "hrid": "/talisman_modifiers/elemental_resistance",
+        "name": "Elemental Resistance",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/defense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "WaterResistance",
+            "NatureResistance",
+            "FireResistance"
+        ],
+        "isPercent": false,
+        "gradeValues": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8
+        ],
+        "weight": 1,
+        "sortIndex": 31
+    },
+    "/talisman_modifiers/enhancing_essence_find": {
+        "hrid": "/talisman_modifiers/enhancing_essence_find",
+        "name": "Enhancing Essence Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/other",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "EnhancingEssenceFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.15,
+            0.225,
+            0.3,
+            0.375,
+            0.45,
+            0.6
+        ],
+        "weight": 1,
+        "sortIndex": 103
+    },
+    "/talisman_modifiers/enhancing_experience": {
+        "hrid": "/talisman_modifiers/enhancing_experience",
+        "name": "Enhancing Experience",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/experience",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "EnhancingExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 81
+    },
+    "/talisman_modifiers/enhancing_rare_find": {
+        "hrid": "/talisman_modifiers/enhancing_rare_find",
+        "name": "Enhancing Rare Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/rare_find",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "EnhancingRareFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.09,
+            0.135,
+            0.18,
+            0.225,
+            0.27,
+            0.36
+        ],
+        "weight": 1,
+        "sortIndex": 91
+    },
+    "/talisman_modifiers/enhancing_speed": {
+        "hrid": "/talisman_modifiers/enhancing_speed",
+        "name": "Enhancing Speed",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/speed",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "EnhancingSpeed"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 62
+    },
+    "/talisman_modifiers/essence_find": {
+        "hrid": "/talisman_modifiers/essence_find",
+        "name": "Essence Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/other",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "SkillingEssenceFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.05,
+            0.075,
+            0.1,
+            0.125,
+            0.15,
+            0.2
+        ],
+        "weight": 1,
+        "sortIndex": 93
+    },
+    "/talisman_modifiers/foraging_efficiency": {
+        "hrid": "/talisman_modifiers/foraging_efficiency",
+        "name": "Foraging Efficiency",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/efficiency",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "ForagingEfficiency"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 64
+    },
+    "/talisman_modifiers/foraging_essence_find": {
+        "hrid": "/talisman_modifiers/foraging_essence_find",
+        "name": "Foraging Essence Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/other",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "ForagingEssenceFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.15,
+            0.225,
+            0.3,
+            0.375,
+            0.45,
+            0.6
+        ],
+        "weight": 1,
+        "sortIndex": 95
+    },
+    "/talisman_modifiers/foraging_experience": {
+        "hrid": "/talisman_modifiers/foraging_experience",
+        "name": "Foraging Experience",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/experience",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "ForagingExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 73
+    },
+    "/talisman_modifiers/foraging_rare_find": {
+        "hrid": "/talisman_modifiers/foraging_rare_find",
+        "name": "Foraging Rare Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/rare_find",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "ForagingRareFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.09,
+            0.135,
+            0.18,
+            0.225,
+            0.27,
+            0.36
+        ],
+        "weight": 1,
+        "sortIndex": 83
+    },
+    "/talisman_modifiers/foraging_speed": {
+        "hrid": "/talisman_modifiers/foraging_speed",
+        "name": "Foraging Speed",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/speed",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "ForagingSpeed"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 54
+    },
+    "/talisman_modifiers/fortify": {
+        "hrid": "/talisman_modifiers/fortify",
+        "name": "Fortify",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/special",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "Fortify"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.01,
+            0.015,
+            0.02,
+            0.025,
+            0.03,
+            0.04
+        ],
+        "weight": 0.1,
+        "sortIndex": 48
+    },
+    "/talisman_modifiers/gathering_quantity": {
+        "hrid": "/talisman_modifiers/gathering_quantity",
+        "name": "Gathering Quantity",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/other",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "GatheringQuantity"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.02,
+            0.03,
+            0.04,
+            0.05,
+            0.06,
+            0.08
+        ],
+        "weight": 1,
+        "sortIndex": 92
+    },
+    "/talisman_modifiers/gourmet": {
+        "hrid": "/talisman_modifiers/gourmet",
+        "name": "Gourmet",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/other",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/buff",
+        "keys": [
+            "/buff_types/gourmet"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.01,
+            0.015,
+            0.02,
+            0.025,
+            0.03,
+            0.04
+        ],
+        "weight": 1,
+        "sortIndex": 105
+    },
+    "/talisman_modifiers/healing_amplify": {
+        "hrid": "/talisman_modifiers/healing_amplify",
+        "name": "Healing Amplify",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "HealingAmplify"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.01,
+            0.015,
+            0.02,
+            0.025,
+            0.03,
+            0.04
+        ],
+        "weight": 1,
+        "sortIndex": 8
+    },
+    "/talisman_modifiers/hp_regen": {
+        "hrid": "/talisman_modifiers/hp_regen",
+        "name": "HP Regen",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/defense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "HpRegenPer10"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.0003,
+            0.00045,
+            0.0006,
+            0.00075,
+            0.0009,
+            0.0012
+        ],
+        "weight": 1,
+        "sortIndex": 26
+    },
+    "/talisman_modifiers/intelligence_experience": {
+        "hrid": "/talisman_modifiers/intelligence_experience",
+        "name": "Intelligence Experience",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/utility",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "IntelligenceExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.015,
+            0.0225,
+            0.03,
+            0.0375,
+            0.045,
+            0.06
+        ],
+        "weight": 1,
+        "sortIndex": 38
+    },
+    "/talisman_modifiers/magic_accuracy": {
+        "hrid": "/talisman_modifiers/magic_accuracy",
+        "name": "Magic Accuracy",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "MagicAccuracy"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.08,
+            0.12,
+            0.16,
+            0.2,
+            0.24,
+            0.32
+        ],
+        "weight": 1,
+        "sortIndex": 12
+    },
+    "/talisman_modifiers/magic_damage": {
+        "hrid": "/talisman_modifiers/magic_damage",
+        "name": "Magic Damage",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "MagicDamage"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 15
+    },
+    "/talisman_modifiers/magic_evasion": {
+        "hrid": "/talisman_modifiers/magic_evasion",
+        "name": "Magic Evasion",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/defense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "MagicEvasion"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.08,
+            0.12,
+            0.16,
+            0.2,
+            0.24,
+            0.32
+        ],
+        "weight": 1,
+        "sortIndex": 30
+    },
+    "/talisman_modifiers/magic_experience": {
+        "hrid": "/talisman_modifiers/magic_experience",
+        "name": "Magic Experience",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/utility",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "MagicExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.015,
+            0.0225,
+            0.03,
+            0.0375,
+            0.045,
+            0.06
+        ],
+        "weight": 1,
+        "sortIndex": 43
+    },
+    "/talisman_modifiers/max_hitpoints": {
+        "hrid": "/talisman_modifiers/max_hitpoints",
+        "name": "Max HP",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/defense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "MaxHitpoints"
+        ],
+        "isPercent": false,
+        "gradeValues": [
+            20,
+            30,
+            40,
+            50,
+            60,
+            80
+        ],
+        "weight": 1,
+        "sortIndex": 21
+    },
+    "/talisman_modifiers/max_manapoints": {
+        "hrid": "/talisman_modifiers/max_manapoints",
+        "name": "Max MP",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/defense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "MaxManapoints"
+        ],
+        "isPercent": false,
+        "gradeValues": [
+            20,
+            30,
+            40,
+            50,
+            60,
+            80
+        ],
+        "weight": 1,
+        "sortIndex": 22
+    },
+    "/talisman_modifiers/melee_accuracy": {
+        "hrid": "/talisman_modifiers/melee_accuracy",
+        "name": "Melee Accuracy",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "StabAccuracy",
+            "SlashAccuracy",
+            "SmashAccuracy"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.08,
+            0.12,
+            0.16,
+            0.2,
+            0.24,
+            0.32
+        ],
+        "weight": 1,
+        "sortIndex": 10
+    },
+    "/talisman_modifiers/melee_damage": {
+        "hrid": "/talisman_modifiers/melee_damage",
+        "name": "Melee Damage",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "StabDamage",
+            "SlashDamage",
+            "SmashDamage"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 13
+    },
+    "/talisman_modifiers/melee_evasion": {
+        "hrid": "/talisman_modifiers/melee_evasion",
+        "name": "Melee Evasion",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/defense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "StabEvasion",
+            "SlashEvasion",
+            "SmashEvasion"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.08,
+            0.12,
+            0.16,
+            0.2,
+            0.24,
+            0.32
+        ],
+        "weight": 1,
+        "sortIndex": 28
+    },
+    "/talisman_modifiers/melee_experience": {
+        "hrid": "/talisman_modifiers/melee_experience",
+        "name": "Melee Experience",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/utility",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "MeleeExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.015,
+            0.0225,
+            0.03,
+            0.0375,
+            0.045,
+            0.06
+        ],
+        "weight": 1,
+        "sortIndex": 41
+    },
+    "/talisman_modifiers/milking_efficiency": {
+        "hrid": "/talisman_modifiers/milking_efficiency",
+        "name": "Milking Efficiency",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/efficiency",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "MilkingEfficiency"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 63
+    },
+    "/talisman_modifiers/milking_essence_find": {
+        "hrid": "/talisman_modifiers/milking_essence_find",
+        "name": "Milking Essence Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/other",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "MilkingEssenceFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.15,
+            0.225,
+            0.3,
+            0.375,
+            0.45,
+            0.6
+        ],
+        "weight": 1,
+        "sortIndex": 94
+    },
+    "/talisman_modifiers/milking_experience": {
+        "hrid": "/talisman_modifiers/milking_experience",
+        "name": "Milking Experience",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/experience",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "MilkingExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 72
+    },
+    "/talisman_modifiers/milking_rare_find": {
+        "hrid": "/talisman_modifiers/milking_rare_find",
+        "name": "Milking Rare Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/rare_find",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "MilkingRareFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.09,
+            0.135,
+            0.18,
+            0.225,
+            0.27,
+            0.36
+        ],
+        "weight": 1,
+        "sortIndex": 82
+    },
+    "/talisman_modifiers/milking_speed": {
+        "hrid": "/talisman_modifiers/milking_speed",
+        "name": "Milking Speed",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/speed",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "MilkingSpeed"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 53
+    },
+    "/talisman_modifiers/mp_regen": {
+        "hrid": "/talisman_modifiers/mp_regen",
+        "name": "MP Regen",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/defense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "MpRegenPer10"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.0003,
+            0.00045,
+            0.0006,
+            0.00075,
+            0.0009,
+            0.0012
+        ],
+        "weight": 1,
+        "sortIndex": 27
+    },
+    "/talisman_modifiers/overkill": {
+        "hrid": "/talisman_modifiers/overkill",
+        "name": "Overkill",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/special",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "Overkill"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.15,
+            0.225,
+            0.3,
+            0.375,
+            0.45,
+            0.6
+        ],
+        "weight": 0.1,
+        "sortIndex": 45
+    },
+    "/talisman_modifiers/physical_amplify": {
+        "hrid": "/talisman_modifiers/physical_amplify",
+        "name": "Physical Amplify",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "PhysicalAmplify"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.01,
+            0.015,
+            0.02,
+            0.025,
+            0.03,
+            0.04
+        ],
+        "weight": 1,
+        "sortIndex": 17
+    },
+    "/talisman_modifiers/processing": {
+        "hrid": "/talisman_modifiers/processing",
+        "name": "Processing",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/other",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/buff",
+        "keys": [
+            "/buff_types/processing"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.02,
+            0.03,
+            0.04,
+            0.05,
+            0.06,
+            0.08
+        ],
+        "weight": 1,
+        "sortIndex": 104
+    },
+    "/talisman_modifiers/ranged_accuracy": {
+        "hrid": "/talisman_modifiers/ranged_accuracy",
+        "name": "Ranged Accuracy",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "RangedAccuracy"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.08,
+            0.12,
+            0.16,
+            0.2,
+            0.24,
+            0.32
+        ],
+        "weight": 1,
+        "sortIndex": 11
+    },
+    "/talisman_modifiers/ranged_damage": {
+        "hrid": "/talisman_modifiers/ranged_damage",
+        "name": "Ranged Damage",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "RangedDamage"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 14
+    },
+    "/talisman_modifiers/ranged_evasion": {
+        "hrid": "/talisman_modifiers/ranged_evasion",
+        "name": "Ranged Evasion",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/defense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "RangedEvasion"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.08,
+            0.12,
+            0.16,
+            0.2,
+            0.24,
+            0.32
+        ],
+        "weight": 1,
+        "sortIndex": 29
+    },
+    "/talisman_modifiers/ranged_experience": {
+        "hrid": "/talisman_modifiers/ranged_experience",
+        "name": "Ranged Experience",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/utility",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "RangedExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.015,
+            0.0225,
+            0.03,
+            0.0375,
+            0.045,
+            0.06
+        ],
+        "weight": 1,
+        "sortIndex": 42
+    },
+    "/talisman_modifiers/shatter": {
+        "hrid": "/talisman_modifiers/shatter",
+        "name": "Shatter",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/special",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "Shatter"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.04,
+            0.06,
+            0.08,
+            0.1,
+            0.12,
+            0.16
+        ],
+        "weight": 0.1,
+        "sortIndex": 47
+    },
+    "/talisman_modifiers/skilling_efficiency": {
+        "hrid": "/talisman_modifiers/skilling_efficiency",
+        "name": "Skilling Efficiency",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/efficiency",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "SkillingEfficiency"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.01,
+            0.015,
+            0.02,
+            0.025,
+            0.03,
+            0.04
+        ],
+        "weight": 1,
+        "sortIndex": 50
+    },
+    "/talisman_modifiers/skilling_experience": {
+        "hrid": "/talisman_modifiers/skilling_experience",
+        "name": "Skilling Experience",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/experience",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "SkillingExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.01,
+            0.015,
+            0.02,
+            0.025,
+            0.03,
+            0.04
+        ],
+        "weight": 1,
+        "sortIndex": 51
+    },
+    "/talisman_modifiers/skilling_rare_find": {
+        "hrid": "/talisman_modifiers/skilling_rare_find",
+        "name": "Skilling Rare Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/rare_find",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "SkillingRareFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 52
+    },
+    "/talisman_modifiers/skilling_speed": {
+        "hrid": "/talisman_modifiers/skilling_speed",
+        "name": "Skilling Speed",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/speed",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "SkillingSpeed"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.01,
+            0.015,
+            0.02,
+            0.025,
+            0.03,
+            0.04
+        ],
+        "weight": 1,
+        "sortIndex": 49
+    },
+    "/talisman_modifiers/smite": {
+        "hrid": "/talisman_modifiers/smite",
+        "name": "Smite",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/special",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "Smite"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 0.1,
+        "sortIndex": 44
+    },
+    "/talisman_modifiers/stamina_experience": {
+        "hrid": "/talisman_modifiers/stamina_experience",
+        "name": "Stamina Experience",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/utility",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "StaminaExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.015,
+            0.0225,
+            0.03,
+            0.0375,
+            0.045,
+            0.06
+        ],
+        "weight": 1,
+        "sortIndex": 37
+    },
+    "/talisman_modifiers/tailoring_efficiency": {
+        "hrid": "/talisman_modifiers/tailoring_efficiency",
+        "name": "Tailoring Efficiency",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/efficiency",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "TailoringEfficiency"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 68
+    },
+    "/talisman_modifiers/tailoring_essence_find": {
+        "hrid": "/talisman_modifiers/tailoring_essence_find",
+        "name": "Tailoring Essence Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/other",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "TailoringEssenceFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.15,
+            0.225,
+            0.3,
+            0.375,
+            0.45,
+            0.6
+        ],
+        "weight": 1,
+        "sortIndex": 99
+    },
+    "/talisman_modifiers/tailoring_experience": {
+        "hrid": "/talisman_modifiers/tailoring_experience",
+        "name": "Tailoring Experience",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/experience",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "TailoringExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 77
+    },
+    "/talisman_modifiers/tailoring_rare_find": {
+        "hrid": "/talisman_modifiers/tailoring_rare_find",
+        "name": "Tailoring Rare Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/rare_find",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "TailoringRareFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.09,
+            0.135,
+            0.18,
+            0.225,
+            0.27,
+            0.36
+        ],
+        "weight": 1,
+        "sortIndex": 87
+    },
+    "/talisman_modifiers/tailoring_speed": {
+        "hrid": "/talisman_modifiers/tailoring_speed",
+        "name": "Tailoring Speed",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/speed",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "TailoringSpeed"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 58
+    },
+    "/talisman_modifiers/tenacity": {
+        "hrid": "/talisman_modifiers/tenacity",
+        "name": "Tenacity",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/defense",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "Tenacity"
+        ],
+        "isPercent": false,
+        "gradeValues": [
+            6,
+            9,
+            12,
+            15,
+            18,
+            24
+        ],
+        "weight": 1,
+        "sortIndex": 25
+    },
+    "/talisman_modifiers/thorns": {
+        "hrid": "/talisman_modifiers/thorns",
+        "name": "Thorns",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/offense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "PhysicalThorns",
+            "ElementalThorns"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.005,
+            0.0075,
+            0.01,
+            0.0125,
+            0.015,
+            0.02
+        ],
+        "weight": 1,
+        "sortIndex": 20
+    },
+    "/talisman_modifiers/threat": {
+        "hrid": "/talisman_modifiers/threat",
+        "name": "Threat",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/defense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "Threat"
+        ],
+        "isPercent": false,
+        "gradeValues": [
+            4,
+            6,
+            8,
+            10,
+            12,
+            16
+        ],
+        "weight": 1,
+        "sortIndex": 32
+    },
+    "/talisman_modifiers/threat_reduction": {
+        "hrid": "/talisman_modifiers/threat_reduction",
+        "name": "Threat Reduction",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/defense",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "Threat"
+        ],
+        "isPercent": false,
+        "gradeValues": [
+            -4,
+            -6,
+            -8,
+            -10,
+            -12,
+            -16
+        ],
+        "weight": 1,
+        "sortIndex": 33
+    },
+    "/talisman_modifiers/woodcutting_efficiency": {
+        "hrid": "/talisman_modifiers/woodcutting_efficiency",
+        "name": "Woodcutting Efficiency",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/efficiency",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "WoodcuttingEfficiency"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 65
+    },
+    "/talisman_modifiers/woodcutting_essence_find": {
+        "hrid": "/talisman_modifiers/woodcutting_essence_find",
+        "name": "Woodcutting Essence Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/other",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "WoodcuttingEssenceFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.15,
+            0.225,
+            0.3,
+            0.375,
+            0.45,
+            0.6
+        ],
+        "weight": 1,
+        "sortIndex": 96
+    },
+    "/talisman_modifiers/woodcutting_experience": {
+        "hrid": "/talisman_modifiers/woodcutting_experience",
+        "name": "Woodcutting Experience",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/experience",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "WoodcuttingExperience"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 74
+    },
+    "/talisman_modifiers/woodcutting_rare_find": {
+        "hrid": "/talisman_modifiers/woodcutting_rare_find",
+        "name": "Woodcutting Rare Find",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/rare_find",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "WoodcuttingRareFind"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.09,
+            0.135,
+            0.18,
+            0.225,
+            0.27,
+            0.36
+        ],
+        "weight": 1,
+        "sortIndex": 84
+    },
+    "/talisman_modifiers/woodcutting_speed": {
+        "hrid": "/talisman_modifiers/woodcutting_speed",
+        "name": "Woodcutting Speed",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/speed",
+        "scopeHrid": "/talisman_modifier_scopes/specific",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "WoodcuttingSpeed"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 1,
+        "sortIndex": 55
+    }
+}
