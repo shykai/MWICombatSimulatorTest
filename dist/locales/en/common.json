@@ -121,5 +121,9 @@
     },
     "simLabyrinth" : "Sim Labyrinth",
     "simAllLabyrinths" : "Sim All Labyrinths",
-    "roomLevel" : "Room Level"
+    "roomLevel" : "Room Level",
+    "talisman": {
+        "effectiveModifierCount": "Effective modifiers: {{count}}",
+        "specialModifierOnlyHighest": "Only the highest grade of the same special modifier takes effect"
+    }
 }

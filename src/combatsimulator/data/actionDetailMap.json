@@ -4529,7 +4529,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 204
+        "sortIndex": 205
     },
     "/actions/cheesesmithing/anchorbound_plate_legs": {
         "hrid": "/actions/cheesesmithing/anchorbound_plate_legs",
@@ -4641,7 +4641,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 198
+        "sortIndex": 199
     },
     "/actions/cheesesmithing/azure_alembic": {
         "hrid": "/actions/cheesesmithing/azure_alembic",
@@ -7825,7 +7825,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 202
+        "sortIndex": 203
     },
     "/actions/cheesesmithing/cheese": {
         "hrid": "/actions/cheesesmithing/cheese",
@@ -9161,7 +9161,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 196
+        "sortIndex": 197
     },
     "/actions/cheesesmithing/crimson_alembic": {
         "hrid": "/actions/cheesesmithing/crimson_alembic",
@@ -10501,7 +10501,65 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 195
+        "sortIndex": 196
+    },
+    "/actions/cheesesmithing/eternal_cheese": {
+        "hrid": "/actions/cheesesmithing/eternal_cheese",
+        "function": "/action_functions/production",
+        "type": "/action_types/cheesesmithing",
+        "category": "/action_categories/cheesesmithing/material",
+        "name": "Eternal Cheese",
+        "maxDifficulty": 0,
+        "levelRequirement": {
+            "skillHrid": "/skills/cheesesmithing",
+            "level": 100
+        },
+        "baseTimeCost": 45000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/cheesesmithing",
+            "value": 108
+        },
+        "dropTable": null,
+        "essenceDropTable": [
+            {
+                "itemHrid": "/items/cheesesmithing_essence",
+                "dropRate": 0.25,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/butter_of_proficiency",
+                "dropRate": 4e-05,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0006770833333333334,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "retainAllEnhancement": false,
+        "inputItems": [
+            {
+                "itemHrid": "/items/eternal_milk",
+                "count": 2
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/eternal_cheese",
+                "count": 1
+            }
+        ],
+        "combatZoneInfo": null,
+        "maxPartySize": 0,
+        "buffs": null,
+        "sortIndex": 194
     },
     "/actions/cheesesmithing/expert_beacon": {
         "hrid": "/actions/cheesesmithing/expert_beacon",
@@ -10677,7 +10735,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 201
+        "sortIndex": 202
     },
     "/actions/cheesesmithing/granite_bludgeon": {
         "hrid": "/actions/cheesesmithing/granite_bludgeon",
@@ -10845,7 +10903,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 200
+        "sortIndex": 201
     },
     "/actions/cheesesmithing/grizzly_bear_shoes": {
         "hrid": "/actions/cheesesmithing/grizzly_bear_shoes",
@@ -12139,7 +12197,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 197
+        "sortIndex": 198
     },
     "/actions/cheesesmithing/maelstrom_plate_body": {
         "hrid": "/actions/cheesesmithing/maelstrom_plate_body",
@@ -12247,7 +12305,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 205
+        "sortIndex": 206
     },
     "/actions/cheesesmithing/maelstrom_plate_legs": {
         "hrid": "/actions/cheesesmithing/maelstrom_plate_legs",
@@ -12355,7 +12413,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 199
+        "sortIndex": 200
     },
     "/actions/cheesesmithing/magnetic_gloves": {
         "hrid": "/actions/cheesesmithing/magnetic_gloves",
@@ -12579,7 +12637,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 194
+        "sortIndex": 195
     },
     "/actions/cheesesmithing/pincer_gloves": {
         "hrid": "/actions/cheesesmithing/pincer_gloves",
@@ -13921,7 +13979,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 203
+        "sortIndex": 204
     },
     "/actions/cheesesmithing/snail_shell_helmet": {
         "hrid": "/actions/cheesesmithing/snail_shell_helmet",
@@ -15590,7 +15648,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -15643,7 +15701,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -15696,7 +15754,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -15780,7 +15838,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -15833,7 +15891,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -15917,7 +15975,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -15970,7 +16028,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -16023,7 +16081,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -16500,7 +16558,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -16553,7 +16611,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -16606,7 +16664,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17065,7 +17123,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17118,7 +17176,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17171,7 +17229,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17224,7 +17282,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17277,7 +17335,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17330,7 +17388,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17383,7 +17441,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17467,7 +17525,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17520,7 +17578,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17573,7 +17631,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17626,7 +17684,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17679,7 +17737,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17751,7 +17809,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17804,7 +17862,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17857,7 +17915,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17910,7 +17968,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -17963,7 +18021,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -18035,7 +18093,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -18088,7 +18146,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -18166,7 +18224,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -18219,7 +18277,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -18272,7 +18330,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -18325,7 +18383,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -18378,7 +18436,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -18431,7 +18489,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -18484,7 +18542,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -18919,7 +18977,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -18991,7 +19049,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -19044,7 +19102,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -19097,7 +19155,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -19150,7 +19208,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -19203,7 +19261,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -19726,7 +19784,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -19779,7 +19837,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -19832,7 +19890,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -19909,7 +19967,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -19962,7 +20020,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -20040,7 +20098,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -20093,7 +20151,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -20146,7 +20204,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -20224,7 +20282,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -20277,7 +20335,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -20330,7 +20388,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -20383,7 +20441,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -20455,7 +20513,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -20508,7 +20566,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -20561,7 +20619,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -20614,7 +20672,7 @@
             "skillHrid": "",
             "level": 0
         },
-        "baseTimeCost": 15000000000,
+        "baseTimeCost": 3000000000,
         "experienceGain": {
             "skillHrid": "",
             "value": 0
@@ -23588,6 +23646,64 @@
         "buffs": null,
         "sortIndex": 51
     },
+    "/actions/crafting/ancient_lumber": {
+        "hrid": "/actions/crafting/ancient_lumber",
+        "function": "/action_functions/production",
+        "type": "/action_types/crafting",
+        "category": "/action_categories/crafting/lumber",
+        "name": "Ancient Lumber",
+        "maxDifficulty": 0,
+        "levelRequirement": {
+            "skillHrid": "/skills/crafting",
+            "level": 100
+        },
+        "baseTimeCost": 45000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/crafting",
+            "value": 108
+        },
+        "dropTable": null,
+        "essenceDropTable": [
+            {
+                "itemHrid": "/items/crafting_essence",
+                "dropRate": 0.25,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/branch_of_insight",
+                "dropRate": 4e-05,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0006770833333333334,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "retainAllEnhancement": false,
+        "inputItems": [
+            {
+                "itemHrid": "/items/ancient_log",
+                "count": 2
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/ancient_lumber",
+                "count": 1
+            }
+        ],
+        "combatZoneInfo": null,
+        "maxPartySize": 0,
+        "buffs": null,
+        "sortIndex": 175
+    },
     "/actions/crafting/arcane_bow": {
         "hrid": "/actions/crafting/arcane_bow",
         "function": "/action_functions/production",
@@ -24426,6 +24542,62 @@
         "buffs": null,
         "sortIndex": 29
     },
+    "/actions/crafting/basic_talisman_core": {
+        "hrid": "/actions/crafting/basic_talisman_core",
+        "function": "/action_functions/production",
+        "type": "/action_types/crafting",
+        "category": "/action_categories/crafting/talisman",
+        "name": "Basic Talisman Core",
+        "maxDifficulty": 0,
+        "levelRequirement": {
+            "skillHrid": "/skills/crafting",
+            "level": 100
+        },
+        "baseTimeCost": 60000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/crafting",
+            "value": 8640
+        },
+        "dropTable": null,
+        "essenceDropTable": [
+            {
+                "itemHrid": "/items/crafting_essence",
+                "dropRate": 0.3333333333333333,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0009027777777777778,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "retainAllEnhancement": false,
+        "inputItems": [
+            {
+                "itemHrid": "/items/eternal_cheese",
+                "count": 200
+            },
+            {
+                "itemHrid": "/items/ancient_lumber",
+                "count": 200
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/basic_talisman_core",
+                "count": 1
+            }
+        ],
+        "combatZoneInfo": null,
+        "maxPartySize": 0,
+        "buffs": null,
+        "sortIndex": 194
+    },
     "/actions/crafting/basic_task_badge": {
         "hrid": "/actions/crafting/basic_task_badge",
         "function": "/action_functions/production",
@@ -25072,7 +25244,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 193
+        "sortIndex": 196
     },
     "/actions/crafting/blazing_trident": {
         "hrid": "/actions/crafting/blazing_trident",
@@ -25184,7 +25356,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 198
+        "sortIndex": 201
     },
     "/actions/crafting/blooming_trident": {
         "hrid": "/actions/crafting/blooming_trident",
@@ -25296,7 +25468,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 197
+        "sortIndex": 200
     },
     "/actions/crafting/catalyst_of_coinification": {
         "hrid": "/actions/crafting/catalyst_of_coinification",
@@ -26496,7 +26668,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 194
+        "sortIndex": 197
     },
     "/actions/crafting/earrings_of_armor": {
         "hrid": "/actions/crafting/earrings_of_armor",
@@ -28612,7 +28784,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 183
+        "sortIndex": 184
     },
     "/actions/crafting/grandmaster_attack_charm": {
         "hrid": "/actions/crafting/grandmaster_attack_charm",
@@ -28664,7 +28836,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 187
+        "sortIndex": 188
     },
     "/actions/crafting/grandmaster_brewing_charm": {
         "hrid": "/actions/crafting/grandmaster_brewing_charm",
@@ -28716,7 +28888,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 182
+        "sortIndex": 183
     },
     "/actions/crafting/grandmaster_cheesesmithing_charm": {
         "hrid": "/actions/crafting/grandmaster_cheesesmithing_charm",
@@ -28768,7 +28940,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 178
+        "sortIndex": 179
     },
     "/actions/crafting/grandmaster_cooking_charm": {
         "hrid": "/actions/crafting/grandmaster_cooking_charm",
@@ -28820,7 +28992,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 181
+        "sortIndex": 182
     },
     "/actions/crafting/grandmaster_crafting_charm": {
         "hrid": "/actions/crafting/grandmaster_crafting_charm",
@@ -28872,7 +29044,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 179
+        "sortIndex": 180
     },
     "/actions/crafting/grandmaster_defense_charm": {
         "hrid": "/actions/crafting/grandmaster_defense_charm",
@@ -28924,7 +29096,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 188
+        "sortIndex": 189
     },
     "/actions/crafting/grandmaster_enhancing_charm": {
         "hrid": "/actions/crafting/grandmaster_enhancing_charm",
@@ -28976,7 +29148,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 184
+        "sortIndex": 185
     },
     "/actions/crafting/grandmaster_foraging_charm": {
         "hrid": "/actions/crafting/grandmaster_foraging_charm",
@@ -29028,7 +29200,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 176
+        "sortIndex": 177
     },
     "/actions/crafting/grandmaster_intelligence_charm": {
         "hrid": "/actions/crafting/grandmaster_intelligence_charm",
@@ -29080,7 +29252,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 186
+        "sortIndex": 187
     },
     "/actions/crafting/grandmaster_magic_charm": {
         "hrid": "/actions/crafting/grandmaster_magic_charm",
@@ -29132,7 +29304,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 191
+        "sortIndex": 192
     },
     "/actions/crafting/grandmaster_melee_charm": {
         "hrid": "/actions/crafting/grandmaster_melee_charm",
@@ -29184,7 +29356,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 189
+        "sortIndex": 190
     },
     "/actions/crafting/grandmaster_milking_charm": {
         "hrid": "/actions/crafting/grandmaster_milking_charm",
@@ -29236,7 +29408,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 175
+        "sortIndex": 176
     },
     "/actions/crafting/grandmaster_ranged_charm": {
         "hrid": "/actions/crafting/grandmaster_ranged_charm",
@@ -29288,7 +29460,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 190
+        "sortIndex": 191
     },
     "/actions/crafting/grandmaster_stamina_charm": {
         "hrid": "/actions/crafting/grandmaster_stamina_charm",
@@ -29340,7 +29512,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 185
+        "sortIndex": 186
     },
     "/actions/crafting/grandmaster_tailoring_charm": {
         "hrid": "/actions/crafting/grandmaster_tailoring_charm",
@@ -29392,7 +29564,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 180
+        "sortIndex": 181
     },
     "/actions/crafting/grandmaster_woodcutting_charm": {
         "hrid": "/actions/crafting/grandmaster_woodcutting_charm",
@@ -29444,7 +29616,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 177
+        "sortIndex": 178
     },
     "/actions/crafting/infernal_battlestaff": {
         "hrid": "/actions/crafting/infernal_battlestaff",
@@ -30892,7 +31064,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 192
+        "sortIndex": 193
     },
     "/actions/crafting/philosophers_necklace": {
         "hrid": "/actions/crafting/philosophers_necklace",
@@ -31956,6 +32128,62 @@
         "buffs": null,
         "sortIndex": 114
     },
+    "/actions/crafting/reshaping_orb": {
+        "hrid": "/actions/crafting/reshaping_orb",
+        "function": "/action_functions/production",
+        "type": "/action_types/crafting",
+        "category": "/action_categories/crafting/talisman",
+        "name": "Reshaping Orb",
+        "maxDifficulty": 0,
+        "levelRequirement": {
+            "skillHrid": "/skills/crafting",
+            "level": 100
+        },
+        "baseTimeCost": 30000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/crafting",
+            "value": 864
+        },
+        "dropTable": null,
+        "essenceDropTable": [
+            {
+                "itemHrid": "/items/crafting_essence",
+                "dropRate": 0.16666666666666666,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0004513888888888889,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "retainAllEnhancement": false,
+        "inputItems": [
+            {
+                "itemHrid": "/items/ancient_lumber",
+                "count": 20
+            },
+            {
+                "itemHrid": "/items/dragon_leather",
+                "count": 20
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/reshaping_orb",
+                "count": 1
+            }
+        ],
+        "combatZoneInfo": null,
+        "maxPartySize": 0,
+        "buffs": null,
+        "sortIndex": 195
+    },
     "/actions/crafting/ring_of_armor": {
         "hrid": "/actions/crafting/ring_of_armor",
         "function": "/action_functions/production",
@@ -32470,7 +32698,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 196
+        "sortIndex": 199
     },
     "/actions/crafting/sinister_chest_key": {
         "hrid": "/actions/crafting/sinister_chest_key",
@@ -32758,7 +32986,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 195
+        "sortIndex": 198
     },
     "/actions/crafting/treant_shield": {
         "hrid": "/actions/crafting/treant_shield",
@@ -35341,6 +35569,73 @@
         "buffs": null,
         "sortIndex": 5
     },
+    "/actions/milking/eternal_holy_cow": {
+        "hrid": "/actions/milking/eternal_holy_cow",
+        "function": "/action_functions/gathering",
+        "type": "/action_types/milking",
+        "category": "/action_categories/milking/cows",
+        "name": "Eternal Holy Cow",
+        "maxDifficulty": 0,
+        "levelRequirement": {
+            "skillHrid": "/skills/milking",
+            "level": 100
+        },
+        "baseTimeCost": 45000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/milking",
+            "value": 108
+        },
+        "dropTable": [
+            {
+                "itemHrid": "/items/holy_milk",
+                "dropRate": 1,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/eternal_milk",
+                "dropRate": 0.1,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "essenceDropTable": [
+            {
+                "itemHrid": "/items/milking_essence",
+                "dropRate": 0.25,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/eternal_milk",
+                "dropRate": 0.05,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/butter_of_proficiency",
+                "dropRate": 4e-05,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/large_meteorite_cache",
+                "dropRate": 0.0006770833333333334,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "retainAllEnhancement": false,
+        "inputItems": null,
+        "outputItems": null,
+        "combatZoneInfo": null,
+        "maxPartySize": 0,
+        "buffs": null,
+        "sortIndex": 8
+    },
     "/actions/milking/holy_cow": {
         "hrid": "/actions/milking/holy_cow",
         "function": "/action_functions/gathering",
@@ -35634,7 +35929,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 134
+        "sortIndex": 136
     },
     "/actions/tailoring/advanced_shroud": {
         "hrid": "/actions/tailoring/advanced_shroud",
@@ -35894,7 +36189,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 125
+        "sortIndex": 127
     },
     "/actions/tailoring/bamboo_boots": {
         "hrid": "/actions/tailoring/bamboo_boots",
@@ -36830,7 +37125,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 127
+        "sortIndex": 129
     },
     "/actions/tailoring/cheesemakers_bottoms": {
         "hrid": "/actions/tailoring/cheesemakers_bottoms",
@@ -37154,7 +37449,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 128
+        "sortIndex": 130
     },
     "/actions/tailoring/chrono_gloves": {
         "hrid": "/actions/tailoring/chrono_gloves",
@@ -37774,7 +38069,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 126
+        "sortIndex": 128
     },
     "/actions/tailoring/dairyhands_bottoms": {
         "hrid": "/actions/tailoring/dairyhands_bottoms",
@@ -37912,6 +38207,64 @@
         "buffs": null,
         "sortIndex": 87
     },
+    "/actions/tailoring/dragon_leather": {
+        "hrid": "/actions/tailoring/dragon_leather",
+        "function": "/action_functions/production",
+        "type": "/action_types/tailoring",
+        "category": "/action_categories/tailoring/material",
+        "name": "Dragon Leather",
+        "maxDifficulty": 0,
+        "levelRequirement": {
+            "skillHrid": "/skills/tailoring",
+            "level": 100
+        },
+        "baseTimeCost": 45000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/tailoring",
+            "value": 108
+        },
+        "dropTable": null,
+        "essenceDropTable": [
+            {
+                "itemHrid": "/items/tailoring_essence",
+                "dropRate": 0.25,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/thread_of_expertise",
+                "dropRate": 3.5e-05,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0006770833333333334,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "retainAllEnhancement": false,
+        "inputItems": [
+            {
+                "itemHrid": "/items/dragon_hide",
+                "count": 2
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/dragon_leather",
+                "count": 1
+            }
+        ],
+        "combatZoneInfo": null,
+        "maxPartySize": 0,
+        "buffs": null,
+        "sortIndex": 124
+    },
     "/actions/tailoring/enchanted_cloak_refined": {
         "hrid": "/actions/tailoring/enchanted_cloak_refined",
         "function": "/action_functions/production",
@@ -37962,7 +38315,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 130
+        "sortIndex": 132
     },
     "/actions/tailoring/enchanted_gloves": {
         "hrid": "/actions/tailoring/enchanted_gloves",
@@ -38598,7 +38951,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 124
+        "sortIndex": 126
     },
     "/actions/tailoring/giant_pouch": {
         "hrid": "/actions/tailoring/giant_pouch",
@@ -39422,7 +39775,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 136
+        "sortIndex": 138
     },
     "/actions/tailoring/kraken_tunic": {
         "hrid": "/actions/tailoring/kraken_tunic",
@@ -39530,7 +39883,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 140
+        "sortIndex": 142
     },
     "/actions/tailoring/large_pouch": {
         "hrid": "/actions/tailoring/large_pouch",
@@ -40250,7 +40603,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 135
+        "sortIndex": 137
     },
     "/actions/tailoring/marine_chaps": {
         "hrid": "/actions/tailoring/marine_chaps",
@@ -40466,7 +40819,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 133
+        "sortIndex": 135
     },
     "/actions/tailoring/medium_pouch": {
         "hrid": "/actions/tailoring/medium_pouch",
@@ -40638,7 +40991,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 131
+        "sortIndex": 133
     },
     "/actions/tailoring/pathseeker_boots": {
         "hrid": "/actions/tailoring/pathseeker_boots",
@@ -40750,7 +41103,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 132
+        "sortIndex": 134
     },
     "/actions/tailoring/radiant_boots": {
         "hrid": "/actions/tailoring/radiant_boots",
@@ -41976,7 +42329,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 139
+        "sortIndex": 141
     },
     "/actions/tailoring/royal_fire_robe_top": {
         "hrid": "/actions/tailoring/royal_fire_robe_top",
@@ -42088,7 +42441,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 143
+        "sortIndex": 145
     },
     "/actions/tailoring/royal_nature_robe_bottoms": {
         "hrid": "/actions/tailoring/royal_nature_robe_bottoms",
@@ -42196,7 +42549,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 138
+        "sortIndex": 140
     },
     "/actions/tailoring/royal_nature_robe_top": {
         "hrid": "/actions/tailoring/royal_nature_robe_top",
@@ -42304,7 +42657,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 142
+        "sortIndex": 144
     },
     "/actions/tailoring/royal_water_robe_bottoms": {
         "hrid": "/actions/tailoring/royal_water_robe_bottoms",
@@ -42416,7 +42769,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 137
+        "sortIndex": 139
     },
     "/actions/tailoring/royal_water_robe_top": {
         "hrid": "/actions/tailoring/royal_water_robe_top",
@@ -42528,7 +42881,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 141
+        "sortIndex": 143
     },
     "/actions/tailoring/shoebill_shoes": {
         "hrid": "/actions/tailoring/shoebill_shoes",
@@ -43012,7 +43365,7 @@
         "combatZoneInfo": null,
         "maxPartySize": 0,
         "buffs": null,
-        "sortIndex": 129
+        "sortIndex": 131
     },
     "/actions/tailoring/small_pouch": {
         "hrid": "/actions/tailoring/small_pouch",
@@ -43073,6 +43426,62 @@
         "maxPartySize": 0,
         "buffs": null,
         "sortIndex": 7
+    },
+    "/actions/tailoring/small_talisman_belt": {
+        "hrid": "/actions/tailoring/small_talisman_belt",
+        "function": "/action_functions/production",
+        "type": "/action_types/tailoring",
+        "category": "/action_categories/tailoring/belt",
+        "name": "Small Talisman Belt",
+        "maxDifficulty": 0,
+        "levelRequirement": {
+            "skillHrid": "/skills/tailoring",
+            "level": 100
+        },
+        "baseTimeCost": 30000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/tailoring",
+            "value": 21600
+        },
+        "dropTable": null,
+        "essenceDropTable": [
+            {
+                "itemHrid": "/items/tailoring_essence",
+                "dropRate": 0.16666666666666666,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/large_artisans_crate",
+                "dropRate": 0.0004513888888888889,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "retainAllEnhancement": false,
+        "inputItems": [
+            {
+                "itemHrid": "/items/eternal_cheese",
+                "count": 500
+            },
+            {
+                "itemHrid": "/items/dragon_leather",
+                "count": 500
+            }
+        ],
+        "outputItems": [
+            {
+                "itemHrid": "/items/small_talisman_belt",
+                "count": 1
+            }
+        ],
+        "combatZoneInfo": null,
+        "maxPartySize": 0,
+        "buffs": null,
+        "sortIndex": 125
     },
     "/actions/tailoring/sorcerer_boots": {
         "hrid": "/actions/tailoring/sorcerer_boots",
@@ -43579,6 +43988,73 @@
         "maxPartySize": 0,
         "buffs": null,
         "sortIndex": 83
+    },
+    "/actions/woodcutting/ancient_arcane_tree": {
+        "hrid": "/actions/woodcutting/ancient_arcane_tree",
+        "function": "/action_functions/gathering",
+        "type": "/action_types/woodcutting",
+        "category": "/action_categories/woodcutting/trees",
+        "name": "Ancient Arcane Tree",
+        "maxDifficulty": 0,
+        "levelRequirement": {
+            "skillHrid": "/skills/woodcutting",
+            "level": 100
+        },
+        "baseTimeCost": 45000000000,
+        "experienceGain": {
+            "skillHrid": "/skills/woodcutting",
+            "value": 108
+        },
+        "dropTable": [
+            {
+                "itemHrid": "/items/arcane_log",
+                "dropRate": 1,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/ancient_log",
+                "dropRate": 0.1,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "essenceDropTable": [
+            {
+                "itemHrid": "/items/woodcutting_essence",
+                "dropRate": 0.25,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "rareDropTable": [
+            {
+                "itemHrid": "/items/ancient_log",
+                "dropRate": 0.05,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/branch_of_insight",
+                "dropRate": 4e-05,
+                "minCount": 1,
+                "maxCount": 1
+            },
+            {
+                "itemHrid": "/items/large_meteorite_cache",
+                "dropRate": 0.0006770833333333334,
+                "minCount": 1,
+                "maxCount": 1
+            }
+        ],
+        "upgradeItemHrid": "",
+        "retainAllEnhancement": false,
+        "inputItems": null,
+        "outputItems": null,
+        "combatZoneInfo": null,
+        "maxPartySize": 0,
+        "buffs": null,
+        "sortIndex": 8
     },
     "/actions/woodcutting/arcane_tree": {
         "hrid": "/actions/woodcutting/arcane_tree",

@@ -2,6 +2,7 @@
     "/monsters/abyssal_imp": {
         "hrid": "/monsters/abyssal_imp",
         "name": "Abyssal Imp",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -127,6 +128,7 @@
     "/monsters/acrobat": {
         "hrid": "/monsters/acrobat",
         "name": "Acrobat",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -220,6 +222,7 @@
     "/monsters/alligator": {
         "hrid": "/monsters/alligator",
         "name": "Sherlock",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -349,6 +352,7 @@
     "/monsters/anchor_shark": {
         "hrid": "/monsters/anchor_shark",
         "name": "Anchor Shark",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -442,6 +446,7 @@
     "/monsters/aquahorse": {
         "hrid": "/monsters/aquahorse",
         "name": "Aquahorse",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -550,6 +555,7 @@
     "/monsters/black_bear": {
         "hrid": "/monsters/black_bear",
         "name": "Black Bear",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -688,6 +694,7 @@
     "/monsters/brine_marksman": {
         "hrid": "/monsters/brine_marksman",
         "name": "Brine Marksman",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -781,6 +788,7 @@
     "/monsters/butterjerry": {
         "hrid": "/monsters/butterjerry",
         "name": "Butterjerry",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -868,6 +876,7 @@
     "/monsters/captain_fishhook": {
         "hrid": "/monsters/captain_fishhook",
         "name": "Captain Fishhook",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -960,6 +969,7 @@
     "/monsters/centaur_archer": {
         "hrid": "/monsters/centaur_archer",
         "name": "Centaur Archer",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -1102,6 +1112,7 @@
     "/monsters/chronofrost_sorcerer": {
         "hrid": "/monsters/chronofrost_sorcerer",
         "name": "Chronofrost Sorcerer",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -1279,6 +1290,7 @@
     "/monsters/crab": {
         "hrid": "/monsters/crab",
         "name": "I Pinch",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -1389,6 +1401,7 @@
     "/monsters/crystal_colossus": {
         "hrid": "/monsters/crystal_colossus",
         "name": "Crystal Colossus",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -1584,6 +1597,7 @@
     "/monsters/cyclops": {
         "hrid": "/monsters/cyclops",
         "name": "Cyclops",
+        "isBoss": true,
         "isLabyrinthMonster": true,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -1685,6 +1699,7 @@
     "/monsters/demonic_overlord": {
         "hrid": "/monsters/demonic_overlord",
         "name": "Demonic Overlord",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -1862,6 +1877,7 @@
     "/monsters/deranged_jester": {
         "hrid": "/monsters/deranged_jester",
         "name": "Deranged Jester",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -1957,6 +1973,7 @@
     "/monsters/dodocamel": {
         "hrid": "/monsters/dodocamel",
         "name": "Dodocamel",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -2050,6 +2067,7 @@
     "/monsters/dryad": {
         "hrid": "/monsters/dryad",
         "name": "Dryad",
+        "isBoss": true,
         "isLabyrinthMonster": true,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -2096,6 +2114,7 @@
                 ],
                 "damageType": "/damage_types/nature",
                 "attackInterval": 3000000000,
+                "autoAttackDamage": -0.5,
                 "magicAccuracy": 1.3,
                 "magicDamage": 1.3,
                 "maxHitpointsRatio": 3,
@@ -2151,6 +2170,7 @@
     "/monsters/dusk_revenant": {
         "hrid": "/monsters/dusk_revenant",
         "name": "Dusk Revenant",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -2334,6 +2354,7 @@
     "/monsters/elementalist": {
         "hrid": "/monsters/elementalist",
         "name": "Elementalist",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -2491,6 +2512,7 @@
     "/monsters/enchanted_bishop": {
         "hrid": "/monsters/enchanted_bishop",
         "name": "Enchanted Bishop",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -2592,6 +2614,7 @@
     "/monsters/enchanted_king": {
         "hrid": "/monsters/enchanted_king",
         "name": "Enchanted King",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -2681,6 +2704,7 @@
     "/monsters/enchanted_knight": {
         "hrid": "/monsters/enchanted_knight",
         "name": "Enchanted Knight",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -2772,6 +2796,7 @@
     "/monsters/enchanted_pawn": {
         "hrid": "/monsters/enchanted_pawn",
         "name": "Enchanted Pawn",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -2856,6 +2881,7 @@
     "/monsters/enchanted_queen": {
         "hrid": "/monsters/enchanted_queen",
         "name": "Enchanted Queen",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -2954,6 +2980,7 @@
     "/monsters/enchanted_rook": {
         "hrid": "/monsters/enchanted_rook",
         "name": "Enchanted Rook",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -3049,6 +3076,7 @@
     "/monsters/eye": {
         "hrid": "/monsters/eye",
         "name": "Eye",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -3210,6 +3238,7 @@
     "/monsters/eyes": {
         "hrid": "/monsters/eyes",
         "name": "Eyes",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -3323,6 +3352,7 @@
     "/monsters/flame_sorcerer": {
         "hrid": "/monsters/flame_sorcerer",
         "name": "Flame Sorcerer",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -3450,6 +3480,7 @@
     "/monsters/fly": {
         "hrid": "/monsters/fly",
         "name": "Fly",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -3528,6 +3559,7 @@
     "/monsters/frog": {
         "hrid": "/monsters/frog",
         "name": "Frogger",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -3633,6 +3665,7 @@
     "/monsters/frost_sniper": {
         "hrid": "/monsters/frost_sniper",
         "name": "Frost Sniper",
+        "isBoss": true,
         "isLabyrinthMonster": true,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -3734,6 +3767,7 @@
     "/monsters/giant_mantis": {
         "hrid": "/monsters/giant_mantis",
         "name": "Giant Mantis",
+        "isBoss": true,
         "isLabyrinthMonster": true,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -3835,6 +3869,7 @@
     "/monsters/giant_scorpion": {
         "hrid": "/monsters/giant_scorpion",
         "name": "Giant Scorpion",
+        "isBoss": true,
         "isLabyrinthMonster": true,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -3936,6 +3971,7 @@
     "/monsters/giant_shoebill": {
         "hrid": "/monsters/giant_shoebill",
         "name": "Giant Shoebill",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -4084,6 +4120,7 @@
     "/monsters/gobo_boomy": {
         "hrid": "/monsters/gobo_boomy",
         "name": "Boomy",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -4232,6 +4269,7 @@
     "/monsters/gobo_chieftain": {
         "hrid": "/monsters/gobo_chieftain",
         "name": "Gobo Chieftain",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -4405,6 +4443,7 @@
     "/monsters/gobo_shooty": {
         "hrid": "/monsters/gobo_shooty",
         "name": "Shooty",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -4545,6 +4584,7 @@
     "/monsters/gobo_slashy": {
         "hrid": "/monsters/gobo_slashy",
         "name": "Slashy",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -4682,6 +4722,7 @@
     "/monsters/gobo_smashy": {
         "hrid": "/monsters/gobo_smashy",
         "name": "Smashy",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -4819,6 +4860,7 @@
     "/monsters/gobo_stabby": {
         "hrid": "/monsters/gobo_stabby",
         "name": "Stabby",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -4950,6 +4992,7 @@
     "/monsters/granite_golem": {
         "hrid": "/monsters/granite_golem",
         "name": "Granite Golem",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -5111,6 +5154,7 @@
     "/monsters/griffin": {
         "hrid": "/monsters/griffin",
         "name": "Griffin",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -5207,6 +5251,7 @@
     "/monsters/grizzly_bear": {
         "hrid": "/monsters/grizzly_bear",
         "name": "Grizzly Bear",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -5345,6 +5390,7 @@
     "/monsters/gummy_bear": {
         "hrid": "/monsters/gummy_bear",
         "name": "Gummy Bear",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -5465,6 +5511,7 @@
     "/monsters/ice_sorcerer": {
         "hrid": "/monsters/ice_sorcerer",
         "name": "Ice Sorcerer",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -5592,6 +5639,7 @@
     "/monsters/infernal_warlock": {
         "hrid": "/monsters/infernal_warlock",
         "name": "Infernal Warlock",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -5725,6 +5773,7 @@
     "/monsters/jackalope": {
         "hrid": "/monsters/jackalope",
         "name": "Jackalope",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -5814,6 +5863,7 @@
     "/monsters/juggler": {
         "hrid": "/monsters/juggler",
         "name": "Juggler",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -5908,6 +5958,7 @@
     "/monsters/jungle_sprite": {
         "hrid": "/monsters/jungle_sprite",
         "name": "Jungle Sprite",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -6039,6 +6090,7 @@
     "/monsters/luna_empress": {
         "hrid": "/monsters/luna_empress",
         "name": "Luna Empress",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -6209,6 +6261,7 @@
     "/monsters/magician": {
         "hrid": "/monsters/magician",
         "name": "Magician",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -6301,6 +6354,7 @@
     "/monsters/magnetic_golem": {
         "hrid": "/monsters/magnetic_golem",
         "name": "Magnetic Golem",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -6428,6 +6482,7 @@
     "/monsters/manticore": {
         "hrid": "/monsters/manticore",
         "name": "Manticore",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -6523,6 +6578,7 @@
     "/monsters/marine_huntress": {
         "hrid": "/monsters/marine_huntress",
         "name": "Marine Huntress",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -6682,6 +6738,7 @@
     "/monsters/mimic": {
         "hrid": "/monsters/mimic",
         "name": "Mimic",
+        "isBoss": true,
         "isLabyrinthMonster": true,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -6783,6 +6840,7 @@
     "/monsters/myconid": {
         "hrid": "/monsters/myconid",
         "name": "Myconid",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -6897,6 +6955,7 @@
     "/monsters/nom_nom": {
         "hrid": "/monsters/nom_nom",
         "name": "Nom Nom",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -7037,6 +7096,7 @@
     "/monsters/novice_sorcerer": {
         "hrid": "/monsters/novice_sorcerer",
         "name": "Novice Sorcerer",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -7159,6 +7219,7 @@
     "/monsters/panda": {
         "hrid": "/monsters/panda",
         "name": "Panda",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -7316,6 +7377,7 @@
     "/monsters/polar_bear": {
         "hrid": "/monsters/polar_bear",
         "name": "Polar Bear",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -7466,6 +7528,7 @@
     "/monsters/porcupine": {
         "hrid": "/monsters/porcupine",
         "name": "Porcupine",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -7572,6 +7635,7 @@
     "/monsters/pyre_hunter": {
         "hrid": "/monsters/pyre_hunter",
         "name": "Pyre Hunter",
+        "isBoss": true,
         "isLabyrinthMonster": true,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -7673,6 +7737,7 @@
     "/monsters/rabid_rabbit": {
         "hrid": "/monsters/rabid_rabbit",
         "name": "Rabid Rabbit",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -7757,6 +7822,7 @@
     "/monsters/rat": {
         "hrid": "/monsters/rat",
         "name": "Jerry",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -7881,6 +7947,7 @@
     "/monsters/red_panda": {
         "hrid": "/monsters/red_panda",
         "name": "Red Panda",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -8064,6 +8131,7 @@
     "/monsters/salamander": {
         "hrid": "/monsters/salamander",
         "name": "Salamander",
+        "isBoss": true,
         "isLabyrinthMonster": true,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -8110,6 +8178,7 @@
                 ],
                 "damageType": "/damage_types/fire",
                 "attackInterval": 3000000000,
+                "autoAttackDamage": -0.5,
                 "magicAccuracy": 1.2,
                 "magicDamage": 1.4,
                 "maxHitpointsRatio": 3,
@@ -8165,6 +8234,7 @@
     "/monsters/sea_snail": {
         "hrid": "/monsters/sea_snail",
         "name": "Gary",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -8287,6 +8357,7 @@
     "/monsters/shadow_archer": {
         "hrid": "/monsters/shadow_archer",
         "name": "Shadow Archer",
+        "isBoss": true,
         "isLabyrinthMonster": true,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -8388,6 +8459,7 @@
     "/monsters/siren": {
         "hrid": "/monsters/siren",
         "name": "Siren",
+        "isBoss": true,
         "isLabyrinthMonster": true,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -8434,6 +8506,7 @@
                 ],
                 "damageType": "/damage_types/water",
                 "attackInterval": 3000000000,
+                "autoAttackDamage": -0.5,
                 "magicAccuracy": 1.4,
                 "magicDamage": 1.2,
                 "maxHitpointsRatio": 3,
@@ -8489,6 +8562,7 @@
     "/monsters/skunk": {
         "hrid": "/monsters/skunk",
         "name": "Skunk",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -8595,6 +8669,7 @@
     "/monsters/slimy": {
         "hrid": "/monsters/slimy",
         "name": "Slimy",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -8707,6 +8782,7 @@
     "/monsters/snake": {
         "hrid": "/monsters/snake",
         "name": "Thnake",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -8813,6 +8889,7 @@
     "/monsters/soul_hunter": {
         "hrid": "/monsters/soul_hunter",
         "name": "Soul Hunter",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -8952,6 +9029,7 @@
     "/monsters/squawker": {
         "hrid": "/monsters/squawker",
         "name": "Squawker",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -9041,6 +9119,7 @@
     "/monsters/stalactite_golem": {
         "hrid": "/monsters/stalactite_golem",
         "name": "Stalactite Golem",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -9192,6 +9271,7 @@
     "/monsters/swampy": {
         "hrid": "/monsters/swampy",
         "name": "Swampy",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -9322,6 +9402,7 @@
     "/monsters/the_kraken": {
         "hrid": "/monsters/the_kraken",
         "name": "The Kraken",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -9417,6 +9498,7 @@
     "/monsters/the_watcher": {
         "hrid": "/monsters/the_watcher",
         "name": "The Watcher",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -9578,6 +9660,7 @@
     "/monsters/tidal_conjuror": {
         "hrid": "/monsters/tidal_conjuror",
         "name": "Tidal Conjuror",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,
@@ -9676,6 +9759,7 @@
     "/monsters/treant": {
         "hrid": "/monsters/treant",
         "name": "Treant",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -9849,6 +9933,7 @@
     "/monsters/trial_badger": {
         "hrid": "/monsters/trial_badger",
         "name": "Trial Badger",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": true,
         "enrageTime": 600000000000,
@@ -9944,6 +10029,7 @@
     "/monsters/trial_beetle": {
         "hrid": "/monsters/trial_beetle",
         "name": "Trial Beetle",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": true,
         "enrageTime": 600000000000,
@@ -10039,6 +10125,7 @@
     "/monsters/trial_chameleon": {
         "hrid": "/monsters/trial_chameleon",
         "name": "Trial Chameleon",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": true,
         "enrageTime": 600000000000,
@@ -10134,6 +10221,7 @@
     "/monsters/trial_dragonfly": {
         "hrid": "/monsters/trial_dragonfly",
         "name": "Trial Dragonfly",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": true,
         "enrageTime": 600000000000,
@@ -10229,6 +10317,7 @@
     "/monsters/trial_firefly": {
         "hrid": "/monsters/trial_firefly",
         "name": "Trial Firefly",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": true,
         "enrageTime": 600000000000,
@@ -10324,6 +10413,7 @@
     "/monsters/trial_hedgehog": {
         "hrid": "/monsters/trial_hedgehog",
         "name": "Trial Hedgehog",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": true,
         "enrageTime": 600000000000,
@@ -10422,6 +10512,7 @@
     "/monsters/trial_jellyfish": {
         "hrid": "/monsters/trial_jellyfish",
         "name": "Trial Jellyfish",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": true,
         "enrageTime": 600000000000,
@@ -10517,6 +10608,7 @@
     "/monsters/trial_wasp": {
         "hrid": "/monsters/trial_wasp",
         "name": "Trial Wasp",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": true,
         "enrageTime": 600000000000,
@@ -10612,6 +10704,7 @@
     "/monsters/turtle": {
         "hrid": "/monsters/turtle",
         "name": "Turuto",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -10757,6 +10850,7 @@
     "/monsters/vampire": {
         "hrid": "/monsters/vampire",
         "name": "Vampire",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -10901,6 +10995,7 @@
     "/monsters/veyes": {
         "hrid": "/monsters/veyes",
         "name": "Veyes",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -11014,6 +11109,7 @@
     "/monsters/werewolf": {
         "hrid": "/monsters/werewolf",
         "name": "Werewolf",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -11157,6 +11253,7 @@
     "/monsters/zombie": {
         "hrid": "/monsters/zombie",
         "name": "Zombie",
+        "isBoss": false,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 180000000000,
@@ -11309,6 +11406,7 @@
     "/monsters/zombie_bear": {
         "hrid": "/monsters/zombie_bear",
         "name": "Zombie Bear",
+        "isBoss": true,
         "isLabyrinthMonster": false,
         "isGuildMonster": false,
         "enrageTime": 600000000000,

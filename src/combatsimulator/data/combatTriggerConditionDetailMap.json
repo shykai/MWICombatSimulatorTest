@@ -32,6 +32,17 @@
         ],
         "sortIndex": 52
     },
+    "/combat_trigger_conditions/boss_status": {
+        "hrid": "/combat_trigger_conditions/boss_status",
+        "name": "Boss Status",
+        "isSingleTarget": true,
+        "isMultiTarget": false,
+        "allowedComparatorHrids": [
+            "/combat_trigger_comparators/is_active",
+            "/combat_trigger_comparators/is_inactive"
+        ],
+        "sortIndex": 55
+    },
     "/combat_trigger_conditions/channeling_coffee": {
         "hrid": "/combat_trigger_conditions/channeling_coffee",
         "name": "Channeling Coffee",

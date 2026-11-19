@@ -175,23 +175,39 @@ class CombatUtilities {
 
         let damageRoll = CombatUtilities.randomInt(sourceMinDamage, sourceMaxDamage);
         damageRoll *= (1 + source.combatDetails.combatStats.taskDamage);
-        damageRoll *= (1 + target.combatDetails.combatStats.damageTaken);
+        damageRoll *= (1 + target.combatDetails.totalDamageTaken);
         if (!abilityEffect) {
             damageRoll += damageRoll * source.combatDetails.combatStats.autoAttackDamage;
         } else {
             damageRoll *= (1 + source.combatDetails.combatStats.abilityDamage);
         }
 
+        if (target.isBoss) {
+            damageRoll *= (1 + source.combatDetails.combatStats.smite);
+        }
+
         let damageDone = 0;
+        let overkillDamageDone = 0;
         let thornDamageDone = 0;
 
         let didHit = false;
         if (Math.random() < hitChance) {
             didHit = true;
+
+            if (source.overkillPool > 0) {
+                overkillDamageDone = Math.min(Math.ceil(source.overkillPool), target.combatDetails.currentHitpoints);
+                if (overkillDamageDone > 0) {
+                    target.combatDetails.currentHitpoints -= overkillDamageDone;
+                }
+                source.overkillPool = 0;
+            }
+
             let penetratedTargetResistance = targetResistance;
 
-            if (sourcePenetration > 0 && targetResistance > 0) {
-                penetratedTargetResistance = targetResistance / (1 + sourcePenetration);
+            let totalPenetration = sourcePenetration + source.combatDetails.combatStats.shatter;
+
+            if (totalPenetration > 0 && targetResistance > 0) {
+                penetratedTargetResistance = targetResistance / (1 + totalPenetration);
             }
 
             let targetDamageTakenRatio = 100 / (100 + penetratedTargetResistance);
@@ -202,6 +218,10 @@ class CombatUtilities {
             let mitigatedDamage = Math.ceil(targetDamageTakenRatio * damageRoll);
             damageDone = Math.min(mitigatedDamage, target.combatDetails.currentHitpoints);
             target.combatDetails.currentHitpoints -= damageDone;
+
+            if (source.combatDetails.combatStats.overkill > 0 && mitigatedDamage > damageDone) {
+                source.overkillPool += (mitigatedDamage - damageDone) * source.combatDetails.combatStats.overkill;
+            }
         }
 
         if (targetThornPower > 0.0 && targetResistance > -99.0) {
@@ -217,7 +237,7 @@ class CombatUtilities {
             }
 
             let targetTaskDamageMultiplier = 1.0 + target.combatDetails.combatStats.taskDamage;
-            let sourceDamageTakenMultiplier = 1.0 + source.combatDetails.combatStats.damageTaken;
+            let sourceDamageTakenMultiplier = 1.0 + source.combatDetails.totalDamageTaken;
             let targetDamageMultiplier = targetTaskDamageMultiplier * sourceDamageTakenMultiplier;
 
             let thornsDamageRoll = CombatUtilities.randomInt(1,
@@ -250,7 +270,7 @@ class CombatUtilities {
                 }
 
                 let targetTaskDamageMultiplier = 1.0 + target.combatDetails.combatStats.taskDamage;
-                let sourceDamageTakenMultiplier = 1.0 + source.combatDetails.combatStats.damageTaken;
+                let sourceDamageTakenMultiplier = 1.0 + source.combatDetails.totalDamageTaken;
                 let retaliationDamageMultiplier = targetTaskDamageMultiplier * sourceDamageTakenMultiplier;
 
                 let premitigatedDamage = damageRoll;
@@ -282,7 +302,7 @@ class CombatUtilities {
             manaLeechMana = source.addManapoints(Math.floor(source.combatDetails.combatStats.manaLeech * damageDone));
         }
 
-        return { damageDone, didHit, thornDamageDone, thornType, retaliationDamageDone, lifeStealHeal, hpDrain, manaLeechMana, isCrit};
+        return { damageDone, overkillDamageDone, didHit, thornDamageDone, thornType, retaliationDamageDone, lifeStealHeal, hpDrain, manaLeechMana, isCrit};
     }
 
     static processHeal(source, abilityEffect, target) {

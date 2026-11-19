@@ -14,6 +14,7 @@ import BlindExpirationEvent from "./events/blindExpirationEvent";
 import SilenceExpirationEvent from "./events/silenceExpirationEvent";
 import CurseExpirationEvent from "./events/curseExpirationEvent";
 import WeakenExpirationEvent from "./events/weakenExpirationEvent";
+import FortifyExpirationEvent from "./events/fortifyExpirationEvent";
 import FuryExpirationEvent from "./events/furyExpirationEvent";
 import EnrageTickEvent from "./events/enrageTickEvent";
 import SimResult from "./simResult";
@@ -310,6 +311,9 @@ class CombatSimulator extends EventTarget {
             case WeakenExpirationEvent.type:
                 this.processWeakenExpirationEvent(event);
                 break;
+            case FortifyExpirationEvent.type:
+                this.processFortifyExpirationEvent(event);
+                break;
             case FuryExpirationEvent.type:
                 this.processFuryExpirationEvent(event);
                 break;
@@ -590,6 +594,10 @@ class CombatSimulator extends EventTarget {
                 this.eventQueue.addEvent(weakenExpirationEvent);
             }
 
+            if (attackResult.didHit && target.combatDetails.combatStats.fortify > 0) {
+                this.processFortifyEffect(target);
+            }
+
             if (!mayhem || (mayhem && attackResult.didHit) || (mayhem && i == (aliveTargets.length - 1))) {
                 let attackType = "autoAttack";
                 if (parryTarget) attackType = "parry";
@@ -599,6 +607,9 @@ class CombatSimulator extends EventTarget {
                     attackType,
                     attackResult.didHit ? attackResult.damageDone : "miss"
                 );
+                if (attackResult.overkillDamageDone > 0) {
+                    this.simResult.addAttack(source, target, "overkill", attackResult.overkillDamageDone);
+                }
             }
 
             if (attackResult.lifeStealHeal > 0) {
@@ -988,6 +999,10 @@ class CombatSimulator extends EventTarget {
         event.source.removeExpiredBuffs(this.simulationTime);
     }
 
+    processFortifyExpirationEvent(event) {
+        event.source.removeExpiredBuffs(this.simulationTime);
+    }
+
     processFuryExpirationEvent(event) {
         event.source.removeExpiredBuffs(this.simulationTime);
         console.log("Fury Timeout");
@@ -1221,17 +1236,36 @@ class CombatSimulator extends EventTarget {
             todoAbilities.push(new Ability("bloom"));
         }
 
-        for (const todoAbility of todoAbilities) {
+        let isEchoTriggered =
+            source.combatDetails.combatStats.echo > 0 &&
+            Math.random() < source.combatDetails.combatStats.echo;
+
+        for (let todoAbilityIndex = 0; todoAbilityIndex < todoAbilities.length; todoAbilityIndex++) {
+            const todoAbility = todoAbilities[todoAbilityIndex];
             for (const abilityEffect of todoAbility.abilityEffects) {
-                switch (abilityEffect.effectType) {
+                let effectiveAbilityEffect = abilityEffect;
+                if (
+                    isEchoTriggered &&
+                    todoAbilityIndex === 0 &&
+                    (abilityEffect.effectType == "/ability_effect_types/damage" ||
+                        abilityEffect.effectType == "/ability_effect_types/heal")
+                ) {
+                    effectiveAbilityEffect = {
+                        ...abilityEffect,
+                        damageFlat: abilityEffect.damageFlat * 1.5,
+                        damageRatio: abilityEffect.damageRatio * 1.5
+                    };
+                }
+
+                switch (effectiveAbilityEffect.effectType) {
                     case "/ability_effect_types/buff":
-                        this.processAbilityBuffEffect(source, todoAbility, abilityEffect);
+                        this.processAbilityBuffEffect(source, todoAbility, effectiveAbilityEffect);
                         break;
                     case "/ability_effect_types/damage":
-                        this.processAbilityDamageEffect(source, todoAbility, abilityEffect);
+                        this.processAbilityDamageEffect(source, todoAbility, effectiveAbilityEffect);
                         break;
                     case "/ability_effect_types/heal":
-                        this.processAbilityHealEffect(source, todoAbility, abilityEffect);
+                        this.processAbilityHealEffect(source, todoAbility, effectiveAbilityEffect);
                         break;
                     case "/ability_effect_types/spend_hp":
                         this.processAbilitySpendHpEffect(source, todoAbility, abilityEffect);
@@ -1350,6 +1384,9 @@ class CombatSimulator extends EventTarget {
                     "parry",
                     attackResult.didHit ? attackResult.damageDone : "miss"
                 );
+                if (attackResult.overkillDamageDone > 0) {
+                    this.simResult.addAttack(tempSource, tempTarget, "overkill", attackResult.overkillDamageDone);
+                }
 
                 if (attackResult.lifeStealHeal > 0) {
                     this.simResult.addHitpointsGained(tempSource, "lifesteal", attackResult.lifeStealHeal);
@@ -1570,12 +1607,19 @@ class CombatSimulator extends EventTarget {
                     this.eventQueue.addEvent(weakenExpirationEvent);
                 }
 
+                if (attackResult.didHit && target.combatDetails.combatStats.fortify > 0) {
+                    this.processFortifyEffect(target);
+                }
+
                 this.simResult.addAttack(
                     source,
                     target,
                     ability.hrid,
                     attackResult.didHit ? attackResult.damageDone : "miss"
                 );
+                if (attackResult.overkillDamageDone > 0) {
+                    this.simResult.addAttack(source, target, "overkill", attackResult.overkillDamageDone);
+                }
 
                 if (attackResult.thornDamageDone > 0) {
                     this.simResult.addAttack(target, source, attackResult.thornType, attackResult.thornDamageDone);
@@ -1617,6 +1661,40 @@ class CombatSimulator extends EventTarget {
                 break;
             }
         }
+    }
+
+    processFortifyEffect(source) {
+        const fortifyExpireTime = 5 * ONE_SECOND;
+
+        let currentFortifyEvent = this.eventQueue.getMatching((event) => event.type == FortifyExpirationEvent.type && event.source == source);
+        let fortifyAmount = 0;
+        if (currentFortifyEvent) fortifyAmount = currentFortifyEvent.fortifyAmount;
+        this.eventQueue.clearMatching((event) => event.type == FortifyExpirationEvent.type && event.source == source);
+
+        let fortifyExpirationEvent = new FortifyExpirationEvent(this.simulationTime + fortifyExpireTime, fortifyAmount, source);
+
+        const fortifyBuffTypes = [
+            "/buff_types/armor",
+            "/buff_types/fire_resistance",
+            "/buff_types/nature_resistance",
+            "/buff_types/water_resistance",
+        ];
+
+        source.addBuffs(
+            fortifyBuffTypes.map((typeHrid) => ({
+                "uniqueHrid": "/buff_uniques/fortify" + typeHrid.replace("/buff_types/", "_"),
+                "typeHrid": typeHrid,
+                "ratioBoost": source.combatDetails.combatStats.fortify * fortifyExpirationEvent.fortifyAmount,
+                "ratioBoostLevelBonus": 0,
+                "flatBoost": 0,
+                "flatBoostLevelBonus": 0,
+                "startTime": "0001-01-01T00:00:00Z",
+                "duration": fortifyExpireTime
+            })),
+            this.simulationTime
+        );
+
+        this.eventQueue.addEvent(fortifyExpirationEvent);
     }
 
     processAbilityHealEffect(source, ability, abilityEffect) {

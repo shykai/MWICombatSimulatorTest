@@ -141,6 +141,8 @@ class Trigger {
                 return source.combatBuffs[buffs?.[0]];
             case "/combat_trigger_conditions/current_hp":
                 return source.combatDetails.currentHitpoints;
+            case "/combat_trigger_conditions/boss_status":
+                return source.isBoss;
             case "/combat_trigger_conditions/current_mp":
                 return source.combatDetails.currentManapoints;
             case "/combat_trigger_conditions/missing_hp":

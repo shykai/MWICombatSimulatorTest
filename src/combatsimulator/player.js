@@ -6,8 +6,11 @@ import HouseRoom from "./houseRoom";
 import LabyrinthUpgrade from "./labyrinthUpgrade";
 import GuildBuff from "./guildBuff";
 import Achievement from "./achievement";
+import Talisman from "./talisman";
 
 class Player extends CombatUnit {
+    slottedTalismans = [];
+
     equipment = {
         "/equipment_types/head": null,
         "/equipment_types/body": null,
@@ -44,6 +47,10 @@ class Player extends CombatUnit {
         for (const [key, value] of Object.entries(dto.equipment)) {
             player.equipment[key] = value ? Equipment.createFromDTO(value) : null;
         }
+
+        player.slottedTalismans = (dto.slottedTalismans ?? []).map((talisman) =>
+            Talisman.createFromDTO(talisman)
+        );
 
         player.food = dto.food.map((food) => (food ? Consumable.createFromDTO(food) : null));
         player.drinks = dto.drinks.map((drink) => (drink ? Consumable.createFromDTO(drink) : null));
@@ -103,6 +110,34 @@ class Player extends CombatUnit {
             this.combatDetails.combatStats.focusTraining = "";
         }
 
+        if (this.equipment["/equipment_types/belt"]) {
+            this.combatDetails.combatStats.talismanSlots =
+                this.equipment["/equipment_types/belt"].getCombatStat("talismanSlots");
+            this.combatDetails.combatStats.talismanPower =
+                this.equipment["/equipment_types/belt"].getCombatStat("talismanPower");
+        } else {
+            this.combatDetails.combatStats.talismanSlots = 0;
+            this.combatDetails.combatStats.talismanPower = 0;
+        }
+
+        let activeTalismans = this.slottedTalismans.filter(
+            (talisman) => talisman.slotIndex <= this.combatDetails.combatStats.talismanSlots
+        );
+        let activeModifierPositions = Talisman.getActiveModifierPositions(
+            activeTalismans.map((talisman) => talisman.modifiers)
+        );
+
+        let talismanCombatStats = {};
+        activeTalismans.forEach((talisman, talismanIndex) => {
+            let stats = talisman.getCombatStats(
+                this.combatDetails.combatStats.talismanPower,
+                (modifier, modifierIndex) => activeModifierPositions.has(talismanIndex + ":" + modifierIndex)
+            );
+            Object.entries(stats).forEach(([key, value]) => {
+                talismanCombatStats[key] = (talismanCombatStats[key] ?? 0) + value;
+            });
+        });
+
         [
             "stabAccuracy",
             "slashAccuracy",
@@ -161,6 +196,11 @@ class Player extends CombatUnit {
             "ripple",
             "bloom",
             "blaze",
+            "smite",
+            "shatter",
+            "overkill",
+            "echo",
+            "fortify",
             "attackSpeed",
             "foodHaste",
             "drinkConcentration",
@@ -173,12 +213,15 @@ class Player extends CombatUnit {
             "meleeExperience",
             "rangedExperience",
             "magicExperience",
-            "retaliation"
+            "retaliation",
+            "damageTaken"
         ].forEach((stat) => {
-            this.combatDetails.combatStats[stat] = Object.values(this.equipment)
-                .filter((equipment) => equipment != null)
-                .map((equipment) => equipment.getCombatStat(stat))
-                .reduce((prev, cur) => prev + cur, 0);
+            this.combatDetails.combatStats[stat] =
+                Object.values(this.equipment)
+                    .filter((equipment) => equipment != null)
+                    .map((equipment) => equipment.getCombatStat(stat))
+                    .reduce((prev, cur) => prev + cur, 0)
+                + (talismanCombatStats[stat] ?? 0);
         });
 
         if (this.equipment["/equipment_types/pouch"]) {

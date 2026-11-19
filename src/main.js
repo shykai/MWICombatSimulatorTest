@@ -6,6 +6,7 @@ import houseRoomDetailMap from "./combatsimulator/data/houseRoomDetailMap.json";
 import labyrinthUpgradeDetailMap from "./combatsimulator/data/labyrinthUpgradeDetailMap.json";
 import guildBuffDetailMap from "./combatsimulator/data/guildBuffDetailMap.json";
 import Ability from "./combatsimulator/ability.js";
+import Talisman from "./combatsimulator/talisman.js";
 import Consumable from "./combatsimulator/consumable.js";
 import HouseRoom from "./combatsimulator/houseRoom"
 import LabyrinthUpgrade from "./combatsimulator/labyrinthUpgrade";
@@ -21,6 +22,8 @@ import combatStyleDetailMap from "./combatsimulator/data/combatStyleDetailMap.js
 import openableLootDropMap from "./combatsimulator/data/openableLootDropMap.json";
 import achievementTierMap from "./combatsimulator/data/achievementTierDetailMap.json"
 import achievementDetailMap from "./combatsimulator/data/achievementDetailMap.json"
+import talismanInfo from "./combatsimulator/data/talismanInfo.json";
+import talismanModifierDetailMap from "./combatsimulator/data/talismanModifierDetailMap.json";
 
 import patchNote from "../patchNote.json";
 
@@ -43,6 +46,7 @@ let food = [null, null, null];
 let drinks = [null, null, null];
 let abilities = [null, null, null, null];
 let triggerMap = {};
+let slottedTalismans = [];
 let modalTriggers = [];
 let currentSimResults = {};
 
@@ -117,7 +121,7 @@ function onMultiWorkerMessage(event) {
 // #region Equipment
 
 function initEquipmentSection() {
-    ["head", "body", "legs", "feet", "hands", "main_hand", "two_hand", "off_hand", "pouch", "neck", "earrings", "ring", "back", "charm"].forEach((type) => {
+    ["head", "body", "legs", "feet", "hands", "main_hand", "two_hand", "off_hand", "pouch", "neck", "earrings", "ring", "back", "belt", "charm"].forEach((type) => {
         initEquipmentSelect(type);
         initEnhancementLevelInput(type);
     });
@@ -510,7 +514,7 @@ function enhancementLevelInputHandler() {
 }
 
 function updateEquipmentState() {
-    ["head", "body", "legs", "feet", "hands", "main_hand", "two_hand", "off_hand", "pouch", "neck", "earrings", "ring", "back", "charm"].forEach((type) => {
+    ["head", "body", "legs", "feet", "hands", "main_hand", "two_hand", "off_hand", "pouch", "neck", "earrings", "ring", "back", "belt", "charm"].forEach((type) => {
         let equipmentType = "/equipment_types/" + type;
         let selectType = type;
         if (type == "main_hand" || type == "two_hand") {
@@ -658,7 +662,8 @@ function updateCombatStatsUI() {
 
     [
         "abilityHaste",
-        "tenacity"
+        "tenacity",
+        "talismanSlots"
     ].forEach((stat) => {
         let element = document.getElementById("combatStat_" + stat);
         element.innerHTML = Math.floor(player.combatDetails.combatStats[stat]);
@@ -694,6 +699,12 @@ function updateCombatStatsUI() {
         "ripple",
         "bloom",
         "blaze",
+        "smite",
+        "shatter",
+        "overkill",
+        "echo",
+        "fortify",
+        "talismanPower",
         "attackSpeed",
         "autoAttackDamage",
         "abilityDamage",
@@ -967,6 +978,330 @@ function swapAbilityOrder(abilityIndex, step) {
 
     updateAbilityState();
     updateAbilityUI();
+}
+
+// #endregion
+
+// #region Talisman
+
+const TALISMAN_SLOT_COUNT = talismanInfo.maxSlotCount;
+const TALISMAN_MODIFIER_COUNT = talismanInfo.maxModifierCount;
+const TALISMAN_TYPE_HRID = "/talisman_types/combat";
+const TALISMAN_MODIFIER_NAME_OVERRIDES = {
+    "/talisman_modifiers/threat": "talismansPanel.increasedThreat",
+    "/talisman_modifiers/threat_reduction": "talismansPanel.reducedThreat"
+};
+const talismanCombatModifiers = Object.values(talismanModifierDetailMap)
+    .filter((modifier) => modifier.talismanTypeHrid == TALISMAN_TYPE_HRID)
+    .sort((a, b) => a.sortIndex - b.sortIndex);
+
+function initTalismanSection() {
+    let container = document.getElementById("talismanSlotsContainer");
+    let newChildren = [];
+
+    for (let slot = 0; slot < TALISMAN_SLOT_COUNT; slot++) {
+        let slotElement = document.createElement("div");
+        slotElement.className = slot == TALISMAN_SLOT_COUNT - 1 ? "mb-0" : "mb-3";
+
+        let header = document.createElement("div");
+        header.className = "d-flex align-items-center gap-2 mb-1";
+        let headerText = document.createElement("b");
+        let headerTextLabel = document.createElement("span");
+        headerTextLabel.setAttribute("data-i18n", "talismanSlot.talisman");
+        headerTextLabel.textContent = i18next.t("talismanSlot.talisman");
+        headerText.append(headerTextLabel, document.createTextNode(" " + (slot + 1)));
+        header.append(headerText);
+        slotElement.appendChild(header);
+
+        for (let line = 0; line < TALISMAN_MODIFIER_COUNT; line++) {
+            let row = document.createElement("div");
+            row.className = "row gx-2 mb-1";
+
+            let modifierColumn = document.createElement("div");
+            modifierColumn.className = "col-md-6";
+            let modifierSelect = document.createElement("select");
+            modifierSelect.className = "form-select form-select-sm";
+            modifierSelect.id = "selectTalismanModifier_" + slot + "_" + line;
+            modifierSelect.add(new Option(i18next.t("characterSelectPage.slots.empty"), ""));
+            modifierSelect.options[0].setAttribute("data-i18n", "characterSelectPage.slots.empty");
+            talismanCombatModifiers.forEach((modifier) => {
+                let option = new Option(getTalismanModifierName(modifier), modifier.hrid);
+                option.setAttribute("data-talisman-modifier", modifier.hrid);
+                modifierSelect.add(option);
+            });
+            modifierColumn.appendChild(modifierSelect);
+
+            let gradeColumn = document.createElement("div");
+            gradeColumn.className = "col-auto";
+            let gradeSelect = document.createElement("select");
+            gradeSelect.className = "form-select form-select-sm";
+            gradeSelect.id = "selectTalismanGrade_" + slot + "_" + line;
+            for (let grade = 1; grade <= talismanInfo.maxGrade; grade++) {
+                gradeSelect.add(new Option("G" + grade, String(grade)));
+            }
+            gradeColumn.appendChild(gradeSelect);
+
+            let valueColumn = document.createElement("div");
+            valueColumn.className = "col-auto d-flex align-items-center";
+            let valueElement = document.createElement("span");
+            valueElement.className = "text-secondary small";
+            valueElement.id = "talismanModifierValue_" + slot + "_" + line;
+            valueColumn.appendChild(valueElement);
+
+            let noteColumn = document.createElement("div");
+            noteColumn.className = "col-auto d-flex align-items-center";
+            let noteElement = document.createElement("span");
+            noteElement.className = "text-warning small";
+            noteElement.id = "talismanModifierNote_" + slot + "_" + line;
+            noteColumn.appendChild(noteElement);
+
+            let infoColumn = document.createElement("div");
+            infoColumn.className = "col-auto d-flex align-items-center";
+            let infoElement = document.createElement("span");
+            infoElement.className = "text-info small d-none";
+            infoElement.style.cursor = "help";
+            infoElement.tabIndex = 0;
+            infoElement.id = "talismanModifierInfo_" + slot + "_" + line;
+            infoElement.textContent = "\u24D8";
+            infoColumn.appendChild(infoElement);
+
+            row.append(modifierColumn, gradeColumn, valueColumn, infoColumn, noteColumn);
+            slotElement.appendChild(row);
+        }
+
+        newChildren.push(slotElement);
+    }
+
+    container.replaceChildren(...newChildren);
+
+    for (let slot = 0; slot < TALISMAN_SLOT_COUNT; slot++) {
+        for (let line = 0; line < TALISMAN_MODIFIER_COUNT; line++) {
+            document
+                .getElementById("selectTalismanModifier_" + slot + "_" + line)
+                .addEventListener("change", talismanInputHandler);
+            document
+                .getElementById("selectTalismanGrade_" + slot + "_" + line)
+                .addEventListener("change", talismanInputHandler);
+        }
+    }
+
+    if (i18next.isInitialized) {
+        refreshTalismanModifierNames();
+    } else {
+        i18next.on("initialized", refreshTalismanModifierNames);
+        i18next.on("loaded", refreshTalismanModifierNames);
+    }
+    i18next.on("languageChanged", refreshTalismanModifierNames);
+}
+
+function refreshTalismanModifierNames() {
+    document.querySelectorAll("option[data-talisman-modifier]").forEach((option) => {
+        let modifier = talismanModifierDetailMap[option.getAttribute("data-talisman-modifier")];
+        if (modifier) {
+            option.textContent = getTalismanModifierName(modifier);
+        }
+    });
+    if (player.combatDetails?.combatStats) {
+        updateTalismanUI();
+    }
+}
+
+function getTalismanModifierNameKey(modifier) {
+    let modifierKey = "talismanModifierNames." + modifier.hrid;
+    if (i18next.exists(modifierKey)) {
+        return modifierKey;
+    }
+    if (TALISMAN_MODIFIER_NAME_OVERRIDES[modifier.hrid]) {
+        return TALISMAN_MODIFIER_NAME_OVERRIDES[modifier.hrid];
+    }
+    let statKey = modifier.keys[0].charAt(0).toLowerCase() + modifier.keys[0].slice(1);
+    let statKey2 = "combatStats." + statKey;
+    if (i18next.exists(statKey2)) {
+        return statKey2;
+    }
+    return null;
+}
+
+function getTalismanModifierName(modifier) {
+    let nameKey = getTalismanModifierNameKey(modifier);
+    return nameKey ? i18next.t(nameKey) : modifier.name;
+}
+
+function talismanInputHandler() {
+    updateTalismanState();
+    updateUI();
+}
+
+function updateTalismanState() {
+    slottedTalismans = [];
+    for (let slot = 0; slot < TALISMAN_SLOT_COUNT; slot++) {
+        let modifiers = [];
+        for (let line = 0; line < TALISMAN_MODIFIER_COUNT; line++) {
+            let modifierSelect = document.getElementById("selectTalismanModifier_" + slot + "_" + line);
+            if (!modifierSelect.value) {
+                continue;
+            }
+            let gradeSelect = document.getElementById("selectTalismanGrade_" + slot + "_" + line);
+            modifiers.push({ hrid: modifierSelect.value, grade: Number(gradeSelect.value) });
+        }
+        if (modifiers.length > 0) {
+            slottedTalismans.push(new Talisman(TALISMAN_TYPE_HRID, modifiers, slot + 1));
+        }
+    }
+    player.slottedTalismans = slottedTalismans;
+}
+
+function formatTalismanModifierValue(detail, value) {
+    let text = detail.isPercent ? Number((value * 100).toFixed(4)) + "%" : Number(value.toFixed(3)).toString();
+    return (value >= 0 ? "+" : "") + text;
+}
+
+function showTalismanModifierInfo(element, description) {
+    element.classList.remove("d-none");
+    element.dataset.talismanDescription = description;
+    let popover = bootstrap.Popover.getOrCreateInstance(element, {
+        trigger: "hover focus",
+        placement: "auto",
+        content: () => element.dataset.talismanDescription ?? ""
+    });
+    popover.setContent();
+}
+
+function hideTalismanModifierInfo(element) {
+    element.classList.add("d-none");
+    bootstrap.Popover.getInstance(element)?.hide();
+}
+
+function getTalismanModifierDescription(modifierHrid, detail, value) {
+    let descriptionKey = "equipmentStatsText." + modifierHrid.replace("/talisman_modifiers/", "");
+    if (!i18next.exists(descriptionKey)) {
+        return null;
+    }
+    let valueText = detail.isPercent
+        ? Number((value * 100).toFixed(4)) + "%"
+        : Number(value.toFixed(3)).toString();
+    return i18next.t(descriptionKey, { value: valueText });
+}
+
+function updateTalismanUI() {
+    let talismanSlots = player.combatDetails.combatStats.talismanSlots;
+    let specialNote = i18next.t("common:talisman.specialModifierOnlyHighest");
+    let slotModifierLists = [];
+
+    for (let slot = 0; slot < TALISMAN_SLOT_COUNT; slot++) {
+        let unlocked = slot < talismanSlots;
+        let slotModifiers = [];
+        let selectedModifierHrids = [];
+
+        for (let line = 0; line < TALISMAN_MODIFIER_COUNT; line++) {
+            let modifierSelect = document.getElementById("selectTalismanModifier_" + slot + "_" + line);
+            let gradeSelect = document.getElementById("selectTalismanGrade_" + slot + "_" + line);
+            let valueElement = document.getElementById("talismanModifierValue_" + slot + "_" + line);
+            let noteElement = document.getElementById("talismanModifierNote_" + slot + "_" + line);
+            let infoElement = document.getElementById("talismanModifierInfo_" + slot + "_" + line);
+
+            modifierSelect.disabled = !unlocked;
+            noteElement.textContent = "";
+            if (modifierSelect.value) {
+                selectedModifierHrids.push(modifierSelect.value);
+            }
+            if (!modifierSelect.value) {
+                gradeSelect.disabled = true;
+                valueElement.textContent = "";
+                hideTalismanModifierInfo(infoElement);
+                continue;
+            }
+
+            gradeSelect.disabled = !unlocked;
+            let detail = talismanModifierDetailMap[modifierSelect.value];
+            let grade = Number(gradeSelect.value);
+            let gradeValue = detail.gradeValues[grade - 1];
+            valueElement.textContent = formatTalismanModifierValue(detail, gradeValue);
+
+            let description = Talisman.isSpecialModifier({ hrid: modifierSelect.value })
+                ? getTalismanModifierDescription(modifierSelect.value, detail, gradeValue)
+                : null;
+            if (description) {
+                showTalismanModifierInfo(infoElement, description);
+            } else {
+                hideTalismanModifierInfo(infoElement);
+            }
+
+            if (unlocked) {
+                slotModifiers.push({ hrid: modifierSelect.value, grade: grade, slot: slot, line: line });
+            }
+        }
+
+        for (let line = 0; line < TALISMAN_MODIFIER_COUNT; line++) {
+            let modifierSelect = document.getElementById("selectTalismanModifier_" + slot + "_" + line);
+            modifierSelect.querySelectorAll("option[data-talisman-modifier]").forEach((option) => {
+                let modifierHrid = option.getAttribute("data-talisman-modifier");
+                option.disabled =
+                    modifierHrid != modifierSelect.value && selectedModifierHrids.includes(modifierHrid);
+            });
+        }
+
+        slotModifierLists.push(slotModifiers);
+    }
+
+    let activePositions = Talisman.getActiveModifierPositions(slotModifierLists);
+
+    let effectiveCount = 0;
+    slotModifierLists.forEach((slotModifiers, slotIndex) => {
+        slotModifiers.forEach((modifier, modifierIndex) => {
+            if (!activePositions.has(slotIndex + ":" + modifierIndex)) {
+                if (Talisman.isSpecialModifier(modifier)) {
+                    document.getElementById("talismanModifierNote_" + modifier.slot + "_" + modifier.line).textContent =
+                        specialNote;
+                }
+                return;
+            }
+            effectiveCount++;
+        });
+    });
+
+    document.getElementById("talismanEffectiveModifierCount").textContent = i18next.t(
+        "common:talisman.effectiveModifierCount",
+        { count: effectiveCount }
+    );
+}
+
+function resetTalismanUI() {
+    for (let slot = 0; slot < TALISMAN_SLOT_COUNT; slot++) {
+        for (let line = 0; line < TALISMAN_MODIFIER_COUNT; line++) {
+            document.getElementById("selectTalismanModifier_" + slot + "_" + line).value = "";
+            document.getElementById("selectTalismanGrade_" + slot + "_" + line).value = "1";
+        }
+    }
+}
+
+function applySlottedTalismansToState(talismans) {
+    resetTalismanUI();
+    (talismans ?? []).forEach((talisman) => {
+        let slot = (talisman.slotIndex ?? 1) - 1;
+        if (slot < 0 || slot >= TALISMAN_SLOT_COUNT) {
+            return;
+        }
+        (talisman.modifiers ?? []).forEach((modifier, line) => {
+            if (line >= TALISMAN_MODIFIER_COUNT) {
+                return;
+            }
+            let modifierSelect = document.getElementById("selectTalismanModifier_" + slot + "_" + line);
+            if (!talismanModifierDetailMap[modifier.hrid]) {
+                return;
+            }
+            modifierSelect.value = modifier.hrid;
+            document.getElementById("selectTalismanGrade_" + slot + "_" + line).value = String(modifier.grade ?? 1);
+        });
+    });
+}
+
+function getSlottedTalismansForExport() {
+    return slottedTalismans.map((talisman) => ({
+        talismanTypeHrid: talisman.talismanTypeHrid,
+        modifiers: talisman.modifiers,
+        slotIndex: talisman.slotIndex,
+    }));
 }
 
 // #endregion
@@ -2958,6 +3293,10 @@ function createDamageTable(resultDiv, damageDone, secondsSimulated) {
                 abilityText = "Retaliation";
                 abilityFullHrid = "combatStats.retaliation";
                 break;
+            case "overkill":
+                abilityText = "Overkill";
+                abilityFullHrid = "combatStats.overkill";
+                break;
             case 'blaze':
                 abilityText = "Blaze";
                 abilityFullHrid = "combatStats.blaze";
@@ -3380,7 +3719,7 @@ function parsePlayerJson(playerJson, hrid) {
     };
     playerData.equipment = {};
     const triggerMap = playerJson.triggerMap;
-    ["head", "body", "legs", "feet", "hands", "off_hand", "pouch", "neck", "earrings", "ring", "back", "main_hand", "two_hand", "charm"].forEach((type) => {
+    ["head", "body", "legs", "feet", "hands", "off_hand", "pouch", "neck", "earrings", "ring", "back", "main_hand", "two_hand", "belt", "charm"].forEach((type) => {
         let currentEquipment = playerJson.player.equipment.find(item => item.itemLocationHrid === "/item_locations/" + type);
         if (currentEquipment){
             playerData.equipment[`/equipment_types/${type}`] = new Equipment(currentEquipment.itemHrid, currentEquipment.enhancementLevel);
@@ -3941,7 +4280,7 @@ function getEquipmentSetFromUI() {
         equipmentSet.levels[skill] = Number(levelInput.value);
     });
 
-    ["head", "body", "legs", "feet", "hands", "weapon", "off_hand", "pouch", "neck", "earrings", "ring", "back", "charm"].forEach((type) => {
+    ["head", "body", "legs", "feet", "hands", "weapon", "off_hand", "pouch", "neck", "earrings", "ring", "back", "belt", "charm"].forEach((type) => {
         let equipmentSelect = document.getElementById("selectEquipment_" + type);
         let enhancementLevelInput = document.getElementById("inputEquipmentEnhancementLevel_" + type);
 
@@ -4011,7 +4350,7 @@ function loadEquipmentSetIntoUI(equipmentSet) {
         levelInput.value = equipmentSet.levels[skill] ?? 1;
     });
 
-    ["head", "body", "legs", "feet", "hands", "weapon", "off_hand", "pouch", "neck", "earrings", "ring", "back", "charm"].forEach((type) => {
+    ["head", "body", "legs", "feet", "hands", "weapon", "off_hand", "pouch", "neck", "earrings", "ring", "back", "belt", "charm"].forEach((type) => {
         let equipmentSelect = document.getElementById("selectEquipment_" + type);
         let enhancementLevelInput = document.getElementById("inputEquipmentEnhancementLevel_" + type);
 
@@ -4195,7 +4534,8 @@ function doSoloExport() {
         "defenseLevel": player.defenseLevel,
         "staminaLevel": player.staminaLevel,
         "intelligenceLevel": player.intelligenceLevel,
-        "equipment": equipmentArray
+        "equipment": equipmentArray,
+        "slottedTalismans": getSlottedTalismansForExport()
     };
     let abilitiesArray = [];
     for (let i = 0; i < 5; i++) {
@@ -4273,7 +4613,7 @@ function doSoloImport() {
         levelInput.value = importSet.player[skill + "Level"];
     });
 
-    ["head", "body", "legs", "feet", "hands", "off_hand", "pouch", "neck", "earrings", "ring", "back", "charm"].forEach((type) => {
+    ["head", "body", "legs", "feet", "hands", "off_hand", "pouch", "neck", "earrings", "ring", "back", "belt", "charm"].forEach((type) => {
         let equipmentSelect = document.getElementById("selectEquipment_" + type);
         let enhancementLevelInput = document.getElementById("inputEquipmentEnhancementLevel_" + type);
         let currentEquipment = importSet.player.equipment.find(item => item.itemLocationHrid === "/item_locations/" + type);
@@ -4353,6 +4693,8 @@ function doSoloImport() {
         triggerMap = importSet.triggerMap;
         fixTriggerMap(triggerMap);
     }
+
+    applySlottedTalismansToState(importSet.player?.slottedTalismans);
 
     if (importSet.houseRooms) {
         for (const room in importSet.houseRooms) {
@@ -4429,7 +4771,8 @@ function savePreviousPlayer(playerId) {
         "defenseLevel": player.defenseLevel,
         "staminaLevel": player.staminaLevel,
         "intelligenceLevel": player.intelligenceLevel,
-        "equipment": equipmentArray
+        "equipment": equipmentArray,
+        "slottedTalismans": getSlottedTalismansForExport()
     };
     let abilitiesArray = [];
     for (let i = 0; i < 5; i++) {
@@ -4476,7 +4819,7 @@ function updateNextPlayer(currentPlayerNumber) {
         levelInput.value = importSet.player[skill + "Level"];
     });
 
-    ["head", "body", "legs", "feet", "hands", "off_hand", "pouch", "neck", "earrings", "ring", "back", "charm"].forEach((type) => {
+    ["head", "body", "legs", "feet", "hands", "off_hand", "pouch", "neck", "earrings", "ring", "back", "belt", "charm"].forEach((type) => {
 
         let equipmentSelect = document.getElementById("selectEquipment_" + type);
         let enhancementLevelInput = document.getElementById("inputEquipmentEnhancementLevel_" + type);
@@ -4557,6 +4900,8 @@ function updateNextPlayer(currentPlayerNumber) {
         triggerMap = importSet.triggerMap;
         fixTriggerMap(triggerMap);
     }
+
+    applySlottedTalismansToState(importSet.player?.slottedTalismans);
 
     { // reset all houseRooms
         let houseRooms = Object.values(houseRoomDetailMap);
@@ -4950,6 +5295,7 @@ function updateState() {
     updateFoodState();
     updateDrinksState();
     updateAbilityState();
+    updateTalismanState();
 }
 
 function updateUI() {
@@ -4957,6 +5303,7 @@ function updateUI() {
     updateFoodUI();
     updateDrinksUI();
     updateAbilityUI();
+    updateTalismanUI();
 
     updateContent();
 }
@@ -5014,6 +5361,7 @@ initLevelSection();
 initFoodSection();
 initDrinksSection();
 initAbilitiesSection();
+initTalismanSection();
 initZones();
 initDungeons();
 initLabyrinth();

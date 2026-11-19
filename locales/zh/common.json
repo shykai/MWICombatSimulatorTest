@@ -120,5 +120,9 @@
     },
     "simLabyrinth" : "模拟迷宫",
     "simAllLabyrinths" : "模拟所有迷宫",
-    "roomLevel" : "房间等级"
+    "roomLevel" : "房间等级",
+    "talisman": {
+        "effectiveModifierCount": "生效词条：{{count}}",
+        "specialModifierOnlyHighest": "同名特殊词条仅等级最高的一条生效"
+    }
 }

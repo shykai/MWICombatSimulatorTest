@@ -40,7 +40,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 913
+        "sortIndex": 922
     },
     "/items/acrobatic_hood": {
         "hrid": "/items/acrobatic_hood",
@@ -331,7 +331,7 @@
                 "creditCount": 5000
             }
         ],
-        "sortIndex": 867
+        "sortIndex": 876
     },
     "/items/advanced_alchemy_charm": {
         "hrid": "/items/advanced_alchemy_charm",
@@ -452,7 +452,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 614
+        "sortIndex": 617
     },
     "/items/advanced_attack_charm": {
         "hrid": "/items/advanced_attack_charm",
@@ -556,7 +556,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 638
+        "sortIndex": 641
     },
     "/items/advanced_beacon": {
         "hrid": "/items/advanced_beacon",
@@ -572,7 +572,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 947
+        "sortIndex": 966
     },
     "/items/advanced_brewing_charm": {
         "hrid": "/items/advanced_brewing_charm",
@@ -693,7 +693,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 608
+        "sortIndex": 611
     },
     "/items/advanced_cheesesmithing_charm": {
         "hrid": "/items/advanced_cheesesmithing_charm",
@@ -814,7 +814,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 584
+        "sortIndex": 587
     },
     "/items/advanced_coffee_crate": {
         "hrid": "/items/advanced_coffee_crate",
@@ -830,7 +830,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 956
+        "sortIndex": 975
     },
     "/items/advanced_cooking_charm": {
         "hrid": "/items/advanced_cooking_charm",
@@ -951,7 +951,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 602
+        "sortIndex": 605
     },
     "/items/advanced_crafting_charm": {
         "hrid": "/items/advanced_crafting_charm",
@@ -1072,7 +1072,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 590
+        "sortIndex": 593
     },
     "/items/advanced_defense_charm": {
         "hrid": "/items/advanced_defense_charm",
@@ -1176,7 +1176,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 644
+        "sortIndex": 647
     },
     "/items/advanced_enhancing_charm": {
         "hrid": "/items/advanced_enhancing_charm",
@@ -1297,7 +1297,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 620
+        "sortIndex": 623
     },
     "/items/advanced_food_crate": {
         "hrid": "/items/advanced_food_crate",
@@ -1313,7 +1313,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 950
+        "sortIndex": 969
     },
     "/items/advanced_foraging_charm": {
         "hrid": "/items/advanced_foraging_charm",
@@ -1434,7 +1434,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 572
+        "sortIndex": 575
     },
     "/items/advanced_intelligence_charm": {
         "hrid": "/items/advanced_intelligence_charm",
@@ -1538,7 +1538,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 632
+        "sortIndex": 635
     },
     "/items/advanced_magic_charm": {
         "hrid": "/items/advanced_magic_charm",
@@ -1642,7 +1642,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 662
+        "sortIndex": 665
     },
     "/items/advanced_melee_charm": {
         "hrid": "/items/advanced_melee_charm",
@@ -1746,7 +1746,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 650
+        "sortIndex": 653
     },
     "/items/advanced_milking_charm": {
         "hrid": "/items/advanced_milking_charm",
@@ -1867,7 +1867,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 566
+        "sortIndex": 569
     },
     "/items/advanced_ranged_charm": {
         "hrid": "/items/advanced_ranged_charm",
@@ -1971,7 +1971,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 656
+        "sortIndex": 659
     },
     "/items/advanced_shroud": {
         "hrid": "/items/advanced_shroud",
@@ -1987,7 +1987,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 944
+        "sortIndex": 963
     },
     "/items/advanced_stamina_charm": {
         "hrid": "/items/advanced_stamina_charm",
@@ -2091,7 +2091,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 626
+        "sortIndex": 629
     },
     "/items/advanced_tailoring_charm": {
         "hrid": "/items/advanced_tailoring_charm",
@@ -2212,7 +2212,23 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 596
+        "sortIndex": 599
+    },
+    "/items/advanced_talisman_core": {
+        "hrid": "/items/advanced_talisman_core",
+        "name": "Advanced Talisman Core",
+        "description": "Adds a third modifier to a talisman",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 300000,
+        "isTradable": true,
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": null,
+            "transmuteSuccessRate": 0,
+            "transmuteDropTable": null
+        },
+        "sortIndex": 939
     },
     "/items/advanced_task_badge": {
         "hrid": "/items/advanced_task_badge",
@@ -2263,7 +2279,7 @@
                 "taskSpeed": 0.010000000000000002
             }
         },
-        "sortIndex": 667
+        "sortIndex": 670
     },
     "/items/advanced_tea_crate": {
         "hrid": "/items/advanced_tea_crate",
@@ -2279,7 +2295,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 953
+        "sortIndex": 972
     },
     "/items/advanced_torch": {
         "hrid": "/items/advanced_torch",
@@ -2295,7 +2311,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 941
+        "sortIndex": 960
     },
     "/items/advanced_woodcutting_charm": {
         "hrid": "/items/advanced_woodcutting_charm",
@@ -2416,7 +2432,7 @@
                 "creditCount": 1600
             }
         ],
-        "sortIndex": 578
+        "sortIndex": 581
     },
     "/items/alchemists_bottoms": {
         "hrid": "/items/alchemists_bottoms",
@@ -2709,7 +2725,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 902
+        "sortIndex": 911
     },
     "/items/alchemy_tea": {
         "hrid": "/items/alchemy_tea",
@@ -2874,7 +2890,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 922
+        "sortIndex": 931
     },
     "/items/amethyst": {
         "hrid": "/items/amethyst",
@@ -2947,7 +2963,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 925
+        "sortIndex": 934
     },
     "/items/anchorbound_plate_body": {
         "hrid": "/items/anchorbound_plate_body",
@@ -3459,6 +3475,114 @@
         ],
         "sortIndex": 444
     },
+    "/items/ancient_log": {
+        "hrid": "/items/ancient_log",
+        "name": "Ancient Log",
+        "description": "",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 200,
+        "isTradable": true,
+        "itemLevel": 100,
+        "alchemyDetail": {
+            "bulkMultiplier": 2,
+            "isCoinifiable": true,
+            "decomposeItems": [
+                {
+                    "itemHrid": "/items/woodcutting_essence",
+                    "count": 15
+                }
+            ],
+            "transmuteSuccessRate": 0.5,
+            "transmuteDropTable": [
+                {
+                    "itemHrid": "/items/ancient_log",
+                    "dropRate": 0.45,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/arcane_log",
+                    "dropRate": 0.25,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/eternal_milk",
+                    "dropRate": 0.15,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/dragon_hide",
+                    "dropRate": 0.15,
+                    "minCount": 1,
+                    "maxCount": 1
+                }
+            ]
+        },
+        "guildCreditConversions": [
+            {
+                "creditItemHrid": "/items/green_guild_credit",
+                "itemCount": 1,
+                "creditCount": 4
+            }
+        ],
+        "sortIndex": 775
+    },
+    "/items/ancient_lumber": {
+        "hrid": "/items/ancient_lumber",
+        "name": "Ancient Lumber",
+        "description": "",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 800,
+        "isTradable": true,
+        "itemLevel": 100,
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": [
+                {
+                    "itemHrid": "/items/crafting_essence",
+                    "count": 30
+                }
+            ],
+            "transmuteSuccessRate": 0.5,
+            "transmuteDropTable": [
+                {
+                    "itemHrid": "/items/ancient_lumber",
+                    "dropRate": 0.45,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/arcane_lumber",
+                    "dropRate": 0.25,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/eternal_cheese",
+                    "dropRate": 0.15,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/dragon_leather",
+                    "dropRate": 0.15,
+                    "minCount": 1,
+                    "maxCount": 1
+                }
+            ]
+        },
+        "guildCreditConversions": [
+            {
+                "creditItemHrid": "/items/green_guild_credit",
+                "itemCount": 1,
+                "creditCount": 10
+            }
+        ],
+        "sortIndex": 783
+    },
     "/items/apple": {
         "hrid": "/items/apple",
         "name": "Apple",
@@ -3517,7 +3641,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 806
+        "sortIndex": 815
     },
     "/items/apple_gummy": {
         "hrid": "/items/apple_gummy",
@@ -3817,7 +3941,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 905
+        "sortIndex": 914
     },
     "/items/arabica_coffee_bean": {
         "hrid": "/items/arabica_coffee_bean",
@@ -3877,7 +4001,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 812
+        "sortIndex": 821
     },
     "/items/arcane_bow": {
         "hrid": "/items/arcane_bow",
@@ -4152,7 +4276,13 @@
                 },
                 {
                     "itemHrid": "/items/redwood_log",
-                    "dropRate": 0.25,
+                    "dropRate": 0.2,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/ancient_log",
+                    "dropRate": 0.05,
                     "minCount": 1,
                     "maxCount": 1
                 },
@@ -4183,7 +4313,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 769
+        "sortIndex": 774
     },
     "/items/arcane_lumber": {
         "hrid": "/items/arcane_lumber",
@@ -4212,7 +4342,13 @@
                 },
                 {
                     "itemHrid": "/items/redwood_lumber",
-                    "dropRate": 0.25,
+                    "dropRate": 0.2,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/ancient_lumber",
+                    "dropRate": 0.05,
                     "minCount": 1,
                     "maxCount": 1
                 },
@@ -4243,7 +4379,7 @@
                 "creditCount": 2
             }
         ],
-        "sortIndex": 776
+        "sortIndex": 782
     },
     "/items/arcane_nature_staff": {
         "hrid": "/items/arcane_nature_staff",
@@ -4889,6 +5025,22 @@
         ],
         "sortIndex": 138
     },
+    "/items/attunement_orb": {
+        "hrid": "/items/attunement_orb",
+        "name": "Attunement Orb",
+        "description": "Each unlocked modifier rolls separately: 65% to go down one grade, 20% to stay the same, and 15% to go up one grade. Grades stay between G1 and G6.",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 500000,
+        "isTradable": true,
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": null,
+            "transmuteSuccessRate": 0,
+            "transmuteDropTable": null
+        },
+        "sortIndex": 946
+    },
     "/items/azure_alembic": {
         "hrid": "/items/azure_alembic",
         "name": "Azure Alembic",
@@ -4947,7 +5099,7 @@
                 "creditCount": 4
             }
         ],
-        "sortIndex": 736
+        "sortIndex": 739
     },
     "/items/azure_boots": {
         "hrid": "/items/azure_boots",
@@ -5086,7 +5238,7 @@
                 "creditCount": 4
             }
         ],
-        "sortIndex": 672
+        "sortIndex": 675
     },
     "/items/azure_buckler": {
         "hrid": "/items/azure_buckler",
@@ -5299,7 +5451,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 758
+        "sortIndex": 762
     },
     "/items/azure_chisel": {
         "hrid": "/items/azure_chisel",
@@ -5367,7 +5519,7 @@
                 "creditCount": 4
             }
         ],
-        "sortIndex": 704
+        "sortIndex": 707
     },
     "/items/azure_enhancer": {
         "hrid": "/items/azure_enhancer",
@@ -5427,7 +5579,7 @@
                 "creditCount": 4
             }
         ],
-        "sortIndex": 744
+        "sortIndex": 747
     },
     "/items/azure_gauntlets": {
         "hrid": "/items/azure_gauntlets",
@@ -5566,7 +5718,7 @@
                 "creditCount": 4
             }
         ],
-        "sortIndex": 696
+        "sortIndex": 699
     },
     "/items/azure_hatchet": {
         "hrid": "/items/azure_hatchet",
@@ -5634,7 +5786,7 @@
                 "creditCount": 4
             }
         ],
-        "sortIndex": 688
+        "sortIndex": 691
     },
     "/items/azure_helmet": {
         "hrid": "/items/azure_helmet",
@@ -5859,7 +6011,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 751
+        "sortIndex": 754
     },
     "/items/azure_needle": {
         "hrid": "/items/azure_needle",
@@ -5919,7 +6071,7 @@
                 "creditCount": 4
             }
         ],
-        "sortIndex": 712
+        "sortIndex": 715
     },
     "/items/azure_plate_body": {
         "hrid": "/items/azure_plate_body",
@@ -6121,7 +6273,7 @@
                 "creditCount": 4
             }
         ],
-        "sortIndex": 728
+        "sortIndex": 731
     },
     "/items/azure_shears": {
         "hrid": "/items/azure_shears",
@@ -6189,7 +6341,7 @@
                 "creditCount": 4
             }
         ],
-        "sortIndex": 680
+        "sortIndex": 683
     },
     "/items/azure_spatula": {
         "hrid": "/items/azure_spatula",
@@ -6249,7 +6401,7 @@
                 "creditCount": 4
             }
         ],
-        "sortIndex": 720
+        "sortIndex": 723
     },
     "/items/azure_spear": {
         "hrid": "/items/azure_spear",
@@ -6544,7 +6696,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 789
+        "sortIndex": 798
     },
     "/items/bamboo_fabric": {
         "hrid": "/items/bamboo_fabric",
@@ -6604,7 +6756,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 794
+        "sortIndex": 803
     },
     "/items/bamboo_gloves": {
         "hrid": "/items/bamboo_gloves",
@@ -7041,7 +7193,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 613
+        "sortIndex": 616
     },
     "/items/basic_attack_charm": {
         "hrid": "/items/basic_attack_charm",
@@ -7136,7 +7288,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 637
+        "sortIndex": 640
     },
     "/items/basic_beacon": {
         "hrid": "/items/basic_beacon",
@@ -7152,7 +7304,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 946
+        "sortIndex": 965
     },
     "/items/basic_brewing_charm": {
         "hrid": "/items/basic_brewing_charm",
@@ -7269,7 +7421,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 607
+        "sortIndex": 610
     },
     "/items/basic_cheesesmithing_charm": {
         "hrid": "/items/basic_cheesesmithing_charm",
@@ -7386,7 +7538,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 583
+        "sortIndex": 586
     },
     "/items/basic_coffee_crate": {
         "hrid": "/items/basic_coffee_crate",
@@ -7402,7 +7554,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 955
+        "sortIndex": 974
     },
     "/items/basic_cooking_charm": {
         "hrid": "/items/basic_cooking_charm",
@@ -7519,7 +7671,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 601
+        "sortIndex": 604
     },
     "/items/basic_crafting_charm": {
         "hrid": "/items/basic_crafting_charm",
@@ -7636,7 +7788,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 589
+        "sortIndex": 592
     },
     "/items/basic_defense_charm": {
         "hrid": "/items/basic_defense_charm",
@@ -7731,7 +7883,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 643
+        "sortIndex": 646
     },
     "/items/basic_enhancing_charm": {
         "hrid": "/items/basic_enhancing_charm",
@@ -7848,7 +8000,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 619
+        "sortIndex": 622
     },
     "/items/basic_food_crate": {
         "hrid": "/items/basic_food_crate",
@@ -7864,7 +8016,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 949
+        "sortIndex": 968
     },
     "/items/basic_foraging_charm": {
         "hrid": "/items/basic_foraging_charm",
@@ -7981,7 +8133,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 571
+        "sortIndex": 574
     },
     "/items/basic_intelligence_charm": {
         "hrid": "/items/basic_intelligence_charm",
@@ -8076,7 +8228,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 631
+        "sortIndex": 634
     },
     "/items/basic_magic_charm": {
         "hrid": "/items/basic_magic_charm",
@@ -8171,7 +8323,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 661
+        "sortIndex": 664
     },
     "/items/basic_melee_charm": {
         "hrid": "/items/basic_melee_charm",
@@ -8266,7 +8418,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 649
+        "sortIndex": 652
     },
     "/items/basic_milking_charm": {
         "hrid": "/items/basic_milking_charm",
@@ -8383,7 +8535,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 565
+        "sortIndex": 568
     },
     "/items/basic_ranged_charm": {
         "hrid": "/items/basic_ranged_charm",
@@ -8478,7 +8630,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 655
+        "sortIndex": 658
     },
     "/items/basic_shroud": {
         "hrid": "/items/basic_shroud",
@@ -8494,7 +8646,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 943
+        "sortIndex": 962
     },
     "/items/basic_stamina_charm": {
         "hrid": "/items/basic_stamina_charm",
@@ -8589,7 +8741,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 625
+        "sortIndex": 628
     },
     "/items/basic_tailoring_charm": {
         "hrid": "/items/basic_tailoring_charm",
@@ -8706,7 +8858,23 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 595
+        "sortIndex": 598
+    },
+    "/items/basic_talisman_core": {
+        "hrid": "/items/basic_talisman_core",
+        "name": "Basic Talisman Core",
+        "description": "Forms a new talisman with one modifier, or adds a second modifier to an existing talisman",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 20000,
+        "isTradable": true,
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": null,
+            "transmuteSuccessRate": 0,
+            "transmuteDropTable": null
+        },
+        "sortIndex": 938
     },
     "/items/basic_task_badge": {
         "hrid": "/items/basic_task_badge",
@@ -8753,7 +8921,7 @@
                 "taskSpeed": 0.005000000000000001
             }
         },
-        "sortIndex": 666
+        "sortIndex": 669
     },
     "/items/basic_tea_crate": {
         "hrid": "/items/basic_tea_crate",
@@ -8769,7 +8937,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 952
+        "sortIndex": 971
     },
     "/items/basic_torch": {
         "hrid": "/items/basic_torch",
@@ -8785,7 +8953,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 940
+        "sortIndex": 959
     },
     "/items/basic_woodcutting_charm": {
         "hrid": "/items/basic_woodcutting_charm",
@@ -8902,7 +9070,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 577
+        "sortIndex": 580
     },
     "/items/bear_essence": {
         "hrid": "/items/bear_essence",
@@ -8945,7 +9113,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 910
+        "sortIndex": 919
     },
     "/items/beast_boots": {
         "hrid": "/items/beast_boots",
@@ -9254,7 +9422,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 780
+        "sortIndex": 787
     },
     "/items/beast_hood": {
         "hrid": "/items/beast_hood",
@@ -9405,7 +9573,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 785
+        "sortIndex": 793
     },
     "/items/beast_tunic": {
         "hrid": "/items/beast_tunic",
@@ -9550,6 +9718,22 @@
             }
         ],
         "sortIndex": 203
+    },
+    "/items/binding_orb": {
+        "hrid": "/items/binding_orb",
+        "name": "Binding Orb",
+        "description": "Locks one modifier on a talisman so other orbs cannot change it",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 500000,
+        "isTradable": true,
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": null,
+            "transmuteSuccessRate": 0,
+            "transmuteDropTable": null
+        },
+        "sortIndex": 947
     },
     "/items/birch_bow": {
         "hrid": "/items/birch_bow",
@@ -9834,7 +10018,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 764
+        "sortIndex": 769
     },
     "/items/birch_lumber": {
         "hrid": "/items/birch_lumber",
@@ -9912,7 +10096,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 771
+        "sortIndex": 777
     },
     "/items/birch_nature_staff": {
         "hrid": "/items/birch_nature_staff",
@@ -10452,7 +10636,7 @@
                 "creditCount": 5000
             }
         ],
-        "sortIndex": 874
+        "sortIndex": 883
     },
     "/items/black_bear_fluff": {
         "hrid": "/items/black_bear_fluff",
@@ -10512,7 +10696,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 847
+        "sortIndex": 856
     },
     "/items/black_bear_shoes": {
         "hrid": "/items/black_bear_shoes",
@@ -10660,7 +10844,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 819
+        "sortIndex": 828
     },
     "/items/blackberry": {
         "hrid": "/items/blackberry",
@@ -10726,7 +10910,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 801
+        "sortIndex": 810
     },
     "/items/blackberry_cake": {
         "hrid": "/items/blackberry_cake",
@@ -11516,7 +11700,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 800
+        "sortIndex": 809
     },
     "/items/blueberry_cake": {
         "hrid": "/items/blueberry_cake",
@@ -11721,7 +11905,7 @@
                 "creditCount": 150
             }
         ],
-        "sortIndex": 891
+        "sortIndex": 900
     },
     "/items/brewers_bottoms": {
         "hrid": "/items/brewers_bottoms",
@@ -12014,7 +12198,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 901
+        "sortIndex": 910
     },
     "/items/brewing_tea": {
         "hrid": "/items/brewing_tea",
@@ -12216,7 +12400,7 @@
                 "creditCount": 10
             }
         ],
-        "sortIndex": 737
+        "sortIndex": 740
     },
     "/items/burble_boots": {
         "hrid": "/items/burble_boots",
@@ -12355,7 +12539,7 @@
                 "creditCount": 10
             }
         ],
-        "sortIndex": 673
+        "sortIndex": 676
     },
     "/items/burble_buckler": {
         "hrid": "/items/burble_buckler",
@@ -12556,7 +12740,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 759
+        "sortIndex": 763
     },
     "/items/burble_chisel": {
         "hrid": "/items/burble_chisel",
@@ -12624,7 +12808,7 @@
                 "creditCount": 10
             }
         ],
-        "sortIndex": 705
+        "sortIndex": 708
     },
     "/items/burble_enhancer": {
         "hrid": "/items/burble_enhancer",
@@ -12684,7 +12868,7 @@
                 "creditCount": 10
             }
         ],
-        "sortIndex": 745
+        "sortIndex": 748
     },
     "/items/burble_gauntlets": {
         "hrid": "/items/burble_gauntlets",
@@ -12823,7 +13007,7 @@
                 "creditCount": 10
             }
         ],
-        "sortIndex": 697
+        "sortIndex": 700
     },
     "/items/burble_hatchet": {
         "hrid": "/items/burble_hatchet",
@@ -12891,7 +13075,7 @@
                 "creditCount": 10
             }
         ],
-        "sortIndex": 689
+        "sortIndex": 692
     },
     "/items/burble_helmet": {
         "hrid": "/items/burble_helmet",
@@ -13104,7 +13288,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 752
+        "sortIndex": 755
     },
     "/items/burble_needle": {
         "hrid": "/items/burble_needle",
@@ -13164,7 +13348,7 @@
                 "creditCount": 10
             }
         ],
-        "sortIndex": 713
+        "sortIndex": 716
     },
     "/items/burble_plate_body": {
         "hrid": "/items/burble_plate_body",
@@ -13366,7 +13550,7 @@
                 "creditCount": 10
             }
         ],
-        "sortIndex": 729
+        "sortIndex": 732
     },
     "/items/burble_shears": {
         "hrid": "/items/burble_shears",
@@ -13434,7 +13618,7 @@
                 "creditCount": 10
             }
         ],
-        "sortIndex": 681
+        "sortIndex": 684
     },
     "/items/burble_spatula": {
         "hrid": "/items/burble_spatula",
@@ -13494,7 +13678,7 @@
                 "creditCount": 10
             }
         ],
-        "sortIndex": 721
+        "sortIndex": 724
     },
     "/items/burble_spear": {
         "hrid": "/items/burble_spear",
@@ -13704,7 +13888,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 820
+        "sortIndex": 829
     },
     "/items/burning_key_fragment": {
         "hrid": "/items/burning_key_fragment",
@@ -13789,7 +13973,7 @@
                 "creditCount": 150
             }
         ],
-        "sortIndex": 889
+        "sortIndex": 898
     },
     "/items/catalyst_of_coinification": {
         "hrid": "/items/catalyst_of_coinification",
@@ -13843,7 +14027,7 @@
                 "creditCount": 5
             }
         ],
-        "sortIndex": 824
+        "sortIndex": 833
     },
     "/items/catalyst_of_decomposition": {
         "hrid": "/items/catalyst_of_decomposition",
@@ -13897,7 +14081,7 @@
                 "creditCount": 6
             }
         ],
-        "sortIndex": 825
+        "sortIndex": 834
     },
     "/items/catalyst_of_transmutation": {
         "hrid": "/items/catalyst_of_transmutation",
@@ -13951,7 +14135,7 @@
                 "creditCount": 7
             }
         ],
-        "sortIndex": 826
+        "sortIndex": 835
     },
     "/items/catalytic_tea": {
         "hrid": "/items/catalytic_tea",
@@ -14318,7 +14502,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 765
+        "sortIndex": 770
     },
     "/items/cedar_lumber": {
         "hrid": "/items/cedar_lumber",
@@ -14396,7 +14580,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 772
+        "sortIndex": 778
     },
     "/items/cedar_nature_staff": {
         "hrid": "/items/cedar_nature_staff",
@@ -14719,7 +14903,7 @@
                 "creditCount": 300
             }
         ],
-        "sortIndex": 733
+        "sortIndex": 736
     },
     "/items/celestial_brush": {
         "hrid": "/items/celestial_brush",
@@ -14833,7 +15017,7 @@
                 "creditCount": 300
             }
         ],
-        "sortIndex": 669
+        "sortIndex": 672
     },
     "/items/celestial_chisel": {
         "hrid": "/items/celestial_chisel",
@@ -14947,7 +15131,7 @@
                 "creditCount": 300
             }
         ],
-        "sortIndex": 701
+        "sortIndex": 704
     },
     "/items/celestial_enhancer": {
         "hrid": "/items/celestial_enhancer",
@@ -15057,7 +15241,7 @@
                 "creditCount": 300
             }
         ],
-        "sortIndex": 741
+        "sortIndex": 744
     },
     "/items/celestial_hammer": {
         "hrid": "/items/celestial_hammer",
@@ -15171,7 +15355,7 @@
                 "creditCount": 300
             }
         ],
-        "sortIndex": 693
+        "sortIndex": 696
     },
     "/items/celestial_hatchet": {
         "hrid": "/items/celestial_hatchet",
@@ -15285,7 +15469,7 @@
                 "creditCount": 300
             }
         ],
-        "sortIndex": 685
+        "sortIndex": 688
     },
     "/items/celestial_needle": {
         "hrid": "/items/celestial_needle",
@@ -15395,7 +15579,7 @@
                 "creditCount": 300
             }
         ],
-        "sortIndex": 709
+        "sortIndex": 712
     },
     "/items/celestial_pot": {
         "hrid": "/items/celestial_pot",
@@ -15505,7 +15689,7 @@
                 "creditCount": 300
             }
         ],
-        "sortIndex": 725
+        "sortIndex": 728
     },
     "/items/celestial_shears": {
         "hrid": "/items/celestial_shears",
@@ -15619,7 +15803,7 @@
                 "creditCount": 300
             }
         ],
-        "sortIndex": 677
+        "sortIndex": 680
     },
     "/items/celestial_spatula": {
         "hrid": "/items/celestial_spatula",
@@ -15729,7 +15913,7 @@
                 "creditCount": 300
             }
         ],
-        "sortIndex": 717
+        "sortIndex": 720
     },
     "/items/centaur_boots": {
         "hrid": "/items/centaur_boots",
@@ -15865,7 +16049,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 835
+        "sortIndex": 844
     },
     "/items/chance_cape": {
         "hrid": "/items/chance_cape",
@@ -16203,7 +16387,7 @@
                 "creditCount": 7500
             }
         ],
-        "sortIndex": 869
+        "sortIndex": 878
     },
     "/items/chaotic_flail": {
         "hrid": "/items/chaotic_flail",
@@ -16486,7 +16670,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 756
+        "sortIndex": 760
     },
     "/items/cheese_alembic": {
         "hrid": "/items/cheese_alembic",
@@ -16542,7 +16726,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 734
+        "sortIndex": 737
     },
     "/items/cheese_boots": {
         "hrid": "/items/cheese_boots",
@@ -16673,7 +16857,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 670
+        "sortIndex": 673
     },
     "/items/cheese_buckler": {
         "hrid": "/items/cheese_buckler",
@@ -16864,7 +17048,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 702
+        "sortIndex": 705
     },
     "/items/cheese_enhancer": {
         "hrid": "/items/cheese_enhancer",
@@ -16920,7 +17104,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 742
+        "sortIndex": 745
     },
     "/items/cheese_gauntlets": {
         "hrid": "/items/cheese_gauntlets",
@@ -17051,7 +17235,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 694
+        "sortIndex": 697
     },
     "/items/cheese_hatchet": {
         "hrid": "/items/cheese_hatchet",
@@ -17115,7 +17299,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 686
+        "sortIndex": 689
     },
     "/items/cheese_helmet": {
         "hrid": "/items/cheese_helmet",
@@ -17310,7 +17494,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 710
+        "sortIndex": 713
     },
     "/items/cheese_plate_body": {
         "hrid": "/items/cheese_plate_body",
@@ -17500,7 +17684,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 726
+        "sortIndex": 729
     },
     "/items/cheese_shears": {
         "hrid": "/items/cheese_shears",
@@ -17564,7 +17748,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 678
+        "sortIndex": 681
     },
     "/items/cheese_spatula": {
         "hrid": "/items/cheese_spatula",
@@ -17620,7 +17804,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 718
+        "sortIndex": 721
     },
     "/items/cheese_spear": {
         "hrid": "/items/cheese_spear",
@@ -18049,7 +18233,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 897
+        "sortIndex": 906
     },
     "/items/cheesesmithing_tea": {
         "hrid": "/items/cheesesmithing_tea",
@@ -18436,7 +18620,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 914
+        "sortIndex": 923
     },
     "/items/chimerical_quiver": {
         "hrid": "/items/chimerical_quiver",
@@ -18667,7 +18851,7 @@
                 "creditCount": 14
             }
         ],
-        "sortIndex": 866
+        "sortIndex": 875
     },
     "/items/chimerical_token": {
         "hrid": "/items/chimerical_token",
@@ -18850,7 +19034,7 @@
                 "creditCount": 500
             }
         ],
-        "sortIndex": 844
+        "sortIndex": 853
     },
     "/items/cleave": {
         "hrid": "/items/cleave",
@@ -19017,7 +19201,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 790
+        "sortIndex": 799
     },
     "/items/coin": {
         "hrid": "/items/coin",
@@ -19201,7 +19385,7 @@
                 "creditCount": 600
             }
         ],
-        "sortIndex": 854
+        "sortIndex": 863
     },
     "/items/colossus_plate_body": {
         "hrid": "/items/colossus_plate_body",
@@ -19496,7 +19680,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 900
+        "sortIndex": 909
     },
     "/items/cooking_tea": {
         "hrid": "/items/cooking_tea",
@@ -19660,7 +19844,7 @@
                 "creditCount": 5000
             }
         ],
-        "sortIndex": 879
+        "sortIndex": 888
     },
     "/items/corsair_helmet": {
         "hrid": "/items/corsair_helmet",
@@ -19977,7 +20161,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 787
+        "sortIndex": 796
     },
     "/items/cotton_boots": {
         "hrid": "/items/cotton_boots",
@@ -20119,7 +20303,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 792
+        "sortIndex": 801
     },
     "/items/cotton_gloves": {
         "hrid": "/items/cotton_gloves",
@@ -20485,7 +20669,7 @@
                 "creditCount": 25
             }
         ],
-        "sortIndex": 831
+        "sortIndex": 840
     },
     "/items/crafters_bottoms": {
         "hrid": "/items/crafters_bottoms",
@@ -20778,7 +20962,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 898
+        "sortIndex": 907
     },
     "/items/crafting_tea": {
         "hrid": "/items/crafting_tea",
@@ -20924,7 +21108,7 @@
                 "creditCount": 20
             }
         ],
-        "sortIndex": 738
+        "sortIndex": 741
     },
     "/items/crimson_boots": {
         "hrid": "/items/crimson_boots",
@@ -21063,7 +21247,7 @@
                 "creditCount": 20
             }
         ],
-        "sortIndex": 674
+        "sortIndex": 677
     },
     "/items/crimson_buckler": {
         "hrid": "/items/crimson_buckler",
@@ -21276,7 +21460,7 @@
                 "creditCount": 2
             }
         ],
-        "sortIndex": 760
+        "sortIndex": 764
     },
     "/items/crimson_chisel": {
         "hrid": "/items/crimson_chisel",
@@ -21344,7 +21528,7 @@
                 "creditCount": 20
             }
         ],
-        "sortIndex": 706
+        "sortIndex": 709
     },
     "/items/crimson_enhancer": {
         "hrid": "/items/crimson_enhancer",
@@ -21404,7 +21588,7 @@
                 "creditCount": 20
             }
         ],
-        "sortIndex": 746
+        "sortIndex": 749
     },
     "/items/crimson_gauntlets": {
         "hrid": "/items/crimson_gauntlets",
@@ -21543,7 +21727,7 @@
                 "creditCount": 20
             }
         ],
-        "sortIndex": 698
+        "sortIndex": 701
     },
     "/items/crimson_hatchet": {
         "hrid": "/items/crimson_hatchet",
@@ -21611,7 +21795,7 @@
                 "creditCount": 20
             }
         ],
-        "sortIndex": 690
+        "sortIndex": 693
     },
     "/items/crimson_helmet": {
         "hrid": "/items/crimson_helmet",
@@ -21836,7 +22020,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 753
+        "sortIndex": 756
     },
     "/items/crimson_needle": {
         "hrid": "/items/crimson_needle",
@@ -21896,7 +22080,7 @@
                 "creditCount": 20
             }
         ],
-        "sortIndex": 714
+        "sortIndex": 717
     },
     "/items/crimson_plate_body": {
         "hrid": "/items/crimson_plate_body",
@@ -22098,7 +22282,7 @@
                 "creditCount": 20
             }
         ],
-        "sortIndex": 730
+        "sortIndex": 733
     },
     "/items/crimson_shears": {
         "hrid": "/items/crimson_shears",
@@ -22166,7 +22350,7 @@
                 "creditCount": 20
             }
         ],
-        "sortIndex": 682
+        "sortIndex": 685
     },
     "/items/crimson_spatula": {
         "hrid": "/items/crimson_spatula",
@@ -22226,7 +22410,7 @@
                 "creditCount": 20
             }
         ],
-        "sortIndex": 722
+        "sortIndex": 725
     },
     "/items/crimson_spear": {
         "hrid": "/items/crimson_spear",
@@ -22714,7 +22898,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 930
+        "sortIndex": 949
     },
     "/items/crushed_amethyst": {
         "hrid": "/items/crushed_amethyst",
@@ -22787,7 +22971,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 933
+        "sortIndex": 952
     },
     "/items/crushed_garnet": {
         "hrid": "/items/crushed_garnet",
@@ -22860,7 +23044,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 931
+        "sortIndex": 950
     },
     "/items/crushed_jade": {
         "hrid": "/items/crushed_jade",
@@ -22933,7 +23117,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 932
+        "sortIndex": 951
     },
     "/items/crushed_moonstone": {
         "hrid": "/items/crushed_moonstone",
@@ -23006,7 +23190,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 934
+        "sortIndex": 953
     },
     "/items/crushed_pearl": {
         "hrid": "/items/crushed_pearl",
@@ -23079,7 +23263,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 929
+        "sortIndex": 948
     },
     "/items/crushed_philosophers_stone": {
         "hrid": "/items/crushed_philosophers_stone",
@@ -23128,7 +23312,7 @@
                 "creditCount": 20
             }
         ],
-        "sortIndex": 936
+        "sortIndex": 955
     },
     "/items/crushed_sunstone": {
         "hrid": "/items/crushed_sunstone",
@@ -23177,7 +23361,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 935
+        "sortIndex": 954
     },
     "/items/culinary_cape": {
         "hrid": "/items/culinary_cape",
@@ -23504,7 +23688,7 @@
                 "creditCount": 7500
             }
         ],
-        "sortIndex": 870
+        "sortIndex": 879
     },
     "/items/cursed_bow": {
         "hrid": "/items/cursed_bow",
@@ -23999,7 +24183,7 @@
                 "creditCount": 5000
             }
         ],
-        "sortIndex": 880
+        "sortIndex": 889
     },
     "/items/dark_key_fragment": {
         "hrid": "/items/dark_key_fragment",
@@ -24166,7 +24350,7 @@
                 "creditCount": 600
             }
         ],
-        "sortIndex": 860
+        "sortIndex": 869
     },
     "/items/demonic_plate_body": {
         "hrid": "/items/demonic_plate_body",
@@ -24685,7 +24869,7 @@
                 "creditCount": 6000
             }
         ],
-        "sortIndex": 864
+        "sortIndex": 873
     },
     "/items/donut": {
         "hrid": "/items/donut",
@@ -24823,7 +25007,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 810
+        "sortIndex": 819
     },
     "/items/dragon_fruit_gummy": {
         "hrid": "/items/dragon_fruit_gummy",
@@ -24993,6 +25177,114 @@
         ],
         "sortIndex": 95
     },
+    "/items/dragon_hide": {
+        "hrid": "/items/dragon_hide",
+        "name": "Dragon Hide",
+        "description": "",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 200,
+        "isTradable": true,
+        "itemLevel": 100,
+        "alchemyDetail": {
+            "bulkMultiplier": 2,
+            "isCoinifiable": true,
+            "decomposeItems": [
+                {
+                    "itemHrid": "/items/tailoring_essence",
+                    "count": 15
+                }
+            ],
+            "transmuteSuccessRate": 0.5,
+            "transmuteDropTable": [
+                {
+                    "itemHrid": "/items/dragon_hide",
+                    "dropRate": 0.45,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/umbral_hide",
+                    "dropRate": 0.25,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/eternal_milk",
+                    "dropRate": 0.15,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/ancient_log",
+                    "dropRate": 0.15,
+                    "minCount": 1,
+                    "maxCount": 1
+                }
+            ]
+        },
+        "guildCreditConversions": [
+            {
+                "creditItemHrid": "/items/green_guild_credit",
+                "itemCount": 1,
+                "creditCount": 4
+            }
+        ],
+        "sortIndex": 789
+    },
+    "/items/dragon_leather": {
+        "hrid": "/items/dragon_leather",
+        "name": "Dragon Leather",
+        "description": "",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 800,
+        "isTradable": true,
+        "itemLevel": 100,
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": [
+                {
+                    "itemHrid": "/items/tailoring_essence",
+                    "count": 27
+                }
+            ],
+            "transmuteSuccessRate": 0.5,
+            "transmuteDropTable": [
+                {
+                    "itemHrid": "/items/dragon_leather",
+                    "dropRate": 0.45,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/umbral_leather",
+                    "dropRate": 0.25,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/eternal_cheese",
+                    "dropRate": 0.15,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/ancient_lumber",
+                    "dropRate": 0.15,
+                    "minCount": 1,
+                    "maxCount": 1
+                }
+            ]
+        },
+        "guildCreditConversions": [
+            {
+                "creditItemHrid": "/items/green_guild_credit",
+                "itemCount": 1,
+                "creditCount": 10
+            }
+        ],
+        "sortIndex": 795
+    },
     "/items/earrings_of_armor": {
         "hrid": "/items/earrings_of_armor",
         "name": "Earrings Of Armor",
@@ -25058,7 +25350,7 @@
                 "creditCount": 300
             }
         ],
-        "sortIndex": 550
+        "sortIndex": 553
     },
     "/items/earrings_of_critical_strike": {
         "hrid": "/items/earrings_of_critical_strike",
@@ -25117,7 +25409,7 @@
                 "creditCount": 500
             }
         ],
-        "sortIndex": 554
+        "sortIndex": 557
     },
     "/items/earrings_of_essence_find": {
         "hrid": "/items/earrings_of_essence_find",
@@ -25176,7 +25468,7 @@
                 "creditCount": 300
             }
         ],
-        "sortIndex": 549
+        "sortIndex": 552
     },
     "/items/earrings_of_gathering": {
         "hrid": "/items/earrings_of_gathering",
@@ -25235,7 +25527,7 @@
                 "creditCount": 250
             }
         ],
-        "sortIndex": 548
+        "sortIndex": 551
     },
     "/items/earrings_of_rare_find": {
         "hrid": "/items/earrings_of_rare_find",
@@ -25298,7 +25590,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 553
+        "sortIndex": 556
     },
     "/items/earrings_of_regeneration": {
         "hrid": "/items/earrings_of_regeneration",
@@ -25367,7 +25659,7 @@
                 "creditCount": 350
             }
         ],
-        "sortIndex": 551
+        "sortIndex": 554
     },
     "/items/earrings_of_resistance": {
         "hrid": "/items/earrings_of_resistance",
@@ -25438,7 +25730,7 @@
                 "creditCount": 350
             }
         ],
-        "sortIndex": 552
+        "sortIndex": 555
     },
     "/items/efficiency_tea": {
         "hrid": "/items/efficiency_tea",
@@ -25576,7 +25868,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 797
+        "sortIndex": 806
     },
     "/items/elemental_affinity": {
         "hrid": "/items/elemental_affinity",
@@ -25766,7 +26058,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 823
+        "sortIndex": 832
     },
     "/items/enchanted_chest": {
         "hrid": "/items/enchanted_chest",
@@ -26043,7 +26335,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 916
+        "sortIndex": 925
     },
     "/items/enchanted_gloves": {
         "hrid": "/items/enchanted_gloves",
@@ -26192,7 +26484,7 @@
                 "creditCount": 18
             }
         ],
-        "sortIndex": 877
+        "sortIndex": 886
     },
     "/items/enchanted_token": {
         "hrid": "/items/enchanted_token",
@@ -26493,7 +26785,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 903
+        "sortIndex": 912
     },
     "/items/enhancing_tea": {
         "hrid": "/items/enhancing_tea",
@@ -26670,6 +26962,114 @@
         ],
         "sortIndex": 186
     },
+    "/items/eternal_cheese": {
+        "hrid": "/items/eternal_cheese",
+        "name": "Eternal Cheese",
+        "description": "",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 800,
+        "isTradable": true,
+        "itemLevel": 100,
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": [
+                {
+                    "itemHrid": "/items/cheesesmithing_essence",
+                    "count": 30
+                }
+            ],
+            "transmuteSuccessRate": 0.5,
+            "transmuteDropTable": [
+                {
+                    "itemHrid": "/items/eternal_cheese",
+                    "dropRate": 0.45,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/holy_cheese",
+                    "dropRate": 0.25,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/ancient_lumber",
+                    "dropRate": 0.15,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/dragon_leather",
+                    "dropRate": 0.15,
+                    "minCount": 1,
+                    "maxCount": 1
+                }
+            ]
+        },
+        "guildCreditConversions": [
+            {
+                "creditItemHrid": "/items/green_guild_credit",
+                "itemCount": 1,
+                "creditCount": 10
+            }
+        ],
+        "sortIndex": 767
+    },
+    "/items/eternal_milk": {
+        "hrid": "/items/eternal_milk",
+        "name": "Eternal Milk",
+        "description": "moooooooooo",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 200,
+        "isTradable": true,
+        "itemLevel": 100,
+        "alchemyDetail": {
+            "bulkMultiplier": 2,
+            "isCoinifiable": true,
+            "decomposeItems": [
+                {
+                    "itemHrid": "/items/milking_essence",
+                    "count": 15
+                }
+            ],
+            "transmuteSuccessRate": 0.5,
+            "transmuteDropTable": [
+                {
+                    "itemHrid": "/items/eternal_milk",
+                    "dropRate": 0.45,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/holy_milk",
+                    "dropRate": 0.25,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/ancient_log",
+                    "dropRate": 0.15,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/dragon_hide",
+                    "dropRate": 0.15,
+                    "minCount": 1,
+                    "maxCount": 1
+                }
+            ]
+        },
+        "guildCreditConversions": [
+            {
+                "creditItemHrid": "/items/green_guild_credit",
+                "itemCount": 1,
+                "creditCount": 4
+            }
+        ],
+        "sortIndex": 759
+    },
     "/items/excelsa_coffee_bean": {
         "hrid": "/items/excelsa_coffee_bean",
         "name": "Excelsa Coffee Bean",
@@ -26734,7 +27134,23 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 815
+        "sortIndex": 824
+    },
+    "/items/exchange_orb": {
+        "hrid": "/items/exchange_orb",
+        "name": "Exchange Orb",
+        "description": "Shuffles the unlocked modifiers of a talisman between their lines, so each type takes another line's grade",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 300000,
+        "isTradable": true,
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": null,
+            "transmuteSuccessRate": 0,
+            "transmuteDropTable": null
+        },
+        "sortIndex": 944
     },
     "/items/expert_alchemy_charm": {
         "hrid": "/items/expert_alchemy_charm",
@@ -26855,7 +27271,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 615
+        "sortIndex": 618
     },
     "/items/expert_attack_charm": {
         "hrid": "/items/expert_attack_charm",
@@ -26959,7 +27375,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 639
+        "sortIndex": 642
     },
     "/items/expert_beacon": {
         "hrid": "/items/expert_beacon",
@@ -26975,7 +27391,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 948
+        "sortIndex": 967
     },
     "/items/expert_brewing_charm": {
         "hrid": "/items/expert_brewing_charm",
@@ -27096,7 +27512,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 609
+        "sortIndex": 612
     },
     "/items/expert_cheesesmithing_charm": {
         "hrid": "/items/expert_cheesesmithing_charm",
@@ -27217,7 +27633,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 585
+        "sortIndex": 588
     },
     "/items/expert_coffee_crate": {
         "hrid": "/items/expert_coffee_crate",
@@ -27233,7 +27649,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 957
+        "sortIndex": 976
     },
     "/items/expert_cooking_charm": {
         "hrid": "/items/expert_cooking_charm",
@@ -27354,7 +27770,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 603
+        "sortIndex": 606
     },
     "/items/expert_crafting_charm": {
         "hrid": "/items/expert_crafting_charm",
@@ -27475,7 +27891,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 591
+        "sortIndex": 594
     },
     "/items/expert_defense_charm": {
         "hrid": "/items/expert_defense_charm",
@@ -27579,7 +27995,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 645
+        "sortIndex": 648
     },
     "/items/expert_enhancing_charm": {
         "hrid": "/items/expert_enhancing_charm",
@@ -27700,7 +28116,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 621
+        "sortIndex": 624
     },
     "/items/expert_food_crate": {
         "hrid": "/items/expert_food_crate",
@@ -27716,7 +28132,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 951
+        "sortIndex": 970
     },
     "/items/expert_foraging_charm": {
         "hrid": "/items/expert_foraging_charm",
@@ -27837,7 +28253,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 573
+        "sortIndex": 576
     },
     "/items/expert_intelligence_charm": {
         "hrid": "/items/expert_intelligence_charm",
@@ -27941,7 +28357,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 633
+        "sortIndex": 636
     },
     "/items/expert_magic_charm": {
         "hrid": "/items/expert_magic_charm",
@@ -28045,7 +28461,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 663
+        "sortIndex": 666
     },
     "/items/expert_melee_charm": {
         "hrid": "/items/expert_melee_charm",
@@ -28149,7 +28565,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 651
+        "sortIndex": 654
     },
     "/items/expert_milking_charm": {
         "hrid": "/items/expert_milking_charm",
@@ -28270,7 +28686,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 567
+        "sortIndex": 570
     },
     "/items/expert_ranged_charm": {
         "hrid": "/items/expert_ranged_charm",
@@ -28374,7 +28790,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 657
+        "sortIndex": 660
     },
     "/items/expert_shroud": {
         "hrid": "/items/expert_shroud",
@@ -28390,7 +28806,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 945
+        "sortIndex": 964
     },
     "/items/expert_stamina_charm": {
         "hrid": "/items/expert_stamina_charm",
@@ -28494,7 +28910,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 627
+        "sortIndex": 630
     },
     "/items/expert_tailoring_charm": {
         "hrid": "/items/expert_tailoring_charm",
@@ -28615,7 +29031,23 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 597
+        "sortIndex": 600
+    },
+    "/items/expert_talisman_core": {
+        "hrid": "/items/expert_talisman_core",
+        "name": "Expert Talisman Core",
+        "description": "Adds a fourth modifier to a talisman",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 600000,
+        "isTradable": true,
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": null,
+            "transmuteSuccessRate": 0,
+            "transmuteDropTable": null
+        },
+        "sortIndex": 940
     },
     "/items/expert_task_badge": {
         "hrid": "/items/expert_task_badge",
@@ -28666,7 +29098,7 @@
                 "taskSpeed": 0.015
             }
         },
-        "sortIndex": 668
+        "sortIndex": 671
     },
     "/items/expert_tea_crate": {
         "hrid": "/items/expert_tea_crate",
@@ -28682,7 +29114,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 954
+        "sortIndex": 973
     },
     "/items/expert_torch": {
         "hrid": "/items/expert_torch",
@@ -28698,7 +29130,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 942
+        "sortIndex": 961
     },
     "/items/expert_woodcutting_charm": {
         "hrid": "/items/expert_woodcutting_charm",
@@ -28819,7 +29251,7 @@
                 "creditCount": 10000
             }
         ],
-        "sortIndex": 579
+        "sortIndex": 582
     },
     "/items/eye_of_the_watcher": {
         "hrid": "/items/eye_of_the_watcher",
@@ -28878,7 +29310,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 840
+        "sortIndex": 849
     },
     "/items/eye_watch": {
         "hrid": "/items/eye_watch",
@@ -29037,7 +29469,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 908
+        "sortIndex": 917
     },
     "/items/fierce_aura": {
         "hrid": "/items/fierce_aura",
@@ -29186,7 +29618,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 816
+        "sortIndex": 825
     },
     "/items/fighter_necklace": {
         "hrid": "/items/fighter_necklace",
@@ -29257,7 +29689,7 @@
                 "creditCount": 700
             }
         ],
-        "sortIndex": 542
+        "sortIndex": 545
     },
     "/items/fireball": {
         "hrid": "/items/fireball",
@@ -29685,7 +30117,7 @@
                 "creditCount": 60
             }
         ],
-        "sortIndex": 842
+        "sortIndex": 851
     },
     "/items/flaming_robe_bottoms": {
         "hrid": "/items/flaming_robe_bottoms",
@@ -29935,7 +30367,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 788
+        "sortIndex": 797
     },
     "/items/fluffy_red_hat": {
         "hrid": "/items/fluffy_red_hat",
@@ -30060,6 +30492,22 @@
             }
         ],
         "sortIndex": 357
+    },
+    "/items/focus_orb": {
+        "hrid": "/items/focus_orb",
+        "name": "Focus Orb",
+        "description": "Rerolls the type of every unlocked modifier on a talisman, keeping their grades. Selected modifiers are more likely to roll. Unique modifiers cannot be selected for focus.",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 250000,
+        "isTradable": true,
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": null,
+            "transmuteSuccessRate": 0,
+            "transmuteDropTable": null
+        },
+        "sortIndex": 943
     },
     "/items/foragers_bottoms": {
         "hrid": "/items/foragers_bottoms",
@@ -30352,7 +30800,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 895
+        "sortIndex": 904
     },
     "/items/foraging_tea": {
         "hrid": "/items/foraging_tea",
@@ -30664,7 +31112,7 @@
                 "creditCount": 250
             }
         ],
-        "sortIndex": 845
+        "sortIndex": 854
     },
     "/items/frost_staff": {
         "hrid": "/items/frost_staff",
@@ -31158,7 +31606,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 923
+        "sortIndex": 932
     },
     "/items/gatherer_cape": {
         "hrid": "/items/gatherer_cape",
@@ -31596,7 +32044,7 @@
                 "creditCount": 600
             }
         ],
-        "sortIndex": 538
+        "sortIndex": 541
     },
     "/items/ginkgo_bow": {
         "hrid": "/items/ginkgo_bow",
@@ -31881,7 +32329,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 767
+        "sortIndex": 772
     },
     "/items/ginkgo_lumber": {
         "hrid": "/items/ginkgo_lumber",
@@ -31959,7 +32407,7 @@
                 "creditCount": 2
             }
         ],
-        "sortIndex": 774
+        "sortIndex": 780
     },
     "/items/ginkgo_nature_staff": {
         "hrid": "/items/ginkgo_nature_staff",
@@ -32215,7 +32663,7 @@
                 "creditCount": 250
             }
         ],
-        "sortIndex": 892
+        "sortIndex": 901
     },
     "/items/gluttonous_pouch": {
         "hrid": "/items/gluttonous_pouch",
@@ -32318,7 +32766,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 539
+        "sortIndex": 542
     },
     "/items/gobo_boomstick": {
         "hrid": "/items/gobo_boomstick",
@@ -32751,7 +33199,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 907
+        "sortIndex": 916
     },
     "/items/gobo_hide": {
         "hrid": "/items/gobo_hide",
@@ -32811,7 +33259,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 779
+        "sortIndex": 786
     },
     "/items/gobo_hood": {
         "hrid": "/items/gobo_hood",
@@ -32950,7 +33398,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 784
+        "sortIndex": 792
     },
     "/items/gobo_rag": {
         "hrid": "/items/gobo_rag",
@@ -32997,7 +33445,7 @@
                 "creditCount": 300
             }
         ],
-        "sortIndex": 837
+        "sortIndex": 846
     },
     "/items/gobo_shooter": {
         "hrid": "/items/gobo_shooter",
@@ -33384,7 +33832,7 @@
                 "creditCount": 500
             }
         ],
-        "sortIndex": 838
+        "sortIndex": 847
     },
     "/items/gold_guild_credit": {
         "hrid": "/items/gold_guild_credit",
@@ -33435,7 +33883,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 911
+        "sortIndex": 920
     },
     "/items/gourmet_tea": {
         "hrid": "/items/gourmet_tea",
@@ -33638,7 +34086,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 617
+        "sortIndex": 620
     },
     "/items/grandmaster_attack_charm": {
         "hrid": "/items/grandmaster_attack_charm",
@@ -33747,7 +34195,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 641
+        "sortIndex": 644
     },
     "/items/grandmaster_brewing_charm": {
         "hrid": "/items/grandmaster_brewing_charm",
@@ -33873,7 +34321,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 611
+        "sortIndex": 614
     },
     "/items/grandmaster_cheesesmithing_charm": {
         "hrid": "/items/grandmaster_cheesesmithing_charm",
@@ -33999,7 +34447,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 587
+        "sortIndex": 590
     },
     "/items/grandmaster_cooking_charm": {
         "hrid": "/items/grandmaster_cooking_charm",
@@ -34125,7 +34573,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 605
+        "sortIndex": 608
     },
     "/items/grandmaster_crafting_charm": {
         "hrid": "/items/grandmaster_crafting_charm",
@@ -34251,7 +34699,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 593
+        "sortIndex": 596
     },
     "/items/grandmaster_defense_charm": {
         "hrid": "/items/grandmaster_defense_charm",
@@ -34360,7 +34808,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 647
+        "sortIndex": 650
     },
     "/items/grandmaster_enhancing_charm": {
         "hrid": "/items/grandmaster_enhancing_charm",
@@ -34486,7 +34934,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 623
+        "sortIndex": 626
     },
     "/items/grandmaster_foraging_charm": {
         "hrid": "/items/grandmaster_foraging_charm",
@@ -34612,7 +35060,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 575
+        "sortIndex": 578
     },
     "/items/grandmaster_intelligence_charm": {
         "hrid": "/items/grandmaster_intelligence_charm",
@@ -34721,7 +35169,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 635
+        "sortIndex": 638
     },
     "/items/grandmaster_magic_charm": {
         "hrid": "/items/grandmaster_magic_charm",
@@ -34830,7 +35278,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 665
+        "sortIndex": 668
     },
     "/items/grandmaster_melee_charm": {
         "hrid": "/items/grandmaster_melee_charm",
@@ -34939,7 +35387,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 653
+        "sortIndex": 656
     },
     "/items/grandmaster_milking_charm": {
         "hrid": "/items/grandmaster_milking_charm",
@@ -35065,7 +35513,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 569
+        "sortIndex": 572
     },
     "/items/grandmaster_ranged_charm": {
         "hrid": "/items/grandmaster_ranged_charm",
@@ -35174,7 +35622,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 659
+        "sortIndex": 662
     },
     "/items/grandmaster_stamina_charm": {
         "hrid": "/items/grandmaster_stamina_charm",
@@ -35283,7 +35731,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 629
+        "sortIndex": 632
     },
     "/items/grandmaster_tailoring_charm": {
         "hrid": "/items/grandmaster_tailoring_charm",
@@ -35409,7 +35857,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 599
+        "sortIndex": 602
     },
     "/items/grandmaster_woodcutting_charm": {
         "hrid": "/items/grandmaster_woodcutting_charm",
@@ -35535,7 +35983,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 581
+        "sortIndex": 584
     },
     "/items/granite_bludgeon": {
         "hrid": "/items/granite_bludgeon",
@@ -35725,7 +36173,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 818
+        "sortIndex": 827
     },
     "/items/griffin_bulwark": {
         "hrid": "/items/griffin_bulwark",
@@ -36155,7 +36603,7 @@
                 "creditCount": 1200
             }
         ],
-        "sortIndex": 861
+        "sortIndex": 870
     },
     "/items/griffin_talon": {
         "hrid": "/items/griffin_talon",
@@ -36221,7 +36669,7 @@
                 "creditCount": 6000
             }
         ],
-        "sortIndex": 865
+        "sortIndex": 874
     },
     "/items/griffin_tunic": {
         "hrid": "/items/griffin_tunic",
@@ -36402,7 +36850,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 848
+        "sortIndex": 857
     },
     "/items/grizzly_bear_shoes": {
         "hrid": "/items/grizzly_bear_shoes",
@@ -36732,7 +37180,7 @@
                 "creditCount": 250
             }
         ],
-        "sortIndex": 893
+        "sortIndex": 902
     },
     "/items/guzzling_pouch": {
         "hrid": "/items/guzzling_pouch",
@@ -36839,7 +37287,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 540
+        "sortIndex": 543
     },
     "/items/heal": {
         "hrid": "/items/heal",
@@ -37007,7 +37455,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 740
+        "sortIndex": 743
     },
     "/items/holy_boots": {
         "hrid": "/items/holy_boots",
@@ -37172,7 +37620,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 676
+        "sortIndex": 679
     },
     "/items/holy_buckler": {
         "hrid": "/items/holy_buckler",
@@ -37362,7 +37810,13 @@
                 },
                 {
                     "itemHrid": "/items/rainbow_cheese",
-                    "dropRate": 0.25,
+                    "dropRate": 0.2,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/eternal_cheese",
+                    "dropRate": 0.05,
                     "minCount": 1,
                     "maxCount": 1
                 },
@@ -37393,7 +37847,7 @@
                 "creditCount": 2
             }
         ],
-        "sortIndex": 762
+        "sortIndex": 766
     },
     "/items/holy_chisel": {
         "hrid": "/items/holy_chisel",
@@ -37474,7 +37928,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 708
+        "sortIndex": 711
     },
     "/items/holy_enhancer": {
         "hrid": "/items/holy_enhancer",
@@ -37547,7 +38001,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 748
+        "sortIndex": 751
     },
     "/items/holy_gauntlets": {
         "hrid": "/items/holy_gauntlets",
@@ -37712,7 +38166,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 700
+        "sortIndex": 703
     },
     "/items/holy_hatchet": {
         "hrid": "/items/holy_hatchet",
@@ -37793,7 +38247,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 692
+        "sortIndex": 695
     },
     "/items/holy_helmet": {
         "hrid": "/items/holy_helmet",
@@ -37995,7 +38449,13 @@
                 },
                 {
                     "itemHrid": "/items/rainbow_milk",
-                    "dropRate": 0.25,
+                    "dropRate": 0.2,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/eternal_milk",
+                    "dropRate": 0.05,
                     "minCount": 1,
                     "maxCount": 1
                 },
@@ -38026,7 +38486,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 755
+        "sortIndex": 758
     },
     "/items/holy_needle": {
         "hrid": "/items/holy_needle",
@@ -38099,7 +38559,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 716
+        "sortIndex": 719
     },
     "/items/holy_plate_body": {
         "hrid": "/items/holy_plate_body",
@@ -38340,7 +38800,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 732
+        "sortIndex": 735
     },
     "/items/holy_shears": {
         "hrid": "/items/holy_shears",
@@ -38421,7 +38881,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 684
+        "sortIndex": 687
     },
     "/items/holy_spatula": {
         "hrid": "/items/holy_spatula",
@@ -38494,7 +38954,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 724
+        "sortIndex": 727
     },
     "/items/holy_spear": {
         "hrid": "/items/holy_spear",
@@ -38819,7 +39279,7 @@
                 "creditCount": 60
             }
         ],
-        "sortIndex": 841
+        "sortIndex": 850
     },
     "/items/icy_robe_bottoms": {
         "hrid": "/items/icy_robe_bottoms",
@@ -39237,7 +39697,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 859
+        "sortIndex": 868
     },
     "/items/insanity": {
         "hrid": "/items/insanity",
@@ -39556,7 +40016,7 @@
                 "creditCount": 2400
             }
         ],
-        "sortIndex": 863
+        "sortIndex": 872
     },
     "/items/jackalope_staff": {
         "hrid": "/items/jackalope_staff",
@@ -39722,7 +40182,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 924
+        "sortIndex": 933
     },
     "/items/jungle_essence": {
         "hrid": "/items/jungle_essence",
@@ -39771,7 +40231,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 906
+        "sortIndex": 915
     },
     "/items/knights_aegis": {
         "hrid": "/items/knights_aegis",
@@ -40076,7 +40536,7 @@
                 "creditCount": 5000
             }
         ],
-        "sortIndex": 873
+        "sortIndex": 882
     },
     "/items/kraken_chaps": {
         "hrid": "/items/kraken_chaps",
@@ -40379,7 +40839,7 @@
                 "creditCount": 7500
             }
         ],
-        "sortIndex": 883
+        "sortIndex": 892
     },
     "/items/kraken_leather": {
         "hrid": "/items/kraken_leather",
@@ -40451,7 +40911,7 @@
                 "creditCount": 5000
             }
         ],
-        "sortIndex": 882
+        "sortIndex": 891
     },
     "/items/kraken_tunic": {
         "hrid": "/items/kraken_tunic",
@@ -40706,7 +41166,7 @@
                 "creditCount": 2
             }
         ],
-        "sortIndex": 918
+        "sortIndex": 927
     },
     "/items/labyrinth_refinement_chest": {
         "hrid": "/items/labyrinth_refinement_chest",
@@ -40744,7 +41204,7 @@
                 "creditCount": 16
             }
         ],
-        "sortIndex": 888
+        "sortIndex": 897
     },
     "/items/labyrinth_token": {
         "hrid": "/items/labyrinth_token",
@@ -40846,6 +41306,55 @@
                 "creditCount": 60
             }
         ],
+        "sortIndex": 540
+    },
+    "/items/large_talisman_belt": {
+        "hrid": "/items/large_talisman_belt",
+        "name": "Large Talisman Belt",
+        "description": "",
+        "categoryHrid": "/item_categories/equipment",
+        "sellPrice": 10000000,
+        "isTradable": true,
+        "itemLevel": 120,
+        "enhancementCosts": [
+            {
+                "itemHrid": "/items/eternal_cheese",
+                "count": 8
+            },
+            {
+                "itemHrid": "/items/dragon_leather",
+                "count": 8
+            },
+            {
+                "itemHrid": "/items/coin",
+                "count": 45400
+            }
+        ],
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": null,
+            "transmuteSuccessRate": 0,
+            "transmuteDropTable": null
+        },
+        "equipmentDetail": {
+            "type": "/equipment_types/belt",
+            "levelRequirements": [
+                {
+                    "skillHrid": "/skills/total_level",
+                    "level": 1500
+                }
+            ],
+            "combatStats": {
+                "talismanSlots": 3,
+                "talismanPower": 0.2
+            },
+            "noncombatStats": {},
+            "combatEnhancementBonuses": {
+                "talismanPower": 0.004
+            },
+            "noncombatEnhancementBonuses": {}
+        },
         "sortIndex": 537
     },
     "/items/large_treasure_chest": {
@@ -40921,7 +41430,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 814
+        "sortIndex": 823
     },
     "/items/life_drain": {
         "hrid": "/items/life_drain",
@@ -41168,7 +41677,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 793
+        "sortIndex": 802
     },
     "/items/linen_gloves": {
         "hrid": "/items/linen_gloves",
@@ -41542,7 +42051,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 853
+        "sortIndex": 862
     },
     "/items/log": {
         "hrid": "/items/log",
@@ -41602,7 +42111,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 763
+        "sortIndex": 768
     },
     "/items/lucky_coffee": {
         "hrid": "/items/lucky_coffee",
@@ -41745,7 +42254,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 770
+        "sortIndex": 776
     },
     "/items/lumberjacks_bottoms": {
         "hrid": "/items/lumberjacks_bottoms",
@@ -42197,7 +42706,7 @@
                 "creditCount": 200
             }
         ],
-        "sortIndex": 836
+        "sortIndex": 845
     },
     "/items/maelstrom_plate_body": {
         "hrid": "/items/maelstrom_plate_body",
@@ -42723,7 +43232,7 @@
                 "creditCount": 5000
             }
         ],
-        "sortIndex": 881
+        "sortIndex": 890
     },
     "/items/magic_coffee": {
         "hrid": "/items/magic_coffee",
@@ -42866,7 +43375,7 @@
                 "creditCount": 5000
             }
         ],
-        "sortIndex": 868
+        "sortIndex": 877
     },
     "/items/magicians_hat": {
         "hrid": "/items/magicians_hat",
@@ -43145,7 +43654,7 @@
                 "creditCount": 150
             }
         ],
-        "sortIndex": 851
+        "sortIndex": 860
     },
     "/items/magnetic_gloves": {
         "hrid": "/items/magnetic_gloves",
@@ -43285,7 +43794,7 @@
                 "creditCount": 500
             }
         ],
-        "sortIndex": 839
+        "sortIndex": 848
     },
     "/items/maim": {
         "hrid": "/items/maim",
@@ -43636,7 +44145,7 @@
                 "creditCount": 2000
             }
         ],
-        "sortIndex": 862
+        "sortIndex": 871
     },
     "/items/marine_chaps": {
         "hrid": "/items/marine_chaps",
@@ -43784,7 +44293,7 @@
                 "creditCount": 100
             }
         ],
-        "sortIndex": 833
+        "sortIndex": 842
     },
     "/items/marine_tunic": {
         "hrid": "/items/marine_tunic",
@@ -44175,7 +44684,7 @@
                 "creditCount": 5000
             }
         ],
-        "sortIndex": 878
+        "sortIndex": 887
     },
     "/items/marsberry": {
         "hrid": "/items/marsberry",
@@ -44241,7 +44750,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 804
+        "sortIndex": 813
     },
     "/items/marsberry_cake": {
         "hrid": "/items/marsberry_cake",
@@ -44535,7 +45044,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 616
+        "sortIndex": 619
     },
     "/items/master_attack_charm": {
         "hrid": "/items/master_attack_charm",
@@ -44644,7 +45153,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 640
+        "sortIndex": 643
     },
     "/items/master_brewing_charm": {
         "hrid": "/items/master_brewing_charm",
@@ -44770,7 +45279,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 610
+        "sortIndex": 613
     },
     "/items/master_cheesesmithing_charm": {
         "hrid": "/items/master_cheesesmithing_charm",
@@ -44896,7 +45405,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 586
+        "sortIndex": 589
     },
     "/items/master_cooking_charm": {
         "hrid": "/items/master_cooking_charm",
@@ -45022,7 +45531,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 604
+        "sortIndex": 607
     },
     "/items/master_crafting_charm": {
         "hrid": "/items/master_crafting_charm",
@@ -45148,7 +45657,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 592
+        "sortIndex": 595
     },
     "/items/master_defense_charm": {
         "hrid": "/items/master_defense_charm",
@@ -45257,7 +45766,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 646
+        "sortIndex": 649
     },
     "/items/master_enhancing_charm": {
         "hrid": "/items/master_enhancing_charm",
@@ -45383,7 +45892,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 622
+        "sortIndex": 625
     },
     "/items/master_foraging_charm": {
         "hrid": "/items/master_foraging_charm",
@@ -45509,7 +46018,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 574
+        "sortIndex": 577
     },
     "/items/master_intelligence_charm": {
         "hrid": "/items/master_intelligence_charm",
@@ -45618,7 +46127,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 634
+        "sortIndex": 637
     },
     "/items/master_magic_charm": {
         "hrid": "/items/master_magic_charm",
@@ -45727,7 +46236,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 664
+        "sortIndex": 667
     },
     "/items/master_melee_charm": {
         "hrid": "/items/master_melee_charm",
@@ -45836,7 +46345,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 652
+        "sortIndex": 655
     },
     "/items/master_milking_charm": {
         "hrid": "/items/master_milking_charm",
@@ -45962,7 +46471,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 568
+        "sortIndex": 571
     },
     "/items/master_ranged_charm": {
         "hrid": "/items/master_ranged_charm",
@@ -46071,7 +46580,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 658
+        "sortIndex": 661
     },
     "/items/master_stamina_charm": {
         "hrid": "/items/master_stamina_charm",
@@ -46180,7 +46689,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 628
+        "sortIndex": 631
     },
     "/items/master_tailoring_charm": {
         "hrid": "/items/master_tailoring_charm",
@@ -46306,7 +46815,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 598
+        "sortIndex": 601
     },
     "/items/master_woodcutting_charm": {
         "hrid": "/items/master_woodcutting_charm",
@@ -46432,7 +46941,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 580
+        "sortIndex": 583
     },
     "/items/medium_artisans_crate": {
         "hrid": "/items/medium_artisans_crate",
@@ -46526,6 +47035,55 @@
                 "creditCount": 12
             }
         ],
+        "sortIndex": 539
+    },
+    "/items/medium_talisman_belt": {
+        "hrid": "/items/medium_talisman_belt",
+        "name": "Medium Talisman Belt",
+        "description": "",
+        "categoryHrid": "/item_categories/equipment",
+        "sellPrice": 5000000,
+        "isTradable": true,
+        "itemLevel": 110,
+        "enhancementCosts": [
+            {
+                "itemHrid": "/items/eternal_cheese",
+                "count": 6
+            },
+            {
+                "itemHrid": "/items/dragon_leather",
+                "count": 6
+            },
+            {
+                "itemHrid": "/items/coin",
+                "count": 18350
+            }
+        ],
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": null,
+            "transmuteSuccessRate": 0,
+            "transmuteDropTable": null
+        },
+        "equipmentDetail": {
+            "type": "/equipment_types/belt",
+            "levelRequirements": [
+                {
+                    "skillHrid": "/skills/total_level",
+                    "level": 1250
+                }
+            ],
+            "combatStats": {
+                "talismanSlots": 2,
+                "talismanPower": 0.15
+            },
+            "noncombatStats": {},
+            "combatEnhancementBonuses": {
+                "talismanPower": 0.003
+            },
+            "noncombatEnhancementBonuses": {}
+        },
         "sortIndex": 536
     },
     "/items/medium_treasure_chest": {
@@ -46678,7 +47236,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 749
+        "sortIndex": 752
     },
     "/items/milking_essence": {
         "hrid": "/items/milking_essence",
@@ -46763,7 +47321,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 894
+        "sortIndex": 903
     },
     "/items/milking_tea": {
         "hrid": "/items/milking_tea",
@@ -46986,7 +47544,7 @@
                 "creditCount": 100
             }
         ],
-        "sortIndex": 938
+        "sortIndex": 957
     },
     "/items/mooberry": {
         "hrid": "/items/mooberry",
@@ -47052,7 +47610,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 803
+        "sortIndex": 812
     },
     "/items/mooberry_cake": {
         "hrid": "/items/mooberry_cake",
@@ -47274,7 +47832,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 821
+        "sortIndex": 830
     },
     "/items/moonstone": {
         "hrid": "/items/moonstone",
@@ -47347,7 +47905,23 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 926
+        "sortIndex": 935
+    },
+    "/items/mutation_orb": {
+        "hrid": "/items/mutation_orb",
+        "name": "Mutation Orb",
+        "description": "Rerolls two random unlocked modifiers on a talisman, up to grade 6",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 400000,
+        "isTradable": true,
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": null,
+            "transmuteSuccessRate": 0,
+            "transmuteDropTable": null
+        },
+        "sortIndex": 945
     },
     "/items/mystic_aura": {
         "hrid": "/items/mystic_aura",
@@ -47592,7 +48166,7 @@
                 "creditCount": 600
             }
         ],
-        "sortIndex": 541
+        "sortIndex": 544
     },
     "/items/necklace_of_speed": {
         "hrid": "/items/necklace_of_speed",
@@ -47657,7 +48231,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 546
+        "sortIndex": 549
     },
     "/items/necklace_of_wisdom": {
         "hrid": "/items/necklace_of_wisdom",
@@ -47728,7 +48302,7 @@
                 "creditCount": 800
             }
         ],
-        "sortIndex": 545
+        "sortIndex": 548
     },
     "/items/orange": {
         "hrid": "/items/orange",
@@ -47794,7 +48368,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 807
+        "sortIndex": 816
     },
     "/items/orange_gummy": {
         "hrid": "/items/orange_gummy",
@@ -48052,7 +48626,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 846
+        "sortIndex": 855
     },
     "/items/panda_gloves": {
         "hrid": "/items/panda_gloves",
@@ -48438,7 +49012,7 @@
                 "creditCount": 6000
             }
         ],
-        "sortIndex": 885
+        "sortIndex": 894
     },
     "/items/pathfinder_boots": {
         "hrid": "/items/pathfinder_boots",
@@ -48722,7 +49296,7 @@
                 "creditCount": 6000
             }
         ],
-        "sortIndex": 886
+        "sortIndex": 895
     },
     "/items/pathseeker_boots": {
         "hrid": "/items/pathseeker_boots",
@@ -49004,7 +49578,7 @@
                 "creditCount": 6000
             }
         ],
-        "sortIndex": 887
+        "sortIndex": 896
     },
     "/items/peach": {
         "hrid": "/items/peach",
@@ -49070,7 +49644,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 809
+        "sortIndex": 818
     },
     "/items/peach_gummy": {
         "hrid": "/items/peach_gummy",
@@ -49299,7 +49873,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 921
+        "sortIndex": 930
     },
     "/items/penetrating_shot": {
         "hrid": "/items/penetrating_shot",
@@ -49694,7 +50268,7 @@
                 "creditCount": 1050
             }
         ],
-        "sortIndex": 555
+        "sortIndex": 558
     },
     "/items/philosophers_mirror": {
         "hrid": "/items/philosophers_mirror",
@@ -49717,7 +50291,7 @@
                 "creditCount": 1150
             }
         ],
-        "sortIndex": 939
+        "sortIndex": 958
     },
     "/items/philosophers_necklace": {
         "hrid": "/items/philosophers_necklace",
@@ -49835,7 +50409,7 @@
                 "creditCount": 1100
             }
         ],
-        "sortIndex": 547
+        "sortIndex": 550
     },
     "/items/philosophers_ring": {
         "hrid": "/items/philosophers_ring",
@@ -49945,7 +50519,7 @@
                 "creditCount": 1050
             }
         ],
-        "sortIndex": 563
+        "sortIndex": 566
     },
     "/items/philosophers_stone": {
         "hrid": "/items/philosophers_stone",
@@ -49988,7 +50562,7 @@
                 "creditCount": 1000
             }
         ],
-        "sortIndex": 928
+        "sortIndex": 937
     },
     "/items/pincer_gloves": {
         "hrid": "/items/pincer_gloves",
@@ -50171,7 +50745,7 @@
                 "creditCount": 3
             }
         ],
-        "sortIndex": 917
+        "sortIndex": 926
     },
     "/items/pirate_refinement_chest": {
         "hrid": "/items/pirate_refinement_chest",
@@ -50210,7 +50784,7 @@
                 "creditCount": 20
             }
         ],
-        "sortIndex": 884
+        "sortIndex": 893
     },
     "/items/pirate_token": {
         "hrid": "/items/pirate_token",
@@ -50284,7 +50858,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 808
+        "sortIndex": 817
     },
     "/items/plum_gummy": {
         "hrid": "/items/plum_gummy",
@@ -50583,7 +51157,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 849
+        "sortIndex": 858
     },
     "/items/polar_bear_shoes": {
         "hrid": "/items/polar_bear_shoes",
@@ -50795,7 +51369,7 @@
                 "creditCount": 2
             }
         ],
-        "sortIndex": 827
+        "sortIndex": 836
     },
     "/items/processing_tea": {
         "hrid": "/items/processing_tea",
@@ -51374,7 +51948,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 766
+        "sortIndex": 771
     },
     "/items/purpleheart_lumber": {
         "hrid": "/items/purpleheart_lumber",
@@ -51440,7 +52014,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 773
+        "sortIndex": 779
     },
     "/items/purpleheart_nature_staff": {
         "hrid": "/items/purpleheart_nature_staff",
@@ -51999,7 +52573,7 @@
                 "creditCount": 2
             }
         ],
-        "sortIndex": 796
+        "sortIndex": 805
     },
     "/items/radiant_fiber": {
         "hrid": "/items/radiant_fiber",
@@ -52065,7 +52639,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 791
+        "sortIndex": 800
     },
     "/items/radiant_gloves": {
         "hrid": "/items/radiant_gloves",
@@ -52592,7 +53166,7 @@
                 "creditCount": 40
             }
         ],
-        "sortIndex": 739
+        "sortIndex": 742
     },
     "/items/rainbow_boots": {
         "hrid": "/items/rainbow_boots",
@@ -52731,7 +53305,7 @@
                 "creditCount": 40
             }
         ],
-        "sortIndex": 675
+        "sortIndex": 678
     },
     "/items/rainbow_buckler": {
         "hrid": "/items/rainbow_buckler",
@@ -52944,7 +53518,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 761
+        "sortIndex": 765
     },
     "/items/rainbow_chisel": {
         "hrid": "/items/rainbow_chisel",
@@ -53012,7 +53586,7 @@
                 "creditCount": 40
             }
         ],
-        "sortIndex": 707
+        "sortIndex": 710
     },
     "/items/rainbow_enhancer": {
         "hrid": "/items/rainbow_enhancer",
@@ -53072,7 +53646,7 @@
                 "creditCount": 40
             }
         ],
-        "sortIndex": 747
+        "sortIndex": 750
     },
     "/items/rainbow_gauntlets": {
         "hrid": "/items/rainbow_gauntlets",
@@ -53211,7 +53785,7 @@
                 "creditCount": 40
             }
         ],
-        "sortIndex": 699
+        "sortIndex": 702
     },
     "/items/rainbow_hatchet": {
         "hrid": "/items/rainbow_hatchet",
@@ -53279,7 +53853,7 @@
                 "creditCount": 40
             }
         ],
-        "sortIndex": 691
+        "sortIndex": 694
     },
     "/items/rainbow_helmet": {
         "hrid": "/items/rainbow_helmet",
@@ -53504,7 +54078,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 754
+        "sortIndex": 757
     },
     "/items/rainbow_needle": {
         "hrid": "/items/rainbow_needle",
@@ -53564,7 +54138,7 @@
                 "creditCount": 40
             }
         ],
-        "sortIndex": 715
+        "sortIndex": 718
     },
     "/items/rainbow_plate_body": {
         "hrid": "/items/rainbow_plate_body",
@@ -53766,7 +54340,7 @@
                 "creditCount": 40
             }
         ],
-        "sortIndex": 731
+        "sortIndex": 734
     },
     "/items/rainbow_shears": {
         "hrid": "/items/rainbow_shears",
@@ -53834,7 +54408,7 @@
                 "creditCount": 40
             }
         ],
-        "sortIndex": 683
+        "sortIndex": 686
     },
     "/items/rainbow_spatula": {
         "hrid": "/items/rainbow_spatula",
@@ -53894,7 +54468,7 @@
                 "creditCount": 40
             }
         ],
-        "sortIndex": 723
+        "sortIndex": 726
     },
     "/items/rainbow_spear": {
         "hrid": "/items/rainbow_spear",
@@ -54182,7 +54756,7 @@
                 "creditCount": 700
             }
         ],
-        "sortIndex": 543
+        "sortIndex": 546
     },
     "/items/red_culinary_hat": {
         "hrid": "/items/red_culinary_hat",
@@ -54371,7 +54945,7 @@
                 "creditCount": 500
             }
         ],
-        "sortIndex": 850
+        "sortIndex": 859
     },
     "/items/red_tea_leaf": {
         "hrid": "/items/red_tea_leaf",
@@ -54437,7 +55011,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 822
+        "sortIndex": 831
     },
     "/items/redwood_bow": {
         "hrid": "/items/redwood_bow",
@@ -54722,7 +55296,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 768
+        "sortIndex": 773
     },
     "/items/redwood_lumber": {
         "hrid": "/items/redwood_lumber",
@@ -54800,7 +55374,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 775
+        "sortIndex": 781
     },
     "/items/redwood_nature_staff": {
         "hrid": "/items/redwood_nature_staff",
@@ -55015,6 +55589,22 @@
         ],
         "sortIndex": 296
     },
+    "/items/reforging_orb": {
+        "hrid": "/items/reforging_orb",
+        "name": "Reforging Orb",
+        "description": "Rerolls every unlocked modifier on a talisman, up to grade 6",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 300000,
+        "isTradable": true,
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": null,
+            "transmuteSuccessRate": 0,
+            "transmuteDropTable": null
+        },
+        "sortIndex": 942
+    },
     "/items/regal_jewel": {
         "hrid": "/items/regal_jewel",
         "name": "Regal Jewel",
@@ -55079,7 +55669,7 @@
                 "creditCount": 7500
             }
         ],
-        "sortIndex": 875
+        "sortIndex": 884
     },
     "/items/regal_sword": {
         "hrid": "/items/regal_sword",
@@ -55706,7 +56296,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 778
+        "sortIndex": 785
     },
     "/items/reptile_hood": {
         "hrid": "/items/reptile_hood",
@@ -55857,7 +56447,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 783
+        "sortIndex": 791
     },
     "/items/reptile_tunic": {
         "hrid": "/items/reptile_tunic",
@@ -55937,6 +56527,22 @@
             }
         ],
         "sortIndex": 421
+    },
+    "/items/reshaping_orb": {
+        "hrid": "/items/reshaping_orb",
+        "name": "Reshaping Orb",
+        "description": "Rerolls every unlocked modifier on a talisman, up to grade 4",
+        "categoryHrid": "/item_categories/resource",
+        "sellPrice": 10000,
+        "isTradable": true,
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": null,
+            "transmuteSuccessRate": 0,
+            "transmuteDropTable": null
+        },
+        "sortIndex": 941
     },
     "/items/retribution": {
         "hrid": "/items/retribution",
@@ -56085,7 +56691,7 @@
                 "creditCount": 600
             }
         ],
-        "sortIndex": 857
+        "sortIndex": 866
     },
     "/items/revenant_chaps": {
         "hrid": "/items/revenant_chaps",
@@ -56441,7 +57047,7 @@
                 "creditCount": 300
             }
         ],
-        "sortIndex": 558
+        "sortIndex": 561
     },
     "/items/ring_of_critical_strike": {
         "hrid": "/items/ring_of_critical_strike",
@@ -56500,7 +57106,7 @@
                 "creditCount": 500
             }
         ],
-        "sortIndex": 562
+        "sortIndex": 565
     },
     "/items/ring_of_essence_find": {
         "hrid": "/items/ring_of_essence_find",
@@ -56559,7 +57165,7 @@
                 "creditCount": 300
             }
         ],
-        "sortIndex": 557
+        "sortIndex": 560
     },
     "/items/ring_of_gathering": {
         "hrid": "/items/ring_of_gathering",
@@ -56618,7 +57224,7 @@
                 "creditCount": 250
             }
         ],
-        "sortIndex": 556
+        "sortIndex": 559
     },
     "/items/ring_of_rare_find": {
         "hrid": "/items/ring_of_rare_find",
@@ -56681,7 +57287,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 561
+        "sortIndex": 564
     },
     "/items/ring_of_regeneration": {
         "hrid": "/items/ring_of_regeneration",
@@ -56750,7 +57356,7 @@
                 "creditCount": 350
             }
         ],
-        "sortIndex": 559
+        "sortIndex": 562
     },
     "/items/ring_of_resistance": {
         "hrid": "/items/ring_of_resistance",
@@ -56821,7 +57427,7 @@
                 "creditCount": 350
             }
         ],
-        "sortIndex": 560
+        "sortIndex": 563
     },
     "/items/rippling_trident": {
         "hrid": "/items/rippling_trident",
@@ -57112,7 +57718,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 813
+        "sortIndex": 822
     },
     "/items/rough_boots": {
         "hrid": "/items/rough_boots",
@@ -57403,7 +58009,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 777
+        "sortIndex": 784
     },
     "/items/rough_hood": {
         "hrid": "/items/rough_hood",
@@ -57544,7 +58150,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 782
+        "sortIndex": 790
     },
     "/items/rough_tunic": {
         "hrid": "/items/rough_tunic",
@@ -57685,7 +58291,7 @@
                 "creditCount": 5000
             }
         ],
-        "sortIndex": 872
+        "sortIndex": 881
     },
     "/items/royal_fire_robe_bottoms": {
         "hrid": "/items/royal_fire_robe_bottoms",
@@ -60092,7 +60698,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 937
+        "sortIndex": 956
     },
     "/items/shield_bash": {
         "hrid": "/items/shield_bash",
@@ -60235,7 +60841,7 @@
                 "creditCount": 50
             }
         ],
-        "sortIndex": 829
+        "sortIndex": 838
     },
     "/items/shoebill_shoes": {
         "hrid": "/items/shoebill_shoes",
@@ -60699,7 +61305,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 795
+        "sortIndex": 804
     },
     "/items/silk_gloves": {
         "hrid": "/items/silk_gloves",
@@ -61316,7 +61922,7 @@
                 "creditCount": 2
             }
         ],
-        "sortIndex": 915
+        "sortIndex": 924
     },
     "/items/sinister_refinement_chest": {
         "hrid": "/items/sinister_refinement_chest",
@@ -61355,7 +61961,7 @@
                 "creditCount": 16
             }
         ],
-        "sortIndex": 871
+        "sortIndex": 880
     },
     "/items/sinister_token": {
         "hrid": "/items/sinister_token",
@@ -61535,6 +62141,71 @@
                 "creditCount": 3
             }
         ],
+        "sortIndex": 538
+    },
+    "/items/small_talisman_belt": {
+        "hrid": "/items/small_talisman_belt",
+        "name": "Small Talisman Belt",
+        "description": "",
+        "categoryHrid": "/item_categories/equipment",
+        "sellPrice": 1000000,
+        "isTradable": true,
+        "itemLevel": 100,
+        "enhancementCosts": [
+            {
+                "itemHrid": "/items/eternal_cheese",
+                "count": 4
+            },
+            {
+                "itemHrid": "/items/dragon_leather",
+                "count": 4
+            },
+            {
+                "itemHrid": "/items/coin",
+                "count": 7490
+            }
+        ],
+        "alchemyDetail": {
+            "bulkMultiplier": 1,
+            "isCoinifiable": true,
+            "decomposeItems": [
+                {
+                    "itemHrid": "/items/eternal_cheese",
+                    "count": 500
+                },
+                {
+                    "itemHrid": "/items/dragon_leather",
+                    "count": 500
+                }
+            ],
+            "transmuteSuccessRate": 0,
+            "transmuteDropTable": null
+        },
+        "equipmentDetail": {
+            "type": "/equipment_types/belt",
+            "levelRequirements": [
+                {
+                    "skillHrid": "/skills/total_level",
+                    "level": 1000
+                }
+            ],
+            "combatStats": {
+                "talismanSlots": 1,
+                "talismanPower": 0.1
+            },
+            "noncombatStats": {},
+            "combatEnhancementBonuses": {
+                "talismanPower": 0.002
+            },
+            "noncombatEnhancementBonuses": {}
+        },
+        "guildCreditConversions": [
+            {
+                "creditItemHrid": "/items/red_guild_credit",
+                "itemCount": 1,
+                "creditCount": 1500
+            }
+        ],
         "sortIndex": 535
     },
     "/items/small_treasure_chest": {
@@ -61693,7 +62364,7 @@
                 "creditCount": 20
             }
         ],
-        "sortIndex": 830
+        "sortIndex": 839
     },
     "/items/snail_shell_helmet": {
         "hrid": "/items/snail_shell_helmet",
@@ -61815,7 +62486,7 @@
                 "creditCount": 10
             }
         ],
-        "sortIndex": 828
+        "sortIndex": 837
     },
     "/items/snake_fang_dirk": {
         "hrid": "/items/snake_fang_dirk",
@@ -62035,7 +62706,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 909
+        "sortIndex": 918
     },
     "/items/sorcerers_sole": {
         "hrid": "/items/sorcerers_sole",
@@ -62095,7 +62766,7 @@
                 "creditCount": 80
             }
         ],
-        "sortIndex": 843
+        "sortIndex": 852
     },
     "/items/soul_fragment": {
         "hrid": "/items/soul_fragment",
@@ -62143,7 +62814,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 858
+        "sortIndex": 867
     },
     "/items/soul_hunter_crossbow": {
         "hrid": "/items/soul_hunter_crossbow",
@@ -62293,7 +62964,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 805
+        "sortIndex": 814
     },
     "/items/spaceberry_cake": {
         "hrid": "/items/spaceberry_cake",
@@ -62509,7 +63180,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 817
+        "sortIndex": 826
     },
     "/items/speed_aura": {
         "hrid": "/items/speed_aura",
@@ -62816,7 +63487,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 852
+        "sortIndex": 861
     },
     "/items/stalactite_spear": {
         "hrid": "/items/stalactite_spear",
@@ -63044,7 +63715,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 920
+        "sortIndex": 929
     },
     "/items/star_fruit": {
         "hrid": "/items/star_fruit",
@@ -63104,7 +63775,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 811
+        "sortIndex": 820
     },
     "/items/star_fruit_gummy": {
         "hrid": "/items/star_fruit_gummy",
@@ -63457,7 +64128,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 802
+        "sortIndex": 811
     },
     "/items/strawberry_cake": {
         "hrid": "/items/strawberry_cake",
@@ -63762,7 +64433,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 799
+        "sortIndex": 808
     },
     "/items/sundering_crossbow": {
         "hrid": "/items/sundering_crossbow",
@@ -64043,7 +64714,7 @@
                 "creditCount": 7500
             }
         ],
-        "sortIndex": 876
+        "sortIndex": 885
     },
     "/items/sunstone": {
         "hrid": "/items/sunstone",
@@ -64092,7 +64763,7 @@
                 "creditCount": 5
             }
         ],
-        "sortIndex": 927
+        "sortIndex": 936
     },
     "/items/super_alchemy_tea": {
         "hrid": "/items/super_alchemy_tea",
@@ -65806,7 +66477,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 904
+        "sortIndex": 913
     },
     "/items/sweep": {
         "hrid": "/items/sweep",
@@ -66069,7 +66740,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 899
+        "sortIndex": 908
     },
     "/items/tailoring_tea": {
         "hrid": "/items/tailoring_tea",
@@ -66378,7 +67049,7 @@
             "transmuteSuccessRate": 0,
             "transmuteDropTable": null
         },
-        "sortIndex": 919
+        "sortIndex": 928
     },
     "/items/task_token": {
         "hrid": "/items/task_token",
@@ -66500,7 +67171,7 @@
                 "creditCount": 150
             }
         ],
-        "sortIndex": 890
+        "sortIndex": 899
     },
     "/items/tome_of_healing": {
         "hrid": "/items/tome_of_healing",
@@ -66902,7 +67573,7 @@
                 "alchemyExperience": 0.001
             }
         },
-        "sortIndex": 612
+        "sortIndex": 615
     },
     "/items/trainee_attack_charm": {
         "hrid": "/items/trainee_attack_charm",
@@ -66989,7 +67660,7 @@
             },
             "noncombatEnhancementBonuses": {}
         },
-        "sortIndex": 636
+        "sortIndex": 639
     },
     "/items/trainee_brewing_charm": {
         "hrid": "/items/trainee_brewing_charm",
@@ -67093,7 +67764,7 @@
                 "brewingExperience": 0.001
             }
         },
-        "sortIndex": 606
+        "sortIndex": 609
     },
     "/items/trainee_cheesesmithing_charm": {
         "hrid": "/items/trainee_cheesesmithing_charm",
@@ -67197,7 +67868,7 @@
                 "cheesesmithingExperience": 0.001
             }
         },
-        "sortIndex": 582
+        "sortIndex": 585
     },
     "/items/trainee_cooking_charm": {
         "hrid": "/items/trainee_cooking_charm",
@@ -67301,7 +67972,7 @@
                 "cookingExperience": 0.001
             }
         },
-        "sortIndex": 600
+        "sortIndex": 603
     },
     "/items/trainee_crafting_charm": {
         "hrid": "/items/trainee_crafting_charm",
@@ -67405,7 +68076,7 @@
                 "craftingExperience": 0.001
             }
         },
-        "sortIndex": 588
+        "sortIndex": 591
     },
     "/items/trainee_defense_charm": {
         "hrid": "/items/trainee_defense_charm",
@@ -67492,7 +68163,7 @@
             },
             "noncombatEnhancementBonuses": {}
         },
-        "sortIndex": 642
+        "sortIndex": 645
     },
     "/items/trainee_enhancing_charm": {
         "hrid": "/items/trainee_enhancing_charm",
@@ -67596,7 +68267,7 @@
                 "enhancingExperience": 0.001
             }
         },
-        "sortIndex": 618
+        "sortIndex": 621
     },
     "/items/trainee_foraging_charm": {
         "hrid": "/items/trainee_foraging_charm",
@@ -67700,7 +68371,7 @@
                 "foragingExperience": 0.001
             }
         },
-        "sortIndex": 570
+        "sortIndex": 573
     },
     "/items/trainee_intelligence_charm": {
         "hrid": "/items/trainee_intelligence_charm",
@@ -67787,7 +68458,7 @@
             },
             "noncombatEnhancementBonuses": {}
         },
-        "sortIndex": 630
+        "sortIndex": 633
     },
     "/items/trainee_magic_charm": {
         "hrid": "/items/trainee_magic_charm",
@@ -67874,7 +68545,7 @@
             },
             "noncombatEnhancementBonuses": {}
         },
-        "sortIndex": 660
+        "sortIndex": 663
     },
     "/items/trainee_melee_charm": {
         "hrid": "/items/trainee_melee_charm",
@@ -67961,7 +68632,7 @@
             },
             "noncombatEnhancementBonuses": {}
         },
-        "sortIndex": 648
+        "sortIndex": 651
     },
     "/items/trainee_milking_charm": {
         "hrid": "/items/trainee_milking_charm",
@@ -68065,7 +68736,7 @@
                 "milkingExperience": 0.001
             }
         },
-        "sortIndex": 564
+        "sortIndex": 567
     },
     "/items/trainee_ranged_charm": {
         "hrid": "/items/trainee_ranged_charm",
@@ -68152,7 +68823,7 @@
             },
             "noncombatEnhancementBonuses": {}
         },
-        "sortIndex": 654
+        "sortIndex": 657
     },
     "/items/trainee_stamina_charm": {
         "hrid": "/items/trainee_stamina_charm",
@@ -68239,7 +68910,7 @@
             },
             "noncombatEnhancementBonuses": {}
         },
-        "sortIndex": 624
+        "sortIndex": 627
     },
     "/items/trainee_tailoring_charm": {
         "hrid": "/items/trainee_tailoring_charm",
@@ -68343,7 +69014,7 @@
                 "tailoringExperience": 0.001
             }
         },
-        "sortIndex": 594
+        "sortIndex": 597
     },
     "/items/trainee_woodcutting_charm": {
         "hrid": "/items/trainee_woodcutting_charm",
@@ -68447,7 +69118,7 @@
                 "woodcuttingExperience": 0.001
             }
         },
-        "sortIndex": 576
+        "sortIndex": 579
     },
     "/items/treant_bark": {
         "hrid": "/items/treant_bark",
@@ -68495,7 +69166,7 @@
                 "creditCount": 40
             }
         ],
-        "sortIndex": 834
+        "sortIndex": 843
     },
     "/items/treant_shield": {
         "hrid": "/items/treant_shield",
@@ -68631,7 +69302,7 @@
                 "creditCount": 30
             }
         ],
-        "sortIndex": 832
+        "sortIndex": 841
     },
     "/items/turtle_shell_body": {
         "hrid": "/items/turtle_shell_body",
@@ -68834,7 +69505,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 912
+        "sortIndex": 921
     },
     "/items/ultra_alchemy_tea": {
         "hrid": "/items/ultra_alchemy_tea",
@@ -70702,7 +71373,13 @@
                 },
                 {
                     "itemHrid": "/items/beast_hide",
-                    "dropRate": 0.25,
+                    "dropRate": 0.2,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/dragon_hide",
+                    "dropRate": 0.05,
                     "minCount": 1,
                     "maxCount": 1
                 },
@@ -70739,7 +71416,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 781
+        "sortIndex": 788
     },
     "/items/umbral_hood": {
         "hrid": "/items/umbral_hood",
@@ -70860,7 +71537,13 @@
                 },
                 {
                     "itemHrid": "/items/beast_leather",
-                    "dropRate": 0.25,
+                    "dropRate": 0.2,
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "itemHrid": "/items/dragon_leather",
+                    "dropRate": 0.05,
                     "minCount": 1,
                     "maxCount": 1
                 },
@@ -70897,7 +71580,7 @@
                 "creditCount": 2
             }
         ],
-        "sortIndex": 786
+        "sortIndex": 794
     },
     "/items/umbral_tunic": {
         "hrid": "/items/umbral_tunic",
@@ -71037,7 +71720,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 855
+        "sortIndex": 864
     },
     "/items/vampire_fang_dirk": {
         "hrid": "/items/vampire_fang_dirk",
@@ -71361,7 +72044,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 735
+        "sortIndex": 738
     },
     "/items/verdant_boots": {
         "hrid": "/items/verdant_boots",
@@ -71500,7 +72183,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 671
+        "sortIndex": 674
     },
     "/items/verdant_buckler": {
         "hrid": "/items/verdant_buckler",
@@ -71713,7 +72396,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 757
+        "sortIndex": 761
     },
     "/items/verdant_chisel": {
         "hrid": "/items/verdant_chisel",
@@ -71781,7 +72464,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 703
+        "sortIndex": 706
     },
     "/items/verdant_enhancer": {
         "hrid": "/items/verdant_enhancer",
@@ -71841,7 +72524,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 743
+        "sortIndex": 746
     },
     "/items/verdant_gauntlets": {
         "hrid": "/items/verdant_gauntlets",
@@ -71980,7 +72663,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 695
+        "sortIndex": 698
     },
     "/items/verdant_hatchet": {
         "hrid": "/items/verdant_hatchet",
@@ -72048,7 +72731,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 687
+        "sortIndex": 690
     },
     "/items/verdant_helmet": {
         "hrid": "/items/verdant_helmet",
@@ -72273,7 +72956,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 750
+        "sortIndex": 753
     },
     "/items/verdant_needle": {
         "hrid": "/items/verdant_needle",
@@ -72333,7 +73016,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 711
+        "sortIndex": 714
     },
     "/items/verdant_plate_body": {
         "hrid": "/items/verdant_plate_body",
@@ -72535,7 +73218,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 727
+        "sortIndex": 730
     },
     "/items/verdant_shears": {
         "hrid": "/items/verdant_shears",
@@ -72603,7 +73286,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 679
+        "sortIndex": 682
     },
     "/items/verdant_spatula": {
         "hrid": "/items/verdant_spatula",
@@ -72663,7 +73346,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 719
+        "sortIndex": 722
     },
     "/items/verdant_spear": {
         "hrid": "/items/verdant_spear",
@@ -73214,7 +73897,7 @@
                 "creditCount": 400
             }
         ],
-        "sortIndex": 856
+        "sortIndex": 865
     },
     "/items/werewolf_slasher": {
         "hrid": "/items/werewolf_slasher",
@@ -73356,7 +74039,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 798
+        "sortIndex": 807
     },
     "/items/white_guild_credit": {
         "hrid": "/items/white_guild_credit",
@@ -73629,7 +74312,7 @@
                 "creditCount": 700
             }
         ],
-        "sortIndex": 544
+        "sortIndex": 547
     },
     "/items/woodcutting_essence": {
         "hrid": "/items/woodcutting_essence",
@@ -73714,7 +74397,7 @@
                 "creditCount": 1
             }
         ],
-        "sortIndex": 896
+        "sortIndex": 905
     },
     "/items/woodcutting_tea": {
         "hrid": "/items/woodcutting_tea",

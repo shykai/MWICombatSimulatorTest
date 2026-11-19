@@ -16,7 +16,7 @@ class Monster extends CombatUnit {
         this.isPlayer = false;
         this.hrid = hrid;
         this.difficultyTier = difficultyTier;
-        this.roomLevel = roomLevel
+        this.roomLevel = roomLevel;
         if (this.roomLevel <= 0) {
             this.roomLevel = this.LabyrinthMonsterBaseRoomLevel;
         }
@@ -25,6 +25,8 @@ class Monster extends CombatUnit {
         if (!gameMonster) {
             throw new Error("No monster found for hrid: " + this.hrid);
         }
+
+        this.isBoss = gameMonster.isBoss ?? false;
 
         this.enrageTime = gameMonster.enrageTime;
 
@@ -138,6 +140,11 @@ class Monster extends CombatUnit {
             "ripple",
             "bloom",
             "blaze",
+            "smite",
+            "shatter",
+            "overkill",
+            "echo",
+            "fortify",
             "attackSpeed",
             "foodHaste",
             "drinkConcentration",

@@ -1,5 +1,6 @@
 class CombatUnit {
     isPlayer;
+    isBoss = false;
     isStunned = false;
     stunExpireTime = null;
     isBlinded = false;
@@ -32,6 +33,7 @@ class CombatUnit {
     dropTable = [];
     rareDropTable = [];
     abilityManaCosts = new Map();
+    overkillPool = 0;
 
     // Calculated combat stats including temporary buffs
     combatDetails = {
@@ -63,6 +65,7 @@ class CombatUnit {
         magicEvasionRating: 11,
         defensiveMaxDamage: 0,
         totalArmor: 0.2,
+        totalDamageTaken: 0,
         totalWaterResistance: 0.4,
         totalNatureResistance: 0.4,
         totalFireResistance: 0.4,
@@ -116,6 +119,8 @@ class CombatUnit {
             combatExperience: 0,
             foodSlots: 1,
             drinkSlots: 1,
+            talismanSlots: 0,
+            talismanPower: 0,
             armorPenetration: 0,
             waterPenetration: 0,
             naturePenetration: 0,
@@ -132,6 +137,11 @@ class CombatUnit {
             blaze: 0,
             weaken: 0,
             fury: 0,
+            smite: 0,
+            shatter: 0,
+            overkill: 0,
+            echo: 0,
+            fortify: 0,
             foodHaste: 0,
             drinkConcentration: 0,
             damageTaken: 0,
@@ -253,10 +263,13 @@ class CombatUnit {
             this.combatDetails.rangedEvasionRating += baseRangedEvasion * boost.ratioBoost;
         }
 
-        this.combatDetails.combatStats.damageTaken = this.getBuffBoost("/buff_types/damage_taken").flatBoost;
-        // if (this.combatDetails.combatStats.damageTaken > 0) {
-        //     console.log("Damage taken: " + this.combatDetails.combatStats.damageTaken);
-        // }
+        let baseDamageTaken = this.combatDetails.combatStats.damageTaken;
+        this.combatDetails.totalDamageTaken = baseDamageTaken;
+        let damageTakenBoosts = this.getBuffBoosts("/buff_types/damage_taken");
+        for (const boost of damageTakenBoosts) {
+            this.combatDetails.totalDamageTaken += boost.flatBoost;
+            this.combatDetails.totalDamageTaken += baseDamageTaken * boost.ratioBoost;
+        }
 
         this.combatDetails.magicAccuracyRating =
             (10 + this.combatDetails.attackLevel) *
@@ -506,7 +519,7 @@ class CombatUnit {
         this.silenceExpireTime = null;
         this.isBlinded = false;
         this.blindExpireTime = null;
-        this.combatDetails.combatStats.damageTaken = 0;
+        this.updateCombatDetails();
     }
 
     getBuffBoosts(type) {
@@ -538,6 +551,7 @@ class CombatUnit {
 
     reset(currentTime = 0) {
         this.clearCCs();
+        this.overkillPool = 0;
         
         // 只有玩家在地下城团灭重开时保留buff和CD，敌人始终完全重置
         if (currentTime == 0 || !this.isPlayer) {

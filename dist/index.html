@@ -396,6 +396,18 @@
                             </div>
                         </div>
                         <div class="row mb-2">
+                            <label for="selectEquipment_belt" class="col-md-2 col-form-label" data-i18n="characterItemsUtil.belt">Belt</label>
+                            <div class="col-md-6">
+                                <select id="selectEquipment_belt" class="form-select">
+                                    <option value="" data-i18n="characterSelectPage.slots.empty">Empty</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="number" id="inputEquipmentEnhancementLevel_belt" class="form-control"
+                                    value="0" min="0" max="20" required />
+                            </div>
+                        </div>
+                        <div class="row mb-2">
                             <label for="selectEquipment_charm" class="col-md-2 col-form-label" data-i18n="characterItemsUtil.charm">Charm</label>
                             <div class="col-md-6">
                                 <select id="selectEquipment_charm" class="form-select">
@@ -700,6 +712,27 @@
                             </div>
                         </div>
                         <!-- #endregion-->
+                        <!-- #region Talismans -->
+                        <div class="row mb-2">
+                            <div class="col-12">
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button id="buttonTalismansAccordion" class="accordion-button collapsed"
+                                                type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseTalismans" style="padding: 0.5em">
+                                                <b data-i18n="characterManagement.talismans">Talismans</b>
+                                                <span id="talismanEffectiveModifierCount" class="ms-2 text-secondary small"></span>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTalismans" class="accordion-collapse collapse">
+                                            <div class="accordion-body p-2" id="talismanSlotsContainer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- #endregion-->
                         <!-- #region Simulation Controls -->
                         <div class="row mb-2 pt-3">
                             <div class="col-md-auto">
@@ -989,6 +1022,34 @@
                 <div class="row">
                     <div class="col-md-8" data-i18n="combatStats.fury">Fury:</div>
                     <div class="col-md-4" id="combatStat_fury"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8" data-i18n="combatStats.smite">Smite:</div>
+                    <div class="col-md-4" id="combatStat_smite"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8" data-i18n="combatStats.shatter">Shatter:</div>
+                    <div class="col-md-4" id="combatStat_shatter"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8" data-i18n="combatStats.overkill">Overkill:</div>
+                    <div class="col-md-4" id="combatStat_overkill"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8" data-i18n="combatStats.echo">Echo:</div>
+                    <div class="col-md-4" id="combatStat_echo"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8" data-i18n="combatStats.fortify">Fortify:</div>
+                    <div class="col-md-4" id="combatStat_fortify"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8" data-i18n="combatStats.talismanPower">Talisman Power:</div>
+                    <div class="col-md-4" id="combatStat_talismanPower"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8" data-i18n="combatStats.talismanSlots">Talisman Slots:</div>
+                    <div class="col-md-4" id="combatStat_talismanSlots"></div>
                 </div>
                 <div class="row">
                     <div class="col-md-8" data-i18n="combatStats.attackSpeed">Attack Speed:</div>
