@@ -142,6 +142,7 @@ class CombatUnit {
             overkill: 0,
             echo: 0,
             fortify: 0,
+            consistency: 0,
             foodHaste: 0,
             drinkConcentration: 0,
             damageTaken: 0,

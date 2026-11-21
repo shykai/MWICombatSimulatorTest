@@ -201,6 +201,7 @@ class Player extends CombatUnit {
             "overkill",
             "echo",
             "fortify",
+            "consistency",
             "attackSpeed",
             "foodHaste",
             "drinkConcentration",

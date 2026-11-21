@@ -3,6 +3,7 @@
     "maxModifierCount": 4,
     "maxSlotCount": 3,
     "maxCountPerCharacter": 60,
+    "maxMarker": 9,
     "createInputItemHrid": "/items/basic_talisman_core",
     "addModifierInputMap": {
         "2": {

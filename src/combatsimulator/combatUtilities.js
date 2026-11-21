@@ -164,7 +164,7 @@ class CombatUtilities {
 
         let armorDamageRatioFlat = abilityEffect ? abilityEffect.armorDamageRatio * source.combatDetails.totalArmor : 0;
 
-        let sourceMinDamage = sourceDamageMultiplier * (1 + baseDamageFlat + armorDamageRatioFlat);
+        let sourceMinDamage = sourceDamageMultiplier * (1 + baseDamageRatio * sourceAutoAttackMaxDamage * source.combatDetails.combatStats.consistency + baseDamageFlat + armorDamageRatioFlat);
         let sourceMaxDamage = sourceDamageMultiplier * (baseDamageRatio * sourceAutoAttackMaxDamage + baseDamageFlat + armorDamageRatioFlat);
 
         if (Math.random() < critChance) {

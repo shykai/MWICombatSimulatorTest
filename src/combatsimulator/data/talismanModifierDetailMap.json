@@ -43,6 +43,28 @@
         "weight": 1,
         "sortIndex": 5
     },
+    "/talisman_modifiers/abundance": {
+        "hrid": "/talisman_modifiers/abundance",
+        "name": "Abundance",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/special",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "Abundance"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.01,
+            0.015,
+            0.02,
+            0.025,
+            0.03,
+            0.04
+        ],
+        "weight": 0.1,
+        "sortIndex": 103
+    },
     "/talisman_modifiers/alchemy_efficiency": {
         "hrid": "/talisman_modifiers/alchemy_efficiency",
         "name": "Alchemy Efficiency",
@@ -85,7 +107,7 @@
             0.6
         ],
         "weight": 1,
-        "sortIndex": 102
+        "sortIndex": 101
     },
     "/talisman_modifiers/alchemy_experience": {
         "hrid": "/talisman_modifiers/alchemy_experience",
@@ -217,7 +239,7 @@
             0.06
         ],
         "weight": 1,
-        "sortIndex": 39
+        "sortIndex": 38
     },
     "/talisman_modifiers/attack_speed": {
         "hrid": "/talisman_modifiers/attack_speed",
@@ -253,12 +275,12 @@
         ],
         "isPercent": true,
         "gradeValues": [
-            0.012,
-            0.018,
-            0.024,
+            0.015,
+            0.0225,
             0.03,
-            0.036,
-            0.048
+            0.0375,
+            0.045,
+            0.06
         ],
         "weight": 1,
         "sortIndex": 1
@@ -305,7 +327,7 @@
             0.6
         ],
         "weight": 1,
-        "sortIndex": 101
+        "sortIndex": 100
     },
     "/talisman_modifiers/brewing_experience": {
         "hrid": "/talisman_modifiers/brewing_experience",
@@ -385,12 +407,12 @@
         ],
         "isPercent": true,
         "gradeValues": [
-            0.012,
-            0.018,
-            0.024,
+            0.01,
+            0.015,
+            0.02,
+            0.025,
             0.03,
-            0.036,
-            0.048
+            0.04
         ],
         "weight": 1,
         "sortIndex": 4
@@ -437,7 +459,7 @@
             0.6
         ],
         "weight": 1,
-        "sortIndex": 97
+        "sortIndex": 96
     },
     "/talisman_modifiers/cheesesmithing_experience": {
         "hrid": "/talisman_modifiers/cheesesmithing_experience",
@@ -525,7 +547,7 @@
             0.04
         ],
         "weight": 1,
-        "sortIndex": 34
+        "sortIndex": 33
     },
     "/talisman_modifiers/combat_experience": {
         "hrid": "/talisman_modifiers/combat_experience",
@@ -547,7 +569,7 @@
             0.04
         ],
         "weight": 1,
-        "sortIndex": 36
+        "sortIndex": 35
     },
     "/talisman_modifiers/combat_rare_find": {
         "hrid": "/talisman_modifiers/combat_rare_find",
@@ -569,7 +591,51 @@
             0.12
         ],
         "weight": 1,
-        "sortIndex": 35
+        "sortIndex": 34
+    },
+    "/talisman_modifiers/conservation": {
+        "hrid": "/talisman_modifiers/conservation",
+        "name": "Conservation",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/special",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "Conservation"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.02,
+            0.03,
+            0.04,
+            0.05,
+            0.06,
+            0.08
+        ],
+        "weight": 0.1,
+        "sortIndex": 106
+    },
+    "/talisman_modifiers/consistency": {
+        "hrid": "/talisman_modifiers/consistency",
+        "name": "Consistency",
+        "talismanTypeHrid": "/talisman_types/combat",
+        "groupHrid": "/talisman_modifier_groups/special",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/combat_stat",
+        "keys": [
+            "Consistency"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 0.1,
+        "sortIndex": 48
     },
     "/talisman_modifiers/cooking_efficiency": {
         "hrid": "/talisman_modifiers/cooking_efficiency",
@@ -613,7 +679,7 @@
             0.6
         ],
         "weight": 1,
-        "sortIndex": 100
+        "sortIndex": 99
     },
     "/talisman_modifiers/cooking_experience": {
         "hrid": "/talisman_modifiers/cooking_experience",
@@ -723,7 +789,7 @@
             0.6
         ],
         "weight": 1,
-        "sortIndex": 98
+        "sortIndex": 97
     },
     "/talisman_modifiers/crafting_experience": {
         "hrid": "/talisman_modifiers/crafting_experience",
@@ -877,7 +943,7 @@
             0.06
         ],
         "weight": 1,
-        "sortIndex": 40
+        "sortIndex": 39
     },
     "/talisman_modifiers/defensive_damage": {
         "hrid": "/talisman_modifiers/defensive_damage",
@@ -921,7 +987,7 @@
             0.12
         ],
         "weight": 0.1,
-        "sortIndex": 46
+        "sortIndex": 45
     },
     "/talisman_modifiers/elemental_amplify": {
         "hrid": "/talisman_modifiers/elemental_amplify",
@@ -937,12 +1003,12 @@
         ],
         "isPercent": true,
         "gradeValues": [
-            0.01,
-            0.015,
             0.02,
-            0.025,
             0.03,
-            0.04
+            0.04,
+            0.05,
+            0.06,
+            0.08
         ],
         "weight": 1,
         "sortIndex": 18
@@ -1015,7 +1081,7 @@
             0.6
         ],
         "weight": 1,
-        "sortIndex": 103
+        "sortIndex": 102
     },
     "/talisman_modifiers/enhancing_experience": {
         "hrid": "/talisman_modifiers/enhancing_experience",
@@ -1083,6 +1149,28 @@
         "weight": 1,
         "sortIndex": 62
     },
+    "/talisman_modifiers/epiphany": {
+        "hrid": "/talisman_modifiers/epiphany",
+        "name": "Epiphany",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/special",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "Epiphany"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.01,
+            0.015,
+            0.02,
+            0.025,
+            0.03,
+            0.04
+        ],
+        "weight": 0.1,
+        "sortIndex": 107
+    },
     "/talisman_modifiers/essence_find": {
         "hrid": "/talisman_modifiers/essence_find",
         "name": "Essence Find",
@@ -1103,7 +1191,7 @@
             0.2
         ],
         "weight": 1,
-        "sortIndex": 93
+        "sortIndex": 92
     },
     "/talisman_modifiers/foraging_efficiency": {
         "hrid": "/talisman_modifiers/foraging_efficiency",
@@ -1147,7 +1235,7 @@
             0.6
         ],
         "weight": 1,
-        "sortIndex": 95
+        "sortIndex": 94
     },
     "/talisman_modifiers/foraging_experience": {
         "hrid": "/talisman_modifiers/foraging_experience",
@@ -1235,51 +1323,7 @@
             0.04
         ],
         "weight": 0.1,
-        "sortIndex": 48
-    },
-    "/talisman_modifiers/gathering_quantity": {
-        "hrid": "/talisman_modifiers/gathering_quantity",
-        "name": "Gathering Quantity",
-        "talismanTypeHrid": "/talisman_types/skilling",
-        "groupHrid": "/talisman_modifier_groups/other",
-        "scopeHrid": "/talisman_modifier_scopes/universal",
-        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
-        "keys": [
-            "GatheringQuantity"
-        ],
-        "isPercent": true,
-        "gradeValues": [
-            0.02,
-            0.03,
-            0.04,
-            0.05,
-            0.06,
-            0.08
-        ],
-        "weight": 1,
-        "sortIndex": 92
-    },
-    "/talisman_modifiers/gourmet": {
-        "hrid": "/talisman_modifiers/gourmet",
-        "name": "Gourmet",
-        "talismanTypeHrid": "/talisman_types/skilling",
-        "groupHrid": "/talisman_modifier_groups/other",
-        "scopeHrid": "/talisman_modifier_scopes/universal",
-        "targetHrid": "/talisman_modifier_targets/buff",
-        "keys": [
-            "/buff_types/gourmet"
-        ],
-        "isPercent": true,
-        "gradeValues": [
-            0.01,
-            0.015,
-            0.02,
-            0.025,
-            0.03,
-            0.04
-        ],
-        "weight": 1,
-        "sortIndex": 105
+        "sortIndex": 47
     },
     "/talisman_modifiers/healing_amplify": {
         "hrid": "/talisman_modifiers/healing_amplify",
@@ -1345,7 +1389,29 @@
             0.06
         ],
         "weight": 1,
-        "sortIndex": 38
+        "sortIndex": 37
+    },
+    "/talisman_modifiers/invigoration": {
+        "hrid": "/talisman_modifiers/invigoration",
+        "name": "Invigoration",
+        "talismanTypeHrid": "/talisman_types/skilling",
+        "groupHrid": "/talisman_modifier_groups/special",
+        "scopeHrid": "/talisman_modifier_scopes/universal",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
+        "keys": [
+            "Invigoration"
+        ],
+        "isPercent": true,
+        "gradeValues": [
+            0.03,
+            0.045,
+            0.06,
+            0.075,
+            0.09,
+            0.12
+        ],
+        "weight": 0.1,
+        "sortIndex": 105
     },
     "/talisman_modifiers/magic_accuracy": {
         "hrid": "/talisman_modifiers/magic_accuracy",
@@ -1433,7 +1499,7 @@
             0.06
         ],
         "weight": 1,
-        "sortIndex": 43
+        "sortIndex": 42
     },
     "/talisman_modifiers/max_hitpoints": {
         "hrid": "/talisman_modifiers/max_hitpoints",
@@ -1571,7 +1637,7 @@
             0.06
         ],
         "weight": 1,
-        "sortIndex": 41
+        "sortIndex": 40
     },
     "/talisman_modifiers/milking_efficiency": {
         "hrid": "/talisman_modifiers/milking_efficiency",
@@ -1615,7 +1681,7 @@
             0.6
         ],
         "weight": 1,
-        "sortIndex": 94
+        "sortIndex": 93
     },
     "/talisman_modifiers/milking_experience": {
         "hrid": "/talisman_modifiers/milking_experience",
@@ -1717,15 +1783,15 @@
         ],
         "isPercent": true,
         "gradeValues": [
+            0.1,
             0.15,
-            0.225,
+            0.2,
+            0.25,
             0.3,
-            0.375,
-            0.45,
-            0.6
+            0.4
         ],
         "weight": 0.1,
-        "sortIndex": 45
+        "sortIndex": 44
     },
     "/talisman_modifiers/physical_amplify": {
         "hrid": "/talisman_modifiers/physical_amplify",
@@ -1749,26 +1815,26 @@
         "weight": 1,
         "sortIndex": 17
     },
-    "/talisman_modifiers/processing": {
-        "hrid": "/talisman_modifiers/processing",
-        "name": "Processing",
+    "/talisman_modifiers/prosperity": {
+        "hrid": "/talisman_modifiers/prosperity",
+        "name": "Prosperity",
         "talismanTypeHrid": "/talisman_types/skilling",
-        "groupHrid": "/talisman_modifier_groups/other",
+        "groupHrid": "/talisman_modifier_groups/special",
         "scopeHrid": "/talisman_modifier_scopes/universal",
-        "targetHrid": "/talisman_modifier_targets/buff",
+        "targetHrid": "/talisman_modifier_targets/noncombat_stat",
         "keys": [
-            "/buff_types/processing"
+            "Prosperity"
         ],
         "isPercent": true,
         "gradeValues": [
-            0.02,
             0.03,
-            0.04,
-            0.05,
+            0.045,
             0.06,
-            0.08
+            0.075,
+            0.09,
+            0.12
         ],
-        "weight": 1,
+        "weight": 0.1,
         "sortIndex": 104
     },
     "/talisman_modifiers/ranged_accuracy": {
@@ -1857,7 +1923,7 @@
             0.06
         ],
         "weight": 1,
-        "sortIndex": 42
+        "sortIndex": 41
     },
     "/talisman_modifiers/shatter": {
         "hrid": "/talisman_modifiers/shatter",
@@ -1879,7 +1945,7 @@
             0.16
         ],
         "weight": 0.1,
-        "sortIndex": 47
+        "sortIndex": 46
     },
     "/talisman_modifiers/skilling_efficiency": {
         "hrid": "/talisman_modifiers/skilling_efficiency",
@@ -1989,7 +2055,7 @@
             0.12
         ],
         "weight": 0.1,
-        "sortIndex": 44
+        "sortIndex": 43
     },
     "/talisman_modifiers/stamina_experience": {
         "hrid": "/talisman_modifiers/stamina_experience",
@@ -2011,7 +2077,7 @@
             0.06
         ],
         "weight": 1,
-        "sortIndex": 37
+        "sortIndex": 36
     },
     "/talisman_modifiers/tailoring_efficiency": {
         "hrid": "/talisman_modifiers/tailoring_efficiency",
@@ -2055,7 +2121,7 @@
             0.6
         ],
         "weight": 1,
-        "sortIndex": 99
+        "sortIndex": 98
     },
     "/talisman_modifiers/tailoring_experience": {
         "hrid": "/talisman_modifiers/tailoring_experience",
@@ -2190,28 +2256,6 @@
         "weight": 1,
         "sortIndex": 32
     },
-    "/talisman_modifiers/threat_reduction": {
-        "hrid": "/talisman_modifiers/threat_reduction",
-        "name": "Threat Reduction",
-        "talismanTypeHrid": "/talisman_types/combat",
-        "groupHrid": "/talisman_modifier_groups/defense",
-        "scopeHrid": "/talisman_modifier_scopes/specific",
-        "targetHrid": "/talisman_modifier_targets/combat_stat",
-        "keys": [
-            "Threat"
-        ],
-        "isPercent": false,
-        "gradeValues": [
-            -4,
-            -6,
-            -8,
-            -10,
-            -12,
-            -16
-        ],
-        "weight": 1,
-        "sortIndex": 33
-    },
     "/talisman_modifiers/woodcutting_efficiency": {
         "hrid": "/talisman_modifiers/woodcutting_efficiency",
         "name": "Woodcutting Efficiency",
@@ -2254,7 +2298,7 @@
             0.6
         ],
         "weight": 1,
-        "sortIndex": 96
+        "sortIndex": 95
     },
     "/talisman_modifiers/woodcutting_experience": {
         "hrid": "/talisman_modifiers/woodcutting_experience",

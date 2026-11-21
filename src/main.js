@@ -704,6 +704,7 @@ function updateCombatStatsUI() {
         "overkill",
         "echo",
         "fortify",
+        "consistency",
         "talismanPower",
         "attackSpeed",
         "autoAttackDamage",

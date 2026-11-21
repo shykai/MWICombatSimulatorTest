@@ -145,6 +145,7 @@ class Monster extends CombatUnit {
             "overkill",
             "echo",
             "fortify",
+            "consistency",
             "attackSpeed",
             "foodHaste",
             "drinkConcentration",

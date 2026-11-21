@@ -194,7 +194,7 @@
             "typeHrid": "/buff_types/processing",
             "ratioBoost": 0,
             "ratioBoostLevelBonus": 0,
-            "flatBoost": 0.2,
+            "flatBoost": 0.16,
             "flatBoostLevelBonus": 0,
             "startTime": "0001-01-01T00:00:00Z",
             "duration": 1800000000000

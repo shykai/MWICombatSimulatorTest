@@ -125,7 +125,8 @@
             shatter: "Shatter",
             overkill: "Overkill",
             echo: "Echo",
-            fortify: "Fortify"
+            fortify: "Fortify",
+            consistency: "Consistency"
         },
         noncombatStats: {
             skillingSpeed: "Skilling Speed",
@@ -185,7 +186,12 @@
             cookingExperience: "Cooking Experience",
             brewingExperience: "Brewing Experience",
             alchemyExperience: "Alchemy Experience",
-            enhancingExperience: "Enhancing Experience"
+            enhancingExperience: "Enhancing Experience",
+            abundance: "Abundance",
+            prosperity: "Prosperity",
+            invigoration: "Invigoration",
+            conservation: "Conservation",
+            epiphany: "Epiphany"
         },
         home: {
             nav: {
@@ -1974,7 +1980,8 @@
             shatter: "Shatter: Critical hits gain {{value}} armor and resistance penetration.",
             overkill: "Overkill: On a killing blow, stores {{value}} of the excess damage and adds it as true damage to the first target of your next successful direct attack.",
             echo: "Echo: On ability cast, {{value}} chance to repeat the ability's damage or healing at half strength.",
-            fortify: "Fortify: When hit, gain {{value}} armor and resistances for 5s, stacking up to 4 times."
+            fortify: "Fortify: When hit, gain {{value}} armor and resistances for 5s, stacking up to 4 times.",
+            consistency: "Consistency: Auto attacks roll at least {{value}} of their maximum damage."
         },
         itemSelector: {
             count: "Count",
@@ -2096,6 +2103,13 @@
             "/talisman_modifiers/elemental_resistance": "Elemental Resistance",
             "/talisman_modifiers/thorns": "Thorns"
         },
+        talismanModifierDescriptions: {
+            "/talisman_modifiers/abundance": "Abundance: {{value}} chance to triple the resources gathered by an action.",
+            "/talisman_modifiers/prosperity": "Prosperity: {{value}} chance to also receive coins equal to the vendor value of the items produced by an action (Cheesesmithing, Crafting, and Tailoring only).",
+            "/talisman_modifiers/invigoration": "Invigoration: {{value}} chance to double the effects of active drinks for a cooking or brewing action.",
+            "/talisman_modifiers/conservation": "Conservation: {{value}} chance to keep a catalyst or protection item that would be consumed (excludes Philosopher's Mirror).",
+            "/talisman_modifiers/epiphany": "Epiphany: Gain {{value}} chance to receive double XP on skilling actions."
+        },
         talismansPanel: {
             type: "Type",
             modifiersTitle: "Modifiers",
@@ -2113,7 +2127,6 @@
             chooseFocusModifiers: "Choose focus modifiers",
             focusPickHint: "Select up to {{limit}} modifiers. Each selected modifier is {{weight}} times as likely to roll. Unique modifiers cannot be selected for focus.",
             increasedThreat: "Increased Threat",
-            reducedThreat: "Reduced Threat",
             focusPickCount: "{{count}} / {{limit}}",
             clearFocusPicks: "Clear",
             upgradeTitle: "Upgrade",
@@ -2148,7 +2161,17 @@
             unlock: "Unlock",
             delete: "Destroy",
             confirmDelete: "Destroy this talisman? This cannot be undone.",
-            cannotChangeInCombat: "Cannot change talismans while in combat"
+            cannotChangeInCombat: "Cannot change talismans while in combat",
+            customize: "Appearance",
+            savingAppearance: "Saving...",
+            appearanceSaveUnconfirmed: "The save has not been confirmed. Your choices are still here; please try saving again.",
+            appearanceHint: "The icon and marker only change how a talisman looks and how it is sorted. They have no effect on modifiers or rerolls.",
+            icon: "Icon",
+            marker: "Marker",
+            markerNone: "None",
+            markerLabel: "Marker {{marker}}",
+            save: "Save",
+            cancel: "Cancel"
         },
         talismanSlot: {
             talisman: "Talisman",
@@ -5859,6 +5882,11 @@
             "/buff_types/processing": "Processing",
             "/buff_types/artisan": "Artisan",
             "/buff_types/blessed": "Blessed",
+            "/buff_types/abundance": "Abundance",
+            "/buff_types/prosperity": "Prosperity",
+            "/buff_types/invigoration": "Invigoration",
+            "/buff_types/conservation": "Conservation",
+            "/buff_types/epiphany": "Epiphany",
             "/buff_types/action_level": "Action Level",
             "/buff_types/essence_find": "Essence Find",
             "/buff_types/rare_find": "Rare Find",
@@ -5926,6 +5954,11 @@
             "/buff_types/processing": "Chance to instantly convert gathered resource into processed material (cheese, fabric, and lumber)",
             "/buff_types/artisan": "Reduces required materials during production",
             "/buff_types/blessed": "Chance to gain +2 instead of +1 on enhancing success",
+            "/buff_types/abundance": "Chance to triple the resources gathered by an action",
+            "/buff_types/prosperity": "Chance to also receive coins equal to the vendor value of the items produced by an action (Cheesesmithing, Crafting, and Tailoring only)",
+            "/buff_types/invigoration": "Chance to double the effects of active drinks for an action",
+            "/buff_types/conservation": "Chance to keep a catalyst or protection item that would be consumed (excludes Philosopher's Mirror)",
+            "/buff_types/epiphany": "Chance to receive double experience on skilling actions",
             "/buff_types/action_level": "Increases required levels for the action",
             "/buff_types/essence_find": "Increases drop rate of essences",
             "/buff_types/rare_find": "Increases rare item drop rate",
@@ -5993,6 +6026,11 @@
             "/buff_types/processing": "Lowers chance to convert gathered resource into processed material (cheese, fabric, and lumber)",
             "/buff_types/artisan": "Increases required materials during production",
             "/buff_types/blessed": "Lowers chance to gain +2 instead of +1 on enhancing success",
+            "/buff_types/abundance": "Lowers chance to triple the resources gathered by an action",
+            "/buff_types/prosperity": "Lowers chance to also receive coins equal to the vendor value of the items produced by an action (Cheesesmithing, Crafting, and Tailoring only)",
+            "/buff_types/invigoration": "Lowers chance to double the effects of active drinks for an action",
+            "/buff_types/conservation": "Lowers chance to keep a catalyst or protection item that would be consumed (excludes Philosopher's Mirror)",
+            "/buff_types/epiphany": "Lowers chance to receive double experience on skilling actions",
             "/buff_types/action_level": "Decreases required levels for the action",
             "/buff_types/essence_find": "Decreases drop rate of essences",
             "/buff_types/rare_find": "Decreases rare item drop rate",
@@ -6697,7 +6735,8 @@
                     shatter: "\u7834\u7532",
                     overkill: "\u8fc7\u91cf\u4f24\u5bb3",
                     echo: "\u56de\u54cd",
-                    fortify: "\u575a\u5b88"
+                    fortify: "\u575a\u5b88",
+                    consistency: "\u7a33\u5b9a"
                 },
                 noncombatStats: {
                     skillingSpeed: "\u4e13\u4e1a\u901f\u5ea6",
@@ -6757,7 +6796,12 @@
                     cookingExperience: "\u70f9\u996a\u7ecf\u9a8c",
                     brewingExperience: "\u51b2\u6ce1\u7ecf\u9a8c",
                     alchemyExperience: "\u70bc\u91d1\u7ecf\u9a8c",
-                    enhancingExperience: "\u5f3a\u5316\u7ecf\u9a8c"
+                    enhancingExperience: "\u5f3a\u5316\u7ecf\u9a8c",
+                    abundance: "\u4e30\u9976",
+                    prosperity: "\u62db\u8d22",
+                    invigoration: "\u632f\u594b",
+                    conservation: "\u8282\u7528",
+                    epiphany: "\u987f\u609f"
                 },
                 home: {
                     nav: {
@@ -8546,7 +8590,8 @@
                     shatter: "\u7834\u7532: \u66b4\u51fb\u65f6\u83b7\u5f97{{value}}\u62a4\u7532\u548c\u6297\u6027\u7a7f\u900f\u3002",
                     overkill: "\u8fc7\u91cf\u4f24\u5bb3: \u51fb\u6740\u65f6\u50a8\u5b58{{value}}\u7684\u6ea2\u51fa\u4f24\u5bb3\uff0c\u4f5c\u4e3a\u771f\u5b9e\u4f24\u5bb3\u9644\u52a0\u5230\u4f60\u4e0b\u4e00\u6b21\u547d\u4e2d\u7684\u76f4\u63a5\u653b\u51fb\u7684\u9996\u4e2a\u76ee\u6807\u3002",
                     echo: "\u56de\u54cd: \u65bd\u653e\u6280\u80fd\u65f6\uff0c{{value}}\u51e0\u7387\u4ee5\u4e00\u534a\u7684\u5f3a\u5ea6\u91cd\u590d\u8be5\u6280\u80fd\u7684\u4f24\u5bb3\u6216\u6cbb\u7597\u3002",
-                    fortify: "\u575a\u5b88: \u88ab\u547d\u4e2d\u65f6\uff0c\u83b7\u5f97{{value}}\u62a4\u7532\u548c\u6297\u6027\uff0c\u6301\u7eed5\u79d2\uff0c\u6700\u591a\u53e0\u52a04\u6b21\u3002"
+                    fortify: "\u575a\u5b88: \u88ab\u547d\u4e2d\u65f6\uff0c\u83b7\u5f97{{value}}\u62a4\u7532\u548c\u6297\u6027\uff0c\u6301\u7eed5\u79d2\uff0c\u6700\u591a\u53e0\u52a04\u6b21\u3002",
+                    consistency: "\u7a33\u5b9a: \u81ea\u52a8\u653b\u51fb\u4f24\u5bb3\u81f3\u5c11\u4e3a\u6700\u5927\u4f24\u5bb3\u7684{{value}}\u3002"
                 },
                 itemSelector: {
                     count: "\u6570\u91cf",
@@ -8668,6 +8713,13 @@
                     "/talisman_modifiers/elemental_resistance": "\u5143\u7d20\u6297\u6027",
                     "/talisman_modifiers/thorns": "\u8346\u68d8"
                 },
+                talismanModifierDescriptions: {
+                    "/talisman_modifiers/abundance": "\u4e30\u9976: \u6709{{value}}\u51e0\u7387\u4f7f\u4e00\u6b21\u884c\u52a8\u91c7\u96c6\u5230\u7684\u8d44\u6e90\u53d8\u4e3a\u4e09\u500d\u3002",
+                    "/talisman_modifiers/prosperity": "\u62db\u8d22: \u6709{{value}}\u51e0\u7387\u989d\u5916\u83b7\u5f97\u4e0e\u4e00\u6b21\u884c\u52a8\u4ea7\u51fa\u7269\u54c1\u7684\u5546\u4eba\u4ef7\u683c\u7b49\u503c\u7684\u91d1\u5e01\uff08\u4ec5\u9650\u5976\u916a\u953b\u9020\u3001\u5236\u4f5c\u548c\u7f1d\u7eab\uff09\u3002",
+                    "/talisman_modifiers/invigoration": "\u632f\u594b: \u70f9\u996a\u6216\u51b2\u6ce1\u65f6\uff0c\u6709{{value}}\u51e0\u7387\u4f7f\u8be5\u6b21\u884c\u52a8\u4e2d\u751f\u6548\u996e\u6599\u7684\u6548\u679c\u7ffb\u500d\u3002",
+                    "/talisman_modifiers/conservation": "\u8282\u7528: \u6709{{value}}\u51e0\u7387\u4fdd\u7559\u672c\u5e94\u6d88\u8017\u7684\u50ac\u5316\u5242\u6216\u4fdd\u62a4\u7269\u54c1\uff08\u4e0d\u5305\u62ec\u8d24\u8005\u4e4b\u955c\uff09\u3002",
+                    "/talisman_modifiers/epiphany": "\u987f\u609f: \u8fdb\u884c\u751f\u6d3b\u884c\u52a8\u65f6\uff0c\u6709{{value}}\u51e0\u7387\u83b7\u5f97\u53cc\u500d\u7ecf\u9a8c\u3002"
+                },
                 talismansPanel: {
                     type: "\u7c7b\u578b",
                     modifiersTitle: "\u8bcd\u6761",
@@ -8685,7 +8737,6 @@
                     chooseFocusModifiers: "\u9009\u62e9\u4e13\u6ce8\u8bcd\u6761",
                     focusPickHint: "\u6700\u591a\u9009\u62e9 {{limit}} \u4e2a\u8bcd\u6761\u3002\u6240\u9009\u8bcd\u6761\u7684\u51fa\u73b0\u6982\u7387\u63d0\u9ad8\u81f3\u539f\u6765\u7684 {{weight}} \u500d\u3002\u7279\u6b8a\u8bcd\u6761\u65e0\u6cd5\u4f5c\u4e3a\u4e13\u6ce8\u76ee\u6807\u3002",
                     increasedThreat: "\u589e\u52a0\u5a01\u80c1",
-                    reducedThreat: "\u964d\u4f4e\u5a01\u80c1",
                     focusPickCount: "{{count}} / {{limit}}",
                     clearFocusPicks: "\u6e05\u7a7a",
                     upgradeTitle: "\u5347\u7ea7",
@@ -8720,7 +8771,17 @@
                     unlock: "\u89e3\u9501",
                     delete: "\u9500\u6bc1",
                     confirmDelete: "\u9500\u6bc1\u8fd9\u4e2a\u7b26\u77f3\uff1f\u6b64\u64cd\u4f5c\u65e0\u6cd5\u64a4\u9500\u3002",
-                    cannotChangeInCombat: "\u6218\u6597\u4e2d\u65e0\u6cd5\u66f4\u6539\u7b26\u77f3"
+                    cannotChangeInCombat: "\u6218\u6597\u4e2d\u65e0\u6cd5\u66f4\u6539\u7b26\u77f3",
+                    customize: "\u5916\u89c2",
+                    savingAppearance: "\u4fdd\u5b58\u4e2d\u2026\u2026",
+                    appearanceSaveUnconfirmed: "\u5c1a\u672a\u786e\u8ba4\u4fdd\u5b58\u6210\u529f\u3002\u4f60\u7684\u9009\u62e9\u5df2\u4fdd\u7559\uff0c\u8bf7\u518d\u6b21\u5c1d\u8bd5\u4fdd\u5b58\u3002",
+                    appearanceHint: "\u56fe\u6807\u548c\u6807\u8bb0\u53ea\u4f1a\u6539\u53d8\u7b26\u77f3\u7684\u5916\u89c2\u548c\u6392\u5e8f\uff0c\u4e0d\u4f1a\u5f71\u54cd\u8bcd\u6761\u6216\u6d17\u7ec3\u3002",
+                    icon: "\u56fe\u6807",
+                    marker: "\u6807\u8bb0",
+                    markerNone: "\u65e0",
+                    markerLabel: "\u6807\u8bb0 {{marker}}",
+                    save: "\u4fdd\u5b58",
+                    cancel: "\u53d6\u6d88"
                 },
                 talismanSlot: {
                     talisman: "\u7b26\u77f3",
@@ -12431,6 +12492,11 @@
                     "/buff_types/processing": "\u52a0\u5de5",
                     "/buff_types/artisan": "\u5de5\u5320",
                     "/buff_types/blessed": "\u798f\u6c14",
+                    "/buff_types/abundance": "\u4e30\u9976",
+                    "/buff_types/prosperity": "\u62db\u8d22",
+                    "/buff_types/invigoration": "\u632f\u594b",
+                    "/buff_types/conservation": "\u8282\u7528",
+                    "/buff_types/epiphany": "\u987f\u609f",
                     "/buff_types/action_level": "\u884c\u52a8\u6240\u9700\u7b49\u7ea7",
                     "/buff_types/essence_find": "\u7cbe\u534e\u53d1\u73b0",
                     "/buff_types/rare_find": "\u7a00\u6709\u53d1\u73b0",
@@ -12498,6 +12564,11 @@
                     "/buff_types/processing": "\u6709\u673a\u4f1a\u7acb\u5373\u5c06\u539f\u6750\u6599\u8f6c\u5316\u6210\u4ea7\u54c1 (\u5976\u916a\u3001\u5e03\u6599\u3001\u548c\u6728\u6750)",
                     "/buff_types/artisan": "\u51cf\u5c11\u751f\u4ea7\u8fc7\u7a0b\u4e2d\u6240\u9700\u6750\u6599",
                     "/buff_types/blessed": "\u6709\u673a\u4f1a\u5728\u5f3a\u5316\u6210\u529f\u65f6\u83b7\u5f97+2\u800c\u4e0d\u662f+1",
+                    "/buff_types/abundance": "\u6709\u673a\u4f1a\u4f7f\u4e00\u6b21\u884c\u52a8\u91c7\u96c6\u5230\u7684\u8d44\u6e90\u53d8\u4e3a\u4e09\u500d",
+                    "/buff_types/prosperity": "\u6709\u673a\u4f1a\u989d\u5916\u83b7\u5f97\u4e0e\u4e00\u6b21\u884c\u52a8\u4ea7\u51fa\u7269\u54c1\u7684\u5546\u4eba\u4ef7\u683c\u7b49\u503c\u7684\u91d1\u5e01\uff08\u4ec5\u9650\u5976\u916a\u953b\u9020\u3001\u5236\u4f5c\u548c\u7f1d\u7eab\uff09",
+                    "/buff_types/invigoration": "\u6709\u673a\u4f1a\u4f7f\u4e00\u6b21\u884c\u52a8\u4e2d\u751f\u6548\u996e\u6599\u7684\u6548\u679c\u7ffb\u500d",
+                    "/buff_types/conservation": "\u6709\u673a\u4f1a\u4fdd\u7559\u672c\u5e94\u6d88\u8017\u7684\u50ac\u5316\u5242\u6216\u4fdd\u62a4\u7269\u54c1\uff08\u4e0d\u5305\u62ec\u8d24\u8005\u4e4b\u955c\uff09",
+                    "/buff_types/epiphany": "\u8fdb\u884c\u751f\u6d3b\u884c\u52a8\u65f6\uff0c\u6709\u673a\u4f1a\u83b7\u5f97\u53cc\u500d\u7ecf\u9a8c",
                     "/buff_types/action_level": "\u589e\u52a0\u884c\u52a8\u6240\u9700\u7b49\u7ea7",
                     "/buff_types/essence_find": "\u589e\u52a0\u7cbe\u534e\u7684\u6389\u843d\u7387",
                     "/buff_types/rare_find": "\u589e\u52a0\u7a00\u6709\u7269\u54c1\u7684\u6389\u843d\u7387",
@@ -12565,6 +12636,11 @@
                     "/buff_types/processing": "\u964d\u4f4e\u5c06\u91c7\u96c6\u8d44\u6e90\u8f6c\u5316\u4e3a\u52a0\u5de5\u6750\u6599\uff08\u5976\u916a\u3001\u5e03\u6599\u548c\u6728\u6750\uff09\u7684\u51e0\u7387",
                     "/buff_types/artisan": "\u589e\u52a0\u751f\u4ea7\u6240\u9700\u6750\u6599",
                     "/buff_types/blessed": "\u964d\u4f4e\u5f3a\u5316\u6210\u529f\u65f6\u83b7\u5f97+2\u800c\u975e+1\u7684\u51e0\u7387",
+                    "/buff_types/abundance": "\u964d\u4f4e\u4e00\u6b21\u884c\u52a8\u91c7\u96c6\u8d44\u6e90\u53d8\u4e3a\u4e09\u500d\u7684\u51e0\u7387",
+                    "/buff_types/prosperity": "\u964d\u4f4e\u989d\u5916\u83b7\u5f97\u4e0e\u4ea7\u51fa\u7269\u54c1\u5546\u4eba\u4ef7\u683c\u7b49\u503c\u91d1\u5e01\u7684\u51e0\u7387\uff08\u4ec5\u9650\u5976\u916a\u953b\u9020\u3001\u5236\u4f5c\u548c\u7f1d\u7eab\uff09",
+                    "/buff_types/invigoration": "\u964d\u4f4e\u4e00\u6b21\u884c\u52a8\u4e2d\u996e\u6599\u6548\u679c\u7ffb\u500d\u7684\u51e0\u7387",
+                    "/buff_types/conservation": "\u964d\u4f4e\u4fdd\u7559\u672c\u5e94\u6d88\u8017\u7684\u50ac\u5316\u5242\u6216\u4fdd\u62a4\u7269\u54c1\u7684\u51e0\u7387\uff08\u4e0d\u5305\u62ec\u8d24\u8005\u4e4b\u955c\uff09",
+                    "/buff_types/epiphany": "\u964d\u4f4e\u8fdb\u884c\u751f\u6d3b\u884c\u52a8\u65f6\u83b7\u5f97\u53cc\u500d\u7ecf\u9a8c\u7684\u51e0\u7387",
                     "/buff_types/action_level": "\u964d\u4f4e\u884c\u52a8\u6240\u9700\u7b49\u7ea7",
                     "/buff_types/essence_find": "\u51cf\u5c11\u7cbe\u534e\u6389\u843d\u7387",
                     "/buff_types/rare_find": "\u51cf\u5c11\u7a00\u6709\u7269\u54c1\u6389\u843d\u7387",
