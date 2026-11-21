@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'Test'),
     filename: 'bundle.js',
     clean: true,
   },
@@ -12,7 +12,7 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, 'Test'),
     },
     compress: true,
     port: 9000,
