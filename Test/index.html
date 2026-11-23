@@ -1615,12 +1615,27 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-check form-switch mb-1">
-                                        <input class="form-check-input" type="checkbox" id="personalBuffsToggle">
-                                        <label class="form-check-label" for="personalBuffsToggle" data-i18n="personalBuffs.title">Personal Buffs</label>
-                                        <div id="personalBuffsBox" class="d-none">
-                                            <!-- Personal buffs will be dynamically added here -->
+                                    <div class="row g-2 align-items-center mb-1">
+                                        <div class="col-md-7">
+                                            <div class="form-check form-switch mb-0">
+                                                <input class="form-check-input" type="checkbox" id="personalBuffsToggle">
+                                                <label class="form-check-label" for="personalBuffsToggle" data-i18n="personalBuffs.title">Personal Buffs</label>
+                                            </div>
                                         </div>
+                                        <div class="col-auto">
+                                            <div class="btn-group btn-group-sm d-none" role="group" id="personalBuffsModeGroup">
+                                                <input type="radio" class="btn-check" name="personalBuffsMode" id="personalBuffsModeGlobal" value="global" checked>
+                                                <label class="btn btn-outline-secondary" for="personalBuffsModeGlobal" data-i18n="common:personalBuffs.global">Global</label>
+                                                <input type="radio" class="btn-check" name="personalBuffsMode" id="personalBuffsModePersonal" value="personal">
+                                                <label class="btn btn-outline-secondary" for="personalBuffsModePersonal" data-i18n="common:personalBuffs.perPlayer">Per Player</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="personalBuffsBox" class="d-none">
+                                        <!-- Personal buffs will be dynamically added here -->
+                                    </div>
+                                    <div id="personalBuffsByPlayerBox" class="d-none mt-1">
+                                        <!-- Per player personal buffs will be dynamically added here -->
                                     </div>
                                 </div>
                             </div>
