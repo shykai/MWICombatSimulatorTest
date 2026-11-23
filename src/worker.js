@@ -46,8 +46,9 @@ onmessage = async function (event) {
                 };
                 extraBuffs.push(comDropBuff);
             }
+            let personalBuffsTable = null;
             if (event.data.extra.personalBuffs) {
-                const personalBuffs = {
+                personalBuffsTable = {
                     "/items/seal_of_attack_speed": {
                         "uniqueHrid": "/buff_uniques/personal_attack_speed",
                         "typeHrid": "/buff_types/attack_speed",
@@ -119,12 +120,19 @@ onmessage = async function (event) {
                         "duration": 0
                     }
                 };
-                for (let buff of event.data.extra.personalBuffs) {
-                    if (personalBuffs[buff]) {
-                        extraBuffs.push(personalBuffs[buff]);
-                    }
-                }
             }
+
+            const personalBuffSelection = event.data.extra.personalBuffs;
+            const getPersonalBuffHrids = (playerHrid) => {
+                if (!personalBuffSelection) {
+                    return [];
+                }
+                if (personalBuffSelection.mode === "personal") {
+                    let playerKey = String(playerHrid).replace("player", "");
+                    return personalBuffSelection.byPlayer?.[playerKey] ?? [];
+                }
+                return personalBuffSelection.buffs ?? [];
+            };
 
             let playersData = event.data.players;
             let players = [];
@@ -139,7 +147,13 @@ onmessage = async function (event) {
             for (let i = 0; i < playersData.length; i++) {
                 let currentPlayer = Player.createFromDTO(structuredClone(playersData[i]));
                 currentPlayer.zoneBuffs = zone?.buffs || labyrinth?.buffs || [];
-                currentPlayer.extraBuffs = extraBuffs;
+                let playerExtraBuffs = extraBuffs.slice();
+                for (let buffHrid of getPersonalBuffHrids(playersData[i].hrid)) {
+                    if (personalBuffsTable?.[buffHrid]) {
+                        playerExtraBuffs.push(personalBuffsTable[buffHrid]);
+                    }
+                }
+                currentPlayer.extraBuffs = playerExtraBuffs;
                 players.push(currentPlayer);
             }
             let simulationTimeLimit = event.data.simulationTimeLimit;

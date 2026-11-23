@@ -3563,15 +3563,7 @@ function startSimulation(selectedPlayers) {
         extra.comDrop = Number(document.getElementById("comDropInput").value);
     }
     extra.enableHpMpVisualization = document.getElementById("hpMpVisualizationToggle").checked;
-    extra.personalBuffs = [];
-    if (document.getElementById("personalBuffsToggle").checked) {
-        let personalBuffs = document.getElementById("personalBuffsBox").querySelectorAll("input");
-        for (let buff of personalBuffs) {
-            if (buff.checked) {
-                extra.personalBuffs.push(buff.value);
-            }
-        }
-    }
+    extra.personalBuffs = getPersonalBuffSelection();
 
     let simAllZonesToggle = document.getElementById("simAllZoneToggle");
     let simAllSoloToggle = document.getElementById("simAllSoloToggle");
@@ -5263,6 +5255,15 @@ function initExtraBuffSection() {
         "/items/seal_of_rare_find",
     ];
     const personalBuffsTable = document.getElementById('personalBuffsBox');
+    const personalBuffsByPlayerTable = document.getElementById('personalBuffsByPlayerBox');
+    const personalBuffsModeGroup = document.getElementById('personalBuffsModeGroup');
+    const personalBuffsToggle = document.getElementById("personalBuffsToggle");
+
+    const getPersonalBuffName = (buffHrid) => {
+        let key = "itemNames." + buffHrid;
+        return i18next.exists(key) ? i18next.t(key) : buffHrid;
+    };
+
     for (const buff of personalBuffKeys) {
         const buffDiv = document.createElement('div');
         buffDiv.className = 'form-check form-switch mb-1';
@@ -5275,18 +5276,117 @@ function initExtraBuffSection() {
         const buffLabel = document.createElement('label');
         buffLabel.className = 'form-check-label';
         buffLabel.setAttribute('for', buffInput.id);
-        buffLabel.innerHTML = buff;
-        buffLabel.setAttribute("data-i18n", "itemNames." +buff);
+        buffLabel.textContent = getPersonalBuffName(buff);
+        buffLabel.setAttribute("data-i18n", "itemNames." + buff);
         buffDiv.appendChild(buffLabel);
 
         personalBuffsTable.appendChild(buffDiv);
     }
 
-    let personalBuffsToggle = document.getElementById("personalBuffsToggle");
-    personalBuffsToggle.onchange = () => {
-        personalBuffsTable.classList.toggle('d-none');
+    // 按玩家分列的个人增益表
+    const personalBuffsTableElement = document.createElement('table');
+    personalBuffsTableElement.className = 'table table-sm align-middle mb-0';
+    const tableHead = document.createElement('thead');
+    const headRow = document.createElement('tr');
+    const headLabelCell = document.createElement('th');
+    headLabelCell.scope = 'col';
+    headRow.appendChild(headLabelCell);
+    for (let playerIndex = 1; playerIndex <= 5; playerIndex++) {
+        const headCell = document.createElement('th');
+        headCell.scope = 'col';
+        headCell.className = 'text-center';
+        headCell.dataset.playerCol = playerIndex;
+        headCell.textContent = 'P' + playerIndex;
+        headRow.appendChild(headCell);
     }
-    
+    tableHead.appendChild(headRow);
+    personalBuffsTableElement.appendChild(tableHead);
+
+    const tableBody = document.createElement('tbody');
+    for (const buff of personalBuffKeys) {
+        const row = document.createElement('tr');
+        const labelCell = document.createElement('td');
+        labelCell.textContent = getPersonalBuffName(buff);
+        labelCell.setAttribute("data-i18n", "itemNames." + buff);
+        row.appendChild(labelCell);
+        for (let playerIndex = 1; playerIndex <= 5; playerIndex++) {
+            const cell = document.createElement('td');
+            cell.className = 'text-center';
+            cell.dataset.playerCell = playerIndex;
+            const input = document.createElement('input');
+            input.className = 'form-check-input';
+            input.type = 'checkbox';
+            input.value = buff;
+            input.id = 'personalBuff_player' + playerIndex + '_' + buff.split('/').pop();
+            input.dataset.player = playerIndex;
+            cell.appendChild(input);
+            row.appendChild(cell);
+        }
+        tableBody.appendChild(row);
+    }
+    personalBuffsTableElement.appendChild(tableBody);
+    personalBuffsByPlayerTable.appendChild(personalBuffsTableElement);
+
+    const updatePersonalBuffsPlayerColumns = () => {
+        const tableElement = personalBuffsByPlayerTable.querySelector('table');
+        if (!tableElement) return;
+        for (let playerIndex = 1; playerIndex <= 5; playerIndex++) {
+            const playerCheckbox = document.getElementById('player' + playerIndex);
+            const visible = !playerCheckbox || playerCheckbox.parentElement.style.display !== 'none';
+            tableElement.querySelectorAll('[data-player-col="' + playerIndex + '"], [data-player-cell="' + playerIndex + '"]')
+                .forEach((cell) => cell.classList.toggle('d-none', !visible));
+        }
+    };
+
+    const updatePersonalBuffsModeVisibility = () => {
+        const mode = document.querySelector('input[name="personalBuffsMode"]:checked').value;
+        personalBuffsModeGroup.classList.toggle('d-none', !personalBuffsToggle.checked);
+        personalBuffsTable.classList.toggle('d-none', !personalBuffsToggle.checked || mode !== 'global');
+        personalBuffsByPlayerTable.classList.toggle('d-none', !personalBuffsToggle.checked || mode !== 'personal');
+        updatePersonalBuffsPlayerColumns();
+    };
+
+    personalBuffsToggle.onchange = updatePersonalBuffsModeVisibility;
+    document.querySelectorAll('input[name="personalBuffsMode"]').forEach((radio) => {
+        radio.onchange = updatePersonalBuffsModeVisibility;
+    });
+    const simDungeonToggle = document.getElementById('simDungeonToggle');
+    if (simDungeonToggle) {
+        simDungeonToggle.addEventListener('change', () => {
+            setTimeout(updatePersonalBuffsPlayerColumns, 0);
+        });
+    }
+
+    updatePersonalBuffsModeVisibility();
+}
+
+function getPersonalBuffSelection() {
+    if (!document.getElementById("personalBuffsToggle").checked) {
+        return { mode: "global", buffs: [], byPlayer: {} };
+    }
+
+    const mode = document.querySelector('input[name="personalBuffsMode"]:checked').value;
+    if (mode === "global") {
+        let buffs = [];
+        document.getElementById("personalBuffsBox").querySelectorAll("input").forEach((buff) => {
+            if (buff.checked) {
+                buffs.push(buff.value);
+            }
+        });
+        return { mode: "global", buffs: buffs, byPlayer: {} };
+    }
+
+    let byPlayer = {};
+    document.getElementById("personalBuffsByPlayerBox").querySelectorAll("input").forEach((buff) => {
+        if (buff.checked) {
+            let player = buff.dataset.player;
+            if (!byPlayer[player]) {
+                byPlayer[player] = [];
+            }
+            byPlayer[player].push(buff.value);
+        }
+    });
+    return { mode: "personal", buffs: [], byPlayer: byPlayer };
 }
 
 
